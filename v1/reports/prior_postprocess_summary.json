@@ -1,0 +1,31 @@
+{
+  "groups": [
+    [
+      "Section_ID"
+    ],
+    [
+      "Region"
+    ],
+    [
+      "Segment"
+    ],
+    [
+      "Mouse_ID",
+      "AP_position"
+    ]
+  ],
+  "weights": [
+    0.0,
+    0.1,
+    0.5,
+    0.0
+  ],
+  "baseline": {
+    "accuracy": 0.7702,
+    "macro_f1": 0.7198926146840641
+  },
+  "corrected": {
+    "accuracy": 0.7708,
+    "macro_f1": 0.7247252546870662
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "baseline": {
+    "accuracy": 0.799,
+    "macro_f1": 0.7669763722400514,
+    "correct": 3995
+  },
+  "families": {
+    "midventral_inhibitory": {
+      "labels": [
+        "MV_in_Chrna2",
+        "MV_in_Esrrb",
+        "MV_in_Gabra1",
+        "MV_in_Gm26673",
+        "MV_in_Sema5b"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 324,
+            "validation_family_cells": 110,
+            "external_family_cells": 9821,
+            "internal_accuracy": 0.9727272727272728,
+            "reference_accuracy": 0.6272727272727273,
+            "internal_tree_best_iteration": 432
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 326,
+            "validation_family_cells": 108,
+            "external_family_cells": 9821,
+            "internal_accuracy": 0.9814814814814815,
+            "reference_accuracy": 0.7037037037037037,
+            "internal_tree_best_iteration": 419
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 326,
+            "validation_family_cells": 108,
+            "external_family_cells": 9821,
+            "internal_accuracy": 0.9814814814814815,
+            "reference_accuracy": 0.6666666666666666,
+            "internal_tree_best_iteration": 479
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 326,
+            "validation_family_cells": 108,
+            "external_family_cells": 9821,
+            "internal_accuracy": 0.9814814814814815,
+            "reference_accuracy": 0.7129629629629629,
+            "internal_tree_best_iteration": 480
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.9792626728110599
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.9815668202764977
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9838709677419355
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.9861751152073732
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.9838709677419355
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.9792626728110599
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.923963133640553
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.8640552995391705
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.7995391705069125
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.7235023041474654
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.6774193548387096
+          }
+        ],
+        "selected_external_weight": 0.30000000000000004,
+        "selected_family_accuracy": 0.9861751152073732
+      },
+      "gate": {
+        "gate": 0.75,
+        "confidence_cap": 0.55,
+        "weight": 0.5,
+        "delta_correct": 3,
+        "fold_delta_correct": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "selected_cells": 430,
+        "strictly_stable": true
+      },
+      "test_cells_selected": 410,
+      "cumulative_metrics": {
+        "accuracy": 0.7996,
+        "macro_f1": 0.7686689022684198,
+        "correct": 3998
+      }
+    },
+    "midventral_excitatory": {
+      "labels": [
+        "MV_ex_Shox2",
+        "MV_ex_Syt2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 116,
+            "validation_family_cells": 39,
+            "external_family_cells": 3517,
+            "internal_accuracy": 1.0,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 480
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 116,
+            "validation_family_cells": 39,
+            "external_family_cells": 3517,
+            "internal_accuracy": 1.0,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 480
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 117,
+            "validation_family_cells": 38,
+            "external_family_cells": 3517,
+            "internal_accuracy": 1.0,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 480
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 116,
+            "validation_family_cells": 39,
+            "external_family_cells": 3517,
+            "internal_accuracy": 1.0,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 480
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 1.0
+          }
+        ],
+        "selected_external_weight": 0.6000000000000001,
+        "selected_family_accuracy": 1.0
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7996,
+        "macro_f1": 0.7686689022684198,
+        "correct": 3998
+      }
+    },
+    "medial_excitatory": {
+      "labels": [
+        "M_ex_Neurod2",
+        "M_ex_Vsx2",
+        "M_ex_Vsx2/Shox2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 44,
+            "validation_family_cells": 16,
+            "external_family_cells": 1952,
+            "internal_accuracy": 0.9375,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 476
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 46,
+            "validation_family_cells": 14,
+            "external_family_cells": 1952,
+            "internal_accuracy": 0.8571428571428571,
+            "reference_accuracy": 0.9285714285714286,
+            "internal_tree_best_iteration": 480
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 45,
+            "validation_family_cells": 15,
+            "external_family_cells": 1952,
+            "internal_accuracy": 1.0,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 480
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 45,
+            "validation_family_cells": 15,
+            "external_family_cells": 1952,
+            "internal_accuracy": 0.8666666666666667,
+            "reference_accuracy": 0.8666666666666667,
+            "internal_tree_best_iteration": 479
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.9166666666666666
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.9166666666666666
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9166666666666666
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.9333333333333333
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.9333333333333333
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.9333333333333333
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.95
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.95
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.95
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.95
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.95
+          }
+        ],
+        "selected_external_weight": 0.6000000000000001,
+        "selected_family_accuracy": 0.95
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7996,
+        "macro_f1": 0.7686689022684198,
+        "correct": 3998
+      }
+    },
+    "cholinergic_pair": {
+      "labels": [
+        "VH_in_Chat",
+        "cholinergic_interneuron"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 7,
+            "validation_family_cells": 3,
+            "external_family_cells": 200,
+            "internal_accuracy": 1.0,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 1
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 7,
+            "validation_family_cells": 3,
+            "external_family_cells": 200,
+            "internal_accuracy": 0.6666666666666666,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 1
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 8,
+            "validation_family_cells": 2,
+            "external_family_cells": 200,
+            "internal_accuracy": 1.0,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 1
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 8,
+            "validation_family_cells": 2,
+            "external_family_cells": 200,
+            "internal_accuracy": 0.5,
+            "reference_accuracy": 1.0,
+            "internal_tree_best_iteration": 1
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.8
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.8
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 1.0
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 1.0
+          }
+        ],
+        "selected_external_weight": 0.6000000000000001,
+        "selected_family_accuracy": 1.0
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7996,
+        "macro_f1": 0.7686689022684198,
+        "correct": 3998
+      }
+    }
+  },
+  "final": {
+    "accuracy": 0.7996,
+    "macro_f1": 0.7686689022684198,
+    "correct": 3998
+  },
+  "delta_correct": 3,
+  "fold_delta_correct": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "test_label_changes": 6
+}

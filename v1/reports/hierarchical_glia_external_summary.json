@@ -1,0 +1,725 @@
+{
+  "baseline": {
+    "accuracy": 0.7708,
+    "macro_f1": 0.7247252546870662
+  },
+  "hierarchical_glia": {
+    "accuracy": 0.791,
+    "macro_f1": 0.7450248241615803
+  },
+  "delta_correct": 101,
+  "external_reference_file": "v1/cache/external_glia_reference.npz",
+  "external_reference_used": true,
+  "family_reports": {
+    "coarse_router": {
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "internal_coarse_glia_accuracy": 0.8766937669376694,
+            "validation_glia_cells": 738,
+            "external_reference_cells": 27112,
+            "tree_best_iteration": 375,
+            "selected_blend_coarse_glia_accuracy": 0.8848238482384824
+          },
+          {
+            "fold": 2,
+            "internal_coarse_glia_accuracy": 0.8716216216216216,
+            "validation_glia_cells": 740,
+            "external_reference_cells": 27112,
+            "tree_best_iteration": 279,
+            "selected_blend_coarse_glia_accuracy": 0.8837837837837837
+          },
+          {
+            "fold": 3,
+            "internal_coarse_glia_accuracy": 0.8652291105121294,
+            "validation_glia_cells": 742,
+            "external_reference_cells": 27112,
+            "tree_best_iteration": 433,
+            "selected_blend_coarse_glia_accuracy": 0.8827493261455526
+          },
+          {
+            "fold": 4,
+            "internal_coarse_glia_accuracy": 0.8482384823848238,
+            "validation_glia_cells": 738,
+            "external_reference_cells": 27112,
+            "tree_best_iteration": 338,
+            "selected_blend_coarse_glia_accuracy": 0.8577235772357723
+          }
+        ],
+        "groups": [
+          "oligodendrocyte_lineage",
+          "astrocyte",
+          "vascular_meningeal",
+          "immune",
+          "peripheral_glia",
+          "ependymal"
+        ],
+        "external_reference": true,
+        "selected_external_probability_weight": 0.7000000000000001,
+        "external_weight_scores": [
+          {
+            "external_weight": 0.0,
+            "coarse_glia_accuracy": 0.8654496281271129
+          },
+          {
+            "external_weight": 0.1,
+            "coarse_glia_accuracy": 0.8674780256930358
+          },
+          {
+            "external_weight": 0.2,
+            "coarse_glia_accuracy": 0.8728870858688302
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "coarse_glia_accuracy": 0.8752535496957403
+          },
+          {
+            "external_weight": 0.4,
+            "coarse_glia_accuracy": 0.876605814739689
+          },
+          {
+            "external_weight": 0.5,
+            "coarse_glia_accuracy": 0.8762677484787018
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "coarse_glia_accuracy": 0.8769438810006761
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "coarse_glia_accuracy": 0.8772819472616633
+          },
+          {
+            "external_weight": 0.8,
+            "coarse_glia_accuracy": 0.8772819472616633
+          },
+          {
+            "external_weight": 0.9,
+            "coarse_glia_accuracy": 0.876605814739689
+          },
+          {
+            "external_weight": 1.0,
+            "coarse_glia_accuracy": 0.876605814739689
+          }
+        ]
+      },
+      "gate": {
+        "gate": 0.45,
+        "confidence_cap": 0.55,
+        "weight": 0.7,
+        "delta_correct": 44,
+        "fold_delta_correct": [
+          12,
+          18,
+          6,
+          8
+        ],
+        "selected_cells": 2958,
+        "stable": true
+      },
+      "test_cells_modified": 3004,
+      "cumulative_metrics": {
+        "accuracy": 0.7796,
+        "macro_f1": 0.7357274061590111
+      }
+    },
+    "oligodendrocyte_lineage": {
+      "labels": [
+        "oligodendrocyte_1",
+        "oligodendrocyte_2",
+        "oligodendrocyte_precursor_cell",
+        "oligodendrocyte_progenitor_1",
+        "oligodendrocyte_progenitor_2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "internal_family_accuracy": 0.7441860465116279,
+            "validation_family_cells": 387,
+            "external_reference_cells": 11094,
+            "tree_best_iteration": 187,
+            "selected_blend_family_accuracy": 0.7416020671834626
+          },
+          {
+            "fold": 2,
+            "internal_family_accuracy": 0.7364341085271318,
+            "validation_family_cells": 387,
+            "external_reference_cells": 11094,
+            "tree_best_iteration": 218,
+            "selected_blend_family_accuracy": 0.7648578811369509
+          },
+          {
+            "fold": 3,
+            "internal_family_accuracy": 0.7410256410256411,
+            "validation_family_cells": 390,
+            "external_reference_cells": 11094,
+            "tree_best_iteration": 188,
+            "selected_blend_family_accuracy": 0.7435897435897436
+          },
+          {
+            "fold": 4,
+            "internal_family_accuracy": 0.7139175257731959,
+            "validation_family_cells": 388,
+            "external_reference_cells": 11094,
+            "tree_best_iteration": 211,
+            "selected_blend_family_accuracy": 0.7474226804123711
+          }
+        ],
+        "external_reference": true,
+        "selected_external_probability_weight": 0.5,
+        "external_weight_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.7338917525773195
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.7371134020618557
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.7364690721649485
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.7416237113402062
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.7493556701030928
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.7493556701030928
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.7461340206185567
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.7416237113402062
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.7403350515463918
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.7371134020618557
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.7345360824742269
+          }
+        ]
+      },
+      "gate": {
+        "gate": 0.3,
+        "confidence_cap": 0.55,
+        "weight": 1.0,
+        "delta_correct": 21,
+        "fold_delta_correct": [
+          1,
+          12,
+          8,
+          0
+        ],
+        "selected_cells": 1685,
+        "stable": true
+      },
+      "test_cells_modified": 1710,
+      "cumulative_metrics": {
+        "accuracy": 0.7838,
+        "macro_f1": 0.7385154817331435
+      }
+    },
+    "astrocyte": {
+      "labels": [
+        "astrocyte_1",
+        "astrocyte_2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "internal_family_accuracy": 0.875,
+            "validation_family_cells": 192,
+            "external_reference_cells": 4999,
+            "tree_best_iteration": 178,
+            "selected_blend_family_accuracy": 0.8958333333333334
+          },
+          {
+            "fold": 2,
+            "internal_family_accuracy": 0.9119170984455959,
+            "validation_family_cells": 193,
+            "external_reference_cells": 4999,
+            "tree_best_iteration": 299,
+            "selected_blend_family_accuracy": 0.9481865284974094
+          },
+          {
+            "fold": 3,
+            "internal_family_accuracy": 0.890625,
+            "validation_family_cells": 192,
+            "external_reference_cells": 4999,
+            "tree_best_iteration": 321,
+            "selected_blend_family_accuracy": 0.90625
+          },
+          {
+            "fold": 4,
+            "internal_family_accuracy": 0.8802083333333334,
+            "validation_family_cells": 192,
+            "external_reference_cells": 4999,
+            "tree_best_iteration": 282,
+            "selected_blend_family_accuracy": 0.890625
+          }
+        ],
+        "external_reference": true,
+        "selected_external_probability_weight": 0.5,
+        "external_weight_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.8894668400520156
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.8959687906371911
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9050715214564369
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.9063719115734721
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.9102730819245773
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.9102730819245773
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.9011703511053316
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.8842652795838751
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.8777633289986996
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.8686605981794538
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.8647594278283485
+          }
+        ]
+      },
+      "gate": {
+        "gate": 0.6,
+        "confidence_cap": 0.55,
+        "weight": 1.0,
+        "delta_correct": 21,
+        "fold_delta_correct": [
+          3,
+          12,
+          6,
+          0
+        ],
+        "selected_cells": 647,
+        "stable": true
+      },
+      "test_cells_modified": 710,
+      "cumulative_metrics": {
+        "accuracy": 0.788,
+        "macro_f1": 0.7402251503100347
+      }
+    },
+    "vascular_meningeal": {
+      "labels": [
+        "endothelial",
+        "pericyte",
+        "meninges_1",
+        "meninges_2",
+        "meninges_3"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "internal_family_accuracy": 0.8292682926829268,
+            "validation_family_cells": 123,
+            "external_reference_cells": 7163,
+            "tree_best_iteration": 158,
+            "selected_blend_family_accuracy": 0.8292682926829268
+          },
+          {
+            "fold": 2,
+            "internal_family_accuracy": 0.8306451612903226,
+            "validation_family_cells": 124,
+            "external_reference_cells": 7163,
+            "tree_best_iteration": 194,
+            "selected_blend_family_accuracy": 0.8548387096774194
+          },
+          {
+            "fold": 3,
+            "internal_family_accuracy": 0.8114754098360656,
+            "validation_family_cells": 122,
+            "external_reference_cells": 7163,
+            "tree_best_iteration": 126,
+            "selected_blend_family_accuracy": 0.819672131147541
+          },
+          {
+            "fold": 4,
+            "internal_family_accuracy": 0.8360655737704918,
+            "validation_family_cells": 122,
+            "external_reference_cells": 7163,
+            "tree_best_iteration": 180,
+            "selected_blend_family_accuracy": 0.8524590163934426
+          }
+        ],
+        "external_reference": true,
+        "selected_external_probability_weight": 0.30000000000000004,
+        "external_weight_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.8268839103869654
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.8289205702647657
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.8329938900203666
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.8391038696537678
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.835030549898167
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.8329938900203666
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.8370672097759674
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.8309572301425662
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.8167006109979633
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.8167006109979633
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.8065173116089613
+          }
+        ]
+      },
+      "gate": {
+        "gate": 0.3,
+        "confidence_cap": 0.55,
+        "weight": 0.75,
+        "delta_correct": 15,
+        "fold_delta_correct": [
+          4,
+          7,
+          2,
+          2
+        ],
+        "selected_cells": 547,
+        "stable": true
+      },
+      "test_cells_modified": 529,
+      "cumulative_metrics": {
+        "accuracy": 0.791,
+        "macro_f1": 0.7450248241615803
+      }
+    },
+    "peripheral_glia": {
+      "labels": [
+        "peripheral_glia",
+        "Schwann_cell"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "internal_family_accuracy": 0.6111111111111112,
+            "validation_family_cells": 18,
+            "external_reference_cells": 1974,
+            "tree_best_iteration": 81,
+            "selected_blend_family_accuracy": 0.7222222222222222
+          },
+          {
+            "fold": 2,
+            "internal_family_accuracy": 0.8235294117647058,
+            "validation_family_cells": 17,
+            "external_reference_cells": 1974,
+            "tree_best_iteration": 200,
+            "selected_blend_family_accuracy": 0.9411764705882353
+          },
+          {
+            "fold": 3,
+            "internal_family_accuracy": 0.631578947368421,
+            "validation_family_cells": 19,
+            "external_reference_cells": 1974,
+            "tree_best_iteration": 70,
+            "selected_blend_family_accuracy": 0.7368421052631579
+          },
+          {
+            "fold": 4,
+            "internal_family_accuracy": 0.8888888888888888,
+            "validation_family_cells": 18,
+            "external_reference_cells": 1974,
+            "tree_best_iteration": 238,
+            "selected_blend_family_accuracy": 0.8888888888888888
+          }
+        ],
+        "external_reference": true,
+        "selected_external_probability_weight": 0.5,
+        "external_weight_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.7361111111111112
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.7916666666666666
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.8055555555555556
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.8194444444444444
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.8194444444444444
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.8194444444444444
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.8055555555555556
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.8055555555555556
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.8055555555555556
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.8055555555555556
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.8055555555555556
+          }
+        ]
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "stable": true,
+        "skipped": true
+      },
+      "test_cells_modified": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.791,
+        "macro_f1": 0.7450248241615803
+      }
+    }
+  },
+  "baseline_top_confusions": [
+    {
+      "count": 85,
+      "truth": "oligodendrocyte_1",
+      "prediction": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "count": 60,
+      "truth": "oligodendrocyte_progenitor_2",
+      "prediction": "oligodendrocyte_1"
+    },
+    {
+      "count": 56,
+      "truth": "oligodendrocyte_progenitor_2",
+      "prediction": "oligodendrocyte_2"
+    },
+    {
+      "count": 53,
+      "truth": "oligodendrocyte_2",
+      "prediction": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "count": 49,
+      "truth": "astrocyte_2",
+      "prediction": "astrocyte_1"
+    },
+    {
+      "count": 35,
+      "truth": "astrocyte_1",
+      "prediction": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "count": 29,
+      "truth": "endothelial",
+      "prediction": "astrocyte_1"
+    },
+    {
+      "count": 29,
+      "truth": "oligodendrocyte_1",
+      "prediction": "astrocyte_1"
+    },
+    {
+      "count": 25,
+      "truth": "oligodendrocyte_progenitor_2",
+      "prediction": "astrocyte_1"
+    },
+    {
+      "count": 24,
+      "truth": "oligodendrocyte_1",
+      "prediction": "oligodendrocyte_2"
+    },
+    {
+      "count": 21,
+      "truth": "oligodendrocyte_progenitor_1",
+      "prediction": "oligodendrocyte_precursor_cell"
+    },
+    {
+      "count": 21,
+      "truth": "DH_in_Klhl14",
+      "prediction": "DH_in_Cdh3"
+    },
+    {
+      "count": 20,
+      "truth": "astrocyte_1",
+      "prediction": "astrocyte_2"
+    },
+    {
+      "count": 20,
+      "truth": "endothelial",
+      "prediction": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "count": 20,
+      "truth": "astrocyte_1",
+      "prediction": "endothelial"
+    }
+  ],
+  "final_top_confusions": [
+    {
+      "count": 106,
+      "truth": "oligodendrocyte_progenitor_2",
+      "prediction": "oligodendrocyte_1"
+    },
+    {
+      "count": 59,
+      "truth": "oligodendrocyte_progenitor_2",
+      "prediction": "oligodendrocyte_2"
+    },
+    {
+      "count": 46,
+      "truth": "oligodendrocyte_1",
+      "prediction": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "count": 32,
+      "truth": "astrocyte_1",
+      "prediction": "astrocyte_2"
+    },
+    {
+      "count": 28,
+      "truth": "oligodendrocyte_2",
+      "prediction": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "count": 25,
+      "truth": "oligodendrocyte_progenitor_2",
+      "prediction": "astrocyte_1"
+    },
+    {
+      "count": 25,
+      "truth": "oligodendrocyte_1",
+      "prediction": "astrocyte_1"
+    },
+    {
+      "count": 24,
+      "truth": "endothelial",
+      "prediction": "astrocyte_1"
+    },
+    {
+      "count": 23,
+      "truth": "astrocyte_1",
+      "prediction": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "count": 22,
+      "truth": "oligodendrocyte_progenitor_1",
+      "prediction": "oligodendrocyte_precursor_cell"
+    },
+    {
+      "count": 22,
+      "truth": "astrocyte_2",
+      "prediction": "astrocyte_1"
+    },
+    {
+      "count": 21,
+      "truth": "DH_in_Klhl14",
+      "prediction": "DH_in_Cdh3"
+    },
+    {
+      "count": 20,
+      "truth": "endothelial",
+      "prediction": "oligodendrocyte_1"
+    },
+    {
+      "count": 19,
+      "truth": "astrocyte_1",
+      "prediction": "oligodendrocyte_1"
+    },
+    {
+      "count": 19,
+      "truth": "meninges_2",
+      "prediction": "meninges_1"
+    }
+  ]
+}

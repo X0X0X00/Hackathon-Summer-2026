@@ -1,0 +1,74 @@
+{
+  "source_order": [
+    "logistic",
+    "lightgbm_original",
+    "lightgbm_wide",
+    "lightgbm_compact"
+  ],
+  "weights": [
+    0.3,
+    0.0,
+    0.3,
+    0.4
+  ],
+  "ensemble": {
+    "accuracy": 0.7702,
+    "macro_f1": 0.7198926146840641
+  },
+  "variants": [
+    {
+      "name": "wide",
+      "accuracy": 0.7536,
+      "macro_f1": 0.6879377877184543,
+      "folds": [
+        {
+          "fold": 1,
+          "accuracy": 0.7688,
+          "best_iteration": 199
+        },
+        {
+          "fold": 2,
+          "accuracy": 0.7624,
+          "best_iteration": 220
+        },
+        {
+          "fold": 3,
+          "accuracy": 0.7432,
+          "best_iteration": 195
+        },
+        {
+          "fold": 4,
+          "accuracy": 0.74,
+          "best_iteration": 214
+        }
+      ]
+    },
+    {
+      "name": "compact",
+      "accuracy": 0.7522,
+      "macro_f1": 0.684122203066475,
+      "folds": [
+        {
+          "fold": 1,
+          "accuracy": 0.7608,
+          "best_iteration": 162
+        },
+        {
+          "fold": 2,
+          "accuracy": 0.7568,
+          "best_iteration": 180
+        },
+        {
+          "fold": 3,
+          "accuracy": 0.7504,
+          "best_iteration": 173
+        },
+        {
+          "fold": 4,
+          "accuracy": 0.7408,
+          "best_iteration": 170
+        }
+      ]
+    }
+  ]
+}

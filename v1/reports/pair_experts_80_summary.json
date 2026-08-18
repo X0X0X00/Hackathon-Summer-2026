@@ -1,0 +1,1285 @@
+{
+  "baseline": {
+    "accuracy": 0.7972,
+    "macro_f1": 0.7624360996241798,
+    "correct": 3986
+  },
+  "pairs": {
+    "opc2_vs_oligo1": {
+      "labels": [
+        "oligodendrocyte_progenitor_2",
+        "oligodendrocyte_1"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 731,
+            "validation_family_cells": 243,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.7736625514403292,
+            "reference_accuracy": 0.7530864197530864,
+            "internal_tree_best_iteration": 169
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 731,
+            "validation_family_cells": 243,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.7942386831275721,
+            "reference_accuracy": 0.823045267489712,
+            "internal_tree_best_iteration": 240
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 730,
+            "validation_family_cells": 244,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.7950819672131147,
+            "reference_accuracy": 0.7786885245901639,
+            "internal_tree_best_iteration": 189
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 730,
+            "validation_family_cells": 244,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.7663934426229508,
+            "reference_accuracy": 0.7827868852459017,
+            "internal_tree_best_iteration": 125
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.7823408624229979
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.7833675564681725
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.795687885010267
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.7987679671457906
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.8008213552361396
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.795687885010267
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.7915811088295688
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.7895277207392197
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.7895277207392197
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.7885010266940452
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.784394250513347
+          }
+        ],
+        "selected_external_weight": 0.4,
+        "selected_family_accuracy": 0.8008213552361396
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7972,
+        "macro_f1": 0.7624360996241798,
+        "correct": 3986
+      }
+    },
+    "opc2_vs_oligo2": {
+      "labels": [
+        "oligodendrocyte_progenitor_2",
+        "oligodendrocyte_2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 842,
+            "validation_family_cells": 280,
+            "external_family_cells": 5000,
+            "internal_accuracy": 0.9071428571428571,
+            "reference_accuracy": 0.8821428571428571,
+            "internal_tree_best_iteration": 392
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 842,
+            "validation_family_cells": 280,
+            "external_family_cells": 5000,
+            "internal_accuracy": 0.8785714285714286,
+            "reference_accuracy": 0.8857142857142857,
+            "internal_tree_best_iteration": 306
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 841,
+            "validation_family_cells": 281,
+            "external_family_cells": 5000,
+            "internal_accuracy": 0.8825622775800712,
+            "reference_accuracy": 0.8932384341637011,
+            "internal_tree_best_iteration": 422
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 841,
+            "validation_family_cells": 281,
+            "external_family_cells": 5000,
+            "internal_accuracy": 0.8861209964412812,
+            "reference_accuracy": 0.8754448398576512,
+            "internal_tree_best_iteration": 387
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.8885918003565062
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.8868092691622104
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.8903743315508021
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.8948306595365418
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.8992869875222816
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.8992869875222816
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.8957219251336899
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.8957219251336899
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.8894830659536542
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.8885918003565062
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.8841354723707665
+          }
+        ],
+        "selected_external_weight": 0.5,
+        "selected_family_accuracy": 0.8992869875222816
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7972,
+        "macro_f1": 0.7624360996241798,
+        "correct": 3986
+      }
+    },
+    "oligo1_vs_oligo2": {
+      "labels": [
+        "oligodendrocyte_1",
+        "oligodendrocyte_2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 517,
+            "validation_family_cells": 173,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.9364161849710982,
+            "reference_accuracy": 0.9248554913294798,
+            "internal_tree_best_iteration": 312
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 519,
+            "validation_family_cells": 171,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.9122807017543859,
+            "reference_accuracy": 0.9415204678362573,
+            "internal_tree_best_iteration": 477
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 517,
+            "validation_family_cells": 173,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.953757225433526,
+            "reference_accuracy": 0.9364161849710982,
+            "internal_tree_best_iteration": 475
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 517,
+            "validation_family_cells": 173,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.9364161849710982,
+            "reference_accuracy": 0.9421965317919075,
+            "internal_tree_best_iteration": 412
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.9347826086956522
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.9318840579710145
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9318840579710145
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.9333333333333333
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.9347826086956522
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.9376811594202898
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.9376811594202898
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.936231884057971
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.936231884057971
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.936231884057971
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.936231884057971
+          }
+        ],
+        "selected_external_weight": 0.6000000000000001,
+        "selected_family_accuracy": 0.9376811594202898
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7972,
+        "macro_f1": 0.7624360996241798,
+        "correct": 3986
+      }
+    },
+    "opc2_vs_astro1": {
+      "labels": [
+        "oligodendrocyte_progenitor_2",
+        "astrocyte_1"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 958,
+            "validation_family_cells": 318,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.9025157232704403,
+            "reference_accuracy": 0.9150943396226415,
+            "internal_tree_best_iteration": 442
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 956,
+            "validation_family_cells": 320,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.93125,
+            "reference_accuracy": 0.946875,
+            "internal_tree_best_iteration": 480
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 957,
+            "validation_family_cells": 319,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.9278996865203761,
+            "reference_accuracy": 0.9216300940438872,
+            "internal_tree_best_iteration": 467
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 957,
+            "validation_family_cells": 319,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.9059561128526645,
+            "reference_accuracy": 0.9028213166144201,
+            "internal_tree_best_iteration": 438
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.9169278996865203
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.920846394984326
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9231974921630094
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.9216300940438872
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.9224137931034483
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.9224137931034483
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.9224137931034483
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.9216300940438872
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.9200626959247649
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.920846394984326
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.9216300940438872
+          }
+        ],
+        "selected_external_weight": 0.2,
+        "selected_family_accuracy": 0.9231974921630094
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7972,
+        "macro_f1": 0.7624360996241798,
+        "correct": 3986
+      }
+    },
+    "endothelial_vs_astro1": {
+      "labels": [
+        "endothelial",
+        "astrocyte_1"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 673,
+            "validation_family_cells": 223,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.9013452914798207,
+            "reference_accuracy": 0.9103139013452914,
+            "internal_tree_best_iteration": 477
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 671,
+            "validation_family_cells": 225,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.9244444444444444,
+            "reference_accuracy": 0.9244444444444444,
+            "internal_tree_best_iteration": 469
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 672,
+            "validation_family_cells": 224,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.9017857142857143,
+            "reference_accuracy": 0.90625,
+            "internal_tree_best_iteration": 474
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 672,
+            "validation_family_cells": 224,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.8928571428571429,
+            "reference_accuracy": 0.8883928571428571,
+            "internal_tree_best_iteration": 385
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.9051339285714286
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.9107142857142857
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9118303571428571
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.9107142857142857
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.9107142857142857
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.9073660714285714
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.9129464285714286
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.9151785714285714
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.9129464285714286
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.9095982142857143
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.9073660714285714
+          }
+        ],
+        "selected_external_weight": 0.7000000000000001,
+        "selected_family_accuracy": 0.9151785714285714
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7972,
+        "macro_f1": 0.7624360996241798,
+        "correct": 3986
+      }
+    },
+    "endothelial_vs_oligo1": {
+      "labels": [
+        "endothelial",
+        "oligodendrocyte_1"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 446,
+            "validation_family_cells": 148,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.8851351351351351,
+            "reference_accuracy": 0.918918918918919,
+            "internal_tree_best_iteration": 342
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 446,
+            "validation_family_cells": 148,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.8513513513513513,
+            "reference_accuracy": 0.8648648648648649,
+            "internal_tree_best_iteration": 284
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 445,
+            "validation_family_cells": 149,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.8926174496644296,
+            "reference_accuracy": 0.9463087248322147,
+            "internal_tree_best_iteration": 417
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 445,
+            "validation_family_cells": 149,
+            "external_family_cells": 4994,
+            "internal_accuracy": 0.8859060402684564,
+            "reference_accuracy": 0.912751677852349,
+            "internal_tree_best_iteration": 283
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.8787878787878788
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.8804713804713805
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.8922558922558923
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.8939393939393939
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.8956228956228957
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.8973063973063973
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.9023569023569024
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.9040404040404041
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.9057239057239057
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.9107744107744108
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.9107744107744108
+          }
+        ],
+        "selected_external_weight": 0.9,
+        "selected_family_accuracy": 0.9107744107744108
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7972,
+        "macro_f1": 0.7624360996241798,
+        "correct": 3986
+      }
+    },
+    "astro1_vs_astro2": {
+      "labels": [
+        "astrocyte_1",
+        "astrocyte_2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 577,
+            "validation_family_cells": 192,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.8645833333333334,
+            "reference_accuracy": 0.859375,
+            "internal_tree_best_iteration": 176
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 576,
+            "validation_family_cells": 193,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.9119170984455959,
+            "reference_accuracy": 0.8652849740932642,
+            "internal_tree_best_iteration": 473
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 577,
+            "validation_family_cells": 192,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.8958333333333334,
+            "reference_accuracy": 0.8645833333333334,
+            "internal_tree_best_iteration": 382
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 577,
+            "validation_family_cells": 192,
+            "external_family_cells": 4999,
+            "internal_accuracy": 0.8854166666666666,
+            "reference_accuracy": 0.8697916666666666,
+            "internal_tree_best_iteration": 277
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.8894668400520156
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.8946684005201561
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9011703511053316
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.9076723016905072
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.9076723016905072
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.9063719115734721
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.9024707412223667
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.8920676202860858
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.8790637191157347
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.8686605981794538
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.8647594278283485
+          }
+        ],
+        "selected_external_weight": 0.4,
+        "selected_family_accuracy": 0.9076723016905072
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7972,
+        "macro_f1": 0.7624360996241798,
+        "correct": 3986
+      }
+    },
+    "opc1_vs_precursor": {
+      "labels": [
+        "oligodendrocyte_progenitor_1",
+        "oligodendrocyte_precursor_cell"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 120,
+            "validation_family_cells": 39,
+            "external_family_cells": 3600,
+            "internal_accuracy": 0.6923076923076923,
+            "reference_accuracy": 0.7435897435897436,
+            "internal_tree_best_iteration": 89
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 119,
+            "validation_family_cells": 40,
+            "external_family_cells": 3600,
+            "internal_accuracy": 0.8,
+            "reference_accuracy": 0.875,
+            "internal_tree_best_iteration": 96
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 118,
+            "validation_family_cells": 41,
+            "external_family_cells": 3600,
+            "internal_accuracy": 0.7560975609756098,
+            "reference_accuracy": 0.7804878048780488,
+            "internal_tree_best_iteration": 76
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 120,
+            "validation_family_cells": 39,
+            "external_family_cells": 3600,
+            "internal_accuracy": 0.7948717948717948,
+            "reference_accuracy": 0.8205128205128205,
+            "internal_tree_best_iteration": 185
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.7610062893081762
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.7735849056603774
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.779874213836478
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.779874213836478
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.7987421383647799
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.8113207547169812
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.8176100628930818
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.8176100628930818
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.8113207547169812
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.8050314465408805
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.8050314465408805
+          }
+        ],
+        "selected_external_weight": 0.6000000000000001,
+        "selected_family_accuracy": 0.8176100628930818
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7972,
+        "macro_f1": 0.7624360996241798,
+        "correct": 3986
+      }
+    },
+    "meninges1_vs_meninges2": {
+      "labels": [
+        "meninges_1",
+        "meninges_2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 81,
+            "validation_family_cells": 28,
+            "external_family_cells": 3113,
+            "internal_accuracy": 0.5714285714285714,
+            "reference_accuracy": 0.6428571428571429,
+            "internal_tree_best_iteration": 44
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 81,
+            "validation_family_cells": 28,
+            "external_family_cells": 3113,
+            "internal_accuracy": 0.42857142857142855,
+            "reference_accuracy": 0.7142857142857143,
+            "internal_tree_best_iteration": 1
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 83,
+            "validation_family_cells": 26,
+            "external_family_cells": 3113,
+            "internal_accuracy": 0.6153846153846154,
+            "reference_accuracy": 0.5769230769230769,
+            "internal_tree_best_iteration": 5
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 82,
+            "validation_family_cells": 27,
+            "external_family_cells": 3113,
+            "internal_accuracy": 0.6296296296296297,
+            "reference_accuracy": 0.7037037037037037,
+            "internal_tree_best_iteration": 184
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.5596330275229358
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.5688073394495413
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.5688073394495413
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.6055045871559633
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.6146788990825688
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.5963302752293578
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.6330275229357798
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.6513761467889908
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.6513761467889908
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.6788990825688074
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.6605504587155964
+          }
+        ],
+        "selected_external_weight": 0.9,
+        "selected_family_accuracy": 0.6788990825688074
+      },
+      "gate": {
+        "gate": 0.45,
+        "confidence_cap": 0.55,
+        "weight": 1.0,
+        "delta_correct": 6,
+        "fold_delta_correct": [
+          1,
+          4,
+          0,
+          1
+        ],
+        "selected_cells": 102,
+        "strictly_stable": true
+      },
+      "test_cells_selected": 92,
+      "cumulative_metrics": {
+        "accuracy": 0.7984,
+        "macro_f1": 0.7652748442768413,
+        "correct": 3992
+      }
+    },
+    "endothelial_vs_pericyte": {
+      "labels": [
+        "endothelial",
+        "pericyte"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 273,
+            "validation_family_cells": 90,
+            "external_family_cells": 3519,
+            "internal_accuracy": 0.9555555555555556,
+            "reference_accuracy": 0.9111111111111111,
+            "internal_tree_best_iteration": 212
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 272,
+            "validation_family_cells": 91,
+            "external_family_cells": 3519,
+            "internal_accuracy": 0.9340659340659341,
+            "reference_accuracy": 0.9120879120879121,
+            "internal_tree_best_iteration": 235
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 272,
+            "validation_family_cells": 91,
+            "external_family_cells": 3519,
+            "internal_accuracy": 0.9230769230769231,
+            "reference_accuracy": 0.8901098901098901,
+            "internal_tree_best_iteration": 126
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 272,
+            "validation_family_cells": 91,
+            "external_family_cells": 3519,
+            "internal_accuracy": 0.9560439560439561,
+            "reference_accuracy": 0.9230769230769231,
+            "internal_tree_best_iteration": 201
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.9421487603305785
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.9393939393939394
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.9393939393939394
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.9421487603305785
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.9421487603305785
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.9366391184573003
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.9449035812672176
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.9393939393939394
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.931129476584022
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.9228650137741047
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.9090909090909091
+          }
+        ],
+        "selected_external_weight": 0.6000000000000001,
+        "selected_family_accuracy": 0.9449035812672176
+      },
+      "gate": {
+        "gate": 1.01,
+        "confidence_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "strictly_stable": true,
+        "skipped": true
+      },
+      "test_cells_selected": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7984,
+        "macro_f1": 0.7652748442768413,
+        "correct": 3992
+      }
+    },
+    "peripheral_vs_schwann": {
+      "labels": [
+        "peripheral_glia",
+        "Schwann_cell"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_family_cells": 54,
+            "validation_family_cells": 18,
+            "external_family_cells": 1974,
+            "internal_accuracy": 0.6666666666666666,
+            "reference_accuracy": 0.7777777777777778,
+            "internal_tree_best_iteration": 63
+          },
+          {
+            "fold": 2,
+            "fit_family_cells": 55,
+            "validation_family_cells": 17,
+            "external_family_cells": 1974,
+            "internal_accuracy": 0.8235294117647058,
+            "reference_accuracy": 0.9411764705882353,
+            "internal_tree_best_iteration": 231
+          },
+          {
+            "fold": 3,
+            "fit_family_cells": 53,
+            "validation_family_cells": 19,
+            "external_family_cells": 1974,
+            "internal_accuracy": 0.5789473684210527,
+            "reference_accuracy": 0.7368421052631579,
+            "internal_tree_best_iteration": 48
+          },
+          {
+            "fold": 4,
+            "fit_family_cells": 54,
+            "validation_family_cells": 18,
+            "external_family_cells": 1974,
+            "internal_accuracy": 0.8333333333333334,
+            "reference_accuracy": 0.9444444444444444,
+            "internal_tree_best_iteration": 241
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "family_accuracy": 0.7222222222222222
+          },
+          {
+            "external_weight": 0.1,
+            "family_accuracy": 0.7916666666666666
+          },
+          {
+            "external_weight": 0.2,
+            "family_accuracy": 0.8055555555555556
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "family_accuracy": 0.8055555555555556
+          },
+          {
+            "external_weight": 0.4,
+            "family_accuracy": 0.8194444444444444
+          },
+          {
+            "external_weight": 0.5,
+            "family_accuracy": 0.8333333333333334
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "family_accuracy": 0.8194444444444444
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "family_accuracy": 0.8194444444444444
+          },
+          {
+            "external_weight": 0.8,
+            "family_accuracy": 0.8333333333333334
+          },
+          {
+            "external_weight": 0.9,
+            "family_accuracy": 0.8472222222222222
+          },
+          {
+            "external_weight": 1.0,
+            "family_accuracy": 0.8472222222222222
+          }
+        ],
+        "selected_external_weight": 0.9,
+        "selected_family_accuracy": 0.8472222222222222
+      },
+      "gate": {
+        "gate": 0.6,
+        "confidence_cap": 0.55,
+        "weight": 1.0,
+        "delta_correct": 3,
+        "fold_delta_correct": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "selected_cells": 65,
+        "strictly_stable": true
+      },
+      "test_cells_selected": 47,
+      "cumulative_metrics": {
+        "accuracy": 0.799,
+        "macro_f1": 0.7669763722400514,
+        "correct": 3995
+      }
+    }
+  },
+  "final": {
+    "accuracy": 0.799,
+    "macro_f1": 0.7669763722400514,
+    "correct": 3995
+  },
+  "delta_correct": 9,
+  "fold_delta_correct": [
+    2,
+    5,
+    0,
+    2
+  ],
+  "test_label_changes": 26
+}

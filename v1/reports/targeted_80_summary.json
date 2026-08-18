@@ -1,0 +1,403 @@
+{
+  "baseline": {
+    "accuracy": 0.791,
+    "macro_f1": 0.7450248241615803,
+    "correct": 3955
+  },
+  "pair_experts": {
+    "oligo_p2_vs_oligo1": {
+      "labels": [
+        "oligodendrocyte_progenitor_2",
+        "oligodendrocyte_1"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_pair_cells": 731,
+            "validation_pair_cells": 243,
+            "external_pair_cells": 4994,
+            "tree_best_iteration": 293,
+            "internal_pair_accuracy": 0.7695473251028807,
+            "external_pair_accuracy": 0.7530864197530864
+          },
+          {
+            "fold": 2,
+            "fit_pair_cells": 731,
+            "validation_pair_cells": 243,
+            "external_pair_cells": 4994,
+            "tree_best_iteration": 327,
+            "internal_pair_accuracy": 0.8106995884773662,
+            "external_pair_accuracy": 0.823045267489712
+          },
+          {
+            "fold": 3,
+            "fit_pair_cells": 730,
+            "validation_pair_cells": 244,
+            "external_pair_cells": 4994,
+            "tree_best_iteration": 242,
+            "internal_pair_accuracy": 0.7909836065573771,
+            "external_pair_accuracy": 0.7827868852459017
+          },
+          {
+            "fold": 4,
+            "fit_pair_cells": 730,
+            "validation_pair_cells": 244,
+            "external_pair_cells": 4994,
+            "tree_best_iteration": 263,
+            "internal_pair_accuracy": 0.7827868852459017,
+            "external_pair_accuracy": 0.7991803278688525
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "pair_accuracy": 0.7885010266940452
+          },
+          {
+            "external_weight": 0.1,
+            "pair_accuracy": 0.7905544147843943
+          },
+          {
+            "external_weight": 0.2,
+            "pair_accuracy": 0.7997946611909651
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "pair_accuracy": 0.8008213552361396
+          },
+          {
+            "external_weight": 0.4,
+            "pair_accuracy": 0.8039014373716632
+          },
+          {
+            "external_weight": 0.5,
+            "pair_accuracy": 0.7967145790554415
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "pair_accuracy": 0.7905544147843943
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "pair_accuracy": 0.7885010266940452
+          },
+          {
+            "external_weight": 0.8,
+            "pair_accuracy": 0.784394250513347
+          }
+        ],
+        "selected_external_weight": 0.4,
+        "selected_pair_accuracy": 0.8039014373716632
+      },
+      "gate": {
+        "mass_gate": 0.4,
+        "confidence_cap": 0.55,
+        "specialist_confidence": 0.65,
+        "base_margin_cap": 1.01,
+        "weight": 1.0,
+        "delta_correct": 2,
+        "fold_delta_correct": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "selected_cells": 731,
+        "stable": true
+      },
+      "test_cells_modified": 736,
+      "cumulative_metrics": {
+        "accuracy": 0.7914,
+        "macro_f1": 0.7451038969604447,
+        "correct": 3957
+      }
+    },
+    "oligo_p2_vs_oligo2": {
+      "labels": [
+        "oligodendrocyte_progenitor_2",
+        "oligodendrocyte_2"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_pair_cells": 842,
+            "validation_pair_cells": 280,
+            "external_pair_cells": 5000,
+            "tree_best_iteration": 440,
+            "internal_pair_accuracy": 0.9035714285714286,
+            "external_pair_accuracy": 0.8928571428571429
+          },
+          {
+            "fold": 2,
+            "fit_pair_cells": 842,
+            "validation_pair_cells": 280,
+            "external_pair_cells": 5000,
+            "tree_best_iteration": 471,
+            "internal_pair_accuracy": 0.8714285714285714,
+            "external_pair_accuracy": 0.8857142857142857
+          },
+          {
+            "fold": 3,
+            "fit_pair_cells": 841,
+            "validation_pair_cells": 281,
+            "external_pair_cells": 5000,
+            "tree_best_iteration": 520,
+            "internal_pair_accuracy": 0.8861209964412812,
+            "external_pair_accuracy": 0.8896797153024911
+          },
+          {
+            "fold": 4,
+            "fit_pair_cells": 841,
+            "validation_pair_cells": 281,
+            "external_pair_cells": 5000,
+            "tree_best_iteration": 520,
+            "internal_pair_accuracy": 0.8790035587188612,
+            "external_pair_accuracy": 0.8718861209964412
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "pair_accuracy": 0.8850267379679144
+          },
+          {
+            "external_weight": 0.1,
+            "pair_accuracy": 0.8885918003565062
+          },
+          {
+            "external_weight": 0.2,
+            "pair_accuracy": 0.8921568627450981
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "pair_accuracy": 0.8948306595365418
+          },
+          {
+            "external_weight": 0.4,
+            "pair_accuracy": 0.8975044563279857
+          },
+          {
+            "external_weight": 0.5,
+            "pair_accuracy": 0.8983957219251337
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "pair_accuracy": 0.8948306595365418
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "pair_accuracy": 0.8939393939393939
+          },
+          {
+            "external_weight": 0.8,
+            "pair_accuracy": 0.8903743315508021
+          }
+        ],
+        "selected_external_weight": 0.5,
+        "selected_pair_accuracy": 0.8983957219251337
+      },
+      "gate": {
+        "mass_gate": 1.01,
+        "confidence_cap": 0.0,
+        "specialist_confidence": 1.01,
+        "base_margin_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "stable": true,
+        "skipped": true
+      },
+      "test_cells_modified": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7914,
+        "macro_f1": 0.7451038969604447,
+        "correct": 3957
+      }
+    },
+    "oligo_p1_vs_precursor": {
+      "labels": [
+        "oligodendrocyte_progenitor_1",
+        "oligodendrocyte_precursor_cell"
+      ],
+      "training": {
+        "folds": [
+          {
+            "fold": 1,
+            "fit_pair_cells": 120,
+            "validation_pair_cells": 39,
+            "external_pair_cells": 3600,
+            "tree_best_iteration": 145,
+            "internal_pair_accuracy": 0.717948717948718,
+            "external_pair_accuracy": 0.7435897435897436
+          },
+          {
+            "fold": 2,
+            "fit_pair_cells": 119,
+            "validation_pair_cells": 40,
+            "external_pair_cells": 3600,
+            "tree_best_iteration": 110,
+            "internal_pair_accuracy": 0.8,
+            "external_pair_accuracy": 0.875
+          },
+          {
+            "fold": 3,
+            "fit_pair_cells": 118,
+            "validation_pair_cells": 41,
+            "external_pair_cells": 3600,
+            "tree_best_iteration": 102,
+            "internal_pair_accuracy": 0.7804878048780488,
+            "external_pair_accuracy": 0.7804878048780488
+          },
+          {
+            "fold": 4,
+            "fit_pair_cells": 120,
+            "validation_pair_cells": 39,
+            "external_pair_cells": 3600,
+            "tree_best_iteration": 147,
+            "internal_pair_accuracy": 0.8205128205128205,
+            "external_pair_accuracy": 0.8205128205128205
+          }
+        ],
+        "blend_scores": [
+          {
+            "external_weight": 0.0,
+            "pair_accuracy": 0.779874213836478
+          },
+          {
+            "external_weight": 0.1,
+            "pair_accuracy": 0.7861635220125787
+          },
+          {
+            "external_weight": 0.2,
+            "pair_accuracy": 0.7924528301886793
+          },
+          {
+            "external_weight": 0.30000000000000004,
+            "pair_accuracy": 0.7861635220125787
+          },
+          {
+            "external_weight": 0.4,
+            "pair_accuracy": 0.7861635220125787
+          },
+          {
+            "external_weight": 0.5,
+            "pair_accuracy": 0.7987421383647799
+          },
+          {
+            "external_weight": 0.6000000000000001,
+            "pair_accuracy": 0.7924528301886793
+          },
+          {
+            "external_weight": 0.7000000000000001,
+            "pair_accuracy": 0.8176100628930818
+          },
+          {
+            "external_weight": 0.8,
+            "pair_accuracy": 0.8176100628930818
+          }
+        ],
+        "selected_external_weight": 0.7000000000000001,
+        "selected_pair_accuracy": 0.8176100628930818
+      },
+      "gate": {
+        "mass_gate": 1.01,
+        "confidence_cap": 0.0,
+        "specialist_confidence": 1.01,
+        "base_margin_cap": 0.0,
+        "weight": 0.0,
+        "delta_correct": 0,
+        "fold_delta_correct": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_cells": 0,
+        "stable": true,
+        "skipped": true
+      },
+      "test_cells_modified": 0,
+      "cumulative_metrics": {
+        "accuracy": 0.7914,
+        "macro_f1": 0.7451038969604447,
+        "correct": 3957
+      }
+    }
+  },
+  "after_pair_experts": {
+    "accuracy": 0.7914,
+    "macro_f1": 0.7451038969604447,
+    "correct": 3957
+  },
+  "spatial_knn": {
+    "embedding": "log_raw_cosine",
+    "distance_metric": "cosine",
+    "k": 20,
+    "smoothing": 1.5,
+    "fold_neighbors": [
+      {
+        "fold": 1,
+        "minimum_neighbors": 0,
+        "median_neighbors": 20.0,
+        "maximum_neighbors": 20
+      },
+      {
+        "fold": 2,
+        "minimum_neighbors": 0,
+        "median_neighbors": 20.0,
+        "maximum_neighbors": 20
+      },
+      {
+        "fold": 3,
+        "minimum_neighbors": 0,
+        "median_neighbors": 20.0,
+        "maximum_neighbors": 20
+      },
+      {
+        "fold": 4,
+        "minimum_neighbors": 1,
+        "median_neighbors": 20.0,
+        "maximum_neighbors": 20
+      }
+    ],
+    "method": "multiplicative",
+    "weight": 0.05,
+    "confidence_cap": 0.55,
+    "spatial_confidence": 0.25,
+    "delta_correct": 9,
+    "fold_delta_correct": [
+      2,
+      2,
+      3,
+      2
+    ],
+    "selected_cells": 410,
+    "stable": true,
+    "test_cells_modified": 521,
+    "cumulative_metrics": {
+      "accuracy": 0.7932,
+      "macro_f1": 0.7457577144493559,
+      "correct": 3966
+    }
+  },
+  "final": {
+    "accuracy": 0.7932,
+    "macro_f1": 0.7457577144493559,
+    "correct": 3966
+  },
+  "delta_correct": 11,
+  "fold_delta_correct": [
+    3,
+    3,
+    3,
+    2
+  ]
+}
