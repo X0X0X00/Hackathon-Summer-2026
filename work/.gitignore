@@ -1,0 +1,9 @@
+# regenerable binaries (see README.md "Reproduce the submission")
+*.npz
+__pycache__/
+cache/
+oof/
+experiments/bag_runs/
+experiments/fold_runs/
+experiments/catxgb_runs/
+experiments/rerank_cache/

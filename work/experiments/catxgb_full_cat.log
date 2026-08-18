@@ -1,0 +1,16 @@
+  fold0: 0.7470
+  fold1: 0.7780
+  fold2: 0.7680
+  fold3: 0.7310
+  fold4: 0.7390
+  OOF acc=0.7526  +EI=0.7548
+cat_s0: acc=0.7526 +EI=0.7548 (743s)
+  fold0: 0.7450
+  fold1: 0.7710
+  fold2: 0.7520
+  fold3: 0.7460
+  fold4: 0.7480
+  OOF acc=0.7524  +EI=0.7552
+cat_s1: acc=0.7524 +EI=0.7552 (730s)
+BAG cat_bag3 (2 runs): acc=0.7616 +EI=0.7632
+saved oof/cat_bag3.npz  acc=0.7616 +EI=0.7632

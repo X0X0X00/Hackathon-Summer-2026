@@ -1,0 +1,29 @@
+
+=== per-member ===
+bag8mix    full=0.7704 +EI=0.7716 dev(0-2)=0.7720 hold(3-4)=0.7680 hold+EI=0.7700 folds=0.7600 0.7870 0.7690 0.7680 0.7680
+cat_bag3   full=0.7626 +EI=0.7646 dev(0-2)=0.7680 hold(3-4)=0.7545 hold+EI=0.7565 folds=0.7540 0.7790 0.7710 0.7490 0.7600
+xgb_bag3   full=0.7600 +EI=0.7620 dev(0-2)=0.7660 hold(3-4)=0.7510 hold+EI=0.7540 folds=0.7460 0.7860 0.7660 0.7490 0.7530
+
+=== argmax agreement with bag8mix (train OOF, all 5000) ===
+cat_bag3   agree=90.40%  agree(hold)=90.95%  test-agree=90.04%
+xgb_bag3   agree=94.90%  agree(hold)=94.90%  test-agree=95.20%
+
+=== fixed unweighted blends (no tuning; holdout 3-4 is THE number) ===
+bag8mix                      hold(3-4)=0.7680 hold+EI=0.7700 | dev(0-2)=0.7720 | full=0.7704 +EI=0.7716 | folds=0.7600 0.7870 0.7690 0.7680 0.7680
+bag8mix+cat_bag3             hold(3-4)=0.7620 hold+EI=0.7625 | dev(0-2)=0.7743 | full=0.7694 +EI=0.7704 | folds=0.7570 0.7900 0.7760 0.7580 0.7660
+bag8mix+xgb_bag3             hold(3-4)=0.7615 hold+EI=0.7635 | dev(0-2)=0.7717 | full=0.7676 +EI=0.7690 | folds=0.7560 0.7900 0.7690 0.7620 0.7610
+bag8mix+cat_bag3+xgb_bag3    hold(3-4)=0.7600 hold+EI=0.7610 | dev(0-2)=0.7737 | full=0.7682 +EI=0.7694 | folds=0.7580 0.7890 0.7740 0.7580 0.7620
+cat_bag3+xgb_bag3            hold(3-4)=0.7545 hold+EI=0.7570 | dev(0-2)=0.7727 | full=0.7654 +EI=0.7670 | folds=0.7530 0.7870 0.7780 0.7500 0.7590
+
+=== dev-tuned weights (grid on folds 0-2 -> holdout 3-4) ===
+  bag8mix+cat_bag3: w0.00:dev0.7720/hold0.7680 w0.05:dev0.7723/hold0.7675 w0.10:dev0.7733/hold0.7680 w0.15:dev0.7733/hold0.7670 w0.20:dev0.7720/hold0.7675 w0.25:dev0.7720/hold0.7655 w0.30:dev0.7737/hold0.7645 w0.35:dev0.7740/hold0.7665 w0.40:dev0.7740/hold0.7655 w0.45:dev0.7733/hold0.7650 w0.50:dev0.7743/hold0.7620
+    -> best-on-dev w=0.50 dev=0.7743  HOLD=0.7620 (+EI 0.7625)  vs bag8mix hold=0.7680
+  bag8mix+xgb_bag3: w0.00:dev0.7720/hold0.7680 w0.05:dev0.7723/hold0.7670 w0.10:dev0.7707/hold0.7660 w0.15:dev0.7707/hold0.7650 w0.20:dev0.7703/hold0.7650 w0.25:dev0.7693/hold0.7650 w0.30:dev0.7693/hold0.7650 w0.35:dev0.7713/hold0.7645 w0.40:dev0.7710/hold0.7640 w0.45:dev0.7720/hold0.7640 w0.50:dev0.7717/hold0.7615
+    -> best-on-dev w=0.05 dev=0.7723  HOLD=0.7670 (+EI 0.7690)  vs bag8mix hold=0.7680
+  3-way: best-on-dev wc=0.30 wx=0.20 dev=0.7753  HOLD=0.7625 (+EI 0.7635)  vs bag8mix hold=0.7680
+
+=== geometric-mean blends (fixed, unweighted) ===
+bag8mix+cat_bag3             hold(3-4)=0.7615 hold+EI=0.7620 | dev(0-2)=0.7747 | full=0.7694
+bag8mix+xgb_bag3             hold(3-4)=0.7625 hold+EI=0.7640 | dev(0-2)=0.7707 | full=0.7674
+bag8mix+cat_bag3+xgb_bag3    hold(3-4)=0.7585 hold+EI=0.7595 | dev(0-2)=0.7733 | full=0.7674
+cat_bag3+xgb_bag3            hold(3-4)=0.7555 hold+EI=0.7570 | dev(0-2)=0.7717 | full=0.7652

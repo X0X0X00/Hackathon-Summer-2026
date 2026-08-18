@@ -1,0 +1,23 @@
+  fold0: 0.7540
+  fold1: 0.7820
+  fold2: 0.7620
+  fold3: 0.7520
+  fold4: 0.7490
+  OOF acc=0.7598  +EI=0.7612
+xgb_s0: acc=0.7598 +EI=0.7612 (236s)
+  fold0: 0.7420
+  fold1: 0.7810
+  fold2: 0.7670
+  fold3: 0.7480
+  fold4: 0.7510
+  OOF acc=0.7578  +EI=0.7600
+xgb_s1: acc=0.7578 +EI=0.7600 (235s)
+  fold0: 0.7500
+  fold1: 0.7860
+  fold2: 0.7700
+  fold3: 0.7500
+  fold4: 0.7550
+  OOF acc=0.7622  +EI=0.7640
+xgb_s2: acc=0.7622 +EI=0.7640 (238s)
+BAG xgb_bag3 (3 runs): acc=0.7600 +EI=0.7620
+saved oof/xgb_bag3.npz  acc=0.7600 +EI=0.7620

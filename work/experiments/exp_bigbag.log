@@ -1,0 +1,120 @@
+jitter configs (fixed per seed):
+  seed 6: sp_k=10 ex_k=25 ff=0.6 leaves=95 bf=0.9
+  seed 7: sp_k=20 ex_k=25 ff=0.5 leaves=63 bf=0.7
+  seed 8: sp_k=15 ex_k=50 ff=0.6 leaves=63 bf=0.7
+  seed 9: sp_k=10 ex_k=50 ff=0.7 leaves=95 bf=0.8
+  seed 10: sp_k=10 ex_k=50 ff=0.7 leaves=95 bf=0.8
+  seed 11: sp_k=15 ex_k=35 ff=0.6 leaves=63 bf=0.7
+  seed 12: sp_k=20 ex_k=50 ff=0.5 leaves=63 bf=0.8
+  seed 13: sp_k=15 ex_k=50 ff=0.5 leaves=31 bf=0.8
+  seed 14: sp_k=10 ex_k=25 ff=0.7 leaves=95 bf=0.7
+  seed 15: sp_k=10 ex_k=25 ff=0.6 leaves=63 bf=0.7
+  seed 16: sp_k=20 ex_k=35 ff=0.7 leaves=63 bf=0.8
+  seed 17: sp_k=10 ex_k=50 ff=0.5 leaves=31 bf=0.9
+r3_s6 [sp_k=10 ex_k=25 ff=0.6 leaves=95 bf=0.9] ...
+  fold0: 0.7540
+  fold1: 0.7790
+  fold2: 0.7680
+  fold3: 0.7650
+  fold4: 0.7540
+  OOF acc=0.7640  +EI=0.7650
+r3_s6 [sp_k=10 ex_k=25 ff=0.6 leaves=95 bf=0.9]: acc=0.7640 +EI=0.7650 (305s)
+r3_s7 [sp_k=20 ex_k=25 ff=0.5 leaves=63 bf=0.7] ...
+  fold0: 0.7540
+  fold1: 0.7770
+  fold2: 0.7590
+  fold3: 0.7560
+  fold4: 0.7560
+  OOF acc=0.7604  +EI=0.7628
+r3_s7 [sp_k=20 ex_k=25 ff=0.5 leaves=63 bf=0.7]: acc=0.7604 +EI=0.7628 (342s)
+r3_s8 [sp_k=15 ex_k=50 ff=0.6 leaves=63 bf=0.7] ...
+  fold0: 0.7540
+  fold1: 0.7850
+  fold2: 0.7660
+  fold3: 0.7580
+  fold4: 0.7530
+  OOF acc=0.7632  +EI=0.7648
+r3_s8 [sp_k=15 ex_k=50 ff=0.6 leaves=63 bf=0.7]: acc=0.7632 +EI=0.7648 (309s)
+r3_s9 [sp_k=10 ex_k=50 ff=0.7 leaves=95 bf=0.8] ...
+  fold0: 0.7510
+  fold1: 0.7850
+  fold2: 0.7660
+  fold3: 0.7620
+  fold4: 0.7680
+  OOF acc=0.7664  +EI=0.7676
+r3_s9 [sp_k=10 ex_k=50 ff=0.7 leaves=95 bf=0.8]: acc=0.7664 +EI=0.7676 (287s)
+r3_s10 [sp_k=10 ex_k=50 ff=0.7 leaves=95 bf=0.8] ...
+  fold0: 0.7530
+  fold1: 0.7820
+  fold2: 0.7740
+  fold3: 0.7600
+  fold4: 0.7580
+  OOF acc=0.7654  +EI=0.7662
+r3_s10 [sp_k=10 ex_k=50 ff=0.7 leaves=95 bf=0.8]: acc=0.7654 +EI=0.7662 (310s)
+r3_s11 [sp_k=15 ex_k=35 ff=0.6 leaves=63 bf=0.7] ...
+  fold0: 0.7540
+  fold1: 0.7810
+  fold2: 0.7740
+  fold3: 0.7580
+  fold4: 0.7530
+  OOF acc=0.7640  +EI=0.7662
+r3_s11 [sp_k=15 ex_k=35 ff=0.6 leaves=63 bf=0.7]: acc=0.7640 +EI=0.7662 (353s)
+r3_s12 [sp_k=20 ex_k=50 ff=0.5 leaves=63 bf=0.8] ...
+  fold0: 0.7560
+  fold1: 0.7710
+  fold2: 0.7640
+  fold3: 0.7530
+  fold4: 0.7550
+  OOF acc=0.7598  +EI=0.7612
+r3_s12 [sp_k=20 ex_k=50 ff=0.5 leaves=63 bf=0.8]: acc=0.7598 +EI=0.7612 (485s)
+r3_s13 [sp_k=15 ex_k=50 ff=0.5 leaves=31 bf=0.8] ...
+  fold0: 0.7530
+  fold1: 0.7810
+  fold2: 0.7690
+  fold3: 0.7540
+  fold4: 0.7630
+  OOF acc=0.7640  +EI=0.7656
+r3_s13 [sp_k=15 ex_k=50 ff=0.5 leaves=31 bf=0.8]: acc=0.7640 +EI=0.7656 (301s)
+r3_s14 [sp_k=10 ex_k=25 ff=0.7 leaves=95 bf=0.7] ...
+  fold0: 0.7570
+  fold1: 0.7830
+  fold2: 0.7790
+  fold3: 0.7620
+  fold4: 0.7630
+  OOF acc=0.7688  +EI=0.7704
+r3_s14 [sp_k=10 ex_k=25 ff=0.7 leaves=95 bf=0.7]: acc=0.7688 +EI=0.7704 (181s)
+r3_s15 [sp_k=10 ex_k=25 ff=0.6 leaves=63 bf=0.7] ...
+  fold0: 0.7610
+  fold1: 0.7840
+  fold2: 0.7640
+  fold3: 0.7550
+  fold4: 0.7530
+  OOF acc=0.7634  +EI=0.7652
+r3_s15 [sp_k=10 ex_k=25 ff=0.6 leaves=63 bf=0.7]: acc=0.7634 +EI=0.7652 (162s)
+r3_s16 [sp_k=20 ex_k=35 ff=0.7 leaves=63 bf=0.8] ...
+  fold0: 0.7560
+  fold1: 0.7850
+  fold2: 0.7730
+  fold3: 0.7670
+  fold4: 0.7550
+  OOF acc=0.7672  +EI=0.7686
+r3_s16 [sp_k=20 ex_k=35 ff=0.7 leaves=63 bf=0.8]: acc=0.7672 +EI=0.7686 (154s)
+r3_s17 [sp_k=10 ex_k=50 ff=0.5 leaves=31 bf=0.9] ...
+  fold0: 0.7620
+  fold1: 0.7830
+  fold2: 0.7570
+  fold3: 0.7610
+  fold4: 0.7610
+  OOF acc=0.7648  +EI=0.7658
+r3_s17 [sp_k=10 ex_k=50 ff=0.5 leaves=31 bf=0.9]: acc=0.7648 +EI=0.7658 (196s)
+round-2 members: ['s0_ex25.npz', 's0_ex50.npz', 's1_ex25.npz', 's1_ex50.npz', 's2_ex25.npz', 's3_ex25.npz', 's4_ex25.npz', 's5_ex25.npz']
+per-run accs (new): {6: 0.764, 7: 0.7604, 8: 0.7632, 9: 0.7664, 10: 0.7654, 11: 0.764, 12: 0.7598, 13: 0.764, 14: 0.7688, 15: 0.7634, 16: 0.7672, 17: 0.7648}
+BAG bag12new (12 runs): acc=0.7674 +EI=0.7686  folds=[0.754, 0.787, 0.772, 0.761, 0.763]
+saved oof/bag12new.npz  acc=0.7674 +EI=0.7686
+BAG bag20 (20 runs): acc=0.7688 +EI=0.7700  folds=[0.753, 0.786, 0.772, 0.767, 0.766]
+saved oof/bag20.npz  acc=0.7688 +EI=0.7700
+per-fold acc  bag8mix : [0.76, 0.787, 0.769, 0.768, 0.768]  mean 0.7704
+per-fold acc  bag12new: [0.754, 0.787, 0.772, 0.761, 0.763]  mean 0.7674
+per-fold acc  bag20   : [0.753, 0.786, 0.772, 0.767, 0.766]  mean 0.7688
+bag20 - bag8mix per fold: [-0.007, -0.001, 0.003, -0.001, -0.002]
+bag8mix acc=0.7704 +EI=0.7716

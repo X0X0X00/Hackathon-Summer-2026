@@ -1,0 +1,3 @@
+saved lgbm_base fold0 acc = 0.7590
+fold0  Ac             acc=0.7500  nfeat=449  (44s)
+fold0  Ac+E           acc=0.7560  nfeat=454  (45s)

@@ -1,0 +1,9 @@
+GRAPH base           mean=0.7725  f0=0.7590 f1=0.7860  88s
+GRAPH pca100         mean=0.7685  f0=0.7630 f1=0.7740  104s
+GRAPH snn:50         mean=0.7690  f0=0.7590 f1=0.7790  113s
+GRAPH cos50          mean=0.7630  f0=0.7560 f1=0.7700  116s
+GRAPH cos50:50       mean=0.7685  f0=0.7680 f1=0.7690  116s
+GRAPH corr200        mean=0.7705  f0=0.7670 f1=0.7740  123s
+GRAPH pca100:50      mean=0.7660  f0=0.7600 f1=0.7720  116s
+GRAPH snn            mean=0.7730  f0=0.7620 f1=0.7840  100s
+GRAPH corr200:50     mean=0.7680  f0=0.7600 f1=0.7760  87s

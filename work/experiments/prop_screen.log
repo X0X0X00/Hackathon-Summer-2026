@@ -1,0 +1,51 @@
+--- stage A: expression graph source & k (ws=0, alpha=0.5) ---
+SCREEN cache_k10                  mean=0.4405  f0=0.4440 f1=0.4370  0s
+SCREEN cache_k25                  mean=0.4700  f0=0.4670 f1=0.4730  0s
+SCREEN cache_k50                  mean=0.4750  f0=0.4700 f1=0.4800  0s
+SCREEN pca15_k10                  mean=0.4780  f0=0.4720 f1=0.4840  1s
+SCREEN pca15_k25                  mean=0.4985  f0=0.4930 f1=0.5040  0s
+SCREEN pca15_k50                  mean=0.4995  f0=0.4900 f1=0.5090  0s
+SCREEN pca20_k10                  mean=0.4760  f0=0.4780 f1=0.4740  2s
+SCREEN pca20_k25                  mean=0.4970  f0=0.4870 f1=0.5070  0s
+SCREEN pca20_k50                  mean=0.5050  f0=0.4910 f1=0.5190  0s
+stage A best so far: pca20_k50  0.5050
+--- stage B: alpha ---
+SCREEN alpha0.2                   mean=0.5010  f0=0.4900 f1=0.5120  0s
+SCREEN alpha0.3                   mean=0.5030  f0=0.4910 f1=0.5150  0s
+SCREEN alpha0.7                   mean=0.5035  f0=0.4860 f1=0.5210  0s
+SCREEN alpha0.9                   mean=0.4665  f0=0.4520 f1=0.4810  1s
+stage B best so far: pca20_k50  0.5050
+--- stage C: spatial admixture ---
+SCREEN sp0.05_k10                 mean=0.5045  f0=0.4900 f1=0.5190  0s
+SCREEN sp0.05_k25                 mean=0.5040  f0=0.4900 f1=0.5180  0s
+SCREEN sp0.1_k10                  mean=0.5050  f0=0.4900 f1=0.5200  0s
+SCREEN sp0.1_k25                  mean=0.5065  f0=0.4910 f1=0.5220  0s
+SCREEN sp0.2_k10                  mean=0.5040  f0=0.4880 f1=0.5200  0s
+SCREEN sp0.2_k25                  mean=0.5040  f0=0.4870 f1=0.5210  0s
+SCREEN sp0.5_k10                  mean=0.5025  f0=0.4900 f1=0.5150  0s
+SCREEN sp0.5_k25                  mean=0.4925  f0=0.4820 f1=0.5030  0s
+stage C best so far: sp0.1_k25  0.5065
+--- stage D: sigma / iters / symm / cmn ---
+SCREEN esig0.3                    mean=0.4290  f0=0.4340 f1=0.4240  0s
+SCREEN esig0.5                    mean=0.4995  f0=0.4900 f1=0.5090  0s
+SCREEN esig2.0                    mean=0.5055  f0=0.4920 f1=0.5190  0s
+SCREEN iter3                      mean=0.5075  f0=0.4900 f1=0.5250  0s
+SCREEN iter5                      mean=0.5075  f0=0.4910 f1=0.5240  0s
+SCREEN iter10                     mean=0.5065  f0=0.4910 f1=0.5220  0s
+SCREEN iter20                     mean=0.5065  f0=0.4910 f1=0.5220  0s
+SCREEN symm_max                   mean=0.5100  f0=0.4960 f1=0.5240  0s
+SCREEN cmn                        mean=0.5085  f0=0.4930 f1=0.5240  0s
+stage D best so far: symm_max  0.5100
+
+FINAL BEST: symm_max  mean=0.5100
+cfg = {'k_sp': 25, 'k_ex': 50, 'ws': 0.1, 'we': 1.0, 'ssig': 1.0, 'esig': 1.0, 'alpha': 0.5, 'n_iter': 200, 'symm': 'max', 'cmn': False, 'ex_src': 'pca20'}
+  fold0: 0.4960
+  fold1: 0.5240
+  fold2: 0.5150
+  fold3: 0.4990
+  fold4: 0.4940
+  OOF acc=0.5056  +EI=0.5502
+saved oof/prop.npz  acc=0.5056 +EI=0.5502
+  fold0: 0.5870  (34s)
+  fold1: 0.5310  (39s)
+  mean over folds [0, 1]: 0.5590

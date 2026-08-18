@@ -1,0 +1,8 @@
+[xgb_d8_eta05_500_mcw5] {'max_depth': 8, 'eta': 0.05, 'min_child_weight': 5}
+    fold0: 0.7450 (39s)
+    fold1: 0.7790 (42s)
+  => f0=0.7450 f1=0.7790 mean=0.7620 time/fold=41s
+[xgb_d5_eta06_700_col5] {'max_depth': 5, 'rounds': 700, 'colsample_bytree': 0.5}
+    fold0: 0.7460 (49s)
+    fold1: 0.7770 (49s)
+  => f0=0.7460 f1=0.7770 mean=0.7615 time/fold=49s

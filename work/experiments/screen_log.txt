@@ -1,0 +1,27 @@
+SCREEN base       fold0_acc=0.7590  nfeat=443  60s
+SCREEN sp5        fold0_acc=0.7590  nfeat=443  61s
+SCREEN sp10       fold0_acc=0.7540  nfeat=443  64s
+SCREEN sp25       fold0_acc=0.7590  nfeat=443  56s
+SCREEN sp40       fold0_acc=0.7570  nfeat=443  56s
+SCREEN ex10       fold0_acc=0.7620  nfeat=443  55s
+SCREEN ex15       fold0_acc=0.7550  nfeat=443  56s
+SCREEN ex40       fold0_acc=0.7620  nfeat=443  60s
+SCREEN ex50       fold0_acc=0.7620  nfeat=443  53s
+SCREEN unif       fold0_acc=0.7540  nfeat=443  41s
+SCREEN gauss1     fold0_acc=0.7550  nfeat=443  48s
+SCREEN gauss5     fold0_acc=0.7560  nfeat=443  52s
+SCREEN all50i     fold0_acc=0.7590  nfeat=443  61s
+SCREEN all50g     fold0_acc=0.7450  nfeat=443  55s
+SCREEN multik     fold0_acc=0.7530  nfeat=691  65s
+SCREEN twohop     fold0_acc=0.5700  nfeat=563  44s
+SCREEN ex1040     fold0_acc=0.7560  nfeat=505  66s
+SCREEN mk4        fold0_acc=0.7530  nfeat=567  74s
+SCREEN thl        fold0_acc=0.7650  nfeat=563  73s
+SCREEN thl40      fold0_acc=0.7570  nfeat=563  67s
+SCREEN thl_m5     fold0_acc=0.7440  nfeat=563  53s
+SCREEN thl_m25    fold0_acc=0.7450  nfeat=563  41s
+SCREEN thl_sp     fold0_acc=0.7520  nfeat=503  36s
+SCREEN thl_ex     fold0_acc=0.7590  nfeat=503  35s
+SCREEN clsd       mean=0.7690  f0=0.7580 f1=0.7800  nfeat=563  76s
+SCREEN clsd_ex    mean=0.7650  f0=0.7530 f1=0.7770  nfeat=503  71s
+SCREEN ex10       mean=0.7720  f0=0.7620 f1=0.7820  nfeat=443  67s
