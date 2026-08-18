@@ -26,7 +26,55 @@ python make_submission.py experiments/specialist_correction.npz   # -> ../predic
 exact template format (row order = `data/meta_test.csv`; header
 `Cell_ID,MERFISH_cell_type_annotation.y`; asserts every label is one of the 60).
 
-## Method (what actually ships)
+## v5+ : external reference (Zenodo 18039571) — what changed on 2026-08-18
+
+The competition data is a 10k-cell / 200-gene subset of the study's public deposit
+(Wang … Meltzer, bioRxiv 2026.01.10.698734; Zenodo 18039571,
+`MERFISH_spinal_cord_resolved_0718.h5ad`, 146,621 cells × 500 genes, same 60 labels,
+MD5 `ce06f62c0ec4973581dae17bb76f0cd9`). Team decision (2026-08-18): organizers permit it.
+
+**Rules we enforce in code (`prep_ext.py`, `external/reference_ids.npy`):**
+- Reference = the deposit MINUS all 10,000 competition Cell_IDs MINUS 47 rows whose 200-gene
+  count vector exactly equals a competition cell → **136,574 reference cells**.
+- Competition rows are kept in the universe only for kNN structure; their label slot is set to
+  -1 before anything else, then competition-TRAIN labels are filled from `meta_train.csv`.
+  Competition TEST labels are never read into any array (asserted).
+- Alignment verified on TRAIN cells only: label / counts / coordinates / section 100 % identical.
+
+**Pipeline** (`prep_ext.py` → `cache_ext/`, `common_ext.py` harness, ~4 min build):
+same feature layout as `prep.py`, but spatial kNN and rel-coords over the FULL sections and
+neighbour-label histograms from reference + visible train labels (density 50 % → 96 %).
+Fold protocol unchanged: predicting competition fold f hides fold-f labels everywhere; reference
+labels are always visible. Reference cells are indistinguishable from competition cells
+(adversarial AUC 0.50 once `Segment`, absent from the deposit, is dropped).
+
+| member (`oof_ext/`) | how | OOF | +EI |
+|---|---|---|---|
+| ext_comp | LGBM on 5000 comp-train, dense nbr labels (`ext_e1.py comp`) | 0.7744 | 0.7756 |
+| ext_all25 | LGBM on 25 % reference + comp-train (`ext_e1.py all … 0.25`) | 0.7760 | 0.7766 |
+| ext_mlp / _s1 / _s2 | torch MLP on 100 % reference + comp-train (`ext_mlp.py`), 3 seeds | 0.727–0.736 | — |
+| yhh_v1 | teammate's Codex pipeline reproduced (`../Hackathon_26_yhh`), OOF-selected → optimistic | 0.8066 | — |
+
+Individually these are all ≤ 0.78, but their errors are almost uncorrelated with the
+competition-only pool, so plain equal-weight averaging jumps:
+
+| blend (equal weights, no search) | all OOF+EI | folds 3–4 |
+|---|---|---|
+| poolAll (v4) | 0.7712 | 0.7685 |
+| poolAll + ext_comp + ext_all25 + mean(3 MLP)  = **v5** | 0.8058 | 0.7985 |
+| v5 members + yhh_v1 (5-way)  = **v6** | 0.8132 | 0.8055 |
+
+`ext_blend.py` aligns universe-order members with competition-order ones by Cell_ID and prints
+these tables. Reproduce v6: run the four member scripts above, reproduce yhh_v1 per its README
+(`v1/artifacts/align_oof.py` writes `oof_ext/yhh_v1.npz`), then
+`python ext_blend.py … --save=v6:poolAll,ext_comp,ext_all25,mlp3,yhh_v1` → `make_submission.py`.
+
+Negative results on the reference (do not repeat): reference-ONLY LGBM early-stopped on
+logloss stops at ~85 rounds and scores 0.73 (logloss rises from over-confidence while accuracy is
+still climbing — never early-stop on multi_logloss here); more reference rows in one LGBM adds only
+~+0.5 pt (E2) — the value is in *blending* reference-trained models with competition-trained ones.
+
+## Method (v1–v4, competition data only)
 
 **Features** (`prep.py` -> `common.build_X`, ~450 cols):
 
