@@ -7,3 +7,4 @@ experiments/bag_runs/
 experiments/fold_runs/
 experiments/catxgb_runs/
 experiments/rerank_cache/
+external/

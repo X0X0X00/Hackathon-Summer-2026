@@ -33,7 +33,8 @@ The competition data is a 10k-cell / 200-gene subset of the study's public depos
 `MERFISH_spinal_cord_resolved_0718.h5ad`, 146,621 cells × 500 genes, same 60 labels,
 MD5 `ce06f62c0ec4973581dae17bb76f0cd9`). Team decision (2026-08-18): organizers permit it.
 
-**Rules we enforce in code (`prep_ext.py`, `external/reference_ids.npy`):**
+**Rules we enforce in code (`build_reference_ids.py` → `external/reference_ids.npy`, then `prep_ext.py`):**
+Download the h5ad from Zenodo into `work/external/` first (ignored by git, 99 MB).
 - Reference = the deposit MINUS all 10,000 competition Cell_IDs MINUS 47 rows whose 200-gene
   count vector exactly equals a competition cell → **136,574 reference cells**.
 - Competition rows are kept in the universe only for kNN structure; their label slot is set to
@@ -74,7 +75,11 @@ so reference-trained models were crippled (0.73–0.78) and transferred badly bo
 | **v6 = refonly + ext_all25 + mlp3 + yhh_v1 + poolAll** | **0.8248** | **0.8175** |
 
 All strong-member blends sit at 0.822–0.825 (differences are noise); v6 is the "one member per
-family, equal weight" choice. `ext_blend.py` aligns universe-order members with competition-order
+family, equal weight" choice. Teammate yhh's V7 (gated glial specialists on top of v6, branch `yhh`,
+claimed +0.7 pt / holdout +0.45) does NOT reproduce on our member files: re-run with
+`experiments/optimize_v7_yhh.py`, the oligo specialists fail the holdout gate (−6, −2) and the
+final is 0.8252 / 0.8170 vs v6 0.8238 / 0.8160 (same-member baseline) — noise. Report:
+`experiments/v7_report_on_our_members.json`. main stays on v6. `ext_blend.py` aligns universe-order members with competition-order
 ones by Cell_ID. Reproduce v6: `prep_ext.py` → the four member scripts → reproduce yhh_v1 per its
 README (`v1/artifacts/align_oof.py` writes `oof_ext/yhh_v1.npz`) → build the 5-way mean into
 `final_probs.npz` (see the snippet in git history of this commit) → `make_submission.py --ext`.
