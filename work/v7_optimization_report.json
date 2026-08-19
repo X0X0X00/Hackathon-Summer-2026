@@ -1,0 +1,348 @@
+{
+  "baseline": {
+    "stage": "reproduced_v6",
+    "accuracy": 0.825,
+    "correct": 4125,
+    "delta_correct": 0,
+    "tune_accuracy": 0.8293333333333334,
+    "holdout_accuracy": 0.8185,
+    "holdout_delta_correct": 0
+  },
+  "family_specialists": {
+    "oligodendrocyte_lineage": {
+      "name": "oligodendrocyte_lineage",
+      "labels": [
+        "oligodendrocyte_1",
+        "oligodendrocyte_2",
+        "oligodendrocyte_precursor_cell",
+        "oligodendrocyte_progenitor_1",
+        "oligodendrocyte_progenitor_2"
+      ],
+      "competition_cells": 1552,
+      "reference_cells": 41305,
+      "external_conditional_accuracy": 0.7326030927835051,
+      "competition_conditional_accuracy": 0.7557989690721649,
+      "external_weight": 1.0,
+      "mass_gate": 0.88,
+      "margin_cap": 0.1,
+      "specialist_confidence": 0.45,
+      "correction_weight": 0.25,
+      "tune_delta_correct": 12,
+      "holdout_delta_correct": 4,
+      "per_fold_delta": [
+        3,
+        4,
+        5,
+        0,
+        4
+      ],
+      "selected_oof": 64,
+      "accepted": true,
+      "selected_test": 52
+    },
+    "astro_vascular_meningeal": {
+      "name": "astro_vascular_meningeal",
+      "labels": [
+        "astrocyte_1",
+        "astrocyte_2",
+        "endothelial",
+        "pericyte",
+        "meninges_1",
+        "meninges_2",
+        "meninges_3"
+      ],
+      "competition_cells": 1260,
+      "reference_cells": 36267,
+      "external_conditional_accuracy": 0.7698412698412699,
+      "competition_conditional_accuracy": 0.8373015873015873,
+      "external_weight": 0.25,
+      "mass_gate": 0.75,
+      "margin_cap": 0.1,
+      "specialist_confidence": 0.6,
+      "correction_weight": 0.25,
+      "tune_delta_correct": 3,
+      "holdout_delta_correct": 1,
+      "per_fold_delta": [
+        3,
+        0,
+        0,
+        1,
+        0
+      ],
+      "selected_oof": 12,
+      "accepted": true,
+      "selected_test": 14
+    }
+  },
+  "routers": {
+    "probability_only": {
+      "margin_cap": 0.05,
+      "router_confidence": 0.4,
+      "weight": 0.1,
+      "tune_delta_correct": 1,
+      "holdout_delta_correct": -2,
+      "per_fold_delta": [
+        0,
+        2,
+        -1,
+        -1,
+        -1
+      ],
+      "selected_oof": 87,
+      "router_raw_accuracy": 0.8008,
+      "feature_count": 432
+    },
+    "anatomy_aware": {
+      "margin_cap": 0.05,
+      "router_confidence": 0.55,
+      "weight": 0.1,
+      "tune_delta_correct": -1,
+      "holdout_delta_correct": -2,
+      "per_fold_delta": [
+        -1,
+        1,
+        -1,
+        0,
+        -2
+      ],
+      "selected_oof": 48,
+      "router_raw_accuracy": 0.8008,
+      "feature_count": 754
+    }
+  },
+  "rare_specialists": {
+    "oligodendrocyte_1_vs_progenitor_2": {
+      "name": "oligodendrocyte_1_vs_progenitor_2",
+      "labels": [
+        "oligodendrocyte_1",
+        "oligodendrocyte_progenitor_2"
+      ],
+      "competition_cells": 974,
+      "reference_cells": 26569,
+      "external_conditional_accuracy": 0.8080082135523614,
+      "competition_conditional_accuracy": 0.795687885010267,
+      "external_weight": 0.75,
+      "mass_gate": 0.6,
+      "margin_cap": 0.4,
+      "specialist_confidence": 0.0,
+      "correction_weight": 0.75,
+      "tune_delta_correct": 7,
+      "holdout_delta_correct": 1,
+      "per_fold_delta": [
+        7,
+        3,
+        -3,
+        1,
+        0
+      ],
+      "selected_oof": 274,
+      "accepted": true,
+      "selected_test": 255
+    },
+    "oligodendrocyte_2_vs_progenitor_2": {
+      "name": "oligodendrocyte_2_vs_progenitor_2",
+      "labels": [
+        "oligodendrocyte_2",
+        "oligodendrocyte_progenitor_2"
+      ],
+      "competition_cells": 1122,
+      "reference_cells": 29993,
+      "external_conditional_accuracy": 0.8698752228163993,
+      "competition_conditional_accuracy": 0.9135472370766489,
+      "external_weight": 0.0,
+      "mass_gate": 0.88,
+      "margin_cap": 0.1,
+      "specialist_confidence": 0.0,
+      "correction_weight": 0.5,
+      "tune_delta_correct": 1,
+      "holdout_delta_correct": 0,
+      "per_fold_delta": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "selected_oof": 3,
+      "accepted": false,
+      "selected_test": 1
+    },
+    "oligodendrocyte_progenitor_1_vs_precursor": {
+      "name": "oligodendrocyte_progenitor_1_vs_precursor",
+      "labels": [
+        "oligodendrocyte_progenitor_1",
+        "oligodendrocyte_precursor_cell"
+      ],
+      "competition_cells": 159,
+      "reference_cells": 4313,
+      "external_conditional_accuracy": 0.8301886792452831,
+      "competition_conditional_accuracy": 0.7547169811320755,
+      "external_weight": 0.5,
+      "mass_gate": 0.6,
+      "margin_cap": 0.1,
+      "specialist_confidence": 0.75,
+      "correction_weight": 0.25,
+      "tune_delta_correct": 0,
+      "holdout_delta_correct": 0,
+      "per_fold_delta": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_oof": 0,
+      "accepted": false,
+      "selected_test": 0
+    },
+    "astrocyte_1_vs_endothelial": {
+      "name": "astrocyte_1_vs_endothelial",
+      "labels": [
+        "astrocyte_1",
+        "endothelial"
+      ],
+      "competition_cells": 896,
+      "reference_cells": 25833,
+      "external_conditional_accuracy": 0.9084821428571429,
+      "competition_conditional_accuracy": 0.9129464285714286,
+      "external_weight": 0.0,
+      "mass_gate": 0.45,
+      "margin_cap": 0.2,
+      "specialist_confidence": 0.0,
+      "correction_weight": 0.75,
+      "tune_delta_correct": 3,
+      "holdout_delta_correct": 2,
+      "per_fold_delta": [
+        0,
+        2,
+        1,
+        1,
+        1
+      ],
+      "selected_oof": 67,
+      "accepted": true,
+      "selected_test": 66
+    },
+    "meninges_1_vs_meninges_2": {
+      "name": "meninges_1_vs_meninges_2",
+      "labels": [
+        "meninges_1",
+        "meninges_2"
+      ],
+      "competition_cells": 109,
+      "reference_cells": 3113,
+      "external_conditional_accuracy": 0.6880733944954128,
+      "competition_conditional_accuracy": 0.6605504587155964,
+      "external_weight": 0.5,
+      "mass_gate": 0.6,
+      "margin_cap": 0.4,
+      "specialist_confidence": 0.0,
+      "correction_weight": 1.0,
+      "tune_delta_correct": 1,
+      "holdout_delta_correct": 1,
+      "per_fold_delta": [
+        -1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "selected_oof": 38,
+      "accepted": true,
+      "selected_test": 34
+    },
+    "DH_in_Klhl14_vs_DH_in_Cdh3": {
+      "name": "DH_in_Klhl14_vs_DH_in_Cdh3",
+      "labels": [
+        "DH_in_Klhl14",
+        "DH_in_Cdh3"
+      ],
+      "competition_cells": 145,
+      "reference_cells": 3779,
+      "external_conditional_accuracy": 0.8482758620689655,
+      "competition_conditional_accuracy": 0.8206896551724138,
+      "external_weight": 0.0,
+      "mass_gate": 0.45,
+      "margin_cap": 0.1,
+      "specialist_confidence": 0.0,
+      "correction_weight": 0.25,
+      "tune_delta_correct": 0,
+      "holdout_delta_correct": 0,
+      "per_fold_delta": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_oof": 2,
+      "accepted": false,
+      "selected_test": 0
+    },
+    "DH_ex_Maf_Slc17a8_vs_DH_ex_Maf_Cck": {
+      "name": "DH_ex_Maf_Slc17a8_vs_DH_ex_Maf_Cck",
+      "labels": [
+        "DH_ex_Maf/Slc17a8",
+        "DH_ex_Maf/Cck"
+      ],
+      "competition_cells": 81,
+      "reference_cells": 1757,
+      "external_conditional_accuracy": 0.7901234567901234,
+      "competition_conditional_accuracy": 0.7777777777777778,
+      "external_weight": 0.0,
+      "mass_gate": 0.45,
+      "margin_cap": 0.1,
+      "specialist_confidence": 0.0,
+      "correction_weight": 0.25,
+      "tune_delta_correct": 0,
+      "holdout_delta_correct": 0,
+      "per_fold_delta": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_oof": 0,
+      "accepted": false,
+      "selected_test": 1
+    },
+    "DH_ex_Prkcg_Nts_vs_DH_ex_Prkcg_Cck": {
+      "name": "DH_ex_Prkcg_Nts_vs_DH_ex_Prkcg_Cck",
+      "labels": [
+        "DH_ex_Prkcg/Nts",
+        "DH_ex_Prkcg/Cck"
+      ],
+      "competition_cells": 85,
+      "reference_cells": 2612,
+      "external_conditional_accuracy": 0.6823529411764706,
+      "competition_conditional_accuracy": 0.6941176470588235,
+      "external_weight": 0.0,
+      "mass_gate": 0.88,
+      "margin_cap": 0.4,
+      "specialist_confidence": 0.75,
+      "correction_weight": 0.5,
+      "tune_delta_correct": 3,
+      "holdout_delta_correct": 0,
+      "per_fold_delta": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "selected_oof": 4,
+      "accepted": false,
+      "selected_test": 4
+    }
+  },
+  "final": {
+    "stage": "v7_final",
+    "accuracy": 0.832,
+    "correct": 4160,
+    "delta_correct": 35,
+    "tune_accuracy": 0.838,
+    "holdout_accuracy": 0.823,
+    "holdout_delta_correct": 9
+  }
+}
