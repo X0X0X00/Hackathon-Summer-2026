@@ -1,0 +1,8 @@
+feature,coefficient
+intercept,-1.5
+anchor_uncertainty,0.0
+anchor_margin,0.0
+mean_expert_entropy,0.0
+expert_disagreement_rate,0.0
+anchor_class_probability_std,0.0
+maximum_expert_confidence,0.0

@@ -1,0 +1,432 @@
+{
+  "n_cells": 5000,
+  "n_classes": 60,
+  "total_corrected": 69,
+  "total_regressed": 59,
+  "top_benefited_classes": [
+    {
+      "class_name": "oligodendrocyte_1",
+      "n": 271,
+      "net_corrected": 19,
+      "delta_accuracy_pp": 7.011,
+      "delta_f1": 0.041881,
+      "delta_nll": -0.268027
+    },
+    {
+      "class_name": "astrocyte_2",
+      "n": 196,
+      "net_corrected": 4,
+      "delta_accuracy_pp": 2.041,
+      "delta_f1": -0.008657,
+      "delta_nll": -0.199682
+    },
+    {
+      "class_name": "ependymal",
+      "n": 10,
+      "net_corrected": 2,
+      "delta_accuracy_pp": 20.0,
+      "delta_f1": 0.136223,
+      "delta_nll": -0.240178
+    },
+    {
+      "class_name": "oligodendrocyte_progenitor_1",
+      "n": 49,
+      "net_corrected": 2,
+      "delta_accuracy_pp": 4.082,
+      "delta_f1": 0.01742,
+      "delta_nll": -0.54821
+    },
+    {
+      "class_name": "microglia",
+      "n": 64,
+      "net_corrected": 2,
+      "delta_accuracy_pp": 3.125,
+      "delta_f1": 0.013776,
+      "delta_nll": -0.270366
+    },
+    {
+      "class_name": "DH_ex_Maf/Cck",
+      "n": 64,
+      "net_corrected": 2,
+      "delta_accuracy_pp": 3.125,
+      "delta_f1": 0.010685,
+      "delta_nll": 0.071421
+    },
+    {
+      "class_name": "beta_motoneuron",
+      "n": 14,
+      "net_corrected": 1,
+      "delta_accuracy_pp": 7.143,
+      "delta_f1": 0.046798,
+      "delta_nll": -0.081247
+    },
+    {
+      "class_name": "peripheral_glia",
+      "n": 23,
+      "net_corrected": 1,
+      "delta_accuracy_pp": 4.348,
+      "delta_f1": 0.040336,
+      "delta_nll": -0.406967
+    },
+    {
+      "class_name": "DH_ex_Reln",
+      "n": 33,
+      "net_corrected": 1,
+      "delta_accuracy_pp": 3.03,
+      "delta_f1": 0.030769,
+      "delta_nll": -0.007836
+    },
+    {
+      "class_name": "DH_ex_Grp",
+      "n": 26,
+      "net_corrected": 1,
+      "delta_accuracy_pp": 3.846,
+      "delta_f1": 0.017571,
+      "delta_nll": -0.09139
+    },
+    {
+      "class_name": "DH_ex_Prkcg/Cck",
+      "n": 33,
+      "net_corrected": 1,
+      "delta_accuracy_pp": 3.03,
+      "delta_f1": 0.012903,
+      "delta_nll": -0.056821
+    },
+    {
+      "class_name": "meninges_1",
+      "n": 67,
+      "net_corrected": 1,
+      "delta_accuracy_pp": 1.493,
+      "delta_f1": 0.008342,
+      "delta_nll": -0.07642
+    }
+  ],
+  "top_harmed_classes": [
+    {
+      "class_name": "oligodendrocyte_progenitor_2",
+      "n": 703,
+      "net_corrected": -17,
+      "delta_accuracy_pp": -2.418,
+      "delta_f1": -0.00254,
+      "delta_nll": -0.002999
+    },
+    {
+      "class_name": "astrocyte_1",
+      "n": 573,
+      "net_corrected": -5,
+      "delta_accuracy_pp": -0.873,
+      "delta_f1": 0.011041,
+      "delta_nll": 0.000332
+    },
+    {
+      "class_name": "oligodendrocyte_precursor_cell",
+      "n": 110,
+      "net_corrected": -4,
+      "delta_accuracy_pp": -3.636,
+      "delta_f1": -0.024522,
+      "delta_nll": -0.078671
+    },
+    {
+      "class_name": "DH_ex_Grpr",
+      "n": 31,
+      "net_corrected": -1,
+      "delta_accuracy_pp": -3.226,
+      "delta_f1": -0.032787,
+      "delta_nll": -0.003841
+    },
+    {
+      "class_name": "DH_ex_Gpr83",
+      "n": 33,
+      "net_corrected": -1,
+      "delta_accuracy_pp": -3.03,
+      "delta_f1": -0.029851,
+      "delta_nll": -0.005343
+    },
+    {
+      "class_name": "meninges_2",
+      "n": 42,
+      "net_corrected": -1,
+      "delta_accuracy_pp": -2.381,
+      "delta_f1": -0.028571,
+      "delta_nll": -0.127489
+    },
+    {
+      "class_name": "pericyte",
+      "n": 40,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": -0.018391,
+      "delta_nll": -0.597442
+    },
+    {
+      "class_name": "meninges_3",
+      "n": 19,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": -0.013495,
+      "delta_nll": -0.082409
+    },
+    {
+      "class_name": "oligodendrocyte_2",
+      "n": 419,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": -0.003893,
+      "delta_nll": -0.035453
+    },
+    {
+      "class_name": "DH_ex_Maf/Slc17a8",
+      "n": 17,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": 0.0,
+      "delta_nll": -0.358
+    },
+    {
+      "class_name": "DH_ex_Nmu/Tac2",
+      "n": 64,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": 0.0,
+      "delta_nll": -0.002868
+    },
+    {
+      "class_name": "DH_ex_Prkcg/Nts",
+      "n": 52,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": 0.0,
+      "delta_nll": -0.023894
+    }
+  ],
+  "fold2_top_harmed_classes": [
+    {
+      "class_name": "astrocyte_1",
+      "n": 191,
+      "net_corrected": -6,
+      "delta_accuracy_pp": -3.141,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "oligodendrocyte_progenitor_2",
+      "n": 235,
+      "net_corrected": -6,
+      "delta_accuracy_pp": -2.553,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "oligodendrocyte_precursor_cell",
+      "n": 36,
+      "net_corrected": -1,
+      "delta_accuracy_pp": -2.778,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "VH_in_Chat",
+      "n": 1,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "DH_ex_Maf/Cpne4",
+      "n": 2,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "DH_in_Kcnip2",
+      "n": 2,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "cholinergic_interneuron",
+      "n": 2,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "DH_ex_Rreb1",
+      "n": 3,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "ependymal",
+      "n": 3,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "visceral_motoneuron",
+      "n": 3,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "M_ex_Neurod2",
+      "n": 4,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    },
+    {
+      "class_name": "DH_ex_Maf/Slc17a8",
+      "n": 6,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": NaN,
+      "delta_nll": NaN
+    }
+  ],
+  "most_fold_unstable_classes": [
+    {
+      "class_name": "astrocyte_1",
+      "n": 573,
+      "net_corrected": -5,
+      "delta_accuracy_pp": -0.873,
+      "delta_f1": 0.011041,
+      "delta_nll": 0.000332
+    },
+    {
+      "class_name": "oligodendrocyte_2",
+      "n": 419,
+      "net_corrected": 0,
+      "delta_accuracy_pp": 0.0,
+      "delta_f1": -0.003893,
+      "delta_nll": -0.035453
+    },
+    {
+      "class_name": "endothelial",
+      "n": 323,
+      "net_corrected": 1,
+      "delta_accuracy_pp": 0.31,
+      "delta_f1": -0.003085,
+      "delta_nll": -0.117155
+    }
+  ],
+  "fold2_top_regression_switches": [
+    {
+      "fold": 2,
+      "true_class": "oligodendrocyte_progenitor_2",
+      "anchor_prediction": "oligodendrocyte_progenitor_2",
+      "stacker_prediction": "oligodendrocyte_1",
+      "outcome": "regressed",
+      "count": 3
+    },
+    {
+      "fold": 2,
+      "true_class": "oligodendrocyte_progenitor_2",
+      "anchor_prediction": "oligodendrocyte_progenitor_2",
+      "stacker_prediction": "oligodendrocyte_2",
+      "outcome": "regressed",
+      "count": 3
+    },
+    {
+      "fold": 2,
+      "true_class": "oligodendrocyte_2",
+      "anchor_prediction": "oligodendrocyte_2",
+      "stacker_prediction": "oligodendrocyte_1",
+      "outcome": "regressed",
+      "count": 2
+    },
+    {
+      "fold": 2,
+      "true_class": "astrocyte_1",
+      "anchor_prediction": "astrocyte_1",
+      "stacker_prediction": "astrocyte_2",
+      "outcome": "regressed",
+      "count": 2
+    },
+    {
+      "fold": 2,
+      "true_class": "oligodendrocyte_1",
+      "anchor_prediction": "oligodendrocyte_1",
+      "stacker_prediction": "oligodendrocyte_progenitor_2",
+      "outcome": "regressed",
+      "count": 1
+    },
+    {
+      "fold": 2,
+      "true_class": "oligodendrocyte_precursor_cell",
+      "anchor_prediction": "oligodendrocyte_precursor_cell",
+      "stacker_prediction": "oligodendrocyte_progenitor_2",
+      "outcome": "regressed",
+      "count": 1
+    },
+    {
+      "fold": 2,
+      "true_class": "astrocyte_1",
+      "anchor_prediction": "astrocyte_1",
+      "stacker_prediction": "pericyte",
+      "outcome": "regressed",
+      "count": 1
+    },
+    {
+      "fold": 2,
+      "true_class": "astrocyte_1",
+      "anchor_prediction": "astrocyte_1",
+      "stacker_prediction": "microglia",
+      "outcome": "regressed",
+      "count": 1
+    },
+    {
+      "fold": 2,
+      "true_class": "astrocyte_1",
+      "anchor_prediction": "astrocyte_1",
+      "stacker_prediction": "oligodendrocyte_precursor_cell",
+      "outcome": "regressed",
+      "count": 1
+    },
+    {
+      "fold": 2,
+      "true_class": "astrocyte_1",
+      "anchor_prediction": "astrocyte_1",
+      "stacker_prediction": "oligodendrocyte_1",
+      "outcome": "regressed",
+      "count": 1
+    },
+    {
+      "fold": 2,
+      "true_class": "astrocyte_1",
+      "anchor_prediction": "astrocyte_1",
+      "stacker_prediction": "endothelial",
+      "outcome": "regressed",
+      "count": 1
+    },
+    {
+      "fold": 2,
+      "true_class": "endothelial",
+      "anchor_prediction": "endothelial",
+      "stacker_prediction": "pericyte",
+      "outcome": "regressed",
+      "count": 1
+    },
+    {
+      "fold": 2,
+      "true_class": "oligodendrocyte_2",
+      "anchor_prediction": "oligodendrocyte_2",
+      "stacker_prediction": "microglia",
+      "outcome": "regressed",
+      "count": 1
+    }
+  ]
+}
