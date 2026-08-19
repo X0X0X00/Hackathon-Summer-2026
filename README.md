@@ -25,3 +25,33 @@ division, else they will be in the open division.
 1.  First place in each division: $300 + $75 x (team size)
 2.  Second place in each division: 0 + $50 x (team size)
   
+
+## Team yhh — V7 submission
+
+The current team submission is [`prediction/prediction.csv`](prediction/prediction.csv).
+
+### Validation result
+
+| Model | 5-fold OOF accuracy | Correct cells | Held-out folds 3–4 |
+|---|---:|---:|---:|
+| Reproduced V6 ensemble | 82.50% | 4,125 / 5,000 | 81.85% |
+| **V7 hierarchical specialists** | **83.20%** | **4,160 / 5,000** | **82.30%** |
+
+These are local out-of-fold validation results, not an official leaderboard score. V7 improves the reproduced V6 baseline by 35 correctly classified cells (+0.70 percentage points). Model selection used folds 0–2; folds 3–4 were retained as a holdout check.
+
+### V7 method
+
+V7 starts from the five-member V6 probability ensemble (`refonly_full`, `ext_all25`, `mlp3`, `yhh_v1`, and `bag8mix`), then applies the existing E/I and Segment/Laminae constraints. It adds gated hierarchical specialists only for ambiguous cells:
+
+- oligodendrocyte-lineage family specialist;
+- astrocyte/vascular/meningeal family specialist;
+- targeted pair experts for `oligodendrocyte_1` vs `oligodendrocyte_progenitor_2`, `astrocyte_1` vs `endothelial`, and `meninges_1` vs `meninges_2`;
+- external reference cells are used only as labeled reference data, while competition OOF predictions remain fold-aware.
+
+Probability-only and anatomy-aware global routers, plus three rare neuronal pair experts, were evaluated but excluded because they did not improve the held-out folds. The accepted corrections are therefore limited to the specialist stages that improved both the tuning folds and the holdout check.
+
+The optimization entry point is [`work/optimize_v7.py`](work/optimize_v7.py), and the complete selection report is [`work/v7_optimization_report.json`](work/v7_optimization_report.json). After preparing the V6 caches and member probability files described in [`work/README.md`](work/README.md), run:
+
+```powershell
+python work/optimize_v7.py
+```

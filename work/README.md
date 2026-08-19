@@ -26,7 +26,65 @@ python make_submission.py experiments/specialist_correction.npz   # -> ../predic
 exact template format (row order = `data/meta_test.csv`; header
 `Cell_ID,MERFISH_cell_type_annotation.y`; asserts every label is one of the 60).
 
-## Method (what actually ships)
+## v5+ : external reference (Zenodo 18039571) — what changed on 2026-08-18
+
+The competition data is a 10k-cell / 200-gene subset of the study's public deposit
+(Wang … Meltzer, bioRxiv 2026.01.10.698734; Zenodo 18039571,
+`MERFISH_spinal_cord_resolved_0718.h5ad`, 146,621 cells × 500 genes, same 60 labels,
+MD5 `ce06f62c0ec4973581dae17bb76f0cd9`). Team decision (2026-08-18): organizers permit it.
+
+**Rules we enforce in code (`prep_ext.py`, `external/reference_ids.npy`):**
+- Reference = the deposit MINUS all 10,000 competition Cell_IDs MINUS 47 rows whose 200-gene
+  count vector exactly equals a competition cell → **136,574 reference cells**.
+- Competition rows are kept in the universe only for kNN structure; their label slot is set to
+  -1 before anything else, then competition-TRAIN labels are filled from `meta_train.csv`.
+  Competition TEST labels are never read into any array (asserted).
+- Alignment verified on TRAIN cells only: label / counts / coordinates / section 100 % identical.
+
+**Pipeline** (`prep_ext.py` → `cache_ext/`, `common_ext.py` harness, ~4 min build):
+same feature layout as `prep.py`, but spatial kNN and rel-coords over the FULL sections and
+neighbour-label histograms from reference + visible train labels (density 50 % → 96 %).
+Fold protocol unchanged: predicting competition fold f hides fold-f labels everywhere; reference
+labels are always visible. Reference cells are indistinguishable from competition cells
+(adversarial AUC 0.50 once `Segment`, absent from the deposit, is dropped).
+
+**The key discovery (2026-08-18 evening): competition `Segment` == deposit `Laminae`.**
+`Segment` (1–22, observed for 40 % = the neurons) is a 1:1 recoding of the deposit's `Laminae`
+column, and Laminae is a per-*subtype* annotation — every label maps to essentially one Segment
+(purity ≥ 0.96) and 9 Segment values map to a single label. It is by far the strongest neuron
+feature (fold-0 neuron acc 0.89 with it vs 0.64 without). The deposit lacks a `Segment` column,
+so reference-trained models were crippled (0.73–0.78) and transferred badly both ways (2×2 test in
+`experiments/ext_2x2.py`). `prep_ext.py` now fills `Segment` for reference rows from Laminae, and
+`ext_post.py` adds a Segment→allowed-labels **hard mask** built from reference labels only
+(0 true-label violations on train; +0.5 pt on any blend). Region mask adds nothing.
+
+| member (`oof_ext/`, Segment-enabled cache) | how | OOF+EI | +Seg mask | folds 3–4 |
+|---|---|---|---|---|
+| refonly_full | LGBM on 136k reference only, 700 rounds (`ext_refonly.py`), eval on all 5000 train | 0.8188 | 0.8188 | 0.8130 |
+| ext_all25 | LGBM on 25 % reference + comp-train (`ext_e1.py all 8 ext_all25 0.25`) | 0.8120 | 0.8120 | 0.8020 |
+| mlp3 | torch/MPS MLP on 100 % reference + comp-train, mean of 3 seeds (`ext_mlp.py`) | 0.8096 | 0.8134 | 0.8035 |
+| yhh_v1 | teammate's Codex pipeline reproduced in `../Hackathon_26_yhh` (OOF-selected → optimistic) | 0.8070 | 0.8074 | 0.7950 |
+| poolAll | v4 competition-only 47-run pool | 0.7712 | 0.7720 | 0.7700 |
+| ext_comp | LGBM on comp-train with dense nbr labels — dominated, not used | 0.7756 | 0.7764 | 0.7670 |
+
+| blend (equal weights, no search) → EI → Segment mask | all OOF | folds 3–4 |
+|---|---|---|
+| v5 (poolAll + ext_comp + ext_all25 + mlp3, pre-Segment members) | 0.8106 | 0.8040 |
+| refonly + mlp3 | 0.8222 | 0.8175 |
+| **v6 = refonly + ext_all25 + mlp3 + yhh_v1 + poolAll** | **0.8248** | **0.8175** |
+
+All strong-member blends sit at 0.822–0.825 (differences are noise); v6 is the "one member per
+family, equal weight" choice. `ext_blend.py` aligns universe-order members with competition-order
+ones by Cell_ID. Reproduce v6: `prep_ext.py` → the four member scripts → reproduce yhh_v1 per its
+README (`v1/artifacts/align_oof.py` writes `oof_ext/yhh_v1.npz`) → build the 5-way mean into
+`final_probs.npz` (see the snippet in git history of this commit) → `make_submission.py --ext`.
+
+Negative results on the reference (do not repeat): early-stopping a reference-only LGBM on
+multi_logloss stops at ~85 rounds (over-confidence, accuracy still climbing) — use fixed rounds;
+before the Segment fix, adding reference rows to one LGBM gave only +0.5 pt and blending was the
+only gain — that was the missing-Segment artefact, not a property of the reference.
+
+## Method (v1–v4, competition data only)
 
 **Features** (`prep.py` -> `common.build_X`, ~450 cols):
 
