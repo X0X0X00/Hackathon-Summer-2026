@@ -1,0 +1,362 @@
+{
+  "ambiguous_signature_accuracy": 0.7111592111592112,
+  "ambiguous_signature_accuracy_by_signature": {
+    "1/excitatory/10": {
+      "accuracy": 0.6458333333333334,
+      "n": 96
+    },
+    "1/excitatory/2": {
+      "accuracy": 0.71875,
+      "n": 64
+    },
+    "1/excitatory/3": {
+      "accuracy": 0.8494623655913979,
+      "n": 93
+    },
+    "1/excitatory/5": {
+      "accuracy": 0.9146341463414634,
+      "n": 82
+    },
+    "1/excitatory/6": {
+      "accuracy": 0.6292134831460674,
+      "n": 89
+    },
+    "1/excitatory/8": {
+      "accuracy": 0.6685082872928176,
+      "n": 181
+    },
+    "1/inhibitory/10": {
+      "accuracy": 0.8571428571428571,
+      "n": 140
+    },
+    "1/inhibitory/4": {
+      "accuracy": 0.9152542372881356,
+      "n": 59
+    },
+    "1/inhibitory/9": {
+      "accuracy": 0.8043478260869565,
+      "n": 46
+    },
+    "3/excitatory/20": {
+      "accuracy": 0.9795918367346939,
+      "n": 49
+    },
+    "4/inhibitory/19": {
+      "accuracy": 0.8863636363636364,
+      "n": 132
+    },
+    "__MISSING__/__MISSING__/22": {
+      "accuracy": 0.7455621301775148,
+      "n": 169
+    },
+    "__MISSING__/__MISSING__/__MISSING__": {
+      "accuracy": 0.6815415821501014,
+      "n": 2958
+    }
+  },
+  "ambiguous_signature_n": 4158,
+  "class_order": [
+    "DH_ex_Cpne4",
+    "DH_ex_Gpr83",
+    "DH_ex_Grp",
+    "DH_ex_Grpr",
+    "DH_ex_Maf/Cck",
+    "DH_ex_Maf/Cpne4",
+    "DH_ex_Maf/Slc17a8",
+    "DH_ex_Nmu/Tac2",
+    "DH_ex_Prkcg/Cck",
+    "DH_ex_Prkcg/Nts",
+    "DH_ex_Prkcg/Rxfp1",
+    "DH_ex_Reln",
+    "DH_ex_Reln/Nmur2",
+    "DH_ex_Reln/Npff",
+    "DH_ex_Rreb1",
+    "DH_ex_Sox5",
+    "DH_ex_Sox5/Tac1",
+    "DH_ex_Tac2",
+    "DH_in_Cdh3",
+    "DH_in_Kcnip2",
+    "DH_in_Klhl14",
+    "DH_in_Npy",
+    "DH_in_Npy2r",
+    "DH_in_Pdyn",
+    "DH_in_Pdyn/Gal",
+    "DH_in_Rorb",
+    "DM_ex_Zfhx3",
+    "MV_ex_Shox2",
+    "MV_ex_Syt2",
+    "MV_in_Chrna2",
+    "MV_in_Esrrb",
+    "MV_in_Gabra1",
+    "MV_in_Gm26673",
+    "MV_in_Sema5b",
+    "M_ex_Neurod2",
+    "M_ex_Vsx2",
+    "M_ex_Vsx2/Shox2",
+    "M_in_Tfap2b",
+    "Schwann_cell",
+    "VH_in_Chat",
+    "alpha_motoneuron",
+    "astrocyte_1",
+    "astrocyte_2",
+    "beta_motoneuron",
+    "cholinergic_interneuron",
+    "endothelial",
+    "ependymal",
+    "gamma_motoneuron",
+    "meninges_1",
+    "meninges_2",
+    "meninges_3",
+    "microglia",
+    "oligodendrocyte_1",
+    "oligodendrocyte_2",
+    "oligodendrocyte_precursor_cell",
+    "oligodendrocyte_progenitor_1",
+    "oligodendrocyte_progenitor_2",
+    "pericyte",
+    "peripheral_glia",
+    "visceral_motoneuron"
+  ],
+  "confusion_pairs_top5": [
+    {
+      "n": 111,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "n": 64,
+      "predicted_label": "oligodendrocyte_1",
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "n": 56,
+      "predicted_label": "oligodendrocyte_2",
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "n": 50,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "oligodendrocyte_2"
+    },
+    {
+      "n": 42,
+      "predicted_label": "astrocyte_1",
+      "true_label": "astrocyte_2"
+    }
+  ],
+  "cv_protocol": "StratifiedKFold(n_splits=3, shuffle=True, random_state=20260819)",
+  "deterministic_signature_accuracy": 1.0,
+  "deterministic_signature_n": 842,
+  "fallback_counts": {},
+  "fallback_examples": [],
+  "fallback_n": 0,
+  "feature_set": "log1p(raw gene counts, 200) inside each fold-learned signature group; no extra metadata features in specialists",
+  "fold_accuracy": {
+    "0": 0.7594481103779244,
+    "1": 0.7564487102579485,
+    "2": 0.7635054021608644
+  },
+  "macro_f1": 0.7052920244297476,
+  "missing_bucket_accuracy": 0.6815415821501014,
+  "missing_bucket_key": "__MISSING__/__MISSING__/__MISSING__",
+  "missing_bucket_n": 2958,
+  "model": "per-signature specialists (gene-only L2 logistic regression) with YW-003 masked-global fallback",
+  "model_hyperparameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "max_iter": 2000,
+    "penalty": "l2",
+    "random_state": 20260819,
+    "solver": "lbfgs"
+  },
+  "n_cells": 5000,
+  "n_classes": 60,
+  "n_specialists_trained_per_fold": {
+    "0": 13,
+    "1": 13,
+    "2": 13
+  },
+  "oof_accuracy": 0.7598,
+  "oof_path": "outputs/oof/YW-004_oof.csv",
+  "per_class_recall": {
+    "DH_ex_Cpne4": 0.6153846153846154,
+    "DH_ex_Gpr83": 0.696969696969697,
+    "DH_ex_Grp": 0.5,
+    "DH_ex_Grpr": 0.7419354838709677,
+    "DH_ex_Maf/Cck": 0.9375,
+    "DH_ex_Maf/Cpne4": 0.0,
+    "DH_ex_Maf/Slc17a8": 0.11764705882352941,
+    "DH_ex_Nmu/Tac2": 0.921875,
+    "DH_ex_Prkcg/Cck": 0.3939393939393939,
+    "DH_ex_Prkcg/Nts": 0.6538461538461539,
+    "DH_ex_Prkcg/Rxfp1": 0.5,
+    "DH_ex_Reln": 0.8484848484848485,
+    "DH_ex_Reln/Nmur2": 0.9402985074626866,
+    "DH_ex_Reln/Npff": 1.0,
+    "DH_ex_Rreb1": 0.0,
+    "DH_ex_Sox5": 0.9791666666666666,
+    "DH_ex_Sox5/Tac1": 0.8235294117647058,
+    "DH_ex_Tac2": 0.46875,
+    "DH_in_Cdh3": 0.9596774193548387,
+    "DH_in_Kcnip2": 0.0,
+    "DH_in_Klhl14": 0.047619047619047616,
+    "DH_in_Npy": 1.0,
+    "DH_in_Npy2r": 0.9736842105263158,
+    "DH_in_Pdyn": 1.0,
+    "DH_in_Pdyn/Gal": 1.0,
+    "DH_in_Rorb": 1.0,
+    "DM_ex_Zfhx3": 1.0,
+    "MV_ex_Shox2": 1.0,
+    "MV_ex_Syt2": 1.0,
+    "MV_in_Chrna2": 0.5454545454545454,
+    "MV_in_Esrrb": 1.0,
+    "MV_in_Gabra1": 1.0,
+    "MV_in_Gm26673": 0.9545454545454546,
+    "MV_in_Sema5b": 1.0,
+    "M_ex_Neurod2": 1.0,
+    "M_ex_Vsx2": 1.0,
+    "M_ex_Vsx2/Shox2": 0.9565217391304348,
+    "M_in_Tfap2b": 1.0,
+    "Schwann_cell": 0.8571428571428571,
+    "VH_in_Chat": 1.0,
+    "alpha_motoneuron": 0.9252336448598131,
+    "astrocyte_1": 0.8150087260034904,
+    "astrocyte_2": 0.5714285714285714,
+    "beta_motoneuron": 0.14285714285714285,
+    "cholinergic_interneuron": 1.0,
+    "endothelial": 0.7275541795665634,
+    "ependymal": 0.5,
+    "gamma_motoneuron": 0.5208333333333334,
+    "meninges_1": 0.5970149253731343,
+    "meninges_2": 0.38095238095238093,
+    "meninges_3": 0.3684210526315789,
+    "microglia": 0.609375,
+    "oligodendrocyte_1": 0.36531365313653136,
+    "oligodendrocyte_2": 0.8424821002386634,
+    "oligodendrocyte_precursor_cell": 0.5454545454545454,
+    "oligodendrocyte_progenitor_1": 0.3469387755102041,
+    "oligodendrocyte_progenitor_2": 0.7297297297297297,
+    "pericyte": 0.125,
+    "peripheral_glia": 0.2608695652173913,
+    "visceral_motoneuron": 1.0
+  },
+  "per_signature_accuracy": {
+    "1/excitatory/1": {
+      "accuracy": 1.0,
+      "n": 36
+    },
+    "1/excitatory/10": {
+      "accuracy": 0.6458333333333334,
+      "n": 96
+    },
+    "1/excitatory/2": {
+      "accuracy": 0.71875,
+      "n": 64
+    },
+    "1/excitatory/3": {
+      "accuracy": 0.8494623655913979,
+      "n": 93
+    },
+    "1/excitatory/5": {
+      "accuracy": 0.9146341463414634,
+      "n": 82
+    },
+    "1/excitatory/6": {
+      "accuracy": 0.6292134831460674,
+      "n": 89
+    },
+    "1/excitatory/8": {
+      "accuracy": 0.6685082872928176,
+      "n": 181
+    },
+    "1/inhibitory/10": {
+      "accuracy": 0.8571428571428571,
+      "n": 140
+    },
+    "1/inhibitory/2": {
+      "accuracy": 1.0,
+      "n": 59
+    },
+    "1/inhibitory/4": {
+      "accuracy": 0.9152542372881356,
+      "n": 59
+    },
+    "1/inhibitory/5": {
+      "accuracy": 1.0,
+      "n": 26
+    },
+    "1/inhibitory/7": {
+      "accuracy": 1.0,
+      "n": 29
+    },
+    "1/inhibitory/9": {
+      "accuracy": 0.8043478260869565,
+      "n": 46
+    },
+    "2/excitatory/11": {
+      "accuracy": 1.0,
+      "n": 133
+    },
+    "3/excitatory/13": {
+      "accuracy": 1.0,
+      "n": 11
+    },
+    "3/excitatory/20": {
+      "accuracy": 0.9795918367346939,
+      "n": 49
+    },
+    "3/inhibitory/12": {
+      "accuracy": 1.0,
+      "n": 73
+    },
+    "4/excitatory/14": {
+      "accuracy": 1.0,
+      "n": 113
+    },
+    "4/excitatory/18": {
+      "accuracy": 1.0,
+      "n": 42
+    },
+    "4/inhibitory/14": {
+      "accuracy": 1.0,
+      "n": 63
+    },
+    "4/inhibitory/15": {
+      "accuracy": 1.0,
+      "n": 94
+    },
+    "4/inhibitory/16": {
+      "accuracy": 1.0,
+      "n": 145
+    },
+    "4/inhibitory/19": {
+      "accuracy": 0.8863636363636364,
+      "n": 132
+    },
+    "5/inhibitory/17": {
+      "accuracy": 1.0,
+      "n": 3
+    },
+    "__MISSING__/__MISSING__/20": {
+      "accuracy": 1.0,
+      "n": 8
+    },
+    "__MISSING__/__MISSING__/21": {
+      "accuracy": 1.0,
+      "n": 7
+    },
+    "__MISSING__/__MISSING__/22": {
+      "accuracy": 0.7455621301775148,
+      "n": 169
+    },
+    "__MISSING__/__MISSING__/__MISSING__": {
+      "accuracy": 0.6815415821501014,
+      "n": 2958
+    }
+  },
+  "proba_path": "outputs/probabilities/YW-004_oof_probabilities.csv.gz",
+  "random_seed": 20260819,
+  "run_id": "YW-004",
+  "runtime_seconds": 2.566483,
+  "warnings": []
+}

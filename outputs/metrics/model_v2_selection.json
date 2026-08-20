@@ -1,0 +1,44 @@
+{
+  "architecture": "V2-B reference-only LightGBM",
+  "candidate_path": "outputs/submissions/model_v2_candidate.csv",
+  "component_probability_files": {
+    "A_oof": "outputs/probabilities/BRIDGE-YW004-5F_oof_probabilities.csv.gz",
+    "A_test": null,
+    "B_oof": "outputs/probabilities/V2-A-SPATIAL-LGBM_oof_probabilities_ei.csv.gz",
+    "B_test": null,
+    "C_oof": "outputs/probabilities/V2-B-REFONLY_oof_probabilities_seg.csv.gz",
+    "C_test": "outputs/probabilities/V2-B-REFONLY_test_probabilities_seg.csv.gz"
+  },
+  "correct": 4106,
+  "cv_protocol": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+  "delta_vs_bridge": 0.06159999999999999,
+  "delta_vs_model_v1": 0.06140000000000001,
+  "delta_vs_v2a": 0.052200000000000024,
+  "delta_vs_v2b": 0.0,
+  "fold_accuracy": {
+    "0": 0.822,
+    "1": 0.831,
+    "2": 0.812,
+    "3": 0.821,
+    "4": 0.82
+  },
+  "git_commit": "533105adebf70fd0bfc5858331a9ca946abf9f39",
+  "glial_accuracy": 0.7628898790579249,
+  "hard_bucket_accuracy": 0.7569303583502367,
+  "macro_f1": 0.793613323779027,
+  "manifest_sha256": "0398d8762ae708b2d5bb2ada25327f3756394e62ee47f152a0190228373f0896",
+  "model_name": "MODEL V2",
+  "neuron_accuracy": 0.9198062432723358,
+  "no_weight_search": true,
+  "official_leaderboard_score": "Not submitted",
+  "oof_accuracy": 0.8212,
+  "selected_id": "C0",
+  "selection_reason": "No predeclared blend clearly improves OOF with fold-stable, slice-safe gain. Keep C0 = V2-B reference-only (OOF=0.8212, 4106/5000).",
+  "team_folds_sha256": "fe2baf2b41f824125fe46705f15d4499f0c3ce76cc149802320b6e6c1f5edb9d",
+  "timestamp": "2026-08-20T10:50:13Z",
+  "weights": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 1.0
+  }
+}

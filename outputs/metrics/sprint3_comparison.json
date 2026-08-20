@@ -1,0 +1,153 @@
+{
+  "best_experiment": {
+    "additional_correct_cells_vs_YW-004": 0,
+    "errors_inside_missing_bucket": 942,
+    "errors_outside_missing_bucket": 259,
+    "improvement_over_0_7598": 0.0,
+    "method": "fold-safe per-signature logistic specialists",
+    "oof_accuracy": 0.7598,
+    "remaining_total_errors": 1201,
+    "run_id": "YW-004"
+  },
+  "formal_model_v1_decision": {
+    "excluded": {
+      "YW-005": "exploratory ensemble diagnostic; not nested; underperforms YW-004 (OOF 0.7592 vs 0.7598)",
+      "YW-006": "valid negative ablation; hard-bucket only; selected log1p_lr matching YW-004",
+      "YW-007": "exact more-complex duplicate of YW-004; n_changed=0; not selected"
+    },
+    "model_v1_written": false,
+    "selected_oof_accuracy": 0.7598,
+    "selected_run_id": "YW-004"
+  },
+  "n_classes": 60,
+  "remaining_errors": {
+    "confusion_pairs_top5": [
+      {
+        "n": 111,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 64,
+        "predicted_label": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 56,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 50,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 42,
+        "predicted_label": "astrocyte_1",
+        "true_label": "astrocyte_2"
+      }
+    ],
+    "errors_inside_missing_bucket": 942,
+    "errors_outside_missing_bucket": 259,
+    "from_run": "YW-004",
+    "missing_bucket": {
+      "accuracy_inside": 0.6815415821501014,
+      "accuracy_outside": 0.8731635651322233,
+      "errors_inside": 942,
+      "errors_outside": 259,
+      "n_inside": 2958,
+      "n_outside": 2042,
+      "signature": "__MISSING__/__MISSING__/__MISSING__"
+    },
+    "remaining_total_errors": 1201
+  },
+  "table": [
+    {
+      "delta_vs_YW-004": -0.0030000000000000027,
+      "fold_0": 0.7540491901619676,
+      "fold_1": 0.7570485902819436,
+      "fold_2": 0.7593037214885955,
+      "formal_selection_eligible": true,
+      "macro_f1": 0.6799064216825523,
+      "method": "gene + fold-safe Region/E-I/Segment one-hot + LR",
+      "oof_accuracy": 0.7568,
+      "run_id": "YW-002",
+      "runtime_seconds": 1.630449083,
+      "total_correct": 3784
+    },
+    {
+      "delta_vs_YW-004": -0.006800000000000028,
+      "fold_0": 0.7510497900419916,
+      "fold_1": 0.7510497900419916,
+      "fold_2": 0.7569027611044418,
+      "formal_selection_eligible": true,
+      "macro_f1": 0.7129958097644725,
+      "method": "gene-only global LR + fold-safe candidate masking",
+      "oof_accuracy": 0.753,
+      "run_id": "YW-003",
+      "runtime_seconds": 3.1777107079999998,
+      "total_correct": 3765
+    },
+    {
+      "delta_vs_YW-004": 0.0,
+      "fold_0": 0.7594481103779244,
+      "fold_1": 0.7564487102579485,
+      "fold_2": 0.7635054021608644,
+      "formal_selection_eligible": true,
+      "macro_f1": 0.7052920244297476,
+      "method": "fold-safe per-signature logistic specialists",
+      "oof_accuracy": 0.7598,
+      "run_id": "YW-004",
+      "runtime_seconds": 2.566483,
+      "total_correct": 3799
+    },
+    {
+      "delta_vs_YW-004": -0.0006000000000000449,
+      "fold_0": 0.7594481103779244,
+      "fold_1": 0.7570485902819436,
+      "fold_2": 0.7611044417767107,
+      "formal_selection_eligible": false,
+      "macro_f1": 0.7071779314312079,
+      "method": "exploratory ensemble diagnostic (not nested; excluded from selection)",
+      "oof_accuracy": 0.7592,
+      "run_id": "YW-005",
+      "runtime_seconds": 0.4180510420000001,
+      "total_correct": 3796
+    },
+    {
+      "delta_vs_YW-004": 0.0,
+      "fold_0": 0.7594481103779244,
+      "fold_1": 0.7564487102579485,
+      "fold_2": 0.7635054021608644,
+      "formal_selection_eligible": true,
+      "macro_f1": 0.7052920244297476,
+      "method": "hybrid: YW-004 outside missing bucket; YW-006 inside",
+      "oof_accuracy": 0.7598,
+      "run_id": "YW-007",
+      "runtime_seconds": 0.0011193329999912294,
+      "total_correct": 3799
+    }
+  ],
+  "yw004_oof_accuracy_reference": 0.7598,
+  "yw005_cross_fitted_oof_accuracy": 0.7592,
+  "yw005_equal_weight_oof_accuracy": 0.7598,
+  "yw005_formal_selection_eligible": false,
+  "yw005_provenance_summary": "Standard 3-fold OOF: a prediction for fold g is fit on folds != g. When selecting weights for held-out fold f, the eligible folds are g != f, so those base models were trained with fold f in the training set. Regenerating base probabilities after changing fold-f labels could change the selected weights.",
+  "yw006": {
+    "delta_vs_YW-004_hard_bucket": 0.0,
+    "n_bucket_cells": 2958,
+    "oof_accuracy": 0.6815415821501014,
+    "outer_fold_bucket_accuracy": {
+      "0": 0.6781725888324873,
+      "1": 0.6862348178137652,
+      "2": 0.6802030456852792
+    },
+    "role": "valid_negative_ablation",
+    "selected_model_by_outer_fold": {
+      "0": "log1p_lr",
+      "1": "log1p_lr",
+      "2": "log1p_lr"
+    }
+  }
+}

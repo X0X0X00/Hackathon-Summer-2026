@@ -1,0 +1,364 @@
+{
+  "class_order": [
+    "DH_ex_Cpne4",
+    "DH_ex_Gpr83",
+    "DH_ex_Grp",
+    "DH_ex_Grpr",
+    "DH_ex_Maf/Cck",
+    "DH_ex_Maf/Cpne4",
+    "DH_ex_Maf/Slc17a8",
+    "DH_ex_Nmu/Tac2",
+    "DH_ex_Prkcg/Cck",
+    "DH_ex_Prkcg/Nts",
+    "DH_ex_Prkcg/Rxfp1",
+    "DH_ex_Reln",
+    "DH_ex_Reln/Nmur2",
+    "DH_ex_Reln/Npff",
+    "DH_ex_Rreb1",
+    "DH_ex_Sox5",
+    "DH_ex_Sox5/Tac1",
+    "DH_ex_Tac2",
+    "DH_in_Cdh3",
+    "DH_in_Kcnip2",
+    "DH_in_Klhl14",
+    "DH_in_Npy",
+    "DH_in_Npy2r",
+    "DH_in_Pdyn",
+    "DH_in_Pdyn/Gal",
+    "DH_in_Rorb",
+    "DM_ex_Zfhx3",
+    "MV_ex_Shox2",
+    "MV_ex_Syt2",
+    "MV_in_Chrna2",
+    "MV_in_Esrrb",
+    "MV_in_Gabra1",
+    "MV_in_Gm26673",
+    "MV_in_Sema5b",
+    "M_ex_Neurod2",
+    "M_ex_Vsx2",
+    "M_ex_Vsx2/Shox2",
+    "M_in_Tfap2b",
+    "Schwann_cell",
+    "VH_in_Chat",
+    "alpha_motoneuron",
+    "astrocyte_1",
+    "astrocyte_2",
+    "beta_motoneuron",
+    "cholinergic_interneuron",
+    "endothelial",
+    "ependymal",
+    "gamma_motoneuron",
+    "meninges_1",
+    "meninges_2",
+    "meninges_3",
+    "microglia",
+    "oligodendrocyte_1",
+    "oligodendrocyte_2",
+    "oligodendrocyte_precursor_cell",
+    "oligodendrocyte_progenitor_1",
+    "oligodendrocyte_progenitor_2",
+    "pericyte",
+    "peripheral_glia",
+    "visceral_motoneuron"
+  ],
+  "compliance_status": "EXTERNAL_REFERENCE_PERMISSION_REQUIRED",
+  "confusion_pairs_top10_ei": [
+    {
+      "n": 132,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "n": 57,
+      "predicted_label": "oligodendrocyte_2",
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "n": 42,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "oligodendrocyte_2"
+    },
+    {
+      "n": 37,
+      "predicted_label": "astrocyte_1",
+      "true_label": "endothelial"
+    },
+    {
+      "n": 37,
+      "predicted_label": "oligodendrocyte_1",
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "n": 34,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "astrocyte_1"
+    },
+    {
+      "n": 34,
+      "predicted_label": "astrocyte_1",
+      "true_label": "astrocyte_2"
+    },
+    {
+      "n": 33,
+      "predicted_label": "astrocyte_1",
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "n": 31,
+      "predicted_label": "astrocyte_1",
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "n": 26,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "endothelial"
+    }
+  ],
+  "confusion_pairs_top10_raw": [
+    {
+      "n": 132,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "n": 57,
+      "predicted_label": "oligodendrocyte_2",
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "n": 42,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "oligodendrocyte_2"
+    },
+    {
+      "n": 37,
+      "predicted_label": "astrocyte_1",
+      "true_label": "endothelial"
+    },
+    {
+      "n": 37,
+      "predicted_label": "oligodendrocyte_1",
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "n": 34,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "astrocyte_1"
+    },
+    {
+      "n": 34,
+      "predicted_label": "astrocyte_1",
+      "true_label": "astrocyte_2"
+    },
+    {
+      "n": 33,
+      "predicted_label": "astrocyte_1",
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "n": 31,
+      "predicted_label": "astrocyte_1",
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "n": 26,
+      "predicted_label": "oligodendrocyte_progenitor_2",
+      "true_label": "endothelial"
+    }
+  ],
+  "confusion_path": "outputs/metrics/V2-A-SPATIAL-LGBM_confusion.csv",
+  "cv_protocol": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+  "feature_blocks": {
+    "expression_knn": "PCA50 Euclidean kNN across all cells, K=50",
+    "genes_lognorm": "library-size log1p (median total) of 200 genes",
+    "metadata": "log total, log volume, density, x/y, within-section rel x/y, spatial/expression distances, Region/EI/Segment/AP/gender/mouse/dataset codes",
+    "neighbor_label_hist": "fold-safe 1/(1+d) histograms of 15 spatial and 25 expression labeled neighbors",
+    "neighbor_mean_pca": "mean PCA50 of 10 spatial neighbors",
+    "pca50": "PCA50 of standardized lognorm genes, random_state=0, train+test",
+    "spatial_knn": "within-Section_ID spatial kNN, K=50 cached"
+  },
+  "feature_set": "genes_lognorm: library-size log1p (median total) of 200 genes; pca50: PCA50 of standardized lognorm genes, random_state=0, train+test; spatial_knn: within-Section_ID spatial kNN, K=50 cached; expression_knn: PCA50 Euclidean kNN across all cells, K=50; neighbor_mean_pca: mean PCA50 of 10 spatial neighbors; metadata: log total, log volume, density, x/y, within-section rel x/y, spatial/expression distances, Region/EI/Segment/AP/gender/mouse/dataset codes; neighbor_label_hist: fold-safe 1/(1+d) histograms of 15 spatial and 25 expression labeled neighbors",
+  "fold_accuracy_ei": {
+    "0": 0.761,
+    "1": 0.785,
+    "2": 0.769,
+    "3": 0.761,
+    "4": 0.769
+  },
+  "fold_accuracy_raw": {
+    "0": 0.761,
+    "1": 0.784,
+    "2": 0.768,
+    "3": 0.759,
+    "4": 0.767
+  },
+  "git_commit": "a3722c06f1844bce825b38a05c4be85838de491a",
+  "glial_accuracy_ei": 0.6928707829408021,
+  "glial_accuracy_raw": 0.6928707829408021,
+  "hard_bucket_accuracy_ei": 0.6876267748478702,
+  "hard_bucket_accuracy_raw": 0.6876267748478702,
+  "lgbm_params": {
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "feature_fraction": 0.7,
+    "lambda_l2": 1.0,
+    "learning_rate": 0.06,
+    "max_bin": 127,
+    "min_data_in_leaf": 20,
+    "num_class": 60,
+    "num_leaves": 63,
+    "num_threads": 8,
+    "objective": "multiclass",
+    "seed": 0,
+    "verbosity": -1
+  },
+  "macro_f1_ei": 0.7107282362858418,
+  "macro_f1_raw": 0.7085405228247511,
+  "manifest_sha256": "0398d8762ae708b2d5bb2ada25327f3756394e62ee47f152a0190228373f0896",
+  "metrics_path": "outputs/metrics/V2-A-SPATIAL-LGBM_metrics.json",
+  "model": "competition-only spatial LightGBM (single seed)",
+  "n_sections": 108,
+  "n_seeds": 1,
+  "n_static_features": 319,
+  "neuron_accuracy_ei": 0.8977395048439182,
+  "neuron_accuracy_raw": 0.8945102260495156,
+  "no_47_model_bag": true,
+  "num_boost_round": 400,
+  "oof_accuracy_ei": 0.769,
+  "oof_accuracy_raw": 0.7678,
+  "oof_path": "outputs/oof/V2-A-SPATIAL-LGBM_oof.csv",
+  "pca_var_explained": 0.33979320526123047,
+  "proba_ei_path": "outputs/probabilities/V2-A-SPATIAL-LGBM_oof_probabilities_ei.csv.gz",
+  "proba_path": "outputs/probabilities/V2-A-SPATIAL-LGBM_oof_probabilities.csv.gz",
+  "random_seed": 0,
+  "run_id": "V2-A-SPATIAL-LGBM",
+  "runtime_seconds": 341.87278683299996,
+  "same_team_benchmark": "single spatial LGBM OOF ~0.762-0.769; not a required match",
+  "slices_ei": {
+    "confusion_pairs_top10": [
+      {
+        "n": 132,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 57,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 42,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 37,
+        "predicted_label": "astrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 37,
+        "predicted_label": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 34,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 34,
+        "predicted_label": "astrocyte_1",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "n": 33,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 31,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 26,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "endothelial"
+      }
+    ],
+    "glial_accuracy": 0.6928707829408021,
+    "glial_n": 3142,
+    "hard_bucket_accuracy": 0.6876267748478702,
+    "hard_bucket_key": "__MISSING__/__MISSING__/__MISSING__",
+    "hard_bucket_n": 2958,
+    "neuron_accuracy": 0.8977395048439182,
+    "neuron_n": 1858
+  },
+  "slices_raw": {
+    "confusion_pairs_top10": [
+      {
+        "n": 132,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 57,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 42,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 37,
+        "predicted_label": "astrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 37,
+        "predicted_label": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 34,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 34,
+        "predicted_label": "astrocyte_1",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "n": 33,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 31,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 26,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "endothelial"
+      }
+    ],
+    "glial_accuracy": 0.6928707829408021,
+    "glial_n": 3142,
+    "hard_bucket_accuracy": 0.6876267748478702,
+    "hard_bucket_key": "__MISSING__/__MISSING__/__MISSING__",
+    "hard_bucket_n": 2958,
+    "neuron_accuracy": 0.8945102260495156,
+    "neuron_n": 1858
+  },
+  "team_folds_sha256": "fe2baf2b41f824125fe46705f15d4499f0c3ce76cc149802320b6e6c1f5edb9d",
+  "test_proba_path": "outputs/probabilities/V2-A-SPATIAL-LGBM_test_probabilities.csv.gz",
+  "timestamp": "2026-08-20T05:32:35Z",
+  "transductive_note": "PCA50, within-section spatial kNN, and PCA50 expression kNN are fit on the concatenated 5000-train + 5000-test feature universe. No labels, including hidden test labels, are used.",
+  "transductive_unsupervised": true
+}

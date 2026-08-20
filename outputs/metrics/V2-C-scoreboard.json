@@ -1,0 +1,543 @@
+{
+  "expert_files": {
+    "A_oof": "outputs/probabilities/BRIDGE-YW004-5F_oof_probabilities.csv.gz",
+    "A_test": "outputs/probabilities/model_v1_test_probabilities.csv.gz",
+    "B_oof": "outputs/probabilities/V2-A-SPATIAL-LGBM_oof_probabilities_ei.csv.gz",
+    "B_test": "outputs/probabilities/V2-A-SPATIAL-LGBM_test_probabilities.csv.gz",
+    "C_oof": "outputs/probabilities/V2-B-REFONLY_oof_probabilities_seg.csv.gz",
+    "C_test": "outputs/probabilities/V2-B-REFONLY_test_probabilities_seg.csv.gz"
+  },
+  "experts": {
+    "A": {
+      "correct": 3798,
+      "fold_accuracy": {
+        "0": 0.767,
+        "1": 0.777,
+        "2": 0.769,
+        "3": 0.74,
+        "4": 0.745
+      },
+      "macro_f1": 0.7244825703338026,
+      "oof_accuracy": 0.7596,
+      "wrong": 1202
+    },
+    "B": {
+      "correct": 3845,
+      "fold_accuracy": {
+        "0": 0.761,
+        "1": 0.785,
+        "2": 0.769,
+        "3": 0.761,
+        "4": 0.769
+      },
+      "macro_f1": 0.7107282362858418,
+      "oof_accuracy": 0.769,
+      "wrong": 1155
+    },
+    "C": {
+      "correct": 4106,
+      "fold_accuracy": {
+        "0": 0.822,
+        "1": 0.831,
+        "2": 0.812,
+        "3": 0.821,
+        "4": 0.82
+      },
+      "macro_f1": 0.793613323779027,
+      "oof_accuracy": 0.8212,
+      "wrong": 894
+    }
+  },
+  "fixed_blends": {
+    "C0": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "C1": [
+      0.0,
+      0.25,
+      0.75
+    ],
+    "C2": [
+      0.15,
+      0.15,
+      0.7
+    ],
+    "C3": [
+      0.2,
+      0.2,
+      0.6
+    ],
+    "C4": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "no_weight_search": true,
+  "scoreboard": {
+    "C0": {
+      "confusion_pairs_top10": [
+        {
+          "n": 98,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 55,
+          "predicted_label": "oligodendrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 40,
+          "predicted_label": "oligodendrocyte_2",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 36,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_2"
+        },
+        {
+          "n": 31,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "astrocyte_1"
+        },
+        {
+          "n": 30,
+          "predicted_label": "astrocyte_1",
+          "true_label": "endothelial"
+        },
+        {
+          "n": 29,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 26,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 24,
+          "predicted_label": "oligodendrocyte_precursor_cell",
+          "true_label": "oligodendrocyte_progenitor_1"
+        },
+        {
+          "n": 21,
+          "predicted_label": "meninges_1",
+          "true_label": "meninges_2"
+        }
+      ],
+      "correct": 4106,
+      "delta_vs_bridge": 0.06159999999999999,
+      "delta_vs_v2a": 0.052200000000000024,
+      "delta_vs_v2b": 0.0,
+      "fold_accuracy": {
+        "0": 0.822,
+        "1": 0.831,
+        "2": 0.812,
+        "3": 0.821,
+        "4": 0.82
+      },
+      "glial_accuracy": 0.7628898790579249,
+      "hard_bucket_accuracy": 0.7569303583502367,
+      "macro_f1": 0.793613323779027,
+      "neuron_accuracy": 0.9198062432723358,
+      "oof_accuracy": 0.8212,
+      "selection_eligible": null,
+      "stability": null,
+      "vs_c0": null,
+      "weights": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 1.0
+      },
+      "wrong": 894
+    },
+    "C1": {
+      "confusion_pairs_top10": [
+        {
+          "n": 101,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 46,
+          "predicted_label": "oligodendrocyte_2",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 41,
+          "predicted_label": "oligodendrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 39,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_2"
+        },
+        {
+          "n": 32,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "astrocyte_1"
+        },
+        {
+          "n": 30,
+          "predicted_label": "astrocyte_1",
+          "true_label": "endothelial"
+        },
+        {
+          "n": 27,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 27,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 24,
+          "predicted_label": "oligodendrocyte_precursor_cell",
+          "true_label": "oligodendrocyte_progenitor_1"
+        },
+        {
+          "n": 22,
+          "predicted_label": "meninges_1",
+          "true_label": "meninges_2"
+        }
+      ],
+      "correct": 4112,
+      "delta_vs_bridge": 0.06279999999999997,
+      "delta_vs_v2a": 0.0534,
+      "delta_vs_v2b": 0.0011999999999999789,
+      "fold_accuracy": {
+        "0": 0.825,
+        "1": 0.833,
+        "2": 0.82,
+        "3": 0.817,
+        "4": 0.817
+      },
+      "glial_accuracy": 0.7632081476766391,
+      "hard_bucket_accuracy": 0.7579445571331981,
+      "macro_f1": 0.7905969897977048,
+      "neuron_accuracy": 0.922497308934338,
+      "oof_accuracy": 0.8224,
+      "selection_eligible": false,
+      "stability": {
+        "flag": "MIXED",
+        "n_negative": 2,
+        "n_positive": 3,
+        "per_fold_delta": {
+          "0": 0.0030000000000000027,
+          "1": 0.0020000000000000018,
+          "2": 0.007999999999999896,
+          "3": -0.0040000000000000036,
+          "4": -0.0030000000000000027
+        }
+      },
+      "vs_c0": {
+        "changed_predictions": 88,
+        "correct_to_wrong": 35,
+        "net_gain": 6,
+        "wrong_to_correct": 41
+      },
+      "weights": {
+        "A": 0.0,
+        "B": 0.25,
+        "C": 0.75
+      },
+      "wrong": 888
+    },
+    "C2": {
+      "confusion_pairs_top10": [
+        {
+          "n": 98,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 47,
+          "predicted_label": "oligodendrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 46,
+          "predicted_label": "oligodendrocyte_2",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 38,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_2"
+        },
+        {
+          "n": 32,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "astrocyte_1"
+        },
+        {
+          "n": 30,
+          "predicted_label": "astrocyte_1",
+          "true_label": "endothelial"
+        },
+        {
+          "n": 28,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 27,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 24,
+          "predicted_label": "oligodendrocyte_precursor_cell",
+          "true_label": "oligodendrocyte_progenitor_1"
+        },
+        {
+          "n": 21,
+          "predicted_label": "meninges_1",
+          "true_label": "meninges_2"
+        }
+      ],
+      "correct": 4106,
+      "delta_vs_bridge": 0.06159999999999999,
+      "delta_vs_v2a": 0.052200000000000024,
+      "delta_vs_v2b": 0.0,
+      "fold_accuracy": {
+        "0": 0.822,
+        "1": 0.835,
+        "2": 0.816,
+        "3": 0.817,
+        "4": 0.816
+      },
+      "glial_accuracy": 0.7612985359643539,
+      "hard_bucket_accuracy": 0.7559161595672752,
+      "macro_f1": 0.7911101313444404,
+      "neuron_accuracy": 0.922497308934338,
+      "oof_accuracy": 0.8212,
+      "selection_eligible": false,
+      "stability": {
+        "flag": "MIXED",
+        "n_negative": 2,
+        "n_positive": 2,
+        "per_fold_delta": {
+          "0": 0.0,
+          "1": 0.0040000000000000036,
+          "2": 0.0039999999999998925,
+          "3": -0.0040000000000000036,
+          "4": -0.0040000000000000036
+        }
+      },
+      "vs_c0": {
+        "changed_predictions": 73,
+        "correct_to_wrong": 31,
+        "net_gain": 0,
+        "wrong_to_correct": 31
+      },
+      "weights": {
+        "A": 0.15,
+        "B": 0.15,
+        "C": 0.7
+      },
+      "wrong": 894
+    },
+    "C3": {
+      "confusion_pairs_top10": [
+        {
+          "n": 100,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 46,
+          "predicted_label": "oligodendrocyte_2",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 44,
+          "predicted_label": "oligodendrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 36,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_2"
+        },
+        {
+          "n": 33,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "astrocyte_1"
+        },
+        {
+          "n": 31,
+          "predicted_label": "astrocyte_1",
+          "true_label": "endothelial"
+        },
+        {
+          "n": 28,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 28,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 24,
+          "predicted_label": "oligodendrocyte_precursor_cell",
+          "true_label": "oligodendrocyte_progenitor_1"
+        },
+        {
+          "n": 22,
+          "predicted_label": "meninges_1",
+          "true_label": "meninges_2"
+        }
+      ],
+      "correct": 4110,
+      "delta_vs_bridge": 0.0623999999999999,
+      "delta_vs_v2a": 0.052999999999999936,
+      "delta_vs_v2b": 0.0007999999999999119,
+      "fold_accuracy": {
+        "0": 0.82,
+        "1": 0.837,
+        "2": 0.824,
+        "3": 0.813,
+        "4": 0.816
+      },
+      "glial_accuracy": 0.7612985359643539,
+      "hard_bucket_accuracy": 0.7559161595672752,
+      "macro_f1": 0.7870480850565713,
+      "neuron_accuracy": 0.9246501614639397,
+      "oof_accuracy": 0.822,
+      "selection_eligible": false,
+      "stability": {
+        "flag": "UNSTABLE",
+        "n_negative": 3,
+        "n_positive": 2,
+        "per_fold_delta": {
+          "0": -0.0020000000000000018,
+          "1": 0.006000000000000005,
+          "2": 0.0119999999999999,
+          "3": -0.008000000000000007,
+          "4": -0.0040000000000000036
+        }
+      },
+      "vs_c0": {
+        "changed_predictions": 130,
+        "correct_to_wrong": 54,
+        "net_gain": 4,
+        "wrong_to_correct": 58
+      },
+      "weights": {
+        "A": 0.2,
+        "B": 0.2,
+        "C": 0.6
+      },
+      "wrong": 890
+    },
+    "C4": {
+      "confusion_pairs_top10": [
+        {
+          "n": 117,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 51,
+          "predicted_label": "oligodendrocyte_2",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 37,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_2"
+        },
+        {
+          "n": 37,
+          "predicted_label": "oligodendrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 31,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "astrocyte_1"
+        },
+        {
+          "n": 30,
+          "predicted_label": "astrocyte_1",
+          "true_label": "endothelial"
+        },
+        {
+          "n": 30,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 27,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 25,
+          "predicted_label": "oligodendrocyte_precursor_cell",
+          "true_label": "oligodendrocyte_progenitor_1"
+        },
+        {
+          "n": 23,
+          "predicted_label": "astrocyte_1",
+          "true_label": "astrocyte_2"
+        }
+      ],
+      "correct": 4066,
+      "delta_vs_bridge": 0.05359999999999998,
+      "delta_vs_v2a": 0.04420000000000002,
+      "delta_vs_v2b": -0.008000000000000007,
+      "fold_accuracy": {
+        "0": 0.813,
+        "1": 0.818,
+        "2": 0.819,
+        "3": 0.808,
+        "4": 0.808
+      },
+      "glial_accuracy": 0.7498408656906429,
+      "hard_bucket_accuracy": 0.7450980392156863,
+      "macro_f1": 0.7724087456355252,
+      "neuron_accuracy": 0.9203444564047363,
+      "oof_accuracy": 0.8132,
+      "selection_eligible": false,
+      "stability": {
+        "flag": "UNSTABLE",
+        "n_negative": 4,
+        "n_positive": 1,
+        "per_fold_delta": {
+          "0": -0.009000000000000008,
+          "1": -0.013000000000000012,
+          "2": 0.006999999999999895,
+          "3": -0.0129999999999999,
+          "4": -0.0119999999999999
+        }
+      },
+      "vs_c0": {
+        "changed_predictions": 374,
+        "correct_to_wrong": 170,
+        "net_gain": -40,
+        "wrong_to_correct": 130
+      },
+      "weights": {
+        "A": 0.3333333333333333,
+        "B": 0.3333333333333333,
+        "C": 0.3333333333333333
+      },
+      "wrong": 934
+    }
+  },
+  "selected_id": "C0",
+  "selection_reason": "No predeclared blend clearly improves OOF with fold-stable, slice-safe gain. Keep C0 = V2-B reference-only (OOF=0.8212, 4106/5000).",
+  "timestamp": "2026-08-20T10:50:13Z"
+}

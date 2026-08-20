@@ -1,0 +1,30 @@
+{
+  "run_id": "V2-B-REFONLY",
+  "existing_process_reused": true,
+  "process": {
+    "pid": 22694,
+    "parent_pid": 22688,
+    "script": "scripts/09_v2b_refonly.py --num-threads 8",
+    "restarted": false,
+    "exit_code": 0,
+    "ended_at": "2026-08-20T10:18:38Z"
+  },
+  "reference_md5": "ce06f62c0ec4973581dae17bb76f0cd9",
+  "test_target_used": false,
+  "prediction_csv_modified": false,
+  "model_v1_modified": false,
+  "official_csvs_modified": false,
+  "fold_f_labels_hidden": true,
+  "reference_labels_always_visible": true,
+  "lightgbm_fit_rows": "usable reference only (136574); competition train labels never in y",
+  "neighbor_histograms": "visible_ext_label_codes: hide fold-f train; keep reference; test always -1",
+  "segment_mask_source": "reference labels only",
+  "ei_of_label_source": "competition TRAIN metadata/labels only",
+  "early_stopping": false,
+  "hyperparameter_search": false,
+  "pseudo_labels": false,
+  "held_out_runtime_assert": "script aborted if known[train fold-f] != -1 or known[test] != -1",
+  "probability_class_order": "official allowed_labels from meta_train, length 60",
+  "oof_probability_row_sums": "verified ~1",
+  "test_ids_in_oof": false
+}

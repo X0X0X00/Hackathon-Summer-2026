@@ -1,0 +1,208 @@
+{
+  "best_experiment": {
+    "all_folds_improved": true,
+    "fold_direction": {
+      "0": "improved",
+      "1": "improved",
+      "2": "improved"
+    },
+    "gain_over_0_5500": 0.2098,
+    "net_additional_correct": 1049,
+    "oof_accuracy": 0.7598,
+    "run_id": "YW-004"
+  },
+  "fold_direction": {
+    "YW-002": {
+      "0": "improved",
+      "1": "improved",
+      "2": "improved"
+    },
+    "YW-003": {
+      "0": "improved",
+      "1": "improved",
+      "2": "improved"
+    },
+    "YW-004": {
+      "0": "improved",
+      "1": "improved",
+      "2": "improved"
+    }
+  },
+  "missing_bucket": {
+    "YW-001": {
+      "accuracy": 0.6612576064908722,
+      "n": 2958,
+      "signature": "__MISSING__/__MISSING__/__MISSING__"
+    },
+    "YW-002": {
+      "accuracy": 0.6812035158891143,
+      "n": 2958,
+      "signature": "__MISSING__/__MISSING__/__MISSING__"
+    },
+    "YW-003": {
+      "accuracy": 0.6778228532792427,
+      "n": 2958,
+      "signature": "__MISSING__/__MISSING__/__MISSING__"
+    },
+    "YW-004": {
+      "accuracy": 0.6815415821501014,
+      "n": 2958,
+      "signature": "__MISSING__/__MISSING__/__MISSING__"
+    }
+  },
+  "n_classes": 60,
+  "paired_vs_YW-001": {
+    "YW-002": {
+      "base_accuracy": 0.55,
+      "base_correct_to_new_wrong": 51,
+      "base_wrong_to_new_correct": 1085,
+      "both_correct": 2699,
+      "both_wrong": 1165,
+      "delta_accuracy": 0.20679999999999998,
+      "n": 5000,
+      "net_additional_correct": 1034,
+      "new_accuracy": 0.7568
+    },
+    "YW-003": {
+      "base_accuracy": 0.55,
+      "base_correct_to_new_wrong": 0,
+      "base_wrong_to_new_correct": 1015,
+      "both_correct": 2750,
+      "both_wrong": 1235,
+      "delta_accuracy": 0.20299999999999996,
+      "n": 5000,
+      "net_additional_correct": 1015,
+      "new_accuracy": 0.753
+    },
+    "YW-004": {
+      "base_accuracy": 0.55,
+      "base_correct_to_new_wrong": 54,
+      "base_wrong_to_new_correct": 1103,
+      "both_correct": 2696,
+      "both_wrong": 1147,
+      "delta_accuracy": 0.2098,
+      "n": 5000,
+      "net_additional_correct": 1049,
+      "new_accuracy": 0.7598
+    }
+  },
+  "remaining_errors": {
+    "confusion_pairs_top5": [
+      {
+        "n": 111,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 64,
+        "predicted_label": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 56,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 50,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 42,
+        "predicted_label": "astrocyte_1",
+        "true_label": "astrocyte_2"
+      }
+    ],
+    "from_run": "YW-004",
+    "hardest_signatures": [
+      {
+        "accuracy": 0.6292134831460674,
+        "n": 89,
+        "signature": "1/excitatory/6"
+      },
+      {
+        "accuracy": 0.6458333333333334,
+        "n": 96,
+        "signature": "1/excitatory/10"
+      },
+      {
+        "accuracy": 0.6685082872928176,
+        "n": 181,
+        "signature": "1/excitatory/8"
+      },
+      {
+        "accuracy": 0.6815415821501014,
+        "n": 2958,
+        "signature": "__MISSING__/__MISSING__/__MISSING__"
+      },
+      {
+        "accuracy": 0.71875,
+        "n": 64,
+        "signature": "1/excitatory/2"
+      },
+      {
+        "accuracy": 0.7455621301775148,
+        "n": 169,
+        "signature": "__MISSING__/__MISSING__/22"
+      },
+      {
+        "accuracy": 0.8043478260869565,
+        "n": 46,
+        "signature": "1/inhibitory/9"
+      },
+      {
+        "accuracy": 0.8494623655913979,
+        "n": 93,
+        "signature": "1/excitatory/3"
+      }
+    ]
+  },
+  "table": [
+    {
+      "delta_vs_yw001": 0.0,
+      "fold_0": 0.5428914217156569,
+      "fold_1": 0.5578884223155369,
+      "fold_2": 0.5492196878751501,
+      "macro_f1": 0.38940550095707044,
+      "method": "log1p 200 genes + multinomial LR",
+      "oof_accuracy": 0.55,
+      "run_id": "YW-001",
+      "runtime_seconds": 2.672367542
+    },
+    {
+      "delta_vs_yw001": 0.20679999999999998,
+      "fold_0": 0.7540491901619676,
+      "fold_1": 0.7570485902819436,
+      "fold_2": 0.7593037214885955,
+      "macro_f1": 0.6799064216825523,
+      "method": "log1p genes + fold-safe one-hot Region/E/I/Segment + LR",
+      "oof_accuracy": 0.7568,
+      "run_id": "YW-002",
+      "runtime_seconds": 1.630449083
+    },
+    {
+      "delta_vs_yw001": 0.20299999999999996,
+      "fold_0": 0.7510497900419916,
+      "fold_1": 0.7510497900419916,
+      "fold_2": 0.7569027611044418,
+      "macro_f1": 0.7129958097644725,
+      "method": "YW-001 gene-only LR + fold-safe candidate masking",
+      "oof_accuracy": 0.753,
+      "run_id": "YW-003",
+      "runtime_seconds": 3.1777107079999998
+    },
+    {
+      "delta_vs_yw001": 0.2098,
+      "fold_0": 0.7594481103779244,
+      "fold_1": 0.7564487102579485,
+      "fold_2": 0.7635054021608644,
+      "macro_f1": 0.7052920244297476,
+      "method": "fold-safe per-signature gene LR specialists",
+      "oof_accuracy": 0.7598,
+      "run_id": "YW-004",
+      "runtime_seconds": 2.566483
+    }
+  ],
+  "yw001_oof_accuracy_reference": 0.55
+}

@@ -1,0 +1,309 @@
+{
+  "class_order": [
+    "DH_ex_Cpne4",
+    "DH_ex_Gpr83",
+    "DH_ex_Grp",
+    "DH_ex_Grpr",
+    "DH_ex_Maf/Cck",
+    "DH_ex_Maf/Cpne4",
+    "DH_ex_Maf/Slc17a8",
+    "DH_ex_Nmu/Tac2",
+    "DH_ex_Prkcg/Cck",
+    "DH_ex_Prkcg/Nts",
+    "DH_ex_Prkcg/Rxfp1",
+    "DH_ex_Reln",
+    "DH_ex_Reln/Nmur2",
+    "DH_ex_Reln/Npff",
+    "DH_ex_Rreb1",
+    "DH_ex_Sox5",
+    "DH_ex_Sox5/Tac1",
+    "DH_ex_Tac2",
+    "DH_in_Cdh3",
+    "DH_in_Kcnip2",
+    "DH_in_Klhl14",
+    "DH_in_Npy",
+    "DH_in_Npy2r",
+    "DH_in_Pdyn",
+    "DH_in_Pdyn/Gal",
+    "DH_in_Rorb",
+    "DM_ex_Zfhx3",
+    "MV_ex_Shox2",
+    "MV_ex_Syt2",
+    "MV_in_Chrna2",
+    "MV_in_Esrrb",
+    "MV_in_Gabra1",
+    "MV_in_Gm26673",
+    "MV_in_Sema5b",
+    "M_ex_Neurod2",
+    "M_ex_Vsx2",
+    "M_ex_Vsx2/Shox2",
+    "M_in_Tfap2b",
+    "Schwann_cell",
+    "VH_in_Chat",
+    "alpha_motoneuron",
+    "astrocyte_1",
+    "astrocyte_2",
+    "beta_motoneuron",
+    "cholinergic_interneuron",
+    "endothelial",
+    "ependymal",
+    "gamma_motoneuron",
+    "meninges_1",
+    "meninges_2",
+    "meninges_3",
+    "microglia",
+    "oligodendrocyte_1",
+    "oligodendrocyte_2",
+    "oligodendrocyte_precursor_cell",
+    "oligodendrocyte_progenitor_1",
+    "oligodendrocyte_progenitor_2",
+    "pericyte",
+    "peripheral_glia",
+    "visceral_motoneuron"
+  ],
+  "cv_protocol": "StratifiedKFold(n_splits=3, shuffle=True, random_state=20260819)",
+  "encoded_feature_dimensions": {
+    "0": {
+      "n_gene_features": 200,
+      "n_meta_features": 32,
+      "n_total_features": 232
+    },
+    "1": {
+      "n_gene_features": 200,
+      "n_meta_features": 32,
+      "n_total_features": 232
+    },
+    "2": {
+      "n_gene_features": 200,
+      "n_meta_features": 32,
+      "n_total_features": 232
+    }
+  },
+  "feature_set": "log1p(raw gene counts, 200) + fold-safe one-hot Region/Excitatory_vs_Inhibitory/Segment",
+  "fold_accuracy": {
+    "0": 0.7540491901619676,
+    "1": 0.7570485902819436,
+    "2": 0.7593037214885955
+  },
+  "macro_f1": 0.6799064216825523,
+  "model": "LogisticRegression_l2_lbfgs",
+  "model_hyperparameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "max_iter": 2000,
+    "penalty": "l2",
+    "random_state": 20260819,
+    "solver": "lbfgs"
+  },
+  "n_cells": 5000,
+  "n_classes": 60,
+  "n_iter_per_fold": {
+    "0": 87,
+    "1": 121,
+    "2": 110
+  },
+  "oof_accuracy": 0.7568,
+  "oof_path": "outputs/oof/YW-002_oof.csv",
+  "per_class_recall": {
+    "DH_ex_Cpne4": 0.6153846153846154,
+    "DH_ex_Gpr83": 0.696969696969697,
+    "DH_ex_Grp": 0.4230769230769231,
+    "DH_ex_Grpr": 0.7741935483870968,
+    "DH_ex_Maf/Cck": 0.9375,
+    "DH_ex_Maf/Cpne4": 0.0,
+    "DH_ex_Maf/Slc17a8": 0.11764705882352941,
+    "DH_ex_Nmu/Tac2": 0.90625,
+    "DH_ex_Prkcg/Cck": 0.42424242424242425,
+    "DH_ex_Prkcg/Nts": 0.6730769230769231,
+    "DH_ex_Prkcg/Rxfp1": 0.5333333333333333,
+    "DH_ex_Reln": 0.8181818181818182,
+    "DH_ex_Reln/Nmur2": 0.9402985074626866,
+    "DH_ex_Reln/Npff": 1.0,
+    "DH_ex_Rreb1": 0.0,
+    "DH_ex_Sox5": 0.9791666666666666,
+    "DH_ex_Sox5/Tac1": 0.9411764705882353,
+    "DH_ex_Tac2": 0.40625,
+    "DH_in_Cdh3": 0.9516129032258065,
+    "DH_in_Kcnip2": 0.0,
+    "DH_in_Klhl14": 0.0,
+    "DH_in_Npy": 0.9444444444444444,
+    "DH_in_Npy2r": 0.9473684210526315,
+    "DH_in_Pdyn": 1.0,
+    "DH_in_Pdyn/Gal": 0.9230769230769231,
+    "DH_in_Rorb": 1.0,
+    "DM_ex_Zfhx3": 1.0,
+    "MV_ex_Shox2": 1.0,
+    "MV_ex_Syt2": 1.0,
+    "MV_in_Chrna2": 0.5454545454545454,
+    "MV_in_Esrrb": 1.0,
+    "MV_in_Gabra1": 1.0,
+    "MV_in_Gm26673": 0.9727272727272728,
+    "MV_in_Sema5b": 1.0,
+    "M_ex_Neurod2": 1.0,
+    "M_ex_Vsx2": 1.0,
+    "M_ex_Vsx2/Shox2": 0.9565217391304348,
+    "M_in_Tfap2b": 1.0,
+    "Schwann_cell": 0.8571428571428571,
+    "VH_in_Chat": 0.3333333333333333,
+    "alpha_motoneuron": 0.9158878504672897,
+    "astrocyte_1": 0.8167539267015707,
+    "astrocyte_2": 0.5612244897959183,
+    "beta_motoneuron": 0.07142857142857142,
+    "cholinergic_interneuron": 0.42857142857142855,
+    "endothelial": 0.7275541795665634,
+    "ependymal": 0.5,
+    "gamma_motoneuron": 0.5833333333333334,
+    "meninges_1": 0.6119402985074627,
+    "meninges_2": 0.35714285714285715,
+    "meninges_3": 0.3684210526315789,
+    "microglia": 0.59375,
+    "oligodendrocyte_1": 0.36162361623616235,
+    "oligodendrocyte_2": 0.8400954653937948,
+    "oligodendrocyte_precursor_cell": 0.5636363636363636,
+    "oligodendrocyte_progenitor_1": 0.3469387755102041,
+    "oligodendrocyte_progenitor_2": 0.7297297297297297,
+    "pericyte": 0.15,
+    "peripheral_glia": 0.2608695652173913,
+    "visceral_motoneuron": 0.375
+  },
+  "per_signature_accuracy": {
+    "1/excitatory/1": {
+      "accuracy": 1.0,
+      "n": 36
+    },
+    "1/excitatory/10": {
+      "accuracy": 0.6458333333333334,
+      "n": 96
+    },
+    "1/excitatory/2": {
+      "accuracy": 0.734375,
+      "n": 64
+    },
+    "1/excitatory/3": {
+      "accuracy": 0.8494623655913979,
+      "n": 93
+    },
+    "1/excitatory/5": {
+      "accuracy": 0.9634146341463414,
+      "n": 82
+    },
+    "1/excitatory/6": {
+      "accuracy": 0.6067415730337079,
+      "n": 89
+    },
+    "1/excitatory/8": {
+      "accuracy": 0.6629834254143646,
+      "n": 181
+    },
+    "1/inhibitory/10": {
+      "accuracy": 0.8357142857142857,
+      "n": 140
+    },
+    "1/inhibitory/2": {
+      "accuracy": 1.0,
+      "n": 59
+    },
+    "1/inhibitory/4": {
+      "accuracy": 0.8813559322033898,
+      "n": 59
+    },
+    "1/inhibitory/5": {
+      "accuracy": 0.9230769230769231,
+      "n": 26
+    },
+    "1/inhibitory/7": {
+      "accuracy": 1.0,
+      "n": 29
+    },
+    "1/inhibitory/9": {
+      "accuracy": 0.782608695652174,
+      "n": 46
+    },
+    "2/excitatory/11": {
+      "accuracy": 1.0,
+      "n": 133
+    },
+    "3/excitatory/13": {
+      "accuracy": 1.0,
+      "n": 11
+    },
+    "3/excitatory/20": {
+      "accuracy": 0.9795918367346939,
+      "n": 49
+    },
+    "3/inhibitory/12": {
+      "accuracy": 1.0,
+      "n": 73
+    },
+    "4/excitatory/14": {
+      "accuracy": 1.0,
+      "n": 113
+    },
+    "4/excitatory/18": {
+      "accuracy": 1.0,
+      "n": 42
+    },
+    "4/inhibitory/14": {
+      "accuracy": 1.0,
+      "n": 63
+    },
+    "4/inhibitory/15": {
+      "accuracy": 1.0,
+      "n": 94
+    },
+    "4/inhibitory/16": {
+      "accuracy": 1.0,
+      "n": 145
+    },
+    "4/inhibitory/19": {
+      "accuracy": 0.9015151515151515,
+      "n": 132
+    },
+    "5/inhibitory/17": {
+      "accuracy": 0.3333333333333333,
+      "n": 3
+    },
+    "__MISSING__/__MISSING__/20": {
+      "accuracy": 0.375,
+      "n": 8
+    },
+    "__MISSING__/__MISSING__/21": {
+      "accuracy": 0.42857142857142855,
+      "n": 7
+    },
+    "__MISSING__/__MISSING__/22": {
+      "accuracy": 0.7514792899408284,
+      "n": 169
+    },
+    "__MISSING__/__MISSING__/__MISSING__": {
+      "accuracy": 0.6812035158891143,
+      "n": 2958
+    }
+  },
+  "preprocessing": {
+    "encoder": "OneHotEncoder(handle_unknown='ignore') fit on training fold only",
+    "forbidden_fields": [
+      "Datasets",
+      "volume",
+      "center_x",
+      "center_y",
+      "Gender",
+      "Mouse_ID",
+      "AP_position",
+      "Section_ID"
+    ],
+    "genes": "log1p(raw counts); no learned parameters",
+    "metadata_fields": [
+      "Region",
+      "Excitatory_vs_Inhibitory",
+      "Segment"
+    ],
+    "missing_token": "__MISSING__",
+    "target_encoding": false
+  },
+  "proba_path": "outputs/probabilities/YW-002_oof_probabilities.csv.gz",
+  "random_seed": 20260819,
+  "run_id": "YW-002",
+  "runtime_seconds": 1.630449083,
+  "warnings": []
+}

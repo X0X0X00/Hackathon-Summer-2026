@@ -1,0 +1,41 @@
+{
+  "bridge_fold_accuracy": {
+    "0": 0.767,
+    "1": 0.777,
+    "2": 0.769,
+    "3": 0.74,
+    "4": 0.745
+  },
+  "bridge_glial_accuracy": 0.67982176957352,
+  "bridge_hard_bucket_accuracy": 0.6754563894523327,
+  "bridge_neuron_accuracy": 0.8945102260495156,
+  "bridge_oof_accuracy": 0.7596,
+  "bridge_run_id": "BRIDGE-YW004-5F",
+  "compliance_status": "EXTERNAL_REFERENCE_PERMISSION_REQUIRED",
+  "cv_protocol": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+  "delta_ei_minus_bridge": 0.009399999999999964,
+  "delta_raw_minus_bridge": 0.008199999999999985,
+  "model_v2_eligibility_reason": "V2-B/V2-C not run; external-reference permission not confirmed",
+  "model_v2_eligible": false,
+  "original_yw004_3fold_oof_secondary": 0.7598,
+  "v2a_fold_accuracy_ei": {
+    "0": 0.761,
+    "1": 0.785,
+    "2": 0.769,
+    "3": 0.761,
+    "4": 0.769
+  },
+  "v2a_fold_accuracy_raw": {
+    "0": 0.761,
+    "1": 0.784,
+    "2": 0.768,
+    "3": 0.759,
+    "4": 0.767
+  },
+  "v2a_glial_accuracy_ei": 0.6928707829408021,
+  "v2a_hard_bucket_accuracy_ei": 0.6876267748478702,
+  "v2a_neuron_accuracy_ei": 0.8977395048439182,
+  "v2a_oof_accuracy_ei": 0.769,
+  "v2a_oof_accuracy_raw": 0.7678,
+  "v2a_run_id": "V2-A-SPATIAL-LGBM"
+}

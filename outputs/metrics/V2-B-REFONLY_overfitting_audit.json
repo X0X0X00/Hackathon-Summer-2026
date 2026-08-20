@@ -1,0 +1,26 @@
+{
+  "run_id": "V2-B-REFONLY",
+  "fit_distribution": "Zenodo reference cells disjoint from competition IDs and exact-vector duplicates",
+  "eval_distribution": "competition train 5-fold OOF",
+  "competition_labels_in_boosting_objective": false,
+  "early_stopping_on_competition_loss": false,
+  "threshold_tuning_on_reported_oof": false,
+  "lucky_seed_search": false,
+  "num_boost_round_fixed": 700,
+  "fold_accuracy_raw": {
+    "0": 0.822,
+    "1": 0.831,
+    "2": 0.812,
+    "3": 0.821,
+    "4": 0.82
+  },
+  "fold_spread_pp": 1.9,
+  "raw_equals_ei_accuracy": true,
+  "ei_equals_segment_accuracy": true,
+  "argmax_changes_raw_to_ei": 2,
+  "argmax_changes_ei_to_segment": 0,
+  "postprocess_did_not_harvest_oof": true,
+  "team_refonly_full_all_train_visible_historical": 0.8188,
+  "this_run_honest_5fold": 0.8212,
+  "note": "Honest 5-fold hides 20% of competition train labels in histograms, unlike team ext_refonly.py all-train-visible eval. Scores are in the same ballpark; not used as a selection criterion."
+}

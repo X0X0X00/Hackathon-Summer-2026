@@ -1,0 +1,434 @@
+{
+  "all": {
+    "A_and_B_correct_C_wrong": 107,
+    "A_and_C_correct_B_wrong": 217,
+    "A_vs_B": {
+      "argmax_disagreement": 871,
+      "both_correct": 3470,
+      "both_wrong": 827,
+      "disagreement_rate": 0.1742,
+      "first_correct_second_wrong": 328,
+      "first_wrong_second_correct": 375,
+      "n": 5000,
+      "pairwise_oracle_accuracy": 0.8346,
+      "pairwise_oracle_correct": 4173
+    },
+    "A_vs_C": {
+      "argmax_disagreement": 912,
+      "both_correct": 3580,
+      "both_wrong": 676,
+      "disagreement_rate": 0.1824,
+      "first_correct_second_wrong": 218,
+      "first_wrong_second_correct": 526,
+      "n": 5000,
+      "pairwise_oracle_accuracy": 0.8648,
+      "pairwise_oracle_correct": 4324
+    },
+    "B_and_C_correct_A_wrong": 285,
+    "B_vs_C": {
+      "argmax_disagreement": 799,
+      "both_correct": 3648,
+      "both_wrong": 697,
+      "disagreement_rate": 0.1598,
+      "first_correct_second_wrong": 197,
+      "first_wrong_second_correct": 458,
+      "n": 5000,
+      "pairwise_oracle_accuracy": 0.8606,
+      "pairwise_oracle_correct": 4303
+    },
+    "all_three_wrong": 586,
+    "headroom_only": true,
+    "n": 5000,
+    "only_A_correct": 111,
+    "only_B_correct": 90,
+    "only_C_correct": 241,
+    "three_expert_oracle_accuracy": 0.8828,
+    "three_expert_oracle_correct": 4414
+  },
+  "error_analysis_c0_vs_strongest_blend": {
+    "c0_top": [
+      {
+        "n": 98,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 55,
+        "predicted_label": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 40,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 36,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 31,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 30,
+        "predicted_label": "astrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 29,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 26,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 24,
+        "predicted_label": "oligodendrocyte_precursor_cell",
+        "true_label": "oligodendrocyte_progenitor_1"
+      },
+      {
+        "n": 21,
+        "predicted_label": "meninges_1",
+        "true_label": "meninges_2"
+      }
+    ],
+    "cand_top": [
+      {
+        "n": 101,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 46,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 41,
+        "predicted_label": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 39,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 32,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 30,
+        "predicted_label": "astrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 27,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 27,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 24,
+        "predicted_label": "oligodendrocyte_precursor_cell",
+        "true_label": "oligodendrocyte_progenitor_1"
+      },
+      {
+        "n": 22,
+        "predicted_label": "meninges_1",
+        "true_label": "meninges_2"
+      }
+    ],
+    "largest_reductions": [
+      {
+        "c0": 55,
+        "cand": 41,
+        "delta": 14,
+        "predicted_label": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "c0": 3,
+        "cand": 1,
+        "delta": 2,
+        "predicted_label": "astrocyte_1",
+        "true_label": "microglia"
+      },
+      {
+        "c0": 3,
+        "cand": 1,
+        "delta": 2,
+        "predicted_label": "DH_in_Klhl14",
+        "true_label": "DH_in_Cdh3"
+      },
+      {
+        "c0": 6,
+        "cand": 4,
+        "delta": 2,
+        "predicted_label": "DH_ex_Rreb1",
+        "true_label": "DH_ex_Maf/Cck"
+      },
+      {
+        "c0": 16,
+        "cand": 14,
+        "delta": 2,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "c0": 29,
+        "cand": 27,
+        "delta": 2,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "c0": 7,
+        "cand": 5,
+        "delta": 2,
+        "predicted_label": "astrocyte_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "c0": 12,
+        "cand": 11,
+        "delta": 1,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_1"
+      }
+    ],
+    "new_or_increased": [
+      {
+        "c0": 40,
+        "cand": 46,
+        "delta": 6,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "c0": 14,
+        "cand": 17,
+        "delta": 3,
+        "predicted_label": "astrocyte_1",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "c0": 36,
+        "cand": 39,
+        "delta": 3,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "c0": 6,
+        "cand": 9,
+        "delta": 3,
+        "predicted_label": "alpha_motoneuron",
+        "true_label": "beta_motoneuron"
+      },
+      {
+        "c0": 98,
+        "cand": 101,
+        "delta": 3,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "c0": 18,
+        "cand": 20,
+        "delta": 2,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "endothelial"
+      },
+      {
+        "c0": 1,
+        "cand": 2,
+        "delta": 1,
+        "predicted_label": "meninges_2",
+        "true_label": "meninges_1"
+      },
+      {
+        "c0": 6,
+        "cand": 7,
+        "delta": 1,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_precursor_cell"
+      }
+    ],
+    "residual_families": {
+      "endothelial_vs_astrocyte_1": {
+        "c0": 51,
+        "cand": 50
+      },
+      "meninges_1_vs_2": {
+        "c0": 22,
+        "cand": 24
+      },
+      "oligo1_vs_opc2": {
+        "c0": 153,
+        "cand": 142
+      },
+      "oligo2_vs_opc2": {
+        "c0": 76,
+        "cand": 85
+      }
+    },
+    "strongest_blend": "C1"
+  },
+  "headroom_only": true,
+  "not_a_model_score": true,
+  "slices": {
+    "glial": {
+      "A_and_B_correct_C_wrong": 71,
+      "A_and_C_correct_B_wrong": 168,
+      "A_vs_B": {
+        "argmax_disagreement": 728,
+        "both_correct": 1869,
+        "both_wrong": 698,
+        "disagreement_rate": 0.2316995544239338,
+        "first_correct_second_wrong": 267,
+        "first_wrong_second_correct": 308,
+        "n": 3142,
+        "pairwise_oracle_accuracy": 0.7778485041374921,
+        "pairwise_oracle_correct": 2444
+      },
+      "A_vs_C": {
+        "argmax_disagreement": 757,
+        "both_correct": 1966,
+        "both_wrong": 575,
+        "disagreement_rate": 0.24092934436664545,
+        "first_correct_second_wrong": 170,
+        "first_wrong_second_correct": 431,
+        "n": 3142,
+        "pairwise_oracle_accuracy": 0.816995544239338,
+        "pairwise_oracle_correct": 2567
+      },
+      "B_and_C_correct_A_wrong": 232,
+      "B_vs_C": {
+        "argmax_disagreement": 645,
+        "both_correct": 2030,
+        "both_wrong": 598,
+        "disagreement_rate": 0.20528325907065564,
+        "first_correct_second_wrong": 147,
+        "first_wrong_second_correct": 367,
+        "n": 3142,
+        "pairwise_oracle_accuracy": 0.8096753660089115,
+        "pairwise_oracle_correct": 2544
+      },
+      "all_three_wrong": 499,
+      "headroom_only": true,
+      "n": 3142,
+      "n_slice": 3142,
+      "only_A_correct": 99,
+      "only_B_correct": 76,
+      "only_C_correct": 199,
+      "three_expert_oracle_accuracy": 0.8411839592616168,
+      "three_expert_oracle_correct": 2643
+    },
+    "hard_bucket": {
+      "A_and_B_correct_C_wrong": 66,
+      "A_and_C_correct_B_wrong": 160,
+      "A_vs_B": {
+        "argmax_disagreement": 697,
+        "both_correct": 1743,
+        "both_wrong": 669,
+        "disagreement_rate": 0.23563218390804597,
+        "first_correct_second_wrong": 255,
+        "first_wrong_second_correct": 291,
+        "n": 2958,
+        "pairwise_oracle_accuracy": 0.7738336713995944,
+        "pairwise_oracle_correct": 2289
+      },
+      "A_vs_C": {
+        "argmax_disagreement": 718,
+        "both_correct": 1837,
+        "both_wrong": 558,
+        "disagreement_rate": 0.2427315753887762,
+        "first_correct_second_wrong": 161,
+        "first_wrong_second_correct": 402,
+        "n": 2958,
+        "pairwise_oracle_accuracy": 0.8113590263691683,
+        "pairwise_oracle_correct": 2400
+      },
+      "B_and_C_correct_A_wrong": 217,
+      "B_vs_C": {
+        "argmax_disagreement": 614,
+        "both_correct": 1894,
+        "both_wrong": 579,
+        "disagreement_rate": 0.20757268424611225,
+        "first_correct_second_wrong": 140,
+        "first_wrong_second_correct": 345,
+        "n": 2958,
+        "pairwise_oracle_accuracy": 0.8042596348884381,
+        "pairwise_oracle_correct": 2379
+      },
+      "all_three_wrong": 484,
+      "headroom_only": true,
+      "n": 2958,
+      "n_slice": 2958,
+      "only_A_correct": 95,
+      "only_B_correct": 74,
+      "only_C_correct": 185,
+      "three_expert_oracle_accuracy": 0.8363759296822177,
+      "three_expert_oracle_correct": 2474
+    },
+    "neuron": {
+      "A_and_B_correct_C_wrong": 36,
+      "A_and_C_correct_B_wrong": 49,
+      "A_vs_B": {
+        "argmax_disagreement": 143,
+        "both_correct": 1601,
+        "both_wrong": 129,
+        "disagreement_rate": 0.07696447793326157,
+        "first_correct_second_wrong": 61,
+        "first_wrong_second_correct": 67,
+        "n": 1858,
+        "pairwise_oracle_accuracy": 0.9305705059203444,
+        "pairwise_oracle_correct": 1729
+      },
+      "A_vs_C": {
+        "argmax_disagreement": 155,
+        "both_correct": 1614,
+        "both_wrong": 101,
+        "disagreement_rate": 0.08342303552206674,
+        "first_correct_second_wrong": 48,
+        "first_wrong_second_correct": 95,
+        "n": 1858,
+        "pairwise_oracle_accuracy": 0.9456404736275565,
+        "pairwise_oracle_correct": 1757
+      },
+      "B_and_C_correct_A_wrong": 53,
+      "B_vs_C": {
+        "argmax_disagreement": 154,
+        "both_correct": 1618,
+        "both_wrong": 99,
+        "disagreement_rate": 0.08288482238966631,
+        "first_correct_second_wrong": 50,
+        "first_wrong_second_correct": 91,
+        "n": 1858,
+        "pairwise_oracle_accuracy": 0.9467168998923574,
+        "pairwise_oracle_correct": 1759
+      },
+      "all_three_wrong": 87,
+      "headroom_only": true,
+      "n": 1858,
+      "n_slice": 1858,
+      "only_A_correct": 12,
+      "only_B_correct": 14,
+      "only_C_correct": 42,
+      "three_expert_oracle_accuracy": 0.9531754574811625,
+      "three_expert_oracle_correct": 1771
+    }
+  }
+}

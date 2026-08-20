@@ -1,0 +1,18 @@
+{
+  "best_oof": 0.8212,
+  "best_postprocess": "segment",
+  "bridge_oof": 0.7596,
+  "delta_vs_bridge": 0.06159999999999999,
+  "delta_vs_v2a": 0.052200000000000024,
+  "quality_gate_pass": true,
+  "v2a_ei_oof": 0.769,
+  "v2b_ei": 0.8212,
+  "v2b_raw": 0.8212,
+  "v2b_seg": 0.8212,
+  "v2b_vs_v2a_cells": {
+    "correct_to_wrong": 197,
+    "n": 5000,
+    "net_gain": 261,
+    "wrong_to_correct": 458
+  }
+}

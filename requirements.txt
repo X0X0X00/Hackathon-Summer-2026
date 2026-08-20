@@ -1,0 +1,11 @@
+# Python 3.9.x. Install into the project venv:
+#   python3 -m venv .venv
+#   .venv/bin/pip install -r requirements.txt
+pandas==2.3.3
+numpy==2.0.2
+scikit-learn==1.6.1
+scipy==1.13.1
+lightgbm==4.6.0
+anndata==0.10.9
+h5py==3.14.0
+pytest==8.4.2

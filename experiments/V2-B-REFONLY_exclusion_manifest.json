@@ -1,0 +1,8 @@
+{
+  "exact_vector_duplicates_removed": 47,
+  "final_usable_reference_rows": 136574,
+  "md5": "ce06f62c0ec4973581dae17bb76f0cd9",
+  "raw_rows": 146621,
+  "test_cell_ids_removed": 5000,
+  "train_cell_ids_removed": 5000
+}

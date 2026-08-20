@@ -1,0 +1,36 @@
+{
+  "exclusion": "drop all competition train Cell_IDs, drop all competition test Cell_IDs, align 200 genes in official column order, drop exact 200-gene count-vector duplicates versus train+test counts",
+  "features": "prep_ext: 200 lognorm genes, PCA50 on full deposit, spatial kNN within Section ID, expression kNN on PCA50, neighbor-mean PCA k=10, Region/EI/Segment/AP/gender/mouse/dataset; Segment from Laminae if 1:1",
+  "fit": "LightGBM on usable reference rows only; not competition train",
+  "fold_protocol": "experiments/team_folds_5_seed42.csv; fold-f competition labels hidden everywhere; reference labels always visible; other train-fold labels may enter neighbor histograms",
+  "label_column": "obs['MERFISH cell type annotation']",
+  "label_normalization": "replace space and hyphen with underscore; map to official 60",
+  "lgbm": {
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "early_stopping": false,
+    "feature_fraction": 0.5,
+    "lambda_l2": 1.0,
+    "learning_rate": 0.05,
+    "max_bin": 127,
+    "min_data_in_leaf": 30,
+    "num_boost_round": 700,
+    "num_leaves": 127,
+    "seed": 0
+  },
+  "not_reproduced": "team ext_refonly.py evaluates all 5000 train with all train labels visible; V2-B uses honest 5-fold instead. Fixed 700 rounds from README refonly_full, not CLI default 2000+early-stop.",
+  "postprocess_order": [
+    "raw",
+    "+E/I",
+    "+Segment mask if Laminae audit passes"
+  ],
+  "read_only_source": "team/main via git show",
+  "scripts": [
+    "work/README.md",
+    "work/build_reference_ids.py",
+    "work/prep_ext.py",
+    "work/common_ext.py",
+    "work/ext_refonly.py",
+    "work/ext_post.py"
+  ]
+}
