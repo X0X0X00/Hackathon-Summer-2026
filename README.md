@@ -1,3 +1,26 @@
+# WYH Modeling Track
+
+## Released models
+
+| Version | Method | Validation | OOF | Official score |
+| --- | --- | --- | ---: | --- |
+| MODEL V1 | Hierarchical Signature Specialists | frozen 3-fold | 75.98% | Not submitted |
+| MODEL V2 | Reference-only LightGBM + approved Zenodo reference | team-compatible 5-fold | 82.12% | Not submitted |
+
+## MODEL V2
+
+MODEL V2 is the current WYH candidate: a reference-only LightGBM trained on **136,574** cleaned cells from the approved Zenodo MERFISH spinal-cord deposit (record 18039571). Local 5-fold OOF accuracy is **82.12%** (4106 / 5000), **+6.14 percentage points** versus MODEL V1.
+
+These figures are **WYH local validation results**. MODEL V1 and MODEL V2 were **not official captain submissions**. No official leaderboard score is claimed.
+
+- Candidate: [`outputs/submissions/model_v2_candidate.csv`](outputs/submissions/model_v2_candidate.csv)
+- MODEL V2 write-up: [`docs/versions/model_v2.md`](docs/versions/model_v2.md)
+- MODEL V1 write-up: [`docs/versions/model_v1.md`](docs/versions/model_v1.md)
+
+A predeclared V2-C blend (C1) reached 82.24% OOF and was rejected: the gain was only +6 net cells, folds 3–4 regressed, and macro-F1 decreased. That result is evidence of conservative model selection / overfitting control; it is not the released MODEL V2 score.
+
+---
+
 # University of Rochester Biomedical Data Science Hackathon Summer 2026
 Welcome to the landing page for the hackathon. The hackathon will commence 8/18. It will be a prediction challenge. All predictions should be submitted through GitHub using the captain's handle. Scoring will also happen in GitHub. All details regarding the hackathon will be posted here.  
 
