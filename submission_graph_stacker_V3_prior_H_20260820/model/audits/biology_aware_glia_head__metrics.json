@@ -1,0 +1,157 @@
+{
+  "protocol": {
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "outer_folds": 5,
+    "architecture": "monotonic biology-axis pair heads with weak auxiliary anatomy terms",
+    "strong_correction": "only Anchor Top-5 candidate pairs with head disagreement, high posterior confidence, and a directionally consistent biology-axis margin",
+    "excluded_unsupported_boundary": "oligodendrocyte_1 vs oligodendrocyte_progenitor_2",
+    "modes": [
+      "competition_only",
+      "rare_reference"
+    ],
+    "confidence_thresholds": [
+      0.9,
+      0.95,
+      0.975,
+      0.99
+    ],
+    "main_margins": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "alphas": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "reference_weight_for_rare_classes": 0.15,
+    "selection_caveat": "The best configuration is exploratory because thresholds are selected on the same OOF predictions; fold consistency is reported separately."
+  },
+  "anchor": {
+    "accuracy": 0.823,
+    "macro_f1": 0.790876139607287,
+    "log_loss": 0.544313907623291,
+    "anchor_wrong_decoder_right": 0,
+    "anchor_right_decoder_wrong": 0,
+    "net_corrections": 0,
+    "changed_predictions": 0
+  },
+  "best_exploratory_configuration": "rare_reference_c0.9_m1.5_a2_moderate0",
+  "best_exploratory_metrics": {
+    "configuration": "rare_reference_c0.9_m1.5_a2_moderate0",
+    "mode": "rare_reference",
+    "confidence_threshold": 0.9,
+    "main_margin": 1.5,
+    "alpha": 2.0,
+    "include_moderate": false,
+    "invoked_cells": 15,
+    "head_applications": 15,
+    "positive_folds": 3,
+    "accuracy": 0.824,
+    "macro_f1": 0.795084248828177,
+    "log_loss": 0.5450422763824463,
+    "anchor_wrong_decoder_right": 9,
+    "anchor_right_decoder_wrong": 4,
+    "net_corrections": 5,
+    "changed_predictions": 15
+  },
+  "success_tests": {
+    "accuracy_above_anchor": true,
+    "net_corrections_positive": true,
+    "at_least_four_positive_folds": false,
+    "macro_f1_not_lower": true
+  },
+  "deployment": "No test probabilities are produced unless the biology head improves accuracy with positive net corrections in at least four folds and does not reduce macro-F1.",
+  "pair_audit": [
+    {
+      "pair": "ependymal_positive",
+      "tier": "high",
+      "applications": 4,
+      "fixed": 4,
+      "harmed": 0,
+      "net": 4
+    },
+    {
+      "pair": "progenitor_1_vs_2",
+      "tier": "high",
+      "applications": 0,
+      "fixed": 0,
+      "harmed": 0,
+      "net": 0
+    },
+    {
+      "pair": "precursor_vs_progenitor_2",
+      "tier": "high",
+      "applications": 1,
+      "fixed": 0,
+      "harmed": 1,
+      "net": -1
+    },
+    {
+      "pair": "progenitor_2_vs_oligodendrocyte_2",
+      "tier": "high",
+      "applications": 7,
+      "fixed": 3,
+      "harmed": 2,
+      "net": 1
+    },
+    {
+      "pair": "oligodendrocyte_1_vs_2",
+      "tier": "high",
+      "applications": 1,
+      "fixed": 1,
+      "harmed": 0,
+      "net": 1
+    },
+    {
+      "pair": "astrocyte_1_vs_progenitor_2",
+      "tier": "high",
+      "applications": 1,
+      "fixed": 0,
+      "harmed": 1,
+      "net": -1
+    },
+    {
+      "pair": "astrocyte_1_vs_oligodendrocyte_1",
+      "tier": "high",
+      "applications": 1,
+      "fixed": 1,
+      "harmed": 0,
+      "net": 1
+    },
+    {
+      "pair": "astrocyte_1_vs_oligodendrocyte_2",
+      "tier": "high",
+      "applications": 0,
+      "fixed": 0,
+      "harmed": 0,
+      "net": 0
+    },
+    {
+      "pair": "precursor_vs_oligodendrocyte_2",
+      "tier": "high",
+      "applications": 0,
+      "fixed": 0,
+      "harmed": 0,
+      "net": 0
+    },
+    {
+      "pair": "progenitor_1_vs_oligodendrocyte_2",
+      "tier": "high",
+      "applications": 0,
+      "fixed": 0,
+      "harmed": 0,
+      "net": 0
+    },
+    {
+      "pair": "astrocyte_1_vs_2",
+      "tier": "moderate",
+      "applications": 0,
+      "fixed": 0,
+      "harmed": 0,
+      "net": 0
+    }
+  ]
+}

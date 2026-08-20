@@ -1,0 +1,48 @@
+{
+  "protocol": {
+    "biology_fixed_configuration": {
+      "mode": "rare_reference",
+      "high_confidence_threshold": 0.85,
+      "high_main_margin": 1.0,
+      "medium_confidence_threshold": 0.65,
+      "medium_main_margin": 0.2,
+      "alpha": 2.0,
+      "moderate_weight": 0.05
+    },
+    "biology_test_ensemble": "five fold-matched heads; each excludes its competition validation fold and predicts all test cells",
+    "combination": "accept single-prior changes, accept matching dual changes, return to Anchor on conflict",
+    "ordered_candidate": "ordered_0.25",
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "selection": "no additional test-time or OOF tuning",
+    "caveat": "The fixed Biology and ordered configurations were chosen exploratorily on OOF."
+  },
+  "oof_metrics": {
+    "accuracy": 0.8254,
+    "macro_f1": 0.7945077845951829,
+    "weighted_f1": 0.8176708722958644,
+    "log_loss": 0.543321910904344
+  },
+  "oof_route_audit": {
+    "biology_changed": 32,
+    "ordered_changed": 30,
+    "biology_only": 24,
+    "ordered_only": 22,
+    "both_agree": 7,
+    "both_conflict_returned_to_anchor": 1,
+    "combined_changed": 53
+  },
+  "test_route_audit": {
+    "biology_changed": 31,
+    "ordered_changed": 16,
+    "biology_only": 23,
+    "ordered_only": 8,
+    "both_agree": 7,
+    "both_conflict_returned_to_anchor": 1,
+    "combined_changed": 38
+  },
+  "test_prediction_distribution": {
+    "anchor_changed_by_biology": 31,
+    "anchor_changed_by_ordered": 16,
+    "anchor_changed_by_combined": 38
+  }
+}

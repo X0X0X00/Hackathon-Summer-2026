@@ -1,0 +1,57 @@
+{
+  "selected_model": "depth_masked_prior_h_anchor",
+  "selection_reason": "The newly trained stacker did not beat the Prior-H Anchor, so submission falls back to the safer OOF winner.",
+  "selected_metrics": {
+    "accuracy": 0.8266,
+    "macro_f1": 0.7977386201523958,
+    "weighted_f1": 0.8190081748971482,
+    "log_loss": 0.5411296146646144
+  },
+  "prior_h_anchor_metrics": {
+    "accuracy": 0.8266,
+    "macro_f1": 0.7977386201523958,
+    "weighted_f1": 0.8190081748971482,
+    "log_loss": 0.5411296146646144
+  },
+  "trained_stacker_metrics": {
+    "accuracy": 0.8254,
+    "macro_f1": 0.7991382883007419,
+    "weighted_f1": 0.8193996773460068,
+    "log_loss": 0.4832246446459643
+  },
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "test_route": {
+    "n_cells": 5000,
+    "eligible_cells": 634,
+    "eligible_fraction": 0.1268,
+    "depth_pass": 1950,
+    "reliable_pass": 1216,
+    "degree_pass": 2190,
+    "median_depth": 12.0,
+    "median_reliable_gene_count": 13.0,
+    "median_consensus_degree": 3.0
+  },
+  "copied_head_sources": [
+    "build_reference_class_similarity_graph.py",
+    "train_confidence_gated_logit_stacker.py",
+    "train_graph_regularized_logit_stacker.py",
+    "train_external_gene_token_encoder.py",
+    "evaluate_current_anchor_metadata_prior_head.py",
+    "train_biology_aware_glia_head.py",
+    "evaluate_anchor_marker_completion_residual.py",
+    "evaluate_anatomical_topology_prior.py",
+    "evaluate_ordered_oligodendrocyte_prior.py",
+    "audit_ordered_biology_head_overlap.py",
+    "export_biology_head_test_and_combine.py",
+    "run_invariant_mnn_gonogo.py",
+    "run_reliability_piecewise_soft_slot_gonogo.py",
+    "build_invariant_piecewise_segment_mnn_graphs.py",
+    "train_invariant_piecewise_mnn_segment_centered_encoder.py",
+    "run_depth_masked_strict_h_gonogo.py",
+    "build_external_segment_mnn_graph.py",
+    "train_external_mnn_residual_encoder.py",
+    "build_soft_slot_neighbor_graph.py",
+    "evaluate_external_mnn_residual_fusion.py"
+  ],
+  "missing_head_sources": []
+}

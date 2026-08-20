@@ -1,0 +1,92 @@
+{
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "n_cells": 146621,
+  "n_genes": 200,
+  "n_neighbors": 8,
+  "alpha": 1.0,
+  "score": "invariant_cosine + alpha * reliable_overlap * piecewise_cosine",
+  "aggregation": "continuous expression minus all-cell Segment mean",
+  "folds": {
+    "0": {
+      "coverage": 0.9134298633892826,
+      "mean_degree": 3.542507553488245,
+      "edge_same_label_rate": 0.4504760808432962,
+      "neighbor_vote_accuracy": 0.47988277909923355,
+      "neighbor_vote_balanced_accuracy": 0.37806063948198,
+      "low_depth_edge_purity": 0.44434384502374524,
+      "high_depth_edge_purity": 0.4561667723525682,
+      "depth_purity_gap_low_minus_high": -0.011822927328822952,
+      "oligo_to_progenitor_cross_rate": 0.4176183412779562,
+      "schwann_to_peripheral_cross_rate": 0.19425034937113198,
+      "train_reference_count": 136574,
+      "reliability_audit": {
+        "depth_quantiles": [
+          8.0,
+          11.0,
+          14.0,
+          21.0
+        ],
+        "segment_depth_group_minimum_reference_cells": 0,
+        "segment_depth_group_median_reference_cells": 123.5,
+        "mean_reliable_genes_per_cell": 33.925842819241446,
+        "median_reliable_genes_per_cell": 28.0,
+        "mean_reliable_negative_genes_per_cell": 18.9863866703951,
+        "fraction_cells_with_at_least_20_reliable_genes": 0.7615621227518569
+      }
+    },
+    "1": {
+      "coverage": 0.9136344725516808,
+      "mean_degree": 3.5447855354962794,
+      "edge_same_label_rate": 0.4505887766757332,
+      "neighbor_vote_accuracy": 0.48000963765525173,
+      "neighbor_vote_balanced_accuracy": 0.37800207318457435,
+      "low_depth_edge_purity": 0.4444980447738256,
+      "high_depth_edge_purity": 0.45623851612494454,
+      "depth_purity_gap_low_minus_high": -0.011740471351118942,
+      "oligo_to_progenitor_cross_rate": 0.41784635304272766,
+      "schwann_to_peripheral_cross_rate": 0.19509275882704968,
+      "train_reference_count": 136574,
+      "reliability_audit": {
+        "depth_quantiles": [
+          8.0,
+          11.0,
+          14.0,
+          21.0
+        ],
+        "segment_depth_group_minimum_reference_cells": 0,
+        "segment_depth_group_median_reference_cells": 123.5,
+        "mean_reliable_genes_per_cell": 33.925842819241446,
+        "median_reliable_genes_per_cell": 28.0,
+        "mean_reliable_negative_genes_per_cell": 18.9863866703951,
+        "fraction_cells_with_at_least_20_reliable_genes": 0.7615621227518569
+      }
+    },
+    "2": {
+      "coverage": 0.9137435974382933,
+      "mean_degree": 3.5453720817618213,
+      "edge_same_label_rate": 0.4504835383338674,
+      "neighbor_vote_accuracy": 0.48015697245211175,
+      "neighbor_vote_balanced_accuracy": 0.37816534990529266,
+      "low_depth_edge_purity": 0.4443685482287246,
+      "high_depth_edge_purity": 0.4561542420523378,
+      "depth_purity_gap_low_minus_high": -0.011785693823613164,
+      "oligo_to_progenitor_cross_rate": 0.41775451279134235,
+      "schwann_to_peripheral_cross_rate": 0.19544819325214613,
+      "train_reference_count": 136574,
+      "reliability_audit": {
+        "depth_quantiles": [
+          8.0,
+          11.0,
+          14.0,
+          21.0
+        ],
+        "segment_depth_group_minimum_reference_cells": 0,
+        "segment_depth_group_median_reference_cells": 123.5,
+        "mean_reliable_genes_per_cell": 33.925842819241446,
+        "median_reliable_genes_per_cell": 28.0,
+        "mean_reliable_negative_genes_per_cell": 18.9863866703951,
+        "fraction_cells_with_at_least_20_reliable_genes": 0.7615621227518569
+      }
+    }
+  }
+}

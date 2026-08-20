@@ -1,0 +1,42 @@
+{
+  "route": {
+    "base": "ordered_biology_submission/conservative_union",
+    "optional_expert": "Invariant + Piecewise Segment-centered strict H",
+    "depth_rule": "n_detected > 14",
+    "reliable_gene_minimum": 20,
+    "strict_graph_degree_minimum": 4,
+    "test_degree_consensus": "median degree across three fold-specific strict graphs",
+    "h_weight": 0.21
+  },
+  "test": {
+    "n_cells": 5000,
+    "eligible_cells": 634,
+    "eligible_fraction": 0.1268,
+    "depth_pass": 1950,
+    "reliable_pass": 1216,
+    "degree_pass": 2190,
+    "median_depth": 12.0,
+    "median_reliable_gene_count": 13.0,
+    "median_consensus_degree": 3.0
+  },
+  "reliability_fit": {
+    "depth_quantiles": [
+      8.0,
+      11.0,
+      14.0,
+      21.0
+    ],
+    "segment_depth_group_minimum_reference_cells": 0,
+    "segment_depth_group_median_reference_cells": 123.5,
+    "mean_reliable_genes_per_cell": 33.925842819241446,
+    "median_reliable_genes_per_cell": 28.0,
+    "mean_reliable_negative_genes_per_cell": 18.9863866703951,
+    "fraction_cells_with_at_least_20_reliable_genes": 0.7615621227518569
+  },
+  "stacker_heads": [
+    "graph_stacker_v2",
+    "current_anchor_prior",
+    "gene_token",
+    "strict_h"
+  ]
+}

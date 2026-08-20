@@ -1,0 +1,266 @@
+{
+  "protocol": {
+    "anchor": "external_primary_crossfit",
+    "head": "cross-fitted hierarchical empirical-Bayes Segment/EI/AP class prior",
+    "combination": "log(anchor) + alpha * (log(metadata_prior) - log(global_prior))",
+    "alpha_grid": [
+      0.0,
+      0.025,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "hierarchical_shrinkage_tau": 20.0,
+    "nested_selection": "outer cell fold; alpha selected by inner folds; outer labels excluded from head fitting and alpha choice",
+    "shuffle_control": "joint Segment/EI/AP tuples permuted within Dataset",
+    "transfer_stress_caveat": "Only the prior head is group-held-out; Current Anchor probabilities remain its original cell-level OOF."
+  },
+  "baseline": {
+    "accuracy": 0.823,
+    "macro_f1": 0.790876139607287,
+    "log_loss": 0.5443139207577122,
+    "anchor_wrong_head_right": 0,
+    "anchor_right_head_wrong": 0,
+    "net_corrections": 0,
+    "changed_predictions": 0,
+    "mcnemar_exact_p": 1.0
+  },
+  "metadata_head_only": [
+    {
+      "variant": "segment",
+      "tau": 20.0,
+      "mean_deepest_level": 1.0,
+      "accuracy": 0.4222,
+      "macro_f1": 0.3027165646,
+      "log_loss": 1.6864302317,
+      "anchor_wrong_head_right": 165,
+      "anchor_right_head_wrong": 2169,
+      "net_corrections": -2004,
+      "changed_predictions": 2793,
+      "mcnemar_exact_p": 0.0
+    },
+    {
+      "variant": "segment_ei",
+      "tau": 20.0,
+      "mean_deepest_level": 2.0,
+      "accuracy": 0.4616,
+      "macro_f1": 0.41072784,
+      "log_loss": 1.5402999873,
+      "anchor_wrong_head_right": 174,
+      "anchor_right_head_wrong": 1981,
+      "net_corrections": -1807,
+      "changed_predictions": 2574,
+      "mcnemar_exact_p": 0.0
+    },
+    {
+      "variant": "segment_ei_ap",
+      "tau": 20.0,
+      "mean_deepest_level": 2.9986,
+      "accuracy": 0.4616,
+      "macro_f1": 0.42976568,
+      "log_loss": 1.5228147862,
+      "anchor_wrong_head_right": 177,
+      "anchor_right_head_wrong": 1984,
+      "net_corrections": -1807,
+      "changed_predictions": 2570,
+      "mcnemar_exact_p": 0.0
+    },
+    {
+      "variant": "shuffled_segment_ei_ap",
+      "tau": 20.0,
+      "mean_deepest_level": 2.9978,
+      "accuracy": 0.134,
+      "macro_f1": 0.007908008,
+      "log_loss": 3.7664665229,
+      "anchor_wrong_head_right": 132,
+      "anchor_right_head_wrong": 3577,
+      "net_corrections": -3445,
+      "changed_predictions": 4273,
+      "mcnemar_exact_p": 0.0
+    }
+  ],
+  "fixed_alpha_best_exploratory": [
+    {
+      "variant": "segment",
+      "alpha": 0.0,
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443139208,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "segment_ei",
+      "alpha": 0.0,
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443139208,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "segment_ei_ap",
+      "alpha": 0.0,
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443139208,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "shuffled_segment_ei_ap",
+      "alpha": 0.0,
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443139208,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    }
+  ],
+  "nested_real_metadata": [
+    {
+      "variant": "segment",
+      "selection_criterion": "accuracy",
+      "selected_alpha_by_outer_fold": "{\"0\": 0.0, \"1\": 0.0, \"2\": 0.0}",
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443139208,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "segment",
+      "selection_criterion": "log_loss",
+      "selected_alpha_by_outer_fold": "{\"0\": 0.0, \"1\": 0.1, \"2\": 0.0}",
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443871191,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "segment_ei",
+      "selection_criterion": "accuracy",
+      "selected_alpha_by_outer_fold": "{\"0\": 0.0, \"1\": 0.0, \"2\": 0.0}",
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443139208,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "segment_ei",
+      "selection_criterion": "log_loss",
+      "selected_alpha_by_outer_fold": "{\"0\": 0.05, \"1\": 0.1, \"2\": 0.05}",
+      "accuracy": 0.8228,
+      "macro_f1": 0.79044534,
+      "log_loss": 0.5441957467,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 1,
+      "net_corrections": -1,
+      "changed_predictions": 1,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "segment_ei_ap",
+      "selection_criterion": "accuracy",
+      "selected_alpha_by_outer_fold": "{\"0\": 0.0, \"1\": 0.0, \"2\": 0.05}",
+      "accuracy": 0.823,
+      "macro_f1": 0.7907346961,
+      "log_loss": 0.5442922022,
+      "anchor_wrong_head_right": 1,
+      "anchor_right_head_wrong": 1,
+      "net_corrections": 0,
+      "changed_predictions": 2,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "segment_ei_ap",
+      "selection_criterion": "log_loss",
+      "selected_alpha_by_outer_fold": "{\"0\": 0.0, \"1\": 0.05, \"2\": 0.05}",
+      "accuracy": 0.8232,
+      "macro_f1": 0.790956728,
+      "log_loss": 0.544282162,
+      "anchor_wrong_head_right": 2,
+      "anchor_right_head_wrong": 1,
+      "net_corrections": 1,
+      "changed_predictions": 4,
+      "mcnemar_exact_p": 1.0
+    }
+  ],
+  "nested_shuffle_control": [
+    {
+      "variant": "shuffled_segment_ei_ap",
+      "selection_criterion": "accuracy",
+      "selected_alpha_by_outer_fold": "{\"0\": 0.0, \"1\": 0.0, \"2\": 0.0}",
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443139208,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    {
+      "variant": "shuffled_segment_ei_ap",
+      "selection_criterion": "log_loss",
+      "selected_alpha_by_outer_fold": "{\"0\": 0.0, \"1\": 0.0, \"2\": 0.0}",
+      "accuracy": 0.823,
+      "macro_f1": 0.7908761396,
+      "log_loss": 0.5443139208,
+      "anchor_wrong_head_right": 0,
+      "anchor_right_head_wrong": 0,
+      "net_corrections": 0,
+      "changed_predictions": 0,
+      "mcnemar_exact_p": 1.0
+    }
+  ],
+  "deployment_candidates": [
+    {
+      "variant": "segment",
+      "deployment_alpha_exploratory_full_oof_choice": 0.0,
+      "oof_accuracy": 0.823,
+      "oof_macro_f1": 0.7908761396,
+      "oof_log_loss": 0.5443139208,
+      "warning": "Use only if nested selection and controls support the fixed-alpha result."
+    },
+    {
+      "variant": "segment_ei",
+      "deployment_alpha_exploratory_full_oof_choice": 0.0,
+      "oof_accuracy": 0.823,
+      "oof_macro_f1": 0.7908761396,
+      "oof_log_loss": 0.5443139208,
+      "warning": "Use only if nested selection and controls support the fixed-alpha result."
+    },
+    {
+      "variant": "segment_ei_ap",
+      "deployment_alpha_exploratory_full_oof_choice": 0.0,
+      "oof_accuracy": 0.823,
+      "oof_macro_f1": 0.7908761396,
+      "oof_log_loss": 0.5443139208,
+      "warning": "Use only if nested selection and controls support the fixed-alpha result."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "configuration": {
+    "anchor": "external_primary_crossfit",
+    "experts": [
+      "graph_stacker_v2",
+      "current_anchor_prior",
+      "gene_token",
+      "strict_h"
+    ],
+    "epochs": 800,
+    "learning_rate": 0.03,
+    "gate_mode": "fixed",
+    "validation": "outer three-fold cross-fit; each held fold is absent from stacker and gate fitting",
+    "formula": "anchor_logit + confidence_gate * classwise_expert_correction + bounded_class_bias",
+    "parameterization": "global expert weight plus strongly regularized class delta; bounded by 0.5*tanh",
+    "class_graph": "C:\\Users\\lizhi\\Documents\\ChatGPT\\hackathon\\outputs\\reference_class_similarity_graph\\reference_class_graph.npz",
+    "class_graph_source": "external reference cells only",
+    "class_graph_classes": [
+      "DH_ex_Cpne4",
+      "DH_ex_Gpr83",
+      "DH_ex_Grp",
+      "DH_ex_Grpr",
+      "DH_ex_Maf/Cck",
+      "DH_ex_Maf/Cpne4",
+      "DH_ex_Maf/Slc17a8",
+      "DH_ex_Nmu/Tac2",
+      "DH_ex_Prkcg/Cck",
+      "DH_ex_Prkcg/Nts",
+      "DH_ex_Prkcg/Rxfp1",
+      "DH_ex_Reln",
+      "DH_ex_Reln/Nmur2",
+      "DH_ex_Reln/Npff",
+      "DH_ex_Rreb1",
+      "DH_ex_Sox5",
+      "DH_ex_Sox5/Tac1",
+      "DH_ex_Tac2",
+      "DH_in_Cdh3",
+      "DH_in_Kcnip2",
+      "DH_in_Klhl14",
+      "DH_in_Npy",
+      "DH_in_Npy2r",
+      "DH_in_Pdyn",
+      "DH_in_Pdyn/Gal",
+      "DH_in_Rorb",
+      "DM_ex_Zfhx3",
+      "MV_ex_Shox2",
+      "MV_ex_Syt2",
+      "MV_in_Chrna2",
+      "MV_in_Esrrb",
+      "MV_in_Gabra1",
+      "MV_in_Gm26673",
+      "MV_in_Sema5b",
+      "M_ex_Neurod2",
+      "M_ex_Vsx2",
+      "M_ex_Vsx2/Shox2",
+      "M_in_Tfap2b",
+      "Schwann_cell",
+      "VH_in_Chat",
+      "alpha_motoneuron",
+      "astrocyte_1",
+      "astrocyte_2",
+      "beta_motoneuron",
+      "cholinergic_interneuron",
+      "endothelial",
+      "ependymal",
+      "gamma_motoneuron",
+      "meninges_1",
+      "meninges_2",
+      "meninges_3",
+      "microglia",
+      "oligodendrocyte_1",
+      "oligodendrocyte_2",
+      "oligodendrocyte_precursor_cell",
+      "oligodendrocyte_progenitor_1",
+      "oligodendrocyte_progenitor_2",
+      "pericyte",
+      "peripheral_glia",
+      "visceral_motoneuron"
+    ],
+    "graph_regularization": "mean weighted squared difference between neighboring-class logit corrections",
+    "graph_lambda": 0.05,
+    "patched_stacker_classes": [
+      "ConfidenceGatedClasswiseStacker"
+    ]
+  },
+  "anchor_metrics": {
+    "accuracy": 0.8266,
+    "macro_f1": 0.7977386201523958,
+    "weighted_f1": 0.8190081748971482,
+    "log_loss": 0.5411296146646144
+  },
+  "stacker_metrics": {
+    "accuracy": 0.8254,
+    "macro_f1": 0.7991382883007419,
+    "weighted_f1": 0.8193996773460068,
+    "log_loss": 0.4832246446459643
+  },
+  "paired_vs_anchor": {
+    "candidate_accuracy": 0.8254,
+    "anchor_accuracy": 0.8266,
+    "delta_candidate_minus_anchor": -0.0012,
+    "bootstrap_ci_low": -0.0056,
+    "bootstrap_ci_high": 0.0032,
+    "candidate_only_correct": 57,
+    "anchor_only_correct": 63,
+    "mcnemar_exact_p_value": 0.6482600518210058
+  },
+  "mean_oof_gate": 1.0,
+  "mean_test_gate": 1.0,
+  "fold_details": [
+    {
+      "fold": 0,
+      "n_fit": 3333,
+      "n_held_out": 1667,
+      "mean_gate": 1.0,
+      "held_out_metrics": {
+        "accuracy": 0.8290341931613677,
+        "macro_f1": 0.8062061420782156,
+        "weighted_f1": 0.8224628015941807,
+        "log_loss": 0.47116484217905263
+      },
+      "anchor_held_out_metrics": {
+        "accuracy": 0.8290341931613677,
+        "macro_f1": 0.7994930313563966,
+        "weighted_f1": 0.8210564114385858,
+        "log_loss": 0.5352091143606892
+      },
+      "mean_classwise_weights": {
+        "graph_stacker_v2": 0.1966419368982315,
+        "current_anchor_prior": -0.14892812073230743,
+        "gene_token": 0.09951850026845932,
+        "strict_h": 0.03947903960943222
+      }
+    },
+    {
+      "fold": 1,
+      "n_fit": 3333,
+      "n_held_out": 1667,
+      "mean_gate": 1.0,
+      "held_out_metrics": {
+        "accuracy": 0.8278344331133773,
+        "macro_f1": 0.804620295669645,
+        "weighted_f1": 0.8225463960882876,
+        "log_loss": 0.4804286392066532
+      },
+      "anchor_held_out_metrics": {
+        "accuracy": 0.8320335932813437,
+        "macro_f1": 0.8072058521790039,
+        "weighted_f1": 0.8250967621293286,
+        "log_loss": 0.5342626940425144
+      },
+      "mean_classwise_weights": {
+        "graph_stacker_v2": 0.19392690062522888,
+        "current_anchor_prior": -0.13688921928405762,
+        "gene_token": 0.09989305585622787,
+        "strict_h": 0.04900621250271797
+      }
+    },
+    {
+      "fold": 2,
+      "n_fit": 3334,
+      "n_held_out": 1666,
+      "mean_gate": 1.0,
+      "held_out_metrics": {
+        "accuracy": 0.819327731092437,
+        "macro_f1": 0.7747976042710779,
+        "weighted_f1": 0.8110557492392944,
+        "log_loss": 0.49808936960375166
+      },
+      "anchor_held_out_metrics": {
+        "accuracy": 0.8187274909963985,
+        "macro_f1": 0.7753144945485311,
+        "weighted_f1": 0.8086747683135647,
+        "log_loss": 0.5539247111134046
+      },
+      "mean_classwise_weights": {
+        "graph_stacker_v2": 0.1999666392803192,
+        "current_anchor_prior": -0.14650435745716095,
+        "gene_token": 0.09923920780420303,
+        "strict_h": 0.06907272338867188
+      }
+    }
+  ],
+  "final_mean_classwise_weights": {
+    "graph_stacker_v2": 0.19382786750793457,
+    "current_anchor_prior": -0.14279575645923615,
+    "gene_token": 0.09975842386484146,
+    "strict_h": 0.05140984430909157
+  },
+  "runtime_seconds": 15.119822263717651,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "graph_penalty_audit": {
+    "n_training_evaluations": 3200,
+    "mean_unweighted_penalty": 0.22801192741608248,
+    "final_unweighted_penalty": 0.22320568561553955,
+    "mean_weighted_penalty": 0.011400596370804124
+  }
+}

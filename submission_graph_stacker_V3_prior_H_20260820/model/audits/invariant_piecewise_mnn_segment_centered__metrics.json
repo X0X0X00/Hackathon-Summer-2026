@@ -1,0 +1,218 @@
+{
+  "configuration": {
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "epochs": 12,
+    "pretrain_epochs": 5,
+    "latent_dim": 192,
+    "n_heads": 8,
+    "encoder_hidden_dim": 384,
+    "decoder_hidden_dim": 256,
+    "retrieval": "fold-matched learned Piecewise exact reciprocal top-8 within Segment",
+    "aggregation": "original normalized expression minus all-cell Segment mean",
+    "raw_baseline": "C:\\Users\\lizhi\\Documents\\ChatGPT\\hackathon\\outputs\\external_mnn_residual_encoder_medium"
+  },
+  "metrics": {
+    "raw_mnn_segment_centered": {
+      "accuracy": 0.7822,
+      "macro_f1": 0.7601245404873841,
+      "weighted_f1": 0.7787330754474183,
+      "log_loss": 0.6168070356737455
+    },
+    "piecewise_mnn_segment_centered": {
+      "accuracy": 0.7874,
+      "macro_f1": 0.7565618650123437,
+      "weighted_f1": 0.7827609743675673,
+      "log_loss": 0.6224550572882048
+    },
+    "current_anchor": {
+      "accuracy": 0.8254,
+      "macro_f1": 0.7945077845951829,
+      "weighted_f1": 0.8176708722958644,
+      "log_loss": 0.5433219109043438
+    },
+    "anchor_raw_mnn_crossfit": {
+      "accuracy": 0.8238,
+      "macro_f1": 0.7939532085988815,
+      "weighted_f1": 0.8160300721057764,
+      "log_loss": 0.5342595486133802
+    },
+    "anchor_piecewise_mnn_crossfit": {
+      "accuracy": 0.8248,
+      "macro_f1": 0.7970506768068192,
+      "weighted_f1": 0.8168847302947769,
+      "log_loss": 0.5232366546551254
+    }
+  },
+  "paired_piecewise_vs_raw": {
+    "gained": 213,
+    "lost": 187,
+    "net": 26,
+    "changed_predictions": 488,
+    "mcnemar_exact_p": 0.21124626009825545
+  },
+  "paired_anchor_piecewise_fusion_vs_anchor": {
+    "gained": 20,
+    "lost": 23,
+    "net": -3,
+    "changed_predictions": 48,
+    "mcnemar_exact_p": 0.7607916425613439
+  },
+  "fusion": {
+    "raw": {
+      "test_weight": 0.07666666666666667,
+      "folds": [
+        {
+          "fold": 0,
+          "weight": 0.23,
+          "tuning_metrics": {
+            "accuracy": 0.8241824182418241,
+            "macro_f1": 0.7952015569795855,
+            "weighted_f1": 0.8162412335578197,
+            "log_loss": 0.5207522183796114
+          },
+          "held_metrics": {
+            "accuracy": 0.823635272945411,
+            "macro_f1": 0.7964874651694421,
+            "weighted_f1": 0.815504687051325,
+            "log_loss": 0.50952797022908
+          }
+        },
+        {
+          "fold": 1,
+          "weight": 0.0,
+          "tuning_metrics": {
+            "accuracy": 0.8229822982298229,
+            "macro_f1": 0.7868529953201194,
+            "weighted_f1": 0.8144738941927819,
+            "log_loss": 0.5459711871481437
+          },
+          "held_metrics": {
+            "accuracy": 0.8302339532093581,
+            "macro_f1": 0.8047991585501943,
+            "weighted_f1": 0.8232733932316337,
+            "log_loss": 0.5380249476646412
+          }
+        },
+        {
+          "fold": 2,
+          "weight": 0.0,
+          "tuning_metrics": {
+            "accuracy": 0.8293341331733654,
+            "macro_f1": 0.802444100388382,
+            "weighted_f1": 0.8220270448802344,
+            "log_loss": 0.5373672842182518
+          },
+          "held_metrics": {
+            "accuracy": 0.8175270108043218,
+            "macro_f1": 0.769105882522309,
+            "weighted_f1": 0.8069854432873577,
+            "log_loss": 0.5552383126879162
+          }
+        }
+      ]
+    },
+    "piecewise": {
+      "test_weight": 0.13333333333333333,
+      "folds": [
+        {
+          "fold": 0,
+          "weight": 0.1,
+          "tuning_metrics": {
+            "accuracy": 0.825982598259826,
+            "macro_f1": 0.7979835086093888,
+            "weighted_f1": 0.8181070368368796,
+            "log_loss": 0.5305904313793586
+          },
+          "held_metrics": {
+            "accuracy": 0.8272345530893821,
+            "macro_f1": 0.7972037722200361,
+            "weighted_f1": 0.8189965976013697,
+            "log_loss": 0.5180868543311005
+          }
+        },
+        {
+          "fold": 1,
+          "weight": 0.2,
+          "tuning_metrics": {
+            "accuracy": 0.8250825082508251,
+            "macro_f1": 0.7958227853240891,
+            "weighted_f1": 0.8167046033447621,
+            "log_loss": 0.5234782518455612
+          },
+          "held_metrics": {
+            "accuracy": 0.8278344331133773,
+            "macro_f1": 0.8046175798151505,
+            "weighted_f1": 0.8203253125362451,
+            "log_loss": 0.5086476678820824
+          }
+        },
+        {
+          "fold": 2,
+          "weight": 0.1,
+          "tuning_metrics": {
+            "accuracy": 0.8299340131973605,
+            "macro_f1": 0.80382068043196,
+            "weighted_f1": 0.8223291253003367,
+            "log_loss": 0.5181439319769334
+          },
+          "held_metrics": {
+            "accuracy": 0.819327731092437,
+            "macro_f1": 0.777939901343022,
+            "weighted_f1": 0.809201607355261,
+            "log_loss": 0.542987289763656
+          }
+        }
+      ]
+    }
+  },
+  "fold_metrics": [
+    {
+      "fold": 0,
+      "n_valid": 1667,
+      "accuracy": 0.7954409118176364,
+      "macro_f1": 0.769466461250065,
+      "weighted_f1": 0.7906034761848463,
+      "log_loss": 0.5896360204685567
+    },
+    {
+      "fold": 1,
+      "n_valid": 1667,
+      "accuracy": 0.7990401919616077,
+      "macro_f1": 0.7710567703875647,
+      "weighted_f1": 0.7915947964923595,
+      "log_loss": 0.5948284914150428
+    },
+    {
+      "fold": 2,
+      "n_valid": 1666,
+      "accuracy": 0.7677070828331333,
+      "macro_f1": 0.7083854392718317,
+      "weighted_f1": 0.7614174925296271,
+      "log_loss": 0.68293694185538
+    }
+  ],
+  "fold_diagnostics": [
+    {
+      "fold": 0,
+      "mean_gate_valid": 0.07717073357026592,
+      "attention_entropy_valid": 0.8032562036176749,
+      "mean_gate_test": 0.07613584671020508,
+      "attention_entropy_test": 0.8316078002929688
+    },
+    {
+      "fold": 1,
+      "mean_gate_valid": 0.07079990995666834,
+      "attention_entropy_valid": 0.8191337882936108,
+      "mean_gate_test": 0.07042702941894531,
+      "attention_entropy_test": 0.8146962646484375
+    },
+    {
+      "fold": 2,
+      "mean_gate_valid": 0.07568513359628519,
+      "attention_entropy_valid": 0.8044561040358527,
+      "mean_gate_test": 0.07550790939331055,
+      "attention_entropy_test": 0.8329426208496093
+    }
+  ],
+  "runtime_seconds": 367.2989253997803
+}
