@@ -11,17 +11,11 @@ from common import load, apply_ei, WORK
 
 D = load()
 te = np.where(~D["is_train"])[0]
-args = [a for a in sys.argv[1:] if not a.startswith("--")]
-use_ext = "--ext" in sys.argv          # E/I + Segment(=Laminae) mask, see ext_post.py
-probs_file = Path(args[0]) if args else WORK / "final_probs.npz"
+probs_file = Path(sys.argv[1]) if len(sys.argv) > 1 else WORK / "final_probs.npz"
 test_probs = np.load(probs_file)["test"]
 assert test_probs.shape == (len(te), 60)
 
-if use_ext:
-    from ext_post import postprocess
-    test_probs = postprocess(test_probs, "test")
-else:
-    test_probs = apply_ei(test_probs, D["ei_known"][te], D["ei_of_label"])
+test_probs = apply_ei(test_probs, D["ei_known"][te], D["ei_of_label"])
 pred_codes = test_probs.argmax(1)
 labels = D["labels"]
 pred_labels = labels[pred_codes]
