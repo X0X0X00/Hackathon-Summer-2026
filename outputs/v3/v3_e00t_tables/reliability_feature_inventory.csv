@@ -1,0 +1,18 @@
+feature,source,test_safe,available,notes
+true_label,meta_train,False,True,diagnostic only
+expert_correct / oracle_correct / recoverable,OOF labels,False,True,retrospective only
+anchor_top1,lzh_prior_h,True,True,test-time probability
+anchor_margin,lzh_prior_h,True,True,top1-top2
+anchor_entropy,lzh_prior_h,True,True,
+alternative_top1_margin_entropy,wyh_model_v2,True,True,
+predicted_class_disagreement,cross-expert,True,True,no labels required
+n_experts_agreeing,cross-expert,True,True,only 2 eligible experts
+probability_advantage,cross-expert,True,True,alt top1 - anchor top1
+js_divergence,cross-expert,True,True,base-2 JS divergence
+library_size,counts_train,True,True,
+n_detected,counts_train,True,True,nonzero official genes
+Region / E/I / Segment / missingness / hard_bucket / Section_ID,meta_train,True,True,observed metadata
+Prior-H eligibility,LZH route audit,True,False,documented rule exists; no committed cell-level OOF field
+strict graph degree,LZH,True,False,aggregate test counts only
+reliable gene count,LZH,True,False,aggregate test counts only
+spatial/reference neighbor-label histograms,team/WYH spatial,False,False,not loaded here; label-derived neighbor histograms are not test-safe if they use held-out labels

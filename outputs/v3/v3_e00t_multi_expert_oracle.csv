@@ -1,0 +1,4 @@
+combo,split,n,oracle_correct,oracle_accuracy,all_wrong,n_experts,oracle_is_not_deployable_accuracy
+lzh_prior_h+wyh_model_v2,overall,5000,4215,0.843,785,2,True
+lzh_prior_h+wyh_model_v2,canonical_folds_0_2,3000,2532,0.844,468,2,True
+lzh_prior_h+wyh_model_v2,canonical_folds_3_4,2000,1683,0.8415,317,2,True

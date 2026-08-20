@@ -1,0 +1,1477 @@
+{
+  "anchor_recoverability": {
+    "anchor": "lzh_prior_h",
+    "anchor_errors": 867,
+    "by_alternative": {
+      "wyh_model_v2": {
+        "recoverable": 82,
+        "recoverable_fraction": 0.09457900807381776
+      }
+    },
+    "false_correction_risk_note": "109 cells have a correct anchor and a disagreeing alternative (0.0264 of correct-anchor cells). An unconstrained override of every disagreement would convert these into new errors.",
+    "patterns": {
+      "A_alternatives_agree_correct": 0,
+      "B_alternatives_disagree_with_anchor_and_each_other": 0,
+      "C_anchor_correct_alternatives_agree_wrong": 0,
+      "D_anchor_correct_exactly_one_alternative_disagrees": 109,
+      "D_fraction_of_anchor_correct": 0.026373094604403582,
+      "note": "Only one eligible alternative expert, so two-alternative consensus patterns A-C are undefined and reported as 0."
+    },
+    "recoverable_by_2plus_agreeing": 0,
+    "recoverable_by_any": 82,
+    "recoverable_by_any_fraction": 0.09457900807381776
+  },
+  "audit_id": "V3-E00T",
+  "biological_families": {
+    "by_hard_bucket": {
+      "hard_bucket_errors": 704,
+      "hard_bucket_recoverable": 66,
+      "non_hard_errors": 163,
+      "non_hard_recoverable": 16
+    },
+    "by_neuron_glial": {
+      "glial_errors": 728,
+      "glial_recoverable": 68,
+      "neuron_errors": 139,
+      "neuron_recoverable": 14
+    },
+    "by_true_family": {
+      "astrocyte": {
+        "error_count": 125,
+        "recoverable_count": 11,
+        "recoverable_fraction": 0.088
+      },
+      "meningeal": {
+        "error_count": 44,
+        "recoverable_count": 8,
+        "recoverable_fraction": 0.18181818181818182
+      },
+      "neuronal_or_other": {
+        "error_count": 163,
+        "recoverable_count": 16,
+        "recoverable_fraction": 0.09815950920245399
+      },
+      "oligodendrocyte_opc": {
+        "error_count": 407,
+        "recoverable_count": 42,
+        "recoverable_fraction": 0.10319410319410319
+      },
+      "other_glial_non_neuronal": {
+        "error_count": 32,
+        "recoverable_count": 1,
+        "recoverable_fraction": 0.03125
+      },
+      "vascular": {
+        "error_count": 96,
+        "recoverable_count": 4,
+        "recoverable_fraction": 0.041666666666666664
+      }
+    },
+    "top_confusion_pairs": [
+      {
+        "anchor_pred": "oligodendrocyte_progenitor_2",
+        "error_count": 92,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 8,
+        "recoverable_fraction": 0.08695652173913043,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_2",
+        "error_count": 53,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 14,
+        "recoverable_fraction": 0.2641509433962264,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_1",
+        "error_count": 47,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 6,
+        "recoverable_fraction": 0.1276595744680851,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_progenitor_2",
+        "error_count": 31,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 2,
+        "recoverable_fraction": 0.06451612903225806,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "anchor_pred": "astrocyte_1",
+        "error_count": 30,
+        "pred_family": "astrocyte",
+        "recoverable_count": 2,
+        "recoverable_fraction": 0.06666666666666667,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "vascular",
+        "true_label": "endothelial"
+      },
+      {
+        "anchor_pred": "astrocyte_1",
+        "error_count": 30,
+        "pred_family": "astrocyte",
+        "recoverable_count": 6,
+        "recoverable_fraction": 0.2,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "anchor_pred": "astrocyte_1",
+        "error_count": 27,
+        "pred_family": "astrocyte",
+        "recoverable_count": 0,
+        "recoverable_fraction": 0.0,
+        "rescuing_experts": [],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_progenitor_2",
+        "error_count": 24,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 2,
+        "recoverable_fraction": 0.08333333333333333,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "astrocyte",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_precursor_cell",
+        "error_count": 23,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 0,
+        "recoverable_fraction": 0.0,
+        "rescuing_experts": [],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_progenitor_1"
+      },
+      {
+        "anchor_pred": "DH_in_Cdh3",
+        "error_count": 21,
+        "pred_family": "neuronal_or_other",
+        "recoverable_count": 0,
+        "recoverable_fraction": 0.0,
+        "rescuing_experts": [],
+        "true_family": "neuronal_or_other",
+        "true_label": "DH_in_Klhl14"
+      },
+      {
+        "anchor_pred": "meninges_1",
+        "error_count": 18,
+        "pred_family": "meningeal",
+        "recoverable_count": 1,
+        "recoverable_fraction": 0.05555555555555555,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "meningeal",
+        "true_label": "meninges_2"
+      },
+      {
+        "anchor_pred": "endothelial",
+        "error_count": 18,
+        "pred_family": "vascular",
+        "recoverable_count": 0,
+        "recoverable_fraction": 0.0,
+        "rescuing_experts": [],
+        "true_family": "astrocyte",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_1",
+        "error_count": 18,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 0,
+        "recoverable_fraction": 0.0,
+        "rescuing_experts": [],
+        "true_family": "vascular",
+        "true_label": "endothelial"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_1",
+        "error_count": 17,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 2,
+        "recoverable_fraction": 0.11764705882352941,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "astrocyte",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_2",
+        "error_count": 17,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 1,
+        "recoverable_fraction": 0.058823529411764705,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_progenitor_2",
+        "error_count": 15,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 0,
+        "recoverable_fraction": 0.0,
+        "rescuing_experts": [],
+        "true_family": "vascular",
+        "true_label": "endothelial"
+      },
+      {
+        "anchor_pred": "astrocyte_1",
+        "error_count": 15,
+        "pred_family": "astrocyte",
+        "recoverable_count": 2,
+        "recoverable_fraction": 0.13333333333333333,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "astrocyte",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "anchor_pred": "oligodendrocyte_progenitor_2",
+        "error_count": 15,
+        "pred_family": "oligodendrocyte_opc",
+        "recoverable_count": 1,
+        "recoverable_fraction": 0.06666666666666667,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "astrocyte",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "anchor_pred": "astrocyte_1",
+        "error_count": 14,
+        "pred_family": "astrocyte",
+        "recoverable_count": 0,
+        "recoverable_fraction": 0.0,
+        "rescuing_experts": [],
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "anchor_pred": "DH_ex_Prkcg/Rxfp1",
+        "error_count": 13,
+        "pred_family": "neuronal_or_other",
+        "recoverable_count": 3,
+        "recoverable_fraction": 0.23076923076923078,
+        "rescuing_experts": [
+          "wyh_model_v2"
+        ],
+        "true_family": "neuronal_or_other",
+        "true_label": "DH_ex_Grp"
+      }
+    ]
+  },
+  "class_names": [
+    "DH_ex_Cpne4",
+    "DH_ex_Gpr83",
+    "DH_ex_Grp",
+    "DH_ex_Grpr",
+    "DH_ex_Maf/Cck",
+    "DH_ex_Maf/Cpne4",
+    "DH_ex_Maf/Slc17a8",
+    "DH_ex_Nmu/Tac2",
+    "DH_ex_Prkcg/Cck",
+    "DH_ex_Prkcg/Nts",
+    "DH_ex_Prkcg/Rxfp1",
+    "DH_ex_Reln",
+    "DH_ex_Reln/Nmur2",
+    "DH_ex_Reln/Npff",
+    "DH_ex_Rreb1",
+    "DH_ex_Sox5",
+    "DH_ex_Sox5/Tac1",
+    "DH_ex_Tac2",
+    "DH_in_Cdh3",
+    "DH_in_Kcnip2",
+    "DH_in_Klhl14",
+    "DH_in_Npy",
+    "DH_in_Npy2r",
+    "DH_in_Pdyn",
+    "DH_in_Pdyn/Gal",
+    "DH_in_Rorb",
+    "DM_ex_Zfhx3",
+    "MV_ex_Shox2",
+    "MV_ex_Syt2",
+    "MV_in_Chrna2",
+    "MV_in_Esrrb",
+    "MV_in_Gabra1",
+    "MV_in_Gm26673",
+    "MV_in_Sema5b",
+    "M_ex_Neurod2",
+    "M_ex_Vsx2",
+    "M_ex_Vsx2/Shox2",
+    "M_in_Tfap2b",
+    "Schwann_cell",
+    "VH_in_Chat",
+    "alpha_motoneuron",
+    "astrocyte_1",
+    "astrocyte_2",
+    "beta_motoneuron",
+    "cholinergic_interneuron",
+    "endothelial",
+    "ependymal",
+    "gamma_motoneuron",
+    "meninges_1",
+    "meninges_2",
+    "meninges_3",
+    "microglia",
+    "oligodendrocyte_1",
+    "oligodendrocyte_2",
+    "oligodendrocyte_precursor_cell",
+    "oligodendrocyte_progenitor_1",
+    "oligodendrocyte_progenitor_2",
+    "pericyte",
+    "peripheral_glia",
+    "visceral_motoneuron"
+  ],
+  "confidence": {
+    "anchor": "lzh_prior_h",
+    "auroc": {
+      "p_anchor_wrong_from_entropy": 0.8158083403868656,
+      "p_anchor_wrong_from_margin_inverted": 0.8182449137124853,
+      "p_anchor_wrong_from_one_minus_top1": 0.8220486583497776,
+      "p_wrong_and_recoverable_from_entropy": 0.8481238655412175,
+      "p_wrong_and_recoverable_from_one_minus_top1": 0.9135158055525248
+    },
+    "mean_js_divergence_on_disagreement": 0.12308745167764372,
+    "note": "Anchor wrong cells have lower top1 / margin and higher entropy than correct cells, but recoverable vs unrecoverable errors overlap substantially. A threshold on confidence alone is unlikely to isolate safe corrections without a second expert signal.",
+    "subsets": {
+      "A_anchor_correct": {
+        "alternative_entropy": {
+          "count": 4133,
+          "mean": 0.13619687936306074,
+          "median": 0.005495393022316386,
+          "p25": 6.466837248945697e-05,
+          "p75": 0.12758667512957658
+        },
+        "alternative_margin": {
+          "count": 4133,
+          "mean": 0.9078612645992703,
+          "median": 0.9989581474773599,
+          "p25": 0.9535063444535655,
+          "p75": 0.9999916670886819
+        },
+        "alternative_top1": {
+          "count": 4133,
+          "mean": 0.9494671809679727,
+          "median": 0.9994043786179365,
+          "p25": 0.9747135627594995,
+          "p75": 0.9999952303567128
+        },
+        "entropy": {
+          "count": 4133,
+          "mean": 0.4117527605405333,
+          "median": 0.31504120100010485,
+          "p25": 0.04905881384815769,
+          "p75": 0.6827126636793976
+        },
+        "js_divergence": {
+          "count": 4133,
+          "mean": 0.03773176698414613,
+          "median": 0.022663758637552198,
+          "p25": 0.0027305834465089426,
+          "p75": 0.056837083153071614
+        },
+        "margin": {
+          "count": 4133,
+          "mean": 0.7936539302247383,
+          "median": 0.8915894945655368,
+          "p25": 0.6880504292941452,
+          "p75": 0.9859442640340702
+        },
+        "prob_advantage_alt_minus_anchor_top1": {
+          "count": 4133,
+          "mean": 0.07502640483846995,
+          "median": 0.04545370230469453,
+          "p25": 0.0014489132919158765,
+          "p75": 0.124080011741098
+        },
+        "top1": {
+          "count": 4133,
+          "mean": 0.8744407761295027,
+          "median": 0.9321805080132604,
+          "p25": 0.8066762296584472,
+          "p75": 0.9920059001477127
+        }
+      },
+      "B_anchor_wrong": {
+        "alternative_entropy": {
+          "count": 867,
+          "mean": 0.5194285288637358,
+          "median": 0.5227471356828117,
+          "p25": 0.18514221129231528,
+          "p75": 0.7550063870173058
+        },
+        "alternative_margin": {
+          "count": 867,
+          "mean": 0.633608143606738,
+          "median": 0.6870072123144086,
+          "p25": 0.37287092845255,
+          "p75": 0.9277664721052727
+        },
+        "alternative_top1": {
+          "count": 867,
+          "mean": 0.7931567521792289,
+          "median": 0.8300624529003438,
+          "p25": 0.6428239913830228,
+          "p75": 0.960826902964426
+        },
+        "entropy": {
+          "count": 867,
+          "mean": 0.9014298356419739,
+          "median": 0.9014862431505865,
+          "p25": 0.6408248412413704,
+          "p75": 1.1533383754954643
+        },
+        "js_divergence": {
+          "count": 867,
+          "mean": 0.06663002137156801,
+          "median": 0.05465362300803831,
+          "p25": 0.029630701867522122,
+          "p75": 0.08795276375992506
+        },
+        "margin": {
+          "count": 867,
+          "mean": 0.4766006663274426,
+          "median": 0.46456278047517857,
+          "p25": 0.247900305050671,
+          "p75": 0.695095110069921
+        },
+        "prob_advantage_alt_minus_anchor_top1": {
+          "count": 867,
+          "mean": 0.11595498787699882,
+          "median": 0.11446266235263136,
+          "p25": 0.03943598161309986,
+          "p75": 0.19912093350659626
+        },
+        "top1": {
+          "count": 867,
+          "mean": 0.6772017643022302,
+          "median": 0.6772771410528511,
+          "p25": 0.548632207162528,
+          "p75": 0.8094224393248691
+        }
+      },
+      "C_wrong_recoverable": {
+        "alternative_entropy": {
+          "count": 82,
+          "mean": 0.7944433686733006,
+          "median": 0.7077452668048339,
+          "p25": 0.6315338960681467,
+          "p75": 0.9929137955608536
+        },
+        "alternative_margin": {
+          "count": 82,
+          "mean": 0.300456704566755,
+          "median": 0.26536749484432853,
+          "p25": 0.08817461052780004,
+          "p75": 0.442760975321975
+        },
+        "alternative_top1": {
+          "count": 82,
+          "mean": 0.6139228190515682,
+          "median": 0.5797583049328533,
+          "p25": 0.5191285165177559,
+          "p75": 0.7108476803204389
+        },
+        "entropy": {
+          "count": 82,
+          "mean": 1.066966506546891,
+          "median": 1.0440946294287459,
+          "p25": 0.8430886896029552,
+          "p75": 1.2657184778346224
+        },
+        "js_divergence": {
+          "count": 82,
+          "mean": 0.11085771174032288,
+          "median": 0.0842965913909377,
+          "p25": 0.051899194008515344,
+          "p75": 0.13323127716384275
+        },
+        "margin": {
+          "count": 82,
+          "mean": 0.18712612599346212,
+          "median": 0.13479976601722932,
+          "p25": 0.06214262576344724,
+          "p75": 0.20652403794282426
+        },
+        "prob_advantage_alt_minus_anchor_top1": {
+          "count": 82,
+          "mean": 0.08686810338773417,
+          "median": 0.06954654576680672,
+          "p25": -0.011620073093842803,
+          "p75": 0.17969894718185297
+        },
+        "top1": {
+          "count": 82,
+          "mean": 0.527054715663834,
+          "median": 0.5180892804537676,
+          "p25": 0.46310751500336456,
+          "p75": 0.5744088913995342
+        }
+      },
+      "D_wrong_unrecoverable": {
+        "alternative_entropy": {
+          "count": 785,
+          "mean": 0.49070086406834174,
+          "median": 0.47116513011769906,
+          "p25": 0.16630978486090872,
+          "p75": 0.7327634628488283
+        },
+        "alternative_margin": {
+          "count": 785,
+          "mean": 0.6684086760924431,
+          "median": 0.7479944873764951,
+          "p25": 0.42520535620590355,
+          "p75": 0.9410498268868944
+        },
+        "alternative_top1": {
+          "count": 785,
+          "mean": 0.8118792776779145,
+          "median": 0.8617418046397303,
+          "p25": 0.6883700762581133,
+          "p75": 0.9644219820826316
+        },
+        "entropy": {
+          "count": 785,
+          "mean": 0.8841381069614602,
+          "median": 0.886843520316775,
+          "p25": 0.6209085531901795,
+          "p75": 1.1487424819450958
+        },
+        "js_divergence": {
+          "count": 785,
+          "mean": 0.06201005881075539,
+          "median": 0.052635820522849104,
+          "p25": 0.028712975840580073,
+          "p75": 0.08398327340747824
+        },
+        "margin": {
+          "count": 785,
+          "mean": 0.5068387711776163,
+          "median": 0.512578541120472,
+          "p25": 0.3030613096211691,
+          "p75": 0.714524206107511
+        },
+        "prob_advantage_alt_minus_anchor_top1": {
+          "count": 785,
+          "mean": 0.11899336307205574,
+          "median": 0.12062692881503112,
+          "p25": 0.04375087568635372,
+          "p75": 0.20273478797983335
+        },
+        "top1": {
+          "count": 785,
+          "mean": 0.6928859146058588,
+          "median": 0.7019416806558415,
+          "p25": 0.5695818039895025,
+          "p75": 0.820920709350374
+        }
+      },
+      "E_wrong_and_2plus_alternatives_agree_correct": {
+        "alternative_entropy": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "p25": null,
+          "p75": null
+        },
+        "alternative_margin": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "p25": null,
+          "p75": null
+        },
+        "alternative_top1": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "p25": null,
+          "p75": null
+        },
+        "entropy": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "p25": null,
+          "p75": null
+        },
+        "js_divergence": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "p25": null,
+          "p75": null
+        },
+        "margin": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "p25": null,
+          "p75": null
+        },
+        "prob_advantage_alt_minus_anchor_top1": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "p25": null,
+          "p75": null
+        },
+        "top1": {
+          "count": 0,
+          "mean": null,
+          "median": null,
+          "p25": null,
+          "p75": null
+        }
+      },
+      "F_correct_but_alternative_disagrees": {
+        "alternative_entropy": {
+          "count": 109,
+          "mean": 0.8025338103005357,
+          "median": 0.7483273227949268,
+          "p25": 0.6576752798757987,
+          "p75": 0.9394165530348613
+        },
+        "alternative_margin": {
+          "count": 109,
+          "mean": 0.3023992617263771,
+          "median": 0.2557163105450681,
+          "p25": 0.10334479677365627,
+          "p75": 0.44436053630363853
+        },
+        "alternative_top1": {
+          "count": 109,
+          "mean": 0.6153616907802242,
+          "median": 0.592860856355528,
+          "p25": 0.5294218466075027,
+          "p75": 0.6971506853636646
+        },
+        "entropy": {
+          "count": 109,
+          "mean": 1.0464396089595451,
+          "median": 1.050181109587446,
+          "p25": 0.8008737216737022,
+          "p75": 1.2873386024749098
+        },
+        "js_divergence": {
+          "count": 109,
+          "mean": 0.1287162397556552,
+          "median": 0.09223307049478756,
+          "p25": 0.05026689608146094,
+          "p75": 0.14776101338057498
+        },
+        "margin": {
+          "count": 109,
+          "mean": 0.23219546798890864,
+          "median": 0.14767447840431158,
+          "p25": 0.07714698830359906,
+          "p75": 0.3227115421014572
+        },
+        "prob_advantage_alt_minus_anchor_top1": {
+          "count": 109,
+          "mean": 0.07143011941767277,
+          "median": 0.053714837452449204,
+          "p25": -0.03336659960692023,
+          "p75": 0.1887459115705571
+        },
+        "top1": {
+          "count": 109,
+          "mean": 0.5439315713625514,
+          "median": 0.5230830011739322,
+          "p25": 0.4546023901828534,
+          "p75": 0.6292412469619892
+        }
+      }
+    }
+  },
+  "consensus": {
+    "D0": {
+      "canonical_folds_0_2": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.8303333333333334,
+        "n": 3000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D0",
+        "wrong_to_correct": 0
+      },
+      "canonical_folds_3_4": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.821,
+        "n": 2000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D0",
+        "wrong_to_correct": 0
+      },
+      "overall": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.8266,
+        "n": 5000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D0",
+        "wrong_to_correct": 0
+      }
+    },
+    "D1": {
+      "canonical_folds_0_2": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.8303333333333334,
+        "n": 3000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D1",
+        "wrong_to_correct": 0
+      },
+      "canonical_folds_3_4": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.821,
+        "n": 2000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D1",
+        "wrong_to_correct": 0
+      },
+      "note": "D1 requires two alternatives; with one alternative it cannot change any cell.",
+      "overall": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.8266,
+        "n": 5000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D1",
+        "wrong_to_correct": 0
+      }
+    },
+    "D2": {
+      "canonical_folds_0_2": {
+        "changed_cells": 132,
+        "correct_to_wrong": 67,
+        "correction_precision": 0.3106060606060606,
+        "final_diagnostic_accuracy": 0.8216666666666667,
+        "n": 3000,
+        "n_alternatives": 1,
+        "net_corrections": -26,
+        "rule": "D2",
+        "wrong_to_correct": 41
+      },
+      "canonical_folds_3_4": {
+        "changed_cells": 104,
+        "correct_to_wrong": 42,
+        "correction_precision": 0.3942307692307692,
+        "final_diagnostic_accuracy": 0.8205,
+        "n": 2000,
+        "n_alternatives": 1,
+        "net_corrections": -1,
+        "rule": "D2",
+        "wrong_to_correct": 41
+      },
+      "note": "With one alternative, D2 replaces the anchor whenever that alternative disagrees.",
+      "overall": {
+        "changed_cells": 236,
+        "correct_to_wrong": 109,
+        "correction_precision": 0.3474576271186441,
+        "final_diagnostic_accuracy": 0.8212,
+        "n": 5000,
+        "n_alternatives": 1,
+        "net_corrections": -27,
+        "rule": "D2",
+        "wrong_to_correct": 82
+      }
+    },
+    "D3": {
+      "canonical_folds_0_2": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.8303333333333334,
+        "n": 3000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D3",
+        "wrong_to_correct": 0
+      },
+      "canonical_folds_3_4": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.821,
+        "n": 2000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D3",
+        "wrong_to_correct": 0
+      },
+      "note": "With two experts, disagreement is a tie and D3 keeps the anchor, matching D0.",
+      "overall": {
+        "changed_cells": 0,
+        "correct_to_wrong": 0,
+        "correction_precision": null,
+        "final_diagnostic_accuracy": 0.8266,
+        "n": 5000,
+        "n_alternatives": 1,
+        "net_corrections": 0,
+        "rule": "D3",
+        "wrong_to_correct": 0
+      }
+    }
+  },
+  "created_at_utc": "2026-08-20T14:02:57Z",
+  "individual": {
+    "lzh_prior_h": {
+      "abs_difference": 0.0,
+      "overall": {
+        "accuracy": 0.8266,
+        "canonical_fold_accuracy": {
+          "0": 0.828,
+          "1": 0.836,
+          "2": 0.827,
+          "3": 0.824,
+          "4": 0.818
+        },
+        "canonical_folds_0_2": {
+          "accuracy": 0.8303333333333334,
+          "correct": 2491,
+          "macro_f1": 0.7951507929964521,
+          "n": 3000
+        },
+        "canonical_folds_3_4": {
+          "accuracy": 0.821,
+          "correct": 1642,
+          "macro_f1": 0.7976339479389553,
+          "n": 2000
+        },
+        "correct": 4133,
+        "log_loss": 0.5411295941876021,
+        "macro_f1": 0.7977386201523958,
+        "n": 5000
+      },
+      "reported_accuracy": 0.8266,
+      "verification_status": "VERIFIED"
+    },
+    "wyh_model_v2": {
+      "abs_difference": 0.0,
+      "overall": {
+        "accuracy": 0.8212,
+        "canonical_fold_accuracy": {
+          "0": 0.822,
+          "1": 0.831,
+          "2": 0.812,
+          "3": 0.821,
+          "4": 0.82
+        },
+        "canonical_folds_0_2": {
+          "accuracy": 0.8216666666666667,
+          "correct": 2465,
+          "macro_f1": 0.7846559303602407,
+          "n": 3000
+        },
+        "canonical_folds_3_4": {
+          "accuracy": 0.8205,
+          "correct": 1641,
+          "macro_f1": 0.8021330032463753,
+          "n": 2000
+        },
+        "correct": 4106,
+        "log_loss": 0.6416423806253077,
+        "macro_f1": 0.793613323779027,
+        "n": 5000
+      },
+      "reported_accuracy": 0.8212,
+      "verification_status": "VERIFIED"
+    }
+  },
+  "integrity": {
+    "class_n": 60,
+    "contract_messages": [
+      "shapes: counts_train=(5000, 200), counts_test=(5000, 200), meta_train=(5000, 12), meta_test=(5000, 12)",
+      "gene columns identical: n=200",
+      "no duplicate Cell_IDs in counts or meta",
+      "train counts/meta Cell_ID order aligned",
+      "test counts/meta Cell_ID order aligned",
+      "train/test Cell_IDs disjoint",
+      "train target MERFISH_cell_type_annotation: n_classes=60, missing=0",
+      "test target fully hidden (all missing)",
+      "gene counts are nonnegative integers",
+      "Cell_ID stored as 19-digit strings (not float)"
+    ],
+    "fold_messages": [
+      "every training Cell_ID appears exactly once",
+      "no test Cell_IDs in team folds file",
+      "folds are 0, 1, 2, 3, 4",
+      "saved folds match StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+      "each fold contains every class with n >= 5 (59 of 60 classes)"
+    ],
+    "joined_by_cell_id": true,
+    "lzh_final_equals_prior_h_anchor": true,
+    "lzh_probability_audit": {
+      "class_order_source": "explicit probability column names aligned to allowed_labels()",
+      "finite": true,
+      "max_abs_row_sum_deviation": 2.220446049250313e-15,
+      "n_classes": 60,
+      "n_negative": 0,
+      "n_rows": 5000,
+      "n_rows_not_summing_to_one_atol_1e4": 0,
+      "usable": true
+    },
+    "lzh_test_probability_audit": {
+      "n_rows": 5000,
+      "usable": true,
+      "used_for_scoring": false
+    },
+    "model_v1_modified": false,
+    "model_v2_modified": false,
+    "n_train_cells": 5000,
+    "prediction_csv_modified": false,
+    "test_labels_used": false,
+    "unique_cell_id": 5000,
+    "wyh_probability_audit": {
+      "class_order_source": "explicit probability column names aligned to allowed_labels()",
+      "finite": true,
+      "max_abs_row_sum_deviation": 1.1102230246251565e-15,
+      "n_classes": 60,
+      "n_negative": 0,
+      "n_rows": 5000,
+      "n_rows_not_summing_to_one_atol_1e4": 0,
+      "usable": true
+    },
+    "wyh_test_probability_audit": {
+      "n_rows": 5000,
+      "usable": true,
+      "used_for_scoring": false
+    }
+  },
+  "lzh_native_folds": {
+    "0": {
+      "accuracy": 0.8290341931613677,
+      "n": 1667
+    },
+    "1": {
+      "accuracy": 0.8320335932813437,
+      "n": 1667
+    },
+    "2": {
+      "accuracy": 0.8187274909963985,
+      "n": 1666
+    }
+  },
+  "manifest": {
+    "active_branch": "ywan/ml-pipeline",
+    "audit_id": "V3-E00T",
+    "created_at_utc": "2026-08-20T14:02:57Z",
+    "experts": [
+      {
+        "artifact_commit_sha": "2a25ee2ddeda46b1219cdd96bffc84d17e115c37",
+        "branch": "ywan/ml-pipeline",
+        "branch_sha": "420e7a6afd9aa0d50b21f385ea7f8c324cee3c84",
+        "comparability_warning": null,
+        "eligibility_level": "A",
+        "eligibility_reason": "Frozen personal MODEL V2 artifacts with Cell_ID-aligned 5-fold seed42 OOF predictions and probabilities. Canonical WYH source; team/wyh not used.",
+        "expert_id": "wyh_model_v2",
+        "fold_seed": 42,
+        "folds_3_4_used_as_locked_holdout": false,
+        "in_predeclared_oracle_pool": true,
+        "model_selection_protocol": "predeclared V2-C blends only; C1 rejected; no weight search",
+        "n_folds": 5,
+        "notes": "Reference-only LightGBM on cleaned Zenodo reference; competition train labels are not the boosting target.",
+        "oof_prediction_path": "outputs/oof/MODEL-V2_oof.csv",
+        "oof_probability_path": "outputs/probabilities/V2-B-REFONLY_oof_probabilities_seg.csv.gz",
+        "owner_line": "WYH",
+        "probability_available": true,
+        "reported_accuracy": 0.8212,
+        "reported_oof_used_for_tuning": false,
+        "reproduced_accuracy": 0.8212,
+        "selected_model_name": "MODEL V2 / V2-B-REFONLY",
+        "test_probability_available": true,
+        "test_probability_path": "outputs/probabilities/V2-B-REFONLY_test_probabilities_seg.csv.gz",
+        "validation_confidence": "HIGH",
+        "validation_protocol": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)"
+      },
+      {
+        "artifact_commit_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "branch": "team/lzh",
+        "branch_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "comparability_warning": "LZH original protocol is 3-fold, not StratifiedKFold seed42. Do not describe canonical folds 3-4 as LZH model folds.",
+        "eligibility_level": "A",
+        "eligibility_reason": "Cell-level OOF probabilities with explicit Cell_ID and named 60-class columns. Bundle documents 3-fold held-out cross-fit. Canonical seed42 slices are a meta-analysis partition, not LZH original folds.",
+        "expert_id": "lzh_prior_h",
+        "fold_seed": null,
+        "folds_3_4_used_as_locked_holdout": false,
+        "in_predeclared_oracle_pool": true,
+        "materialized": {
+          "branch": "team/lzh",
+          "commit_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+          "local_path": "/var/folders/fr/w8vd5tg92_76xvfb6yvd_1s00000gn/T/v3_e00t_team_artifacts_h7sz50k2/lzh_oof_probabilities_final.csv",
+          "n_bytes": 6637481,
+          "original_path": "submission_graph_stacker_V3_prior_H_20260820/model/oof_probabilities_final.csv",
+          "sha256": "6ff2685c83dd2a0babcc8bc023b4ae4ea38d74a92a9155ab0275af4a0423cb30"
+        },
+        "model_selection_protocol": "select Prior-H Anchor over newly trained graph stacker using the same 3-fold OOF",
+        "n_folds": 3,
+        "notes": "Selected because the V3 graph stacker (0.8254) did not beat Prior-H (0.8266).",
+        "oof_prediction_path": null,
+        "oof_probability_path": "submission_graph_stacker_V3_prior_H_20260820/model/oof_probabilities_final.csv",
+        "owner_line": "LZH",
+        "probability_available": true,
+        "reported_accuracy": 0.8266,
+        "reported_oof_used_for_tuning": true,
+        "reproduced_accuracy": 0.8266,
+        "selected_model_name": "depth_masked_prior_h_anchor",
+        "test_probability_available": true,
+        "test_probability_path": "submission_graph_stacker_V3_prior_H_20260820/model/test_probabilities_final.csv",
+        "validation_confidence": "MEDIUM",
+        "validation_protocol": "outer three-fold cross-fit (LZH folds.npy; not canonical seed42)"
+      },
+      {
+        "artifact_commit_sha": "9afc72774e2a6e186a04c2557110992d0befe164",
+        "branch": "team/yhh",
+        "branch_sha": "9afc72774e2a6e186a04c2557110992d0befe164",
+        "comparability_warning": "Cannot enter oracle/reliability analysis without cell-level OOF.",
+        "eligibility_level": "C",
+        "eligibility_reason": "Reported 0.8320 / 4160 correct in work/v7_optimization_report.json, but cell-level OOF is only written to gitignored work/v7_final_probs.npz. Root prediction.csv is test-only. Team main independently recorded that V7 did not reproduce on zzh member files.",
+        "expert_id": "yhh_v7",
+        "fold_seed": 42,
+        "folds_3_4_used_as_locked_holdout": true,
+        "in_predeclared_oracle_pool": false,
+        "model_selection_protocol": "gated specialists accepted only with positive tune and holdout gain",
+        "n_folds": 5,
+        "notes": "V7 commit 0890a3d added only README, test prediction.csv, optimize_v7.py, and the JSON report.",
+        "oof_prediction_path": null,
+        "oof_probability_path": null,
+        "owner_line": "YHH",
+        "probability_available": false,
+        "reported_accuracy": 0.832,
+        "reported_oof_used_for_tuning": true,
+        "reproduced_accuracy": null,
+        "selected_model_name": "V7 hierarchical specialists on reproduced V6 ensemble",
+        "test_prediction_path": "prediction/prediction.csv",
+        "test_probability_available": false,
+        "test_probability_path": null,
+        "validation_confidence": "LOW",
+        "validation_protocol": "5-fold; selection on folds 0-2, holdout folds 3-4 (YHH README)"
+      },
+      {
+        "artifact_commit_sha": "c34feed7a03d1a1421c55a6fe4c40765aeff2b8b",
+        "branch": "team/main",
+        "branch_sha": "c34feed7a03d1a1421c55a6fe4c40765aeff2b8b",
+        "comparability_warning": "Do not invent an OOF metric. Test disagreement is not validation evidence.",
+        "eligibility_level": "C",
+        "eligibility_reason": "HEAD only updates prediction/prediction.csv (test predictions). No committed OOF predictions or probabilities. Historical V6 OOF npz files are gitignored.",
+        "expert_id": "team_main_v9",
+        "fold_seed": null,
+        "folds_3_4_used_as_locked_holdout": null,
+        "in_predeclared_oracle_pool": false,
+        "model_selection_protocol": null,
+        "n_folds": null,
+        "notes": "Latest reproducible documented ensemble on this line was V6 (reported ~0.8248) but member OOF npz files are not in git.",
+        "oof_prediction_path": null,
+        "oof_probability_path": null,
+        "owner_line": "team_main / zzh",
+        "probability_available": false,
+        "reported_accuracy": null,
+        "reported_oof_used_for_tuning": null,
+        "reproduced_accuracy": null,
+        "selected_model_name": "team blend v9",
+        "test_prediction_path": "prediction/prediction.csv",
+        "test_probability_available": false,
+        "test_probability_path": null,
+        "validation_confidence": "LOW",
+        "validation_protocol": null
+      },
+      {
+        "artifact_commit_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "branch": "team/lzh",
+        "branch_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "comparability_warning": "Not added to the predeclared 4-line oracle pool; it is a superseded LZH package, not an independent owner line.",
+        "eligibility_level": "A",
+        "eligibility_reason": "Honest 3-fold OOF probabilities exist, but this package is superseded by the selected Prior-H model on the same owner line.",
+        "expert_id": "lzh_graph_stacker_v2_historical",
+        "fold_seed": null,
+        "in_predeclared_oracle_pool": false,
+        "n_folds": 3,
+        "notes": "Inventoried only. Using it together with Prior-H would double-count the LZH family.",
+        "oof_prediction_path": null,
+        "oof_probability_path": "submission_graph_stacker_82_50_20260820/model/oof_probabilities.csv",
+        "owner_line": "LZH",
+        "probability_available": true,
+        "reported_accuracy": 0.825,
+        "reproduced_accuracy": null,
+        "selected_model_name": "graph_regularized_logit_stacker (82.50 package)",
+        "test_probability_available": true,
+        "test_probability_path": "submission_graph_stacker_82_50_20260820/model/test_probabilities.csv",
+        "validation_confidence": "MEDIUM",
+        "validation_protocol": "outer three-fold cross-fit"
+      }
+    ],
+    "materialized_artifacts": {
+      "cache_dir": "/var/folders/fr/w8vd5tg92_76xvfb6yvd_1s00000gn/T/v3_e00t_team_artifacts_h7sz50k2",
+      "cache_dir_gitignored": false,
+      "lzh_final_oof": {
+        "branch": "team/lzh",
+        "commit_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "local_path": "/var/folders/fr/w8vd5tg92_76xvfb6yvd_1s00000gn/T/v3_e00t_team_artifacts_h7sz50k2/lzh_oof_probabilities_final.csv",
+        "n_bytes": 6637481,
+        "original_path": "submission_graph_stacker_V3_prior_H_20260820/model/oof_probabilities_final.csv",
+        "sha256": "6ff2685c83dd2a0babcc8bc023b4ae4ea38d74a92a9155ab0275af4a0423cb30"
+      },
+      "lzh_final_test": {
+        "branch": "team/lzh",
+        "commit_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "local_path": "/var/folders/fr/w8vd5tg92_76xvfb6yvd_1s00000gn/T/v3_e00t_team_artifacts_h7sz50k2/lzh_test_probabilities_final.csv",
+        "n_bytes": 6666114,
+        "original_path": "submission_graph_stacker_V3_prior_H_20260820/model/test_probabilities_final.csv",
+        "sha256": "00c202f6d105a6f6af7d218d27fc8f0daee86f260d51db384142388f8c013864"
+      },
+      "lzh_gate": {
+        "branch": "team/lzh",
+        "commit_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "local_path": "/var/folders/fr/w8vd5tg92_76xvfb6yvd_1s00000gn/T/v3_e00t_team_artifacts_h7sz50k2/lzh_oof_gate.csv",
+        "n_bytes": 130018,
+        "original_path": "submission_graph_stacker_V3_prior_H_20260820/model/trained_stacker/oof_gate.csv",
+        "sha256": "6ad2a404bdfde9a29a07db6898a7c7250c2b4530b79b6e6a1d2ea84c8bfe3b1c"
+      },
+      "lzh_prior_h_oof": {
+        "branch": "team/lzh",
+        "commit_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "local_path": "/var/folders/fr/w8vd5tg92_76xvfb6yvd_1s00000gn/T/v3_e00t_team_artifacts_h7sz50k2/lzh_oof_probabilities_prior_h_anchor.csv",
+        "n_bytes": 6637481,
+        "original_path": "submission_graph_stacker_V3_prior_H_20260820/model/inputs/oof_probabilities_prior_h_anchor.csv",
+        "sha256": "6ff2685c83dd2a0babcc8bc023b4ae4ea38d74a92a9155ab0275af4a0423cb30"
+      },
+      "lzh_selection": {
+        "branch": "team/lzh",
+        "commit_sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "local_path": "/var/folders/fr/w8vd5tg92_76xvfb6yvd_1s00000gn/T/v3_e00t_team_artifacts_h7sz50k2/lzh_final_selection.json",
+        "n_bytes": 2031,
+        "original_path": "submission_graph_stacker_V3_prior_H_20260820/model/final_selection.json",
+        "sha256": "a31e265a6c0d60b910987719c51867b1744905d8df864e0570c2e719f5c2349f"
+      }
+    },
+    "snapshots": {
+      "local_head": {
+        "author": "Ywan033",
+        "date": "2026-08-20T08:19:54-04:00",
+        "present": true,
+        "ref": "HEAD",
+        "sha": "420e7a6afd9aa0d50b21f385ea7f8c324cee3c84",
+        "subject": "docs: add Codex project handoff instructions"
+      },
+      "origin_head": {
+        "author": "Ywan033",
+        "date": "2026-08-20T08:19:54-04:00",
+        "present": true,
+        "ref": "origin/ywan/ml-pipeline",
+        "sha": "420e7a6afd9aa0d50b21f385ea7f8c324cee3c84",
+        "subject": "docs: add Codex project handoff instructions"
+      },
+      "team/lzh": {
+        "author": "Zhiheng Li",
+        "date": "2026-08-20T19:37:13+08:00",
+        "present": true,
+        "ref": "team/lzh",
+        "sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+        "subject": "Upload submission_graph_stacker_V3_prior_H"
+      },
+      "team/main": {
+        "author": "X0X0X00",
+        "date": "2026-08-20T07:51:14-04:00",
+        "present": true,
+        "ref": "team/main",
+        "sha": "c34feed7a03d1a1421c55a6fe4c40765aeff2b8b",
+        "subject": "Update predictions (team blend v9)"
+      },
+      "team/revert-1-lzh": {
+        "author": "Zhiheng Li",
+        "date": "2026-08-20T02:00:05+08:00",
+        "present": true,
+        "ref": "team/revert-1-lzh",
+        "sha": "bf4b34bbb988505341ec2caec237de6a9587207d",
+        "subject": "Revert \"Upload files to lzh branch\""
+      },
+      "team/wyh": {
+        "author": "Ywan033",
+        "date": "2026-08-20T07:53:30-04:00",
+        "present": true,
+        "ref": "team/wyh",
+        "sha": "da127c6ca86693f8bad5941aa26cc24ba129e1af",
+        "subject": "docs(wyh): document Model V1 and Model V2 releases"
+      },
+      "team/yhh": {
+        "author": "Baiyu-ying",
+        "date": "2026-08-19T18:14:10+08:00",
+        "present": true,
+        "ref": "team/yhh",
+        "sha": "9afc72774e2a6e186a04c2557110992d0befe164",
+        "subject": "merge V6 and V7 model updates"
+      }
+    }
+  },
+  "multi_expert_oracle": {
+    "best_3_way": null,
+    "best_4_way": null,
+    "canonical_folds_0_2": {
+      "all_wrong": 468,
+      "experts": [
+        "lzh_prior_h",
+        "wyh_model_v2"
+      ],
+      "n": 3000,
+      "n_correct_experts_distribution": {
+        "0": 468,
+        "1": 108,
+        "2": 2424
+      },
+      "oracle_accuracy": 0.844,
+      "oracle_correct": 2532
+    },
+    "canonical_folds_3_4": {
+      "all_wrong": 317,
+      "experts": [
+        "lzh_prior_h",
+        "wyh_model_v2"
+      ],
+      "n": 2000,
+      "n_correct_experts_distribution": {
+        "0": 317,
+        "1": 83,
+        "2": 1600
+      },
+      "oracle_accuracy": 0.8415,
+      "oracle_correct": 1683
+    },
+    "omitted_experts": {
+      "lzh_graph_stacker_v2_historical": "LEVEL A but excluded as superseded same-line LZH model",
+      "team_main_v9": "LEVEL C: test-only prediction.csv",
+      "yhh_v7": "LEVEL C: no committed cell-level OOF"
+    },
+    "oracle_is_not_deployable_accuracy": true,
+    "overall": {
+      "all_wrong": 785,
+      "experts": [
+        "lzh_prior_h",
+        "wyh_model_v2"
+      ],
+      "n": 5000,
+      "n_correct_experts_distribution": {
+        "0": 785,
+        "1": 191,
+        "2": 4024
+      },
+      "oracle_accuracy": 0.843,
+      "oracle_correct": 4215
+    }
+  },
+  "oracle_is_not_deployable_accuracy": true,
+  "pairwise": [
+    {
+      "canonical_folds_0_2": {
+        "a_accuracy": 0.8303333333333334,
+        "a_only_correct": 67,
+        "b_accuracy": 0.8216666666666667,
+        "b_only_correct": 41,
+        "both_correct": 2424,
+        "both_wrong": 468,
+        "disagreement_count": 132,
+        "disagreement_rate": 0.044,
+        "expert_a": "lzh_prior_h",
+        "expert_b": "wyh_model_v2",
+        "incremental_oracle_headroom_over_stronger": 0.013666666666666605,
+        "n": 3000,
+        "pair_oracle_accuracy": 0.844,
+        "pair_oracle_correct": 2532
+      },
+      "canonical_folds_3_4": {
+        "a_accuracy": 0.821,
+        "a_only_correct": 42,
+        "b_accuracy": 0.8205,
+        "b_only_correct": 41,
+        "both_correct": 1600,
+        "both_wrong": 317,
+        "disagreement_count": 104,
+        "disagreement_rate": 0.052,
+        "expert_a": "lzh_prior_h",
+        "expert_b": "wyh_model_v2",
+        "incremental_oracle_headroom_over_stronger": 0.020500000000000074,
+        "n": 2000,
+        "pair_oracle_accuracy": 0.8415,
+        "pair_oracle_correct": 1683
+      },
+      "expert_a": "lzh_prior_h",
+      "expert_b": "wyh_model_v2",
+      "overall": {
+        "a_accuracy": 0.8266,
+        "a_only_correct": 109,
+        "b_accuracy": 0.8212,
+        "b_only_correct": 82,
+        "both_correct": 4024,
+        "both_wrong": 785,
+        "disagreement_count": 236,
+        "disagreement_rate": 0.0472,
+        "expert_a": "lzh_prior_h",
+        "expert_b": "wyh_model_v2",
+        "incremental_oracle_headroom_over_stronger": 0.01639999999999997,
+        "n": 5000,
+        "pair_oracle_accuracy": 0.843,
+        "pair_oracle_correct": 4215
+      }
+    }
+  ],
+  "recommended_anchor": {
+    "eligible_anchor_candidates": [
+      "lzh_prior_h",
+      "wyh_model_v2"
+    ],
+    "reason": "LZH Prior-H has honest Cell_ID-aligned OOF probabilities, the highest reproduced overall accuracy among eligible experts (0.8266 vs WYH 0.8212), and canonical folds 3-4 accuracy 0.8210 vs WYH 0.8205. YHH V7 and team-main v9 cannot be anchors because they lack honest OOF artifacts. Limitation: LZH uses a 3-fold protocol and selected this model on the same OOF used for reporting (MEDIUM confidence).",
+    "recommended_anchor": "lzh_prior_h",
+    "rejected_as_anchor": {
+      "team_main_v9": "test-only",
+      "yhh_v7": "no cell-level OOF"
+    }
+  },
+  "snapshots": {
+    "local_head": {
+      "author": "Ywan033",
+      "date": "2026-08-20T08:19:54-04:00",
+      "present": true,
+      "ref": "HEAD",
+      "sha": "420e7a6afd9aa0d50b21f385ea7f8c324cee3c84",
+      "subject": "docs: add Codex project handoff instructions"
+    },
+    "origin_head": {
+      "author": "Ywan033",
+      "date": "2026-08-20T08:19:54-04:00",
+      "present": true,
+      "ref": "origin/ywan/ml-pipeline",
+      "sha": "420e7a6afd9aa0d50b21f385ea7f8c324cee3c84",
+      "subject": "docs: add Codex project handoff instructions"
+    },
+    "team/lzh": {
+      "author": "Zhiheng Li",
+      "date": "2026-08-20T19:37:13+08:00",
+      "present": true,
+      "ref": "team/lzh",
+      "sha": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+      "subject": "Upload submission_graph_stacker_V3_prior_H"
+    },
+    "team/main": {
+      "author": "X0X0X00",
+      "date": "2026-08-20T07:51:14-04:00",
+      "present": true,
+      "ref": "team/main",
+      "sha": "c34feed7a03d1a1421c55a6fe4c40765aeff2b8b",
+      "subject": "Update predictions (team blend v9)"
+    },
+    "team/revert-1-lzh": {
+      "author": "Zhiheng Li",
+      "date": "2026-08-20T02:00:05+08:00",
+      "present": true,
+      "ref": "team/revert-1-lzh",
+      "sha": "bf4b34bbb988505341ec2caec237de6a9587207d",
+      "subject": "Revert \"Upload files to lzh branch\""
+    },
+    "team/wyh": {
+      "author": "Ywan033",
+      "date": "2026-08-20T07:53:30-04:00",
+      "present": true,
+      "ref": "team/wyh",
+      "sha": "da127c6ca86693f8bad5941aa26cc24ba129e1af",
+      "subject": "docs(wyh): document Model V1 and Model V2 releases"
+    },
+    "team/yhh": {
+      "author": "Baiyu-ying",
+      "date": "2026-08-19T18:14:10+08:00",
+      "present": true,
+      "ref": "team/yhh",
+      "sha": "9afc72774e2a6e186a04c2557110992d0befe164",
+      "subject": "merge V6 and V7 model updates"
+    }
+  },
+  "strategic_decision": {
+    "auditable_experts": [
+      "lzh_prior_h",
+      "wyh_model_v2"
+    ],
+    "best_honest_multi_expert_oracle": 0.843,
+    "best_honest_multi_expert_oracle_correct": 4215,
+    "best_oracle_canonical_folds_3_4": 0.8415,
+    "full_team_oracle_status": "unknown",
+    "interpretation": "Routing-only is insufficient for the CURRENTLY AUDITABLE honest expert pool. A new independent expert should be developed now rather than tuning a router over only LZH + WYH. If YHH/main OOF artifacts later become available, rerun the canonical oracle audit.",
+    "label": "ROUTING-ONLY INSUFFICIENT",
+    "next_experiment_rationale": "A new independent expert should be developed now rather than tuning a router over only LZH + WYH. The approved same-study 500-gene reference is the smallest domain-gap source of additional signal not already fully used by the 200-gene reference-only LightGBM. If YHH/main OOF artifacts later become available, rerun the canonical oracle audit.",
+    "next_primary_experiment": "V3-E02D \u2014 500-to-200 Gene Privileged Distillation",
+    "oracle_scope": "currently_auditable_honest_expert_pool_only",
+    "thresholds_not_tuned": true,
+    "unavailable_for_cell_level_oof_comparison": [
+      "yhh_v7",
+      "team_main_v9"
+    ],
+    "weights_not_optimized": true
+  },
+  "unique_value": {
+    "additional_correct_cells_from_adding_alternative": 82,
+    "experts": {
+      "lzh_prior_h": {
+        "anchor_wrong_this_expert_correct": 0,
+        "only_this_expert_correct": 109,
+        "standalone_accuracy": 0.8266
+      },
+      "wyh_model_v2": {
+        "anchor_wrong_this_expert_correct": 82,
+        "only_this_expert_correct": 82,
+        "standalone_accuracy": 0.8212
+      }
+    },
+    "oracle_anchor_only": 0.8266,
+    "oracle_anchor_plus_alternative": 0.843,
+    "wyh_model_v2_unique_value_answer": "Yes. WYH MODEL V2 is uniquely correct on 82 cells that LZH Prior-H misses, which is the entire incremental oracle of the eligible two-expert pool. That is meaningful unique value despite a lower standalone accuracy (0.8212 vs 0.8266). It is not enough, by itself, to create a 3-expert team oracle, and unconstrained replacement of the anchor by WYH is unsafe because WYH also introduces 109 false corrections."
+  }
+}

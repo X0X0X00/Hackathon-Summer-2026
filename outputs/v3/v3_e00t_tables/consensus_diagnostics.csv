@@ -1,0 +1,13 @@
+split,rule,n,changed_cells,wrong_to_correct,correct_to_wrong,net_corrections,correction_precision,final_diagnostic_accuracy,n_alternatives
+overall,D0,5000,0,0,0,0,,0.8266,1
+canonical_folds_0_2,D0,3000,0,0,0,0,,0.8303333333333334,1
+canonical_folds_3_4,D0,2000,0,0,0,0,,0.821,1
+overall,D1,5000,0,0,0,0,,0.8266,1
+canonical_folds_0_2,D1,3000,0,0,0,0,,0.8303333333333334,1
+canonical_folds_3_4,D1,2000,0,0,0,0,,0.821,1
+overall,D2,5000,236,82,109,-27,0.3474576271186441,0.8212,1
+canonical_folds_0_2,D2,3000,132,41,67,-26,0.3106060606060606,0.8216666666666667,1
+canonical_folds_3_4,D2,2000,104,41,42,-1,0.3942307692307692,0.8205,1
+overall,D3,5000,0,0,0,0,,0.8266,1
+canonical_folds_0_2,D3,3000,0,0,0,0,,0.8303333333333334,1
+canonical_folds_3_4,D3,2000,0,0,0,0,,0.821,1
