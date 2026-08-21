@@ -21,10 +21,47 @@ A predeclared V2-C blend (C1) reached 82.24% OOF and was rejected: the gain was 
 
 ## V3 Research Program
 
-The V3 research program is **completed**. MODEL V3 was **not created**. MODEL V2 remains the frozen personal deployable model.
+The V3 research program is **completed without MODEL V3 promotion**.
+MODEL V2 remains the frozen WYH deployable model.
 
-- Program summary: [`reports/v3/v3_research_program_summary.md`](reports/v3/v3_research_program_summary.md)
-- Contribution record: [`docs/contributions/wyh_v3_contribution.md`](docs/contributions/wyh_v3_contribution.md)
+| Item | Result | Status |
+| --- | ---: | --- |
+| Frozen MODEL V2 | **82.12%** (4106 / 5000) | Current WYH deployable model |
+| Best V3 experimental candidate — E06M M2 | **82.18%** (4109 / 5000) | Experimental; not promoted |
+| Strongest auditable team standalone comparator — LZH Prior-H | **82.66%** (4133 / 5000) | Teammate model |
+| Five-expert diagnostic oracle | **87.86%** (4393 / 5000) | Diagnostic coverage ceiling only |
+
+### Why no MODEL V3?
+
+The best V3 experimental candidate improved MODEL V2 by only **3 net cells**
+(105 wrong→correct versus 102 correct→wrong).
+
+The improvement was not stable enough for promotion:
+
+- folds 0–2: **+12** net cells
+- folds 3–4: **−9** net cells
+- exact McNemar test: **p = 0.8895**
+- section audit: **31 wins / 45 ties / 32 losses**
+
+Therefore the predeclared MODEL V3 promotion criteria were not met.
+
+### Main V3 finding
+
+The V3 experiments exposed a **coverage–utilization gap**.
+
+The auditable expert pool contained substantial complementary information,
+but the tested privileged-gene distillation, weak-expert confidence gating,
+directional correction, and source-balanced multi-reference transfer methods
+did not convert that coverage into a stable deployable improvement without
+offsetting errors.
+
+> **87.86% is a diagnostic oracle coverage ceiling — not OOF accuracy,
+> test accuracy, leaderboard accuracy, or a deployable model score.**
+
+- Full research summary:
+  [`reports/v3/v3_research_program_summary.md`](reports/v3/v3_research_program_summary.md)
+- WYH contribution record:
+  [`docs/contributions/wyh_v3_contribution.md`](docs/contributions/wyh_v3_contribution.md)
 
 ---
 
