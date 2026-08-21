@@ -1,0 +1,11 @@
+true_label,n,family
+oligodendrocyte_progenitor_2,34,oligodendrocyte_opc
+astrocyte_1,5,astrocyte
+DH_ex_Prkcg/Nts,3,neuronal_or_other
+oligodendrocyte_1,2,oligodendrocyte_opc
+alpha_motoneuron,2,neuronal_or_other
+meninges_3,2,meningeal
+pericyte,2,vascular
+meninges_2,1,meningeal
+MV_in_Gm26673,1,neuronal_or_other
+microglia,1,microglia

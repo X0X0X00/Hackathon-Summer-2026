@@ -1,0 +1,303 @@
+{
+  "anndata_shape": [
+    55331,
+    500
+  ],
+  "competition_test_cell_id_overlap": 0,
+  "competition_train_cell_id_overlap": 0,
+  "condition_source_column_candidates": [
+    "Datasets",
+    "batch",
+    "Condition"
+  ],
+  "created_at_utc": "2026-08-21T04:16:24Z",
+  "duplication_check": {
+    "auditable_sni_only_expert_found": false,
+    "claim": "new source-diversity experiment within the current team/project",
+    "local_tree_sni_mentions": 0,
+    "note": "git fetch team --prune and git grep on team/main, team/yhh, team/lzh, team/wyh, team/revert-1-lzh, and the personal tree found no auditable SNI_merged_0917.h5ad isolated expert. This is not a global-novelty claim.",
+    "team_remote_sni_merged_mentions": 0
+  },
+  "exact_vector_duplicate_audit": {
+    "cleaned_merfish_reference_rows": 136574,
+    "policy": "Exclude competition-train/test ID overlaps, competition exact 200-gene vectors, and exact 200-gene vectors that reproduce the cleaned MERFISH reference so that source diversity is not artificially inflated.",
+    "sni_exact_vectors_matching_cleaned_merfish_reference": 116,
+    "sni_exact_vectors_matching_competition_test": 15,
+    "sni_exact_vectors_matching_competition_train": 10
+  },
+  "expected_md5": "7e90a801ee57b8fec06cd03c8630f01b",
+  "experiment_id": "V3-E04S",
+  "feasibility": {
+    "code": "PASS",
+    "passed": true,
+    "reason": "PASS"
+  },
+  "file_path": "/Users/yyl/Documents/Hackathon-Summer-2026/work/external/SNI_merged_0917.h5ad",
+  "file_size_bytes": 115901575,
+  "filename": "SNI_merged_0917.h5ad",
+  "label_column_candidates": [
+    "voting",
+    "tangram",
+    "singler",
+    "seurat",
+    "rctd"
+  ],
+  "md5": "7e90a801ee57b8fec06cd03c8630f01b",
+  "md5_ok": true,
+  "merfish_reference_cell_id_overlap": 0,
+  "merfish_reference_md5": "ce06f62c0ec4973581dae17bb76f0cd9",
+  "merfish_reference_shape": [
+    146621,
+    500
+  ],
+  "n_obs": 55331,
+  "n_vars": 500,
+  "nonnegative_counts": true,
+  "obs_column_names": [
+    "Datasets",
+    "volume",
+    "center_x",
+    "center_y",
+    "batch",
+    "voting",
+    "tangram",
+    "singler",
+    "seurat",
+    "rctd",
+    "Condition",
+    "Mouse ID",
+    "Axial level",
+    "Side",
+    "Section ID",
+    "Custom Cells groups"
+  ],
+  "official_gene_alignment": {
+    "aligned_to_official_order": true,
+    "exact_200_of_200": true,
+    "matches_official_gene_contract": true,
+    "missing_genes": [],
+    "n_official_genes": 200,
+    "n_present": 200,
+    "ordered_200_gene_sha256": "e3301724038990aa2db237026316aaa5fd265a11231c343bea733f8106ab06f5"
+  },
+  "sha256": "30fcfed7daa1d5bc690b444a2a4e4fe1801fcad47e1417800ef9117252086226",
+  "source_distribution": {
+    "cleaned_merfish_library_size": {
+      "count": 136574,
+      "max": 815.0,
+      "mean": 31.328774144419874,
+      "median": 21.0,
+      "min": 0.0,
+      "p25": 13.0,
+      "p75": 37.0
+    },
+    "cleaned_merfish_n_detected": {
+      "count": 136574,
+      "max": 94.0,
+      "mean": 14.948679836572115,
+      "median": 12.0,
+      "min": 0.0,
+      "p25": 8.0,
+      "p75": 19.0
+    },
+    "competition_library_size_scale": 21.0,
+    "competition_train_library_size": {
+      "count": 5000,
+      "max": 550.0,
+      "mean": 31.3168,
+      "median": 21.0,
+      "min": 1.0,
+      "p25": 13.0,
+      "p75": 37.0
+    },
+    "competition_train_n_detected": {
+      "count": 5000,
+      "max": 85.0,
+      "mean": 14.8588,
+      "median": 12.0,
+      "min": 1.0,
+      "p25": 8.0,
+      "p75": 18.0
+    },
+    "pca_source_separation_sni_vs_competition_train": {
+      "competition_train_pc_mean": [
+        0.076872318983078,
+        0.07936446368694305
+      ],
+      "explained_variance_ratio": [
+        0.019662179052829742,
+        0.013586703687906265
+      ],
+      "mean_pc_euclidean_separation": 0.12052429467439651,
+      "note": "unlabeled diagnostic only; PCA was not used as a domain-adaptation model",
+      "sni_pc_mean": [
+        -0.00698508694767952,
+        -0.007203666027635336
+      ]
+    },
+    "per_gene_mean_correlation_sni_vs_cleaned_merfish": 0.9771831233818743,
+    "per_gene_mean_correlation_sni_vs_competition_train": 0.9744311404594553,
+    "per_gene_variance_correlation_sni_vs_cleaned_merfish": 0.9594372614326038,
+    "per_gene_variance_correlation_sni_vs_competition_train": 0.952808857603493,
+    "raw_sni_library_size": {
+      "count": 55331,
+      "max": 965.0,
+      "mean": 37.66085919285753,
+      "median": 20.0,
+      "min": 0.0,
+      "p25": 12.0,
+      "p75": 40.0
+    },
+    "raw_sni_n_detected": {
+      "count": 55331,
+      "max": 108.0,
+      "mean": 15.489490520684607,
+      "median": 11.0,
+      "min": 0.0,
+      "p25": 8.0,
+      "p75": 18.0
+    },
+    "usable_sni_library_size": {
+      "count": 55193,
+      "max": 965.0,
+      "mean": 37.70922037214864,
+      "median": 20.0,
+      "min": 1.0,
+      "p25": 12.0,
+      "p75": 40.0
+    },
+    "usable_sni_n_detected": {
+      "count": 55193,
+      "max": 108.0,
+      "mean": 15.524233145507582,
+      "median": 11.0,
+      "min": 1.0,
+      "p25": 8.0,
+      "p75": 18.0
+    }
+  },
+  "study_source_metadata": {
+    "Axial level": {
+      "cervical": 8657,
+      "lumbar": 34105,
+      "sacral": 5944,
+      "thoracic": 6625
+    },
+    "Condition": {
+      "SNI": 23833,
+      "Sham": 31498
+    },
+    "Datasets": {
+      "14-05-25_15-36_20240722-msSCShamSNI-run2_VPT_processed_cell": 17061,
+      "14-05-25_15-38_Assembled_20240717-msSCShamSNI-run1_VMSC02901_Cells": 13822,
+      "202508251138_ShamSNIrun_VMSC15212_region_0": 7560,
+      "202508251138_ShamSNIrun_VMSC15212_region_1": 7231,
+      "202508251138_ShamSNIrun_VMSC15212_region_2": 9657
+    },
+    "Mouse ID": {
+      "B41_M1": 8574,
+      "B41_M3": 9192,
+      "B42_F1": 6067,
+      "BL6_F2": 6953,
+      "BL6_F3": 6635,
+      "BL6_M2": 14490,
+      "BL6_M3": 3420
+    },
+    "batch": {
+      "0717": 13822,
+      "0722": 17061,
+      "0825": 24448
+    },
+    "note": "values recorded from file fields only; biological meaning is not inferred beyond field names",
+    "uns_keys": []
+  },
+  "taxonomy": {
+    "case": "B",
+    "cells_excluded_by_taxonomy": 0,
+    "cells_retained_by_taxonomy": 55331,
+    "class_count_max": 7448,
+    "class_count_median": 379.5,
+    "class_count_min": 18,
+    "competition_classes_covered": 60,
+    "competition_classes_missing": [],
+    "label_column": "voting",
+    "mapped_class_count": 60,
+    "mapping_already_in_project": true,
+    "mapping_function": "merfish60.reference.norm_label",
+    "per_class_sni_counts": {
+      "DH_ex_Cpne4": 386,
+      "DH_ex_Gpr83": 301,
+      "DH_ex_Grp": 64,
+      "DH_ex_Grpr": 451,
+      "DH_ex_Maf/Cck": 808,
+      "DH_ex_Maf/Cpne4": 105,
+      "DH_ex_Maf/Slc17a8": 122,
+      "DH_ex_Nmu/Tac2": 593,
+      "DH_ex_Prkcg/Cck": 303,
+      "DH_ex_Prkcg/Nts": 566,
+      "DH_ex_Prkcg/Rxfp1": 167,
+      "DH_ex_Reln": 369,
+      "DH_ex_Reln/Nmur2": 940,
+      "DH_ex_Reln/Npff": 338,
+      "DH_ex_Rreb1": 178,
+      "DH_ex_Sox5": 700,
+      "DH_ex_Sox5/Tac1": 111,
+      "DH_ex_Tac2": 362,
+      "DH_in_Cdh3": 1637,
+      "DH_in_Kcnip2": 79,
+      "DH_in_Klhl14": 60,
+      "DH_in_Npy": 589,
+      "DH_in_Npy2r": 341,
+      "DH_in_Pdyn": 412,
+      "DH_in_Pdyn/Gal": 406,
+      "DH_in_Rorb": 494,
+      "DM_ex_Zfhx3": 1582,
+      "MV_ex_Shox2": 267,
+      "MV_ex_Syt2": 2027,
+      "MV_in_Chrna2": 216,
+      "MV_in_Esrrb": 340,
+      "MV_in_Gabra1": 2375,
+      "MV_in_Gm26673": 2574,
+      "MV_in_Sema5b": 1446,
+      "M_ex_Neurod2": 80,
+      "M_ex_Vsx2": 361,
+      "M_ex_Vsx2/Shox2": 443,
+      "M_in_Tfap2b": 397,
+      "Schwann_cell": 1233,
+      "VH_in_Chat": 18,
+      "alpha_motoneuron": 1421,
+      "astrocyte_1": 5998,
+      "astrocyte_2": 1514,
+      "beta_motoneuron": 189,
+      "cholinergic_interneuron": 44,
+      "endothelial": 3520,
+      "ependymal": 85,
+      "gamma_motoneuron": 249,
+      "meninges_1": 751,
+      "meninges_2": 160,
+      "meninges_3": 252,
+      "microglia": 815,
+      "oligodendrocyte_1": 2763,
+      "oligodendrocyte_2": 3849,
+      "oligodendrocyte_precursor_cell": 1094,
+      "oligodendrocyte_progenitor_1": 197,
+      "oligodendrocyte_progenitor_2": 7448,
+      "pericyte": 373,
+      "peripheral_glia": 291,
+      "visceral_motoneuron": 77
+    },
+    "raw_label_count": 60,
+    "reason": "existing V2 norm_label maps spaces/hyphens to official underscores",
+    "unmapped_labels": []
+  },
+  "usable_class_count_max": 7444,
+  "usable_class_count_median": 379.5,
+  "usable_class_count_min": 18,
+  "usable_missing_competition_classes": [],
+  "usable_sni_cells": 55193,
+  "var_column_names": [],
+  "var_gene_identifier_source": "AnnData.var_names",
+  "x_dtype": "uint32",
+  "x_max": 622.0,
+  "x_min": 0.0
+}

@@ -1,0 +1,8 @@
+family,n,accuracy
+oligodendrocyte_opc,1552,0.645618556701031
+astrocyte,769,0.7321196358907672
+vascular,363,0.6225895316804407
+meningeal,128,0.4921875
+microglia,64,0.703125
+remaining_glial_non_neuronal,82,0.7682926829268293
+neuronal_or_other,2042,0.43046033300685604

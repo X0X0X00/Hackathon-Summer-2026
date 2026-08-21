@@ -1,0 +1,675 @@
+{
+  "all_four_wrong": 636,
+  "confidence_diagnostic": {
+    "auroc": {
+      "margin": 0.41091135635457454,
+      "neg_entropy": 0.4368695858549899,
+      "note": "diagnostic only; no threshold optimized",
+      "top1": 0.4194553221787113
+    },
+    "sni_correct": {
+      "count": 53,
+      "entropy": {
+        "count": 53,
+        "mean": 0.8169651469991901,
+        "median": 0.683508206882298,
+        "p25": 0.3666664835309786,
+        "p75": 1.1835873525324727
+      },
+      "margin": {
+        "count": 53,
+        "mean": 0.5407700898776464,
+        "median": 0.5307404319154487,
+        "p25": 0.27715559267562273,
+        "p75": 0.8161836959769821
+      },
+      "top1": {
+        "count": 53,
+        "mean": 0.710464434467053,
+        "median": 0.7595084532550432,
+        "p25": 0.5839160098720547,
+        "p75": 0.900491290931513
+      }
+    },
+    "sni_wrong": {
+      "count": 636,
+      "entropy": {
+        "count": 636,
+        "mean": 0.7242200820325654,
+        "median": 0.5910457289987312,
+        "p25": 0.1509328087284055,
+        "p75": 1.20967087325567
+      },
+      "margin": {
+        "count": 636,
+        "mean": 0.6286718137446309,
+        "median": 0.7240779929396804,
+        "p25": 0.309345345924011,
+        "p75": 0.956350651388723
+      },
+      "top1": {
+        "count": 636,
+        "mean": 0.7617040289780668,
+        "median": 0.8407833986867421,
+        "p25": 0.560528349112249,
+        "p75": 0.9724413570433251
+      }
+    }
+  },
+  "created_at_utc": "2026-08-21T04:33:50Z",
+  "decision": {
+    "label": "STRONG SOURCE-DIVERSE EXPERT",
+    "next_action": "Admit this isolated SNI-only expert into the future V3 expert pool as a frozen source-diverse member, then run a separate controlled experiment on how to use it. Do not concatenate SNI with the MERFISH reference, train a router, or create MODEL V3 yet.",
+    "reason": "SNI recovered at least 40 all-three-wrong cells, four-expert oracle reached 0.87, and locked folds 3-4 also contribute."
+  },
+  "experiment_id": "V3-E04S",
+  "four_expert": {
+    "all_four_wrong": 636,
+    "folds_0_2": {
+      "accuracy": 0.8756666666666667,
+      "correct": 2627,
+      "n": 3000
+    },
+    "folds_3_4": {
+      "accuracy": 0.8685,
+      "correct": 1737,
+      "n": 2000
+    },
+    "formula": "4311 + sni_new_unique_recoveries",
+    "identity_check": true,
+    "oracle_is_not_deployable_accuracy": true,
+    "overall": {
+      "accuracy": 0.8728,
+      "correct": 4364,
+      "n": 5000
+    }
+  },
+  "four_expert_identity": "4311 + 53 = 4364",
+  "four_expert_oracle_accuracy": 0.8728,
+  "four_expert_oracle_correct": 4364,
+  "frozen_all_three_wrong": 689,
+  "frozen_three_expert_oracle_correct": 4311,
+  "leakage_audit": {
+    "blend_optimization": false,
+    "canonical_folds_3_4_used_for_redesign": false,
+    "cell_id_dtype": "lossless_string",
+    "competition_exact_vector_duplicates_excluded": true,
+    "competition_id_overlaps_excluded": true,
+    "competition_test_labels_used": false,
+    "competition_train_labels_used_for_sni_fitting": false,
+    "ensemble_weights_optimized": false,
+    "frozen_artifacts_modified": false,
+    "hyperparameter_search": false,
+    "leaderboard_feedback_used": false,
+    "merfish_exact_vector_duplicates_excluded": true,
+    "prediction_csv_modified": false,
+    "router_trained": false,
+    "seed_search": false,
+    "sni_concatenated_with_merfish_reference": false,
+    "submission_generated": false,
+    "test_probabilities_used_for_model_selection": false
+  },
+  "lgbm": {
+    "num_boost_round": 700,
+    "params": {
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "bagging_seed": 100,
+      "feature_fraction": 0.5,
+      "feature_fraction_seed": 200,
+      "lambda_l2": 1.0,
+      "learning_rate": 0.05,
+      "max_bin": 127,
+      "min_data_in_leaf": 30,
+      "num_class": 60,
+      "num_leaves": 127,
+      "num_threads": 8,
+      "objective": "multiclass",
+      "seed": 0,
+      "verbosity": -1
+    },
+    "seed": 0
+  },
+  "n_sni_usable": 55193,
+  "oracle_is_not_deployable_accuracy": true,
+  "pairwise": [
+    {
+      "A": "lzh_prior_h",
+      "A_accuracy": 0.8266,
+      "A_only_correct": 1397,
+      "B": "sni",
+      "B_accuracy": 0.5682,
+      "B_only_correct": 105,
+      "both_correct": 2736,
+      "both_wrong": 762,
+      "incremental_oracle_headroom_over_stronger": 0.02100000000000002,
+      "oracle_is_not_deployable_accuracy": true,
+      "pair_oracle_accuracy": 0.8476,
+      "pair_oracle_count": 4238,
+      "prediction_disagreement_count": 1771,
+      "prediction_disagreement_rate": 0.3542
+    },
+    {
+      "A": "wyh_model_v2",
+      "A_accuracy": 0.8212,
+      "A_only_correct": 1392,
+      "B": "sni",
+      "B_accuracy": 0.5682,
+      "B_only_correct": 127,
+      "both_correct": 2714,
+      "both_wrong": 767,
+      "incremental_oracle_headroom_over_stronger": 0.025399999999999978,
+      "oracle_is_not_deployable_accuracy": true,
+      "pair_oracle_accuracy": 0.8466,
+      "pair_oracle_count": 4233,
+      "prediction_disagreement_count": 1789,
+      "prediction_disagreement_rate": 0.3578
+    },
+    {
+      "A": "s0",
+      "A_accuracy": 0.6302,
+      "A_only_correct": 604,
+      "B": "sni",
+      "B_accuracy": 0.5682,
+      "B_only_correct": 294,
+      "both_correct": 2547,
+      "both_wrong": 1555,
+      "incremental_oracle_headroom_over_stronger": 0.05879999999999996,
+      "oracle_is_not_deployable_accuracy": true,
+      "pair_oracle_accuracy": 0.689,
+      "pair_oracle_count": 3445,
+      "prediction_disagreement_count": 1410,
+      "prediction_disagreement_rate": 0.282
+    }
+  ],
+  "pca_var_explained": 0.3310685157775879,
+  "recoveries_by_family": [
+    {
+      "family": "oligodendrocyte_opc",
+      "n": 36
+    },
+    {
+      "family": "astrocyte",
+      "n": 5
+    },
+    {
+      "family": "vascular",
+      "n": 2
+    },
+    {
+      "family": "meningeal",
+      "n": 3
+    },
+    {
+      "family": "microglia",
+      "n": 1
+    },
+    {
+      "family": "remaining_glial_non_neuronal",
+      "n": 0
+    },
+    {
+      "family": "neuronal_or_other",
+      "n": 6
+    }
+  ],
+  "runtime_sec": 1048.0807678699493,
+  "slices": {
+    "confusion_pairs_top10": [
+      {
+        "n": 153,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 56,
+        "predicted_label": "astrocyte_1",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "n": 54,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 54,
+        "predicted_label": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 39,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 37,
+        "predicted_label": "oligodendrocyte_precursor_cell",
+        "true_label": "oligodendrocyte_progenitor_1"
+      },
+      {
+        "n": 36,
+        "predicted_label": "astrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 31,
+        "predicted_label": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 30,
+        "predicted_label": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 23,
+        "predicted_label": "meninges_1",
+        "true_label": "meninges_2"
+      }
+    ],
+    "glial_accuracy": 0.6635900700190961,
+    "glial_n": 3142,
+    "hard_bucket_accuracy": 0.6632860040567952,
+    "hard_bucket_key": "__MISSING__/__MISSING__/__MISSING__",
+    "hard_bucket_n": 2958,
+    "neuron_accuracy": 0.4068891280947255,
+    "neuron_n": 1858,
+    "non_hard_bucket_accuracy": 0.43046033300685604,
+    "non_hard_bucket_n": 2042,
+    "sni_by_family": [
+      {
+        "accuracy": 0.645618556701031,
+        "family": "oligodendrocyte_opc",
+        "n": 1552
+      },
+      {
+        "accuracy": 0.7321196358907672,
+        "family": "astrocyte",
+        "n": 769
+      },
+      {
+        "accuracy": 0.6225895316804407,
+        "family": "vascular",
+        "n": 363
+      },
+      {
+        "accuracy": 0.4921875,
+        "family": "meningeal",
+        "n": 128
+      },
+      {
+        "accuracy": 0.703125,
+        "family": "microglia",
+        "n": 64
+      },
+      {
+        "accuracy": 0.7682926829268293,
+        "family": "remaining_glial_non_neuronal",
+        "n": 82
+      },
+      {
+        "accuracy": 0.43046033300685604,
+        "family": "neuronal_or_other",
+        "n": 2042
+      }
+    ]
+  },
+  "sni_new_unique_recoveries": 53,
+  "sni_new_unique_recoveries_folds_0_2": 26,
+  "sni_new_unique_recoveries_folds_3_4": 27,
+  "standalone": {
+    "accuracy": 0.5682,
+    "canonical_fold_accuracy": {
+      "0": 0.574,
+      "1": 0.583,
+      "2": 0.576,
+      "3": 0.559,
+      "4": 0.549
+    },
+    "correct": 2841,
+    "evaluation_term": "honest_external_validation_not_competition_oof",
+    "folds_0_2": 0.5776666666666667,
+    "folds_3_4": 0.554,
+    "log_loss": 1.9808673873982807,
+    "macro_f1": 0.42169643098319504,
+    "n": 5000,
+    "per_class_precision": {
+      "DH_ex_Cpne4": 0.631578947368421,
+      "DH_ex_Gpr83": 0.2727272727272727,
+      "DH_ex_Grp": 0.0,
+      "DH_ex_Grpr": 0.35294117647058826,
+      "DH_ex_Maf/Cck": 0.3023255813953488,
+      "DH_ex_Maf/Cpne4": 0.0,
+      "DH_ex_Maf/Slc17a8": 0.0,
+      "DH_ex_Nmu/Tac2": 0.6263736263736264,
+      "DH_ex_Prkcg/Cck": 0.43478260869565216,
+      "DH_ex_Prkcg/Nts": 0.4074074074074074,
+      "DH_ex_Prkcg/Rxfp1": 0.0,
+      "DH_ex_Reln": 0.625,
+      "DH_ex_Reln/Nmur2": 0.4875,
+      "DH_ex_Reln/Npff": 0.9285714285714286,
+      "DH_ex_Rreb1": 0.0,
+      "DH_ex_Sox5": 0.29411764705882354,
+      "DH_ex_Sox5/Tac1": 1.0,
+      "DH_ex_Tac2": 0.42857142857142855,
+      "DH_in_Cdh3": 0.3949579831932773,
+      "DH_in_Kcnip2": 0.0,
+      "DH_in_Klhl14": 0.0,
+      "DH_in_Npy": 0.4642857142857143,
+      "DH_in_Npy2r": 0.4166666666666667,
+      "DH_in_Pdyn": 0.696969696969697,
+      "DH_in_Pdyn/Gal": 0.4444444444444444,
+      "DH_in_Rorb": 0.5483870967741935,
+      "DM_ex_Zfhx3": 0.45714285714285713,
+      "MV_ex_Shox2": 0.5333333333333333,
+      "MV_ex_Syt2": 0.44,
+      "MV_in_Chrna2": 0.3,
+      "MV_in_Esrrb": 0.0,
+      "MV_in_Gabra1": 0.41706161137440756,
+      "MV_in_Gm26673": 0.39069767441860465,
+      "MV_in_Sema5b": 0.43137254901960786,
+      "M_ex_Neurod2": 0.7333333333333333,
+      "M_ex_Vsx2": 0.0,
+      "M_ex_Vsx2/Shox2": 0.425,
+      "M_in_Tfap2b": 0.8913043478260869,
+      "Schwann_cell": 0.8103448275862069,
+      "VH_in_Chat": 1.0,
+      "alpha_motoneuron": 0.7099236641221374,
+      "astrocyte_1": 0.5792759051186017,
+      "astrocyte_2": 0.7674418604651163,
+      "beta_motoneuron": 0.0,
+      "cholinergic_interneuron": 0.7142857142857143,
+      "endothelial": 0.7353951890034365,
+      "ependymal": 0.8888888888888888,
+      "gamma_motoneuron": 0.8695652173913043,
+      "meninges_1": 0.5921052631578947,
+      "meninges_2": 1.0,
+      "meninges_3": 0.42857142857142855,
+      "microglia": 0.6081081081081081,
+      "oligodendrocyte_1": 0.24087591240875914,
+      "oligodendrocyte_2": 0.7787610619469026,
+      "oligodendrocyte_precursor_cell": 0.5175438596491229,
+      "oligodendrocyte_progenitor_1": 1.0,
+      "oligodendrocyte_progenitor_2": 0.5650406504065041,
+      "pericyte": 0.631578947368421,
+      "peripheral_glia": 0.7272727272727273,
+      "visceral_motoneuron": 0.8333333333333334
+    },
+    "per_class_recall": {
+      "DH_ex_Cpne4": 0.46153846153846156,
+      "DH_ex_Gpr83": 0.09090909090909091,
+      "DH_ex_Grp": 0.0,
+      "DH_ex_Grpr": 0.3870967741935484,
+      "DH_ex_Maf/Cck": 0.203125,
+      "DH_ex_Maf/Cpne4": 0.0,
+      "DH_ex_Maf/Slc17a8": 0.0,
+      "DH_ex_Nmu/Tac2": 0.890625,
+      "DH_ex_Prkcg/Cck": 0.30303030303030304,
+      "DH_ex_Prkcg/Nts": 0.4230769230769231,
+      "DH_ex_Prkcg/Rxfp1": 0.0,
+      "DH_ex_Reln": 0.45454545454545453,
+      "DH_ex_Reln/Nmur2": 0.582089552238806,
+      "DH_ex_Reln/Npff": 0.3611111111111111,
+      "DH_ex_Rreb1": 0.0,
+      "DH_ex_Sox5": 0.4166666666666667,
+      "DH_ex_Sox5/Tac1": 0.3235294117647059,
+      "DH_ex_Tac2": 0.1875,
+      "DH_in_Cdh3": 0.3790322580645161,
+      "DH_in_Kcnip2": 0.0,
+      "DH_in_Klhl14": 0.0,
+      "DH_in_Npy": 0.24074074074074073,
+      "DH_in_Npy2r": 0.13157894736842105,
+      "DH_in_Pdyn": 0.3898305084745763,
+      "DH_in_Pdyn/Gal": 0.6153846153846154,
+      "DH_in_Rorb": 0.5862068965517241,
+      "DM_ex_Zfhx3": 0.3609022556390977,
+      "MV_ex_Shox2": 0.19047619047619047,
+      "MV_ex_Syt2": 0.6814159292035398,
+      "MV_in_Chrna2": 0.13636363636363635,
+      "MV_in_Esrrb": 0.0,
+      "MV_in_Gabra1": 0.6068965517241379,
+      "MV_in_Gm26673": 0.7636363636363637,
+      "MV_in_Sema5b": 0.23404255319148937,
+      "M_ex_Neurod2": 1.0,
+      "M_ex_Vsx2": 0.0,
+      "M_ex_Vsx2/Shox2": 0.7391304347826086,
+      "M_in_Tfap2b": 0.5616438356164384,
+      "Schwann_cell": 0.9591836734693877,
+      "VH_in_Chat": 1.0,
+      "alpha_motoneuron": 0.8691588785046729,
+      "astrocyte_1": 0.8097731239092496,
+      "astrocyte_2": 0.5051020408163265,
+      "beta_motoneuron": 0.0,
+      "cholinergic_interneuron": 0.7142857142857143,
+      "endothelial": 0.6625386996904025,
+      "ependymal": 0.8,
+      "gamma_motoneuron": 0.4166666666666667,
+      "meninges_1": 0.6716417910447762,
+      "meninges_2": 0.07142857142857142,
+      "meninges_3": 0.7894736842105263,
+      "microglia": 0.703125,
+      "oligodendrocyte_1": 0.12177121771217712,
+      "oligodendrocyte_2": 0.8400954653937948,
+      "oligodendrocyte_precursor_cell": 0.5363636363636364,
+      "oligodendrocyte_progenitor_1": 0.04081632653061224,
+      "oligodendrocyte_progenitor_2": 0.7908961593172119,
+      "pericyte": 0.3,
+      "peripheral_glia": 0.34782608695652173,
+      "visceral_motoneuron": 0.625
+    }
+  },
+  "top_recovery_classes": [
+    {
+      "family": "oligodendrocyte_opc",
+      "n": 34,
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "family": "astrocyte",
+      "n": 5,
+      "true_label": "astrocyte_1"
+    },
+    {
+      "family": "neuronal_or_other",
+      "n": 3,
+      "true_label": "DH_ex_Prkcg/Nts"
+    },
+    {
+      "family": "oligodendrocyte_opc",
+      "n": 2,
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "family": "neuronal_or_other",
+      "n": 2,
+      "true_label": "alpha_motoneuron"
+    },
+    {
+      "family": "meningeal",
+      "n": 2,
+      "true_label": "meninges_3"
+    },
+    {
+      "family": "vascular",
+      "n": 2,
+      "true_label": "pericyte"
+    },
+    {
+      "family": "meningeal",
+      "n": 1,
+      "true_label": "meninges_2"
+    },
+    {
+      "family": "neuronal_or_other",
+      "n": 1,
+      "true_label": "MV_in_Gm26673"
+    },
+    {
+      "family": "microglia",
+      "n": 1,
+      "true_label": "microglia"
+    }
+  ],
+  "top_resolved_shared_confusions": [
+    {
+      "error_count": 58,
+      "family": "oligodendrocyte_opc",
+      "pred": "oligodendrocyte_progenitor_2",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "error_count": 36,
+      "family": "oligodendrocyte_opc",
+      "pred": "oligodendrocyte_1",
+      "sni_rescue_count": 20,
+      "sni_rescue_fraction": 0.5555555555555556,
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "error_count": 35,
+      "family": "oligodendrocyte_opc",
+      "pred": "oligodendrocyte_2",
+      "sni_rescue_count": 8,
+      "sni_rescue_fraction": 0.22857142857142856,
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "error_count": 27,
+      "family": "oligodendrocyte_opc",
+      "pred": "oligodendrocyte_progenitor_2",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "oligodendrocyte_2"
+    },
+    {
+      "error_count": 26,
+      "family": "vascular",
+      "pred": "astrocyte_1",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "endothelial"
+    },
+    {
+      "error_count": 26,
+      "family": "oligodendrocyte_opc",
+      "pred": "astrocyte_1",
+      "sni_rescue_count": 2,
+      "sni_rescue_fraction": 0.07692307692307693,
+      "true_label": "oligodendrocyte_progenitor_2"
+    },
+    {
+      "error_count": 23,
+      "family": "oligodendrocyte_opc",
+      "pred": "astrocyte_1",
+      "sni_rescue_count": 1,
+      "sni_rescue_fraction": 0.043478260869565216,
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "error_count": 22,
+      "family": "oligodendrocyte_opc",
+      "pred": "oligodendrocyte_precursor_cell",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "oligodendrocyte_progenitor_1"
+    },
+    {
+      "error_count": 21,
+      "family": "astrocyte",
+      "pred": "oligodendrocyte_progenitor_2",
+      "sni_rescue_count": 1,
+      "sni_rescue_fraction": 0.047619047619047616,
+      "true_label": "astrocyte_1"
+    },
+    {
+      "error_count": 21,
+      "family": "neuronal_or_other",
+      "pred": "DH_in_Cdh3",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "DH_in_Klhl14"
+    },
+    {
+      "error_count": 16,
+      "family": "meningeal",
+      "pred": "meninges_1",
+      "sni_rescue_count": 1,
+      "sni_rescue_fraction": 0.0625,
+      "true_label": "meninges_2"
+    },
+    {
+      "error_count": 16,
+      "family": "vascular",
+      "pred": "oligodendrocyte_1",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "endothelial"
+    },
+    {
+      "error_count": 15,
+      "family": "astrocyte",
+      "pred": "endothelial",
+      "sni_rescue_count": 2,
+      "sni_rescue_fraction": 0.13333333333333333,
+      "true_label": "astrocyte_1"
+    },
+    {
+      "error_count": 14,
+      "family": "astrocyte",
+      "pred": "oligodendrocyte_1",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "astrocyte_1"
+    },
+    {
+      "error_count": 14,
+      "family": "vascular",
+      "pred": "oligodendrocyte_progenitor_2",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "endothelial"
+    },
+    {
+      "error_count": 14,
+      "family": "oligodendrocyte_opc",
+      "pred": "astrocyte_1",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "oligodendrocyte_precursor_cell"
+    },
+    {
+      "error_count": 13,
+      "family": "astrocyte",
+      "pred": "oligodendrocyte_progenitor_2",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "astrocyte_2"
+    },
+    {
+      "error_count": 12,
+      "family": "neuronal_or_other",
+      "pred": "alpha_motoneuron",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "gamma_motoneuron"
+    },
+    {
+      "error_count": 12,
+      "family": "oligodendrocyte_opc",
+      "pred": "oligodendrocyte_2",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "oligodendrocyte_1"
+    },
+    {
+      "error_count": 11,
+      "family": "remaining_glial_non_neuronal",
+      "pred": "Schwann_cell",
+      "sni_rescue_count": 0,
+      "sni_rescue_fraction": 0.0,
+      "true_label": "peripheral_glia"
+    }
+  ]
+}

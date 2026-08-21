@@ -1,0 +1,4 @@
+A,B,A_accuracy,B_accuracy,both_correct,A_only_correct,B_only_correct,both_wrong,prediction_disagreement_count,prediction_disagreement_rate,pair_oracle_count,pair_oracle_accuracy,incremental_oracle_headroom_over_stronger,oracle_is_not_deployable_accuracy
+lzh_prior_h,sni,0.8266,0.5682,2736,1397,105,762,1771,0.3542,4238,0.8476,0.02100000000000002,True
+wyh_model_v2,sni,0.8212,0.5682,2714,1392,127,767,1789,0.3578,4233,0.8466,0.025399999999999978,True
+s0,sni,0.6302,0.5682,2547,604,294,1555,1410,0.282,3445,0.689,0.05879999999999996,True
