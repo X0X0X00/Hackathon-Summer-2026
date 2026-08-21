@@ -1,0 +1,1880 @@
+{
+  "name": "V12 historical version library router",
+  "protocol": "V9 anchor; outer-fold rule discovery; final rules restricted to ordered expert/source/target keys rediscovered in at least 3 of 5 outer fits.",
+  "anchor_v9": {
+    "correct": 4169,
+    "accuracy": 0.8338,
+    "macro_f1": 0.8036711895135938,
+    "log_loss": 0.5014826870266094,
+    "fold_correct": [
+      838,
+      847,
+      832,
+      830,
+      822
+    ]
+  },
+  "inventory": {
+    "v1": {
+      "correct": 4034,
+      "accuracy": 0.8068,
+      "macro_f1": 0.7864322071509419,
+      "log_loss": 0.6320427712643274,
+      "fold_correct": [
+        810,
+        827,
+        813,
+        789,
+        795
+      ],
+      "test_disagreement_vs_v9": 555
+    },
+    "bag8mix": {
+      "correct": 3836,
+      "accuracy": 0.7672,
+      "macro_f1": 0.7027004984923173,
+      "log_loss": 0.8017910909309593,
+      "fold_correct": [
+        756,
+        783,
+        769,
+        764,
+        764
+      ],
+      "test_disagreement_vs_v9": 587
+    },
+    "refonly_full": {
+      "correct": 4103,
+      "accuracy": 0.8206,
+      "macro_f1": 0.7927736925123701,
+      "log_loss": 0.6426927428025614,
+      "fold_correct": [
+        821,
+        832,
+        817,
+        815,
+        818
+      ],
+      "test_disagreement_vs_v9": 229
+    },
+    "mlp3": {
+      "correct": 4062,
+      "accuracy": 0.8124,
+      "macro_f1": 0.7969779259054203,
+      "log_loss": 0.572126190074453,
+      "fold_correct": [
+        826,
+        820,
+        801,
+        800,
+        815
+      ],
+      "test_disagreement_vs_v9": 460
+    },
+    "v6": {
+      "correct": 4124,
+      "accuracy": 0.8248,
+      "macro_f1": 0.7957364595417016,
+      "log_loss": 0.5235406869508148,
+      "fold_correct": [
+        830,
+        832,
+        825,
+        817,
+        820
+      ],
+      "test_disagreement_vs_v9": 125
+    },
+    "v7": {
+      "correct": 4160,
+      "accuracy": 0.832,
+      "macro_f1": 0.8000376407720237,
+      "log_loss": 0.5027580993246112,
+      "fold_correct": [
+        842,
+        842,
+        830,
+        820,
+        826
+      ],
+      "test_disagreement_vs_v9": 156
+    },
+    "v8": {
+      "correct": 4150,
+      "accuracy": 0.83,
+      "macro_f1": 0.8012347591717391,
+      "log_loss": 0.5015638859361515,
+      "fold_correct": [
+        834,
+        839,
+        828,
+        827,
+        822
+      ],
+      "test_disagreement_vs_v9": 23
+    },
+    "v85": {
+      "correct": 4164,
+      "accuracy": 0.8328,
+      "macro_f1": 0.8034824274353716,
+      "log_loss": 0.5017911316661267,
+      "fold_correct": [
+        838,
+        845,
+        831,
+        828,
+        822
+      ],
+      "test_disagreement_vs_v9": 4
+    },
+    "v85_classwise": {
+      "correct": 4138,
+      "accuracy": 0.8276,
+      "macro_f1": 0.7945805949039646,
+      "log_loss": 0.49159333734254196,
+      "fold_correct": [
+        833,
+        834,
+        831,
+        823,
+        817
+      ],
+      "test_disagreement_vs_v9": 116
+    },
+    "v85_knn": {
+      "correct": 4150,
+      "accuracy": 0.83,
+      "macro_f1": 0.8012719968521893,
+      "log_loss": 0.5149158468675151,
+      "fold_correct": [
+        835,
+        840,
+        829,
+        822,
+        824
+      ],
+      "test_disagreement_vs_v9": 43
+    },
+    "v9_pair_sweep": {
+      "correct": 4172,
+      "accuracy": 0.8344,
+      "macro_f1": 0.8035827626372768,
+      "log_loss": 0.5014264275264492,
+      "fold_correct": [
+        840,
+        848,
+        835,
+        828,
+        821
+      ],
+      "test_disagreement_vs_v9": 13
+    },
+    "section_groupcv": {
+      "correct": 3816,
+      "accuracy": 0.7632,
+      "macro_f1": 0.6984401911224672,
+      "log_loss": 0.8446863600371743,
+      "fold_correct": [
+        762,
+        786,
+        766,
+        756,
+        746
+      ],
+      "test_disagreement_vs_v9": 623
+    },
+    "lzh": {
+      "correct": 4125,
+      "accuracy": 0.825,
+      "macro_f1": 0.796233139724596,
+      "log_loss": 0.4847422594385185,
+      "fold_correct": [
+        830,
+        837,
+        825,
+        818,
+        815
+      ],
+      "test_disagreement_vs_v9": 186
+    },
+    "consensus_versions": {
+      "correct": 4141,
+      "accuracy": 0.8282,
+      "macro_f1": 0.8007461247711282,
+      "log_loss": 0.5052757692961615,
+      "fold_correct": [
+        835,
+        837,
+        826,
+        820,
+        823
+      ],
+      "test_disagreement_vs_v9": 62
+    },
+    "consensus_strong": {
+      "correct": 4150,
+      "accuracy": 0.83,
+      "macro_f1": 0.7991038894131753,
+      "log_loss": 0.48907626149203104,
+      "fold_correct": [
+        835,
+        840,
+        826,
+        827,
+        822
+      ],
+      "test_disagreement_vs_v9": 70
+    },
+    "consensus_diverse": {
+      "correct": 4125,
+      "accuracy": 0.825,
+      "macro_f1": 0.7969354009284817,
+      "log_loss": 0.5041098361771732,
+      "fold_correct": [
+        832,
+        836,
+        818,
+        820,
+        819
+      ],
+      "test_disagreement_vs_v9": 131
+    }
+  },
+  "nested_exploratory_audit": {
+    "correct": 4166,
+    "accuracy": 0.8332,
+    "macro_f1": 0.8042179622238016,
+    "log_loss": 0.503586377754991,
+    "fold_correct": [
+      836,
+      847,
+      832,
+      830,
+      821
+    ],
+    "delta_correct": -3,
+    "fold_delta": [
+      -2,
+      0,
+      0,
+      0,
+      -1
+    ]
+  },
+  "nested_stable_rule_audit": {
+    "correct": 4174,
+    "accuracy": 0.8348,
+    "macro_f1": 0.8049193500366305,
+    "log_loss": 0.5008469758467132,
+    "fold_correct": [
+      839,
+      848,
+      833,
+      831,
+      823
+    ],
+    "delta_correct": 5,
+    "fold_delta": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "rule_count_by_holdout": [
+      1,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "nested_rules_by_holdout": [
+    {
+      "holdout": 0,
+      "rule_count": 11,
+      "rules": [
+        {
+          "expert": "v1",
+          "source": "DH_ex_Prkcg/Rxfp1",
+          "target": "DH_ex_Grp",
+          "pmin": 0.3,
+          "margin_cap": 1.0,
+          "gain": 4,
+          "selected": 6,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "refonly_full",
+          "source": "meninges_1",
+          "target": "meninges_2",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 3,
+          "selected": 3,
+          "fold_delta": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "section_groupcv",
+          "source": "meninges_3",
+          "target": "meninges_2",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 3,
+          "selected": 3,
+          "fold_delta": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "mlp3",
+          "source": "oligodendrocyte_2",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.4,
+          "margin_cap": 0.4,
+          "gain": 3,
+          "selected": 4,
+          "fold_delta": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "rate": 0.75
+        },
+        {
+          "expert": "lzh",
+          "source": "oligodendrocyte_1",
+          "target": "oligodendrocyte_progenitor_2",
+          "pmin": 0.5,
+          "margin_cap": 0.2,
+          "gain": 3,
+          "selected": 7,
+          "fold_delta": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "rate": 0.42857142857142855
+        },
+        {
+          "expert": "lzh",
+          "source": "astrocyte_1",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.4,
+          "margin_cap": 0.12,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "v1",
+          "source": "DH_in_Cdh3",
+          "target": "DH_in_Klhl14",
+          "pmin": 0.0,
+          "margin_cap": 1.0,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "v1",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "microglia",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "bag8mix",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "astrocyte_1",
+          "pmin": 0.6,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "v1",
+          "source": "alpha_motoneuron",
+          "target": "gamma_motoneuron",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 6,
+          "fold_delta": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "rate": 0.3333333333333333
+        },
+        {
+          "expert": "section_groupcv",
+          "source": "meninges_2",
+          "target": "meninges_1",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 6,
+          "fold_delta": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "rate": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "holdout": 1,
+      "rule_count": 12,
+      "rules": [
+        {
+          "expert": "v85_classwise",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 5,
+          "selected": 20,
+          "fold_delta": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "rate": 0.25
+        },
+        {
+          "expert": "v1",
+          "source": "DH_ex_Prkcg/Rxfp1",
+          "target": "DH_ex_Grp",
+          "pmin": 0.3,
+          "margin_cap": 1.0,
+          "gain": 4,
+          "selected": 6,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "v1",
+          "source": "MV_in_Chrna2",
+          "target": "MV_in_Gm26673",
+          "pmin": 0.0,
+          "margin_cap": 0.08,
+          "gain": 3,
+          "selected": 3,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "v1",
+          "source": "alpha_motoneuron",
+          "target": "gamma_motoneuron",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 3,
+          "selected": 5,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "rate": 0.6
+        },
+        {
+          "expert": "v1",
+          "source": "astrocyte_1",
+          "target": "oligodendrocyte_progenitor_2",
+          "pmin": 0.3,
+          "margin_cap": 0.2,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "v1",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "astrocyte_2",
+          "pmin": 0.4,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "refonly_full",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "oligodendrocyte_2",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "mlp3",
+          "source": "oligodendrocyte_2",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.5,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "v9_pair_sweep",
+          "source": "endothelial",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.12,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "lzh",
+          "source": "astrocyte_1",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.4,
+          "margin_cap": 0.12,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "lzh",
+          "source": "meninges_1",
+          "target": "meninges_2",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "mlp3",
+          "source": "oligodendrocyte_1",
+          "target": "oligodendrocyte_progenitor_2",
+          "pmin": 0.5,
+          "margin_cap": 0.05,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "rate": 0.5
+        }
+      ]
+    },
+    {
+      "holdout": 2,
+      "rule_count": 9,
+      "rules": [
+        {
+          "expert": "v85_classwise",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 5,
+          "selected": 17,
+          "fold_delta": [
+            4,
+            1,
+            0,
+            0
+          ],
+          "rate": 0.29411764705882354
+        },
+        {
+          "expert": "v1",
+          "source": "MV_in_Chrna2",
+          "target": "MV_in_Gm26673",
+          "pmin": 0.0,
+          "margin_cap": 0.08,
+          "gain": 3,
+          "selected": 3,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "section_groupcv",
+          "source": "meninges_3",
+          "target": "meninges_2",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 3,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "v1",
+          "source": "alpha_motoneuron",
+          "target": "gamma_motoneuron",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 3,
+          "selected": 5,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "rate": 0.6
+        },
+        {
+          "expert": "v1",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "microglia",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "bag8mix",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "astrocyte_1",
+          "pmin": 0.6,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "refonly_full",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "oligodendrocyte_2",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "section_groupcv",
+          "source": "astrocyte_1",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "section_groupcv",
+          "source": "meninges_2",
+          "target": "meninges_1",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "rate": 0.5
+        }
+      ]
+    },
+    {
+      "holdout": 3,
+      "rule_count": 10,
+      "rules": [
+        {
+          "expert": "v85_classwise",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 6,
+          "selected": 23,
+          "fold_delta": [
+            4,
+            1,
+            1,
+            0
+          ],
+          "rate": 0.2608695652173913
+        },
+        {
+          "expert": "v1",
+          "source": "DH_ex_Prkcg/Rxfp1",
+          "target": "DH_ex_Grp",
+          "pmin": 0.3,
+          "margin_cap": 1.0,
+          "gain": 4,
+          "selected": 4,
+          "fold_delta": [
+            0,
+            0,
+            1,
+            3
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "refonly_full",
+          "source": "meninges_1",
+          "target": "meninges_2",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 3,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "v1",
+          "source": "astrocyte_1",
+          "target": "oligodendrocyte_progenitor_2",
+          "pmin": 0.3,
+          "margin_cap": 0.2,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "bag8mix",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "astrocyte_1",
+          "pmin": 0.5,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "lzh",
+          "source": "astrocyte_1",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.4,
+          "margin_cap": 0.12,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "v1",
+          "source": "DH_in_Cdh3",
+          "target": "DH_in_Klhl14",
+          "pmin": 0.0,
+          "margin_cap": 1.0,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "v9_pair_sweep",
+          "source": "endothelial",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.12,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "v1",
+          "source": "alpha_motoneuron",
+          "target": "gamma_motoneuron",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 6,
+          "fold_delta": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "rate": 0.3333333333333333
+        },
+        {
+          "expert": "section_groupcv",
+          "source": "meninges_2",
+          "target": "meninges_1",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 6,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "rate": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "holdout": 4,
+      "rule_count": 10,
+      "rules": [
+        {
+          "expert": "v85_classwise",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 6,
+          "selected": 22,
+          "fold_delta": [
+            4,
+            1,
+            1,
+            0
+          ],
+          "rate": 0.2727272727272727
+        },
+        {
+          "expert": "section_groupcv",
+          "source": "meninges_3",
+          "target": "meninges_2",
+          "pmin": 0.0,
+          "margin_cap": 1.0,
+          "gain": 4,
+          "selected": 4,
+          "fold_delta": [
+            0,
+            3,
+            0,
+            1
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "refonly_full",
+          "source": "meninges_1",
+          "target": "meninges_2",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 3,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "rate": 1.0
+        },
+        {
+          "expert": "v1",
+          "source": "astrocyte_1",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "mlp3",
+          "source": "oligodendrocyte_2",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.5,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 3,
+          "fold_delta": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "rate": 0.6666666666666666
+        },
+        {
+          "expert": "v1",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "microglia",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "refonly_full",
+          "source": "oligodendrocyte_progenitor_2",
+          "target": "oligodendrocyte_2",
+          "pmin": 0.0,
+          "margin_cap": 0.2,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "v9_pair_sweep",
+          "source": "endothelial",
+          "target": "oligodendrocyte_1",
+          "pmin": 0.0,
+          "margin_cap": 0.12,
+          "gain": 2,
+          "selected": 4,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "rate": 0.5
+        },
+        {
+          "expert": "v1",
+          "source": "alpha_motoneuron",
+          "target": "gamma_motoneuron",
+          "pmin": 0.0,
+          "margin_cap": 0.4,
+          "gain": 2,
+          "selected": 6,
+          "fold_delta": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "rate": 0.3333333333333333
+        },
+        {
+          "expert": "v1",
+          "source": "astrocyte_1",
+          "target": "oligodendrocyte_progenitor_2",
+          "pmin": 0.3,
+          "margin_cap": 1.0,
+          "gain": 2,
+          "selected": 8,
+          "fold_delta": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "rate": 0.25
+        }
+      ]
+    }
+  ],
+  "stable_key_counts": {
+    "v1|alpha_motoneuron|gamma_motoneuron": {
+      "selection_count": 5,
+      "holdout_delta": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "v85_classwise|oligodendrocyte_progenitor_2|oligodendrocyte_1": {
+      "selection_count": 4,
+      "holdout_delta": [
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "candidate": {
+    "correct": 4178,
+    "accuracy": 0.8356,
+    "macro_f1": 0.8051381495047853,
+    "log_loss": 0.5007047717436494,
+    "fold_correct": [
+      843,
+      848,
+      833,
+      831,
+      823
+    ],
+    "delta_correct": 9,
+    "fold_delta": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "selected_oof": 33,
+  "selected_test": 29,
+  "test_changes_vs_v9": 29,
+  "final_rules": [
+    {
+      "expert": "v85_classwise",
+      "source": "oligodendrocyte_progenitor_2",
+      "target": "oligodendrocyte_1",
+      "pmin": 0.0,
+      "margin_cap": 0.2,
+      "gain": 6,
+      "selected": 26,
+      "fold_delta": [
+        4,
+        1,
+        1,
+        0,
+        0
+      ],
+      "rate": 0.23076923076923078
+    },
+    {
+      "expert": "v1",
+      "source": "alpha_motoneuron",
+      "target": "gamma_motoneuron",
+      "pmin": 0.0,
+      "margin_cap": 0.4,
+      "gain": 3,
+      "selected": 7,
+      "fold_delta": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "rate": 0.42857142857142855
+    }
+  ],
+  "changes": [
+    {
+      "Cell_ID": "2796212800388100189",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2795584800400100368",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2656144300210100218",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2796212801010100070",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2795103300232100063",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2795103300310200108",
+      "v9": "alpha_motoneuron",
+      "v12": "gamma_motoneuron",
+      "rule": {
+        "expert": "v1",
+        "source": "alpha_motoneuron",
+        "target": "gamma_motoneuron",
+        "pmin": 0.0,
+        "margin_cap": 0.4,
+        "gain": 3,
+        "selected": 7,
+        "fold_delta": [
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "rate": 0.42857142857142855
+      }
+    },
+    {
+      "Cell_ID": "2787445900761100263",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2795584800240100230",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2795103300119100217",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2707604800143100192",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2946331700000008947",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2707604000040100114",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2796212800488100063",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2707604800123100010",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2796212800789100257",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2946331700000018881",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2787445900206100090",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2795903600169100285",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2946331700000012432",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2787445900792200009",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2707604700413100025",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2945606900000006545",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2656144900238100152",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2796212800887100255",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2795903600267100194",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2796212800979100216",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2707604800081100190",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2787889600360100128",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    },
+    {
+      "Cell_ID": "2707604800242100246",
+      "v9": "oligodendrocyte_progenitor_2",
+      "v12": "oligodendrocyte_1",
+      "rule": {
+        "expert": "v85_classwise",
+        "source": "oligodendrocyte_progenitor_2",
+        "target": "oligodendrocyte_1",
+        "pmin": 0.0,
+        "margin_cap": 0.2,
+        "gain": 6,
+        "selected": 26,
+        "fold_delta": [
+          4,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rate": 0.23076923076923078
+      }
+    }
+  ],
+  "output": "C:\\yhh\\v6_reproduction\\prediction\\prediction_v12_version_router.csv",
+  "probabilities": "C:\\yhh\\v6_reproduction\\work\\v12_final_probs.npz",
+  "caveat": "The official test labels are hidden. Nested OOF stability is evidence, not a guarantee of leaderboard improvement."
+}
