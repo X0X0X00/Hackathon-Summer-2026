@@ -1,0 +1,10 @@
+id,count,note
+A,96,all positive unique S0 rescues
+B,7,only LZH != WYH
+C,89,only LZH == WYH
+D,87,only hard-bucket cells
+E,49,only oligodendrocyte / OPC
+F,14,only astrocyte
+G,10,only vascular / endothelial
+H,11,S0 top1 > LZH top1 and S0 top1 > WYH top1
+I,13,S0 margin > LZH margin and S0 margin > WYH margin

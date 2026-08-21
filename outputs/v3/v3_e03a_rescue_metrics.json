@@ -1,0 +1,2796 @@
+{
+  "agreement_states": {
+    "state_A": {
+      "danger_rate_n3": 0.21893366918555834,
+      "lzh_accuracy": 0.8446683459277917,
+      "n": 4764,
+      "n1": 651,
+      "n2": 1043,
+      "n3": 1043,
+      "positive_rescue_count": 89,
+      "positive_rescue_rate": 0.01868178001679261,
+      "s0_accuracy": 0.644416456759026,
+      "three_expert_oracle_accuracy": 0.8633501259445844,
+      "three_expert_oracle_correct": 4113,
+      "wyh_accuracy": 0.8446683459277917
+    },
+    "state_B": {
+      "danger_rate_n3": 0.4957627118644068,
+      "lzh_accuracy": 0.461864406779661,
+      "n": 236,
+      "n1": 38,
+      "n2": 0,
+      "n3": 117,
+      "positive_rescue_count": 7,
+      "positive_rescue_rate": 0.029661016949152543,
+      "s0_accuracy": 0.3432203389830508,
+      "three_expert_oracle_accuracy": 0.8389830508474576,
+      "three_expert_oracle_correct": 198,
+      "wyh_accuracy": 0.3474576271186441
+    },
+    "when_agree_and_both_wrong": {
+      "n": 740,
+      "s0_accuracy": 0.12027027027027028,
+      "s0_correct": 89
+    },
+    "when_disagree": {
+      "n": 236,
+      "s0_accuracy": 0.3432203389830508,
+      "s0_correct": 81,
+      "strong_any_correct": 191,
+      "strong_any_correct_rate": 0.809322033898305
+    }
+  },
+  "ceilings": {
+    "count_restrictions": [
+      {
+        "count": 96,
+        "id": "A",
+        "note": "all positive unique S0 rescues"
+      },
+      {
+        "count": 7,
+        "id": "B",
+        "note": "only LZH != WYH"
+      },
+      {
+        "count": 89,
+        "id": "C",
+        "note": "only LZH == WYH"
+      },
+      {
+        "count": 87,
+        "id": "D",
+        "note": "only hard-bucket cells"
+      },
+      {
+        "count": 49,
+        "id": "E",
+        "note": "only oligodendrocyte / OPC"
+      },
+      {
+        "count": 14,
+        "id": "F",
+        "note": "only astrocyte"
+      },
+      {
+        "count": 10,
+        "id": "G",
+        "note": "only vascular / endothelial"
+      },
+      {
+        "count": 11,
+        "id": "H",
+        "note": "S0 top1 > LZH top1 and S0 top1 > WYH top1"
+      },
+      {
+        "count": 13,
+        "id": "I",
+        "note": "S0 margin > LZH margin and S0 margin > WYH margin"
+      }
+    ],
+    "j_distributions": {
+      "lzh_margin_P": {
+        "count": 96,
+        "mean": 0.3509473417348404,
+        "median": 0.3420485092591055,
+        "p25": 0.1952804465308993,
+        "p75": 0.49628116458055316
+      },
+      "lzh_margin_all": {
+        "count": 5000,
+        "mean": 0.7386768942649473,
+        "median": 0.845278310596715,
+        "p25": 0.5734178545007022,
+        "p75": 0.9727188007525821
+      },
+      "lzh_top1_P": {
+        "count": 96,
+        "mean": 0.6074735712014876,
+        "median": 0.6113584949518116,
+        "p25": 0.5157195506701373,
+        "p75": 0.6881842304644905
+      },
+      "wyh_margin_P": {
+        "count": 96,
+        "mean": 0.5119290352493701,
+        "median": 0.5150924118353531,
+        "p25": 0.2794730287420497,
+        "p75": 0.7184944397707707
+      },
+      "wyh_margin_all": {
+        "count": 5000,
+        "mean": 0.860305773419165,
+        "median": 0.9956667615391774,
+        "p25": 0.8562465377710746,
+        "p75": 0.9999639476372044
+      },
+      "wyh_top1_P": {
+        "count": 96,
+        "mean": 0.7283177164120965,
+        "median": 0.7256143951867531,
+        "p25": 0.6064026572526091,
+        "p75": 0.8540825550032416
+      }
+    },
+    "j_text": "GROUP P LZH margin mean 0.3509 (population 0.7387); WYH margin mean 0.5119 (population 0.8603). No threshold was chosen."
+  },
+  "confusion_pairs": {
+    "lzh_pairs": [
+      {
+        "n": 26,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 5,
+        "pred": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 4,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "microglia"
+      },
+      {
+        "n": 4,
+        "pred": "astrocyte_1",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "n": 4,
+        "pred": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 4,
+        "pred": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 3,
+        "pred": "meninges_1",
+        "true_label": "meninges_3"
+      },
+      {
+        "n": 3,
+        "pred": "endothelial",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 2,
+        "pred": "astrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_2",
+        "true_label": "microglia"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_precursor_cell",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 2,
+        "pred": "DH_ex_Tac2",
+        "true_label": "DH_ex_Prkcg/Nts"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Maf/Cck",
+        "true_label": "DH_ex_Maf/Cpne4"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Gpr83",
+        "true_label": "DH_ex_Grpr"
+      },
+      {
+        "n": 1,
+        "pred": "pericyte",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Reln/Nmur2",
+        "true_label": "DH_ex_Cpne4"
+      },
+      {
+        "n": 1,
+        "pred": "endothelial",
+        "true_label": "pericyte"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_1",
+        "true_label": "meninges_2"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "microglia"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 1,
+        "pred": "gamma_motoneuron",
+        "true_label": "alpha_motoneuron"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Prkcg/Cck",
+        "true_label": "DH_ex_Prkcg/Nts"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "pericyte"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_1",
+        "true_label": "pericyte"
+      },
+      {
+        "n": 1,
+        "pred": "peripheral_glia",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Nmu/Tac2",
+        "true_label": "DH_ex_Tac2"
+      },
+      {
+        "n": 1,
+        "pred": "beta_motoneuron",
+        "true_label": "alpha_motoneuron"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_1",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_1"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_1",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_2",
+        "true_label": "meninges_3"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "n": 1,
+        "pred": "Schwann_cell",
+        "true_label": "peripheral_glia"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_2",
+        "true_label": "meninges_1"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_precursor_cell",
+        "true_label": "oligodendrocyte_progenitor_1"
+      }
+    ],
+    "lzh_wyh_agree_both_wrong_s0_correct": 89,
+    "lzh_wyh_disagree_s0_correct": 7,
+    "wyh_pairs": [
+      {
+        "n": 28,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 5,
+        "pred": "oligodendrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 4,
+        "pred": "astrocyte_1",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "n": 4,
+        "pred": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 3,
+        "pred": "meninges_1",
+        "true_label": "meninges_3"
+      },
+      {
+        "n": 3,
+        "pred": "endothelial",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 3,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "microglia"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_2",
+        "true_label": "microglia"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_precursor_cell",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 2,
+        "pred": "DH_ex_Tac2",
+        "true_label": "DH_ex_Prkcg/Nts"
+      },
+      {
+        "n": 2,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Maf/Cck",
+        "true_label": "DH_ex_Maf/Cpne4"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_1",
+        "true_label": "microglia"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Gpr83",
+        "true_label": "DH_ex_Grpr"
+      },
+      {
+        "n": 1,
+        "pred": "pericyte",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Reln/Nmur2",
+        "true_label": "DH_ex_Cpne4"
+      },
+      {
+        "n": 1,
+        "pred": "endothelial",
+        "true_label": "pericyte"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_1",
+        "true_label": "meninges_2"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "microglia"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_2",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 1,
+        "pred": "gamma_motoneuron",
+        "true_label": "alpha_motoneuron"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Prkcg/Cck",
+        "true_label": "DH_ex_Prkcg/Nts"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "pericyte"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_1",
+        "true_label": "pericyte"
+      },
+      {
+        "n": 1,
+        "pred": "peripheral_glia",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 1,
+        "pred": "DH_ex_Nmu/Tac2",
+        "true_label": "DH_ex_Tac2"
+      },
+      {
+        "n": 1,
+        "pred": "beta_motoneuron",
+        "true_label": "alpha_motoneuron"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_1",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_1",
+        "true_label": "oligodendrocyte_progenitor_1"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_1",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_2",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_2",
+        "true_label": "meninges_3"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_progenitor_2",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "n": 1,
+        "pred": "astrocyte_2",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 1,
+        "pred": "Schwann_cell",
+        "true_label": "peripheral_glia"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_2",
+        "true_label": "meninges_1"
+      },
+      {
+        "n": 1,
+        "pred": "meninges_1",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 1,
+        "pred": "oligodendrocyte_precursor_cell",
+        "true_label": "oligodendrocyte_progenitor_1"
+      }
+    ]
+  },
+  "created_at_utc": "2026-08-21T03:30:04Z",
+  "dangerous_overrides": {
+    "n1": 689,
+    "n2": 1043,
+    "n3": 1160,
+    "s0_wrong": 1849
+  },
+  "experiment_id": "V3-E03A",
+  "family_rescue_map": [
+    {
+      "family": "oligodendrocyte_opc",
+      "n1": 316,
+      "n2": 113,
+      "n3": 162,
+      "population": 1552,
+      "positive_rescues": 49,
+      "rescue_rate_among_shared_errors": 0.13424657534246576,
+      "shared_errors": 365
+    },
+    {
+      "family": "astrocyte",
+      "n1": 100,
+      "n2": 82,
+      "n3": 99,
+      "population": 769,
+      "positive_rescues": 14,
+      "rescue_rate_among_shared_errors": 0.12280701754385964,
+      "shared_errors": 114
+    },
+    {
+      "family": "vascular",
+      "n1": 82,
+      "n2": 22,
+      "n3": 28,
+      "population": 363,
+      "positive_rescues": 10,
+      "rescue_rate_among_shared_errors": 0.10869565217391304,
+      "shared_errors": 92
+    },
+    {
+      "family": "meningeal",
+      "n1": 30,
+      "n2": 13,
+      "n3": 24,
+      "population": 128,
+      "positive_rescues": 6,
+      "rescue_rate_among_shared_errors": 0.16666666666666666,
+      "shared_errors": 36
+    },
+    {
+      "family": "microglia",
+      "n1": 11,
+      "n2": 4,
+      "n3": 4,
+      "population": 64,
+      "positive_rescues": 7,
+      "rescue_rate_among_shared_errors": 0.3888888888888889,
+      "shared_errors": 18
+    },
+    {
+      "family": "remaining_glial_non_neuronal",
+      "n1": 12,
+      "n2": 2,
+      "n3": 5,
+      "population": 82,
+      "positive_rescues": 1,
+      "rescue_rate_among_shared_errors": 0.07692307692307693,
+      "shared_errors": 13
+    },
+    {
+      "family": "neuronal_or_other",
+      "n1": 138,
+      "n2": 807,
+      "n3": 838,
+      "population": 2042,
+      "positive_rescues": 9,
+      "rescue_rate_among_shared_errors": 0.061224489795918366,
+      "shared_errors": 147
+    }
+  ],
+  "family_rescue_map_folds_0_2": [
+    {
+      "family": "oligodendrocyte_opc",
+      "n1": 182,
+      "n2": 70,
+      "n3": 97,
+      "population": 933,
+      "positive_rescues": 39,
+      "rescue_rate_among_shared_errors": 0.17647058823529413,
+      "shared_errors": 221
+    },
+    {
+      "family": "astrocyte",
+      "n1": 65,
+      "n2": 52,
+      "n3": 59,
+      "population": 462,
+      "positive_rescues": 9,
+      "rescue_rate_among_shared_errors": 0.12162162162162163,
+      "shared_errors": 74
+    },
+    {
+      "family": "vascular",
+      "n1": 46,
+      "n2": 12,
+      "n3": 16,
+      "population": 217,
+      "positive_rescues": 6,
+      "rescue_rate_among_shared_errors": 0.11538461538461539,
+      "shared_errors": 52
+    },
+    {
+      "family": "meningeal",
+      "n1": 13,
+      "n2": 10,
+      "n3": 18,
+      "population": 76,
+      "positive_rescues": 5,
+      "rescue_rate_among_shared_errors": 0.2777777777777778,
+      "shared_errors": 18
+    },
+    {
+      "family": "microglia",
+      "n1": 6,
+      "n2": 1,
+      "n3": 1,
+      "population": 38,
+      "positive_rescues": 4,
+      "rescue_rate_among_shared_errors": 0.4,
+      "shared_errors": 10
+    },
+    {
+      "family": "remaining_glial_non_neuronal",
+      "n1": 7,
+      "n2": 0,
+      "n3": 1,
+      "population": 50,
+      "positive_rescues": 0,
+      "rescue_rate_among_shared_errors": 0.0,
+      "shared_errors": 7
+    },
+    {
+      "family": "neuronal_or_other",
+      "n1": 80,
+      "n2": 475,
+      "n3": 490,
+      "population": 1224,
+      "positive_rescues": 6,
+      "rescue_rate_among_shared_errors": 0.06976744186046512,
+      "shared_errors": 86
+    }
+  ],
+  "family_rescue_map_folds_3_4": [
+    {
+      "family": "oligodendrocyte_opc",
+      "n1": 134,
+      "n2": 43,
+      "n3": 65,
+      "population": 619,
+      "positive_rescues": 10,
+      "rescue_rate_among_shared_errors": 0.06944444444444445,
+      "shared_errors": 144
+    },
+    {
+      "family": "astrocyte",
+      "n1": 35,
+      "n2": 30,
+      "n3": 40,
+      "population": 307,
+      "positive_rescues": 5,
+      "rescue_rate_among_shared_errors": 0.125,
+      "shared_errors": 40
+    },
+    {
+      "family": "vascular",
+      "n1": 36,
+      "n2": 10,
+      "n3": 12,
+      "population": 146,
+      "positive_rescues": 4,
+      "rescue_rate_among_shared_errors": 0.1,
+      "shared_errors": 40
+    },
+    {
+      "family": "meningeal",
+      "n1": 17,
+      "n2": 3,
+      "n3": 6,
+      "population": 52,
+      "positive_rescues": 1,
+      "rescue_rate_among_shared_errors": 0.05555555555555555,
+      "shared_errors": 18
+    },
+    {
+      "family": "microglia",
+      "n1": 5,
+      "n2": 3,
+      "n3": 3,
+      "population": 26,
+      "positive_rescues": 3,
+      "rescue_rate_among_shared_errors": 0.375,
+      "shared_errors": 8
+    },
+    {
+      "family": "remaining_glial_non_neuronal",
+      "n1": 5,
+      "n2": 2,
+      "n3": 4,
+      "population": 32,
+      "positive_rescues": 1,
+      "rescue_rate_among_shared_errors": 0.16666666666666666,
+      "shared_errors": 6
+    },
+    {
+      "family": "neuronal_or_other",
+      "n1": 58,
+      "n2": 332,
+      "n3": 348,
+      "population": 818,
+      "positive_rescues": 3,
+      "rescue_rate_among_shared_errors": 0.04918032786885246,
+      "shared_errors": 61
+    }
+  ],
+  "feature_diagnostics": [
+    {
+      "auc_p_vs_n1": 0.41415699080793417,
+      "auc_p_vs_n1_folds_0_2": 0.4140423522574552,
+      "auc_p_vs_n1_folds_3_4": 0.43218390804597695,
+      "auc_p_vs_n3": 0.5263290229885058,
+      "auc_p_vs_n3_folds_0_2": 0.523141654978962,
+      "auc_p_vs_n3_folds_3_4": 0.5449403378273671,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "s0_top1",
+      "n1_count": 689,
+      "n1_mean": 0.5440996535276172,
+      "n1_median": 0.5239900323875554,
+      "n1_p25": 0.37205264856891374,
+      "n1_p75": 0.7050094823346321,
+      "n3_count": 1160,
+      "n3_mean": 0.4740060119592678,
+      "n3_median": 0.45213256788760603,
+      "n3_p25": 0.3224583887235529,
+      "n3_p75": 0.6077023657216698,
+      "p_count": 96,
+      "p_mean": 0.47858831645978667,
+      "p_median": 0.4712406542542616,
+      "p_p25": 0.3923881619439098,
+      "p_p75": 0.5495640010224105
+    },
+    {
+      "auc_p_vs_n1": 0.33549528301886794,
+      "auc_p_vs_n1_folds_0_2": 0.317206058624823,
+      "auc_p_vs_n1_folds_3_4": 0.38033205619412513,
+      "auc_p_vs_n3": 0.4249910201149426,
+      "auc_p_vs_n3_folds_0_2": 0.4131497301202771,
+      "auc_p_vs_n3_folds_3_4": 0.45932124593212453,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "s0_margin",
+      "n1_count": 689,
+      "n1_mean": 0.3411729056507968,
+      "n1_median": 0.27154598783116424,
+      "n1_p25": 0.13127178644859366,
+      "n1_p75": 0.523605762503887,
+      "n3_count": 1160,
+      "n3_mean": 0.271105169146337,
+      "n3_median": 0.2010640489023411,
+      "n3_p25": 0.07484841741959572,
+      "n3_p75": 0.4149542357264646,
+      "p_count": 96,
+      "p_mean": 0.19556308626489158,
+      "p_median": 0.14604004558270614,
+      "p_p25": 0.06768066492820343,
+      "p_p75": 0.2606165348922917
+    },
+    {
+      "auc_p_vs_n1": 0.5001814223512336,
+      "auc_p_vs_n1_folds_0_2": 0.49042897097817006,
+      "auc_p_vs_n1_folds_3_4": 0.5085568326947637,
+      "auc_p_vs_n3": 0.37657147988505746,
+      "auc_p_vs_n3_folds_0_2": 0.3702877300352756,
+      "auc_p_vs_n3_folds_3_4": 0.37897102123043547,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "s0_entropy",
+      "n1_count": 689,
+      "n1_mean": 1.4080498308328788,
+      "n1_median": 1.3565475504950397,
+      "n1_p25": 0.8614708470174246,
+      "n1_p75": 1.9097327267338868,
+      "n3_count": 1160,
+      "n3_mean": 1.6551372605997123,
+      "n3_median": 1.6557434573624672,
+      "n3_p25": 1.1613409595675588,
+      "n3_p75": 2.1683323779688206,
+      "p_count": 96,
+      "p_mean": 1.3932606368612916,
+      "p_median": 1.3379276982886967,
+      "p_p25": 1.0915782709048598,
+      "p_p75": 1.6550442203290663
+    },
+    {
+      "auc_p_vs_n1": 0.3213745766811804,
+      "auc_p_vs_n1_folds_0_2": 0.31884057971014496,
+      "auc_p_vs_n1_folds_3_4": 0.3237547892720306,
+      "auc_p_vs_n3": 0.18160919540229883,
+      "auc_p_vs_n3_folds_0_2": 0.1785243741765481,
+      "auc_p_vs_n3_folds_3_4": 0.1868123353479002,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "lzh_top1",
+      "n1_count": 689,
+      "n1_mean": 0.7047866184764242,
+      "n1_median": 0.7154482887704512,
+      "n1_p25": 0.5887736825414842,
+      "n1_p75": 0.8368169064549785,
+      "n3_count": 1160,
+      "n3_mean": 0.8382742946599323,
+      "n3_median": 0.9394515608209413,
+      "n3_p25": 0.6906487880878069,
+      "n3_p75": 0.9999999940999997,
+      "p_count": 96,
+      "p_mean": 0.6074735712014876,
+      "p_median": 0.6113584949518116,
+      "p_p25": 0.5157195506701373,
+      "p_p75": 0.6881842304644905
+    },
+    {
+      "auc_p_vs_n1": 0.30220428156748913,
+      "auc_p_vs_n1_folds_0_2": 0.2981366459627329,
+      "auc_p_vs_n1_folds_3_4": 0.3162196679438059,
+      "auc_p_vs_n3": 0.1909662356321839,
+      "auc_p_vs_n3_folds_0_2": 0.18226443962769348,
+      "auc_p_vs_n3_folds_3_4": 0.20478847047884705,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "lzh_margin",
+      "n1_count": 689,
+      "n1_mean": 0.5285594928416315,
+      "n1_median": 0.5408440158479892,
+      "n1_p25": 0.3356952706144802,
+      "n1_p75": 0.7430545824605073,
+      "n3_count": 1160,
+      "n3_mean": 0.7243442904813149,
+      "n3_median": 0.8857652962430045,
+      "n3_p25": 0.4767935090372526,
+      "n3_p75": 0.9999999939999997,
+      "p_count": 96,
+      "p_mean": 0.3509473417348404,
+      "p_median": 0.3420485092591055,
+      "p_p25": 0.1952804465308993,
+      "p_p75": 0.49628116458055316
+    },
+    {
+      "auc_p_vs_n1": 0.6365354378326076,
+      "auc_p_vs_n1_folds_0_2": 0.6352838618284844,
+      "auc_p_vs_n1_folds_3_4": 0.6399744572158365,
+      "auc_p_vs_n3": 0.839385775862069,
+      "auc_p_vs_n3_folds_0_2": 0.8343533511836457,
+      "auc_p_vs_n3_folds_3_4": 0.8476677514334418,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "lzh_entropy",
+      "n1_count": 689,
+      "n1_mean": 0.8635526934921564,
+      "n1_median": 0.8638846527443952,
+      "n1_p25": 0.5905748499940898,
+      "n1_p75": 1.1364459537522555,
+      "n3_count": 1160,
+      "n3_mean": 0.4314051609769682,
+      "n3_median": 0.2418702107924838,
+      "n3_p25": 1.4175252073536737e-07,
+      "n3_p75": 0.7782181674828387,
+      "p_count": 96,
+      "p_mean": 1.0318813348817777,
+      "p_median": 1.010908121769606,
+      "p_p25": 0.8489952550253708,
+      "p_p75": 1.2286476423950106
+    },
+    {
+      "auc_p_vs_n1": 0.3243226898887276,
+      "auc_p_vs_n1_folds_0_2": 0.3209109730848862,
+      "auc_p_vs_n1_folds_3_4": 0.33065134099616855,
+      "auc_p_vs_n3": 0.1798132183908046,
+      "auc_p_vs_n3_folds_0_2": 0.17612308215393768,
+      "auc_p_vs_n3_folds_3_4": 0.1834805516813885,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "wyh_top1",
+      "n1_count": 689,
+      "n1_mean": 0.8235221076946322,
+      "n1_median": 0.8825543123703554,
+      "n1_p25": 0.7082311650943081,
+      "n1_p75": 0.97167295425444,
+      "n3_count": 1160,
+      "n3_mean": 0.9021936823308544,
+      "n3_median": 0.9992559216015695,
+      "n3_p25": 0.8609852689921428,
+      "n3_p75": 1.0,
+      "p_count": 96,
+      "p_mean": 0.7283177164120965,
+      "p_median": 0.7256143951867531,
+      "p_p25": 0.6064026572526091,
+      "p_p75": 0.8540825550032416
+    },
+    {
+      "auc_p_vs_n1": 0.31771589259796806,
+      "auc_p_vs_n1_folds_0_2": 0.313900693763394,
+      "auc_p_vs_n1_folds_3_4": 0.3266922094508301,
+      "auc_p_vs_n3": 0.18104346264367818,
+      "auc_p_vs_n3_folds_0_2": 0.17771686004505077,
+      "auc_p_vs_n3_folds_3_4": 0.18565008523167517,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "wyh_margin",
+      "n1_count": 689,
+      "n1_mean": 0.6902113546424214,
+      "n1_median": 0.7886366634548936,
+      "n1_p25": 0.47107041075317047,
+      "n1_p75": 0.9503679532281194,
+      "n3_count": 1160,
+      "n3_mean": 0.8238025766526721,
+      "n3_median": 0.9986274130718815,
+      "n3_p25": 0.7508613874762011,
+      "n3_p75": 1.0,
+      "p_count": 96,
+      "p_mean": 0.5119290352493701,
+      "p_median": 0.5150924118353531,
+      "p_p25": 0.2794730287420497,
+      "p_p75": 0.7184944397707707
+    },
+    {
+      "auc_p_vs_n1": 0.657338534107402,
+      "auc_p_vs_n1_folds_0_2": 0.6611456176673568,
+      "auc_p_vs_n1_folds_3_4": 0.6466155810983397,
+      "auc_p_vs_n3": 0.8256196120689655,
+      "auc_p_vs_n3_folds_0_2": 0.8313782991202346,
+      "auc_p_vs_n3_folds_3_4": 0.8158995815899581,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "wyh_entropy",
+      "n1_count": 689,
+      "n1_mean": 0.46879498990015944,
+      "n1_median": 0.41999559983010637,
+      "n1_p25": 0.1362744408882398,
+      "n1_p75": 0.7104639213646633,
+      "n3_count": 1160,
+      "n3_mean": 0.2348480133128829,
+      "n3_median": 0.006352340444176705,
+      "n3_p25": -0.0,
+      "n3_p75": 0.4382718115873236,
+      "p_count": 96,
+      "p_mean": 0.6479211484629007,
+      "p_median": 0.6710062868097473,
+      "p_p25": 0.46935070916920024,
+      "p_p75": 0.8489021693319478
+    },
+    {
+      "auc_p_vs_n1": 0.49111786405418484,
+      "auc_p_vs_n1_folds_0_2": 0.4960771493952272,
+      "auc_p_vs_n1_folds_3_4": 0.4754789272030651,
+      "auc_p_vs_n3": 0.5139727011494253,
+      "auc_p_vs_n3_folds_0_2": 0.5164690382081687,
+      "auc_p_vs_n3_folds_3_4": 0.5019758251975824,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "lzh_wyh_agree",
+      "n1_count": 689,
+      "n1_mean": 0.9448476052249637,
+      "n1_median": 1.0,
+      "n1_p25": 1.0,
+      "n1_p75": 1.0,
+      "n3_count": 1160,
+      "n3_mean": 0.8991379310344828,
+      "n3_median": 1.0,
+      "n3_p25": 1.0,
+      "n3_p75": 1.0,
+      "p_count": 96,
+      "p_mean": 0.9270833333333334,
+      "p_median": 1.0,
+      "p_p25": 1.0,
+      "p_p75": 1.0
+    },
+    {
+      "auc_p_vs_n1": 0.15602322206095792,
+      "auc_p_vs_n1_folds_0_2": 0.15538847117794485,
+      "auc_p_vs_n1_folds_3_4": 0.1568965517241379,
+      "auc_p_vs_n3": 0.4831896551724138,
+      "auc_p_vs_n3_folds_0_2": 0.4831378299120235,
+      "auc_p_vs_n3_folds_3_4": 0.48326359832635984,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "lzh_s0_agree",
+      "n1_count": 689,
+      "n1_mean": 0.6879535558780842,
+      "n1_median": 1.0,
+      "n1_p25": 0.0,
+      "n1_p75": 1.0,
+      "n3_count": 1160,
+      "n3_mean": 0.03362068965517241,
+      "n3_median": 0.0,
+      "n3_p25": 0.0,
+      "n3_p75": 0.0,
+      "p_count": 96,
+      "p_mean": 0.0,
+      "p_median": 0.0,
+      "p_p25": 0.0,
+      "p_p75": 0.0
+    },
+    {
+      "auc_p_vs_n1": 0.16255442670537013,
+      "auc_p_vs_n1_folds_0_2": 0.16290726817042606,
+      "auc_p_vs_n1_folds_3_4": 0.16206896551724137,
+      "auc_p_vs_n3": 0.49181034482758623,
+      "auc_p_vs_n3_folds_0_2": 0.49193548387096775,
+      "auc_p_vs_n3_folds_3_4": 0.4916317991631799,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "wyh_s0_agree",
+      "n1_count": 689,
+      "n1_mean": 0.6748911465892597,
+      "n1_median": 1.0,
+      "n1_p25": 0.0,
+      "n1_p75": 1.0,
+      "n3_count": 1160,
+      "n3_mean": 0.016379310344827588,
+      "n3_median": 0.0,
+      "n3_p25": 0.0,
+      "n3_p75": 0.0,
+      "p_count": 96,
+      "p_mean": 0.0,
+      "p_median": 0.0,
+      "p_p25": 0.0,
+      "p_p75": 0.0
+    },
+    {
+      "auc_p_vs_n1": 0.169811320754717,
+      "auc_p_vs_n1_folds_0_2": 0.16917293233082709,
+      "auc_p_vs_n1_folds_3_4": 0.1706896551724138,
+      "auc_p_vs_n3": 0.5,
+      "auc_p_vs_n3_folds_0_2": 0.5,
+      "auc_p_vs_n3_folds_3_4": 0.5,
+      "direction_folds_0_2": "tied",
+      "direction_folds_3_4": "tied",
+      "direction_overall": "tied",
+      "feature": "all_three_agree",
+      "n1_count": 689,
+      "n1_mean": 0.660377358490566,
+      "n1_median": 1.0,
+      "n1_p25": 0.0,
+      "n1_p75": 1.0,
+      "n3_count": 1160,
+      "n3_mean": 0.0,
+      "n3_median": 0.0,
+      "n3_p25": 0.0,
+      "n3_p75": 0.0,
+      "p_count": 96,
+      "p_mean": 0.0,
+      "p_median": 0.0,
+      "p_p25": 0.0,
+      "p_p75": 0.0
+    },
+    {
+      "auc_p_vs_n1": 0.5299271286889211,
+      "auc_p_vs_n1_folds_0_2": 0.523972975918056,
+      "auc_p_vs_n1_folds_3_4": 0.5469348659003832,
+      "auc_p_vs_n3": 0.5110272988505747,
+      "auc_p_vs_n3_folds_0_2": 0.5084576480088402,
+      "auc_p_vs_n3_folds_3_4": 0.5231287773128778,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "all_three_different",
+      "n1_count": 689,
+      "n1_mean": 0.013062409288824383,
+      "n1_median": 0.0,
+      "n1_p25": 0.0,
+      "n1_p75": 0.0,
+      "n3_count": 1160,
+      "n3_mean": 0.05086206896551724,
+      "n3_median": 0.0,
+      "n3_p25": 0.0,
+      "n3_p75": 0.0,
+      "p_count": 96,
+      "p_mean": 0.07291666666666667,
+      "p_median": 0.0,
+      "p_p25": 0.0,
+      "p_p75": 0.0
+    },
+    {
+      "auc_p_vs_n1": 0.14876632801161105,
+      "auc_p_vs_n1_folds_0_2": 0.14912280701754388,
+      "auc_p_vs_n1_folds_3_4": 0.14827586206896554,
+      "auc_p_vs_n3": 0.475,
+      "auc_p_vs_n3_folds_0_2": 0.4750733137829912,
+      "auc_p_vs_n3_folds_3_4": 0.47489539748953974,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "n_experts_supporting_s0",
+      "n1_count": 689,
+      "n1_mean": 2.362844702467344,
+      "n1_median": 3.0,
+      "n1_p25": 1.0,
+      "n1_p75": 3.0,
+      "n3_count": 1160,
+      "n3_mean": 1.05,
+      "n3_median": 1.0,
+      "n3_p25": 1.0,
+      "n3_p75": 1.0,
+      "p_count": 96,
+      "p_mean": 1.0,
+      "p_median": 1.0,
+      "p_p25": 1.0,
+      "p_p75": 1.0
+    },
+    {
+      "auc_p_vs_n1": 0.14876632801161105,
+      "auc_p_vs_n1_folds_0_2": 0.14912280701754388,
+      "auc_p_vs_n1_folds_3_4": 0.14827586206896554,
+      "auc_p_vs_n3": 0.475,
+      "auc_p_vs_n3_folds_0_2": 0.4750733137829912,
+      "auc_p_vs_n3_folds_3_4": 0.47489539748953974,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "n_strong_supporting_s0",
+      "n1_count": 689,
+      "n1_mean": 1.362844702467344,
+      "n1_median": 2.0,
+      "n1_p25": 0.0,
+      "n1_p75": 2.0,
+      "n3_count": 1160,
+      "n3_mean": 0.05,
+      "n3_median": 0.0,
+      "n3_p25": 0.0,
+      "n3_p75": 0.0,
+      "p_count": 96,
+      "p_mean": 0.0,
+      "p_median": 0.0,
+      "p_p25": 0.0,
+      "p_p75": 0.0
+    },
+    {
+      "auc_p_vs_n1": 0.526321359458152,
+      "auc_p_vs_n1_folds_0_2": 0.5154916276197741,
+      "auc_p_vs_n1_folds_3_4": 0.562962962962963,
+      "auc_p_vs_n3": 0.7626616379310345,
+      "auc_p_vs_n3_folds_0_2": 0.770517234051596,
+      "auc_p_vs_n3_folds_3_4": 0.7649930264993026,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "s0_prob_advantage_lzh",
+      "n1_count": 689,
+      "n1_mean": -0.16068696494880702,
+      "n1_median": -0.138610802145002,
+      "n1_p25": -0.2886528714130668,
+      "n1_p75": -0.015982930952010532,
+      "n3_count": 1160,
+      "n3_mean": -0.3642682827006645,
+      "n3_median": -0.3925718795830778,
+      "n3_p25": -0.5869206241069029,
+      "n3_p75": -0.17178685113869588,
+      "p_count": 96,
+      "p_mean": -0.12888525474170087,
+      "p_median": -0.14879078305345836,
+      "p_p25": -0.2447766715493373,
+      "p_p75": -0.042971147726062045
+    },
+    {
+      "auc_p_vs_n1": 0.5301161103047896,
+      "auc_p_vs_n1_folds_0_2": 0.5171261487050961,
+      "auc_p_vs_n1_folds_3_4": 0.5690932311621968,
+      "auc_p_vs_n3": 0.7179777298850575,
+      "auc_p_vs_n3_folds_0_2": 0.7177100599260486,
+      "auc_p_vs_n3_folds_3_4": 0.7304354563768789,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "s0_prob_advantage_wyh",
+      "n1_count": 689,
+      "n1_mean": -0.279422454167015,
+      "n1_median": -0.26586551411074155,
+      "n1_p25": -0.4300769641450799,
+      "n1_p75": -0.12438068243095396,
+      "n3_count": 1160,
+      "n3_mean": -0.42818767037158645,
+      "n3_median": -0.4599198667761348,
+      "n3_p25": -0.6235743600002087,
+      "n3_p75": -0.2686638156926894,
+      "p_count": 96,
+      "p_mean": -0.2497293999523099,
+      "p_median": -0.2635899691021214,
+      "p_p25": -0.401031228593732,
+      "p_p75": -0.13967934008584
+    },
+    {
+      "auc_p_vs_n1": 0.5659772617319787,
+      "auc_p_vs_n1_folds_0_2": 0.549271730049762,
+      "auc_p_vs_n1_folds_3_4": 0.5977011494252873,
+      "auc_p_vs_n3": 0.12607758620689657,
+      "auc_p_vs_n3_folds_0_2": 0.12159462790598835,
+      "auc_p_vs_n3_folds_3_4": 0.1356733302339997,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "js_s0_lzh",
+      "n1_count": 689,
+      "n1_mean": 0.23895840856254705,
+      "n1_median": 0.12152161806411564,
+      "n1_p25": 0.05316824234109965,
+      "n1_p75": 0.300114416952081,
+      "n3_count": 1160,
+      "n3_mean": 0.6159287678783854,
+      "n3_median": 0.68652785619398,
+      "n3_p25": 0.43178176393388285,
+      "n3_p75": 0.8536842415370776,
+      "p_count": 96,
+      "p_mean": 0.19464735393066546,
+      "p_median": 0.18404354113839566,
+      "p_p25": 0.10079779625480598,
+      "p_p75": 0.2507215483081062
+    },
+    {
+      "auc_p_vs_n1": 0.5650701499758104,
+      "auc_p_vs_n1_folds_0_2": 0.552577094911191,
+      "auc_p_vs_n1_folds_3_4": 0.5954022988505747,
+      "auc_p_vs_n3": 0.1285201149425287,
+      "auc_p_vs_n3_folds_0_2": 0.12233839092184112,
+      "auc_p_vs_n3_folds_3_4": 0.13885014721834804,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "js_s0_wyh",
+      "n1_count": 689,
+      "n1_mean": 0.2846169918028783,
+      "n1_median": 0.1766320603383093,
+      "n1_p25": 0.08676937256393807,
+      "n1_p75": 0.39467228682180683,
+      "n3_count": 1160,
+      "n3_mean": 0.6452990853662001,
+      "n3_median": 0.7014450325178387,
+      "n3_p25": 0.47913526628362096,
+      "n3_p75": 0.8575283721341151,
+      "p_count": 96,
+      "p_mean": 0.2666651761422707,
+      "p_median": 0.2382527913073974,
+      "p_p25": 0.14557839025046304,
+      "p_p75": 0.3568575721801842
+    },
+    {
+      "auc_p_vs_n1": 0.5255049588776004,
+      "auc_p_vs_n1_folds_0_2": 0.5098979332388943,
+      "auc_p_vs_n1_folds_3_4": 0.58058748403576,
+      "auc_p_vs_n3": 0.7329920977011494,
+      "auc_p_vs_n3_folds_0_2": 0.7218113816991798,
+      "auc_p_vs_n3_folds_3_4": 0.7694095769409577,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "js_lzh_wyh",
+      "n1_count": 689,
+      "n1_mean": 0.06079640390501273,
+      "n1_median": 0.051681575205355046,
+      "n1_p25": 0.028047162601849997,
+      "n1_p75": 0.08378274430580096,
+      "n3_count": 1160,
+      "n3_mean": 0.03755601693831687,
+      "n3_median": 0.015369572191610677,
+      "n3_p25": 2.950000006277528e-09,
+      "n3_p75": 0.05449735079830207,
+      "p_count": 96,
+      "p_mean": 0.07072056120717933,
+      "p_median": 0.05439270847042016,
+      "p_p25": 0.030733273974259824,
+      "p_p75": 0.08871938604360136
+    },
+    {
+      "auc_p_vs_n1": 0.46280085873246257,
+      "auc_p_vs_n1_folds_0_2": 0.4679997094184737,
+      "auc_p_vs_n1_folds_3_4": 0.45893997445721585,
+      "auc_p_vs_n3": 0.33077406609195403,
+      "auc_p_vs_n3_folds_0_2": 0.3347039823196906,
+      "auc_p_vs_n3_folds_3_4": 0.31659693165969316,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "n_detected",
+      "n1_count": 689,
+      "n1_mean": 11.296081277213352,
+      "n1_median": 10.0,
+      "n1_p25": 7.0,
+      "n1_p75": 14.0,
+      "n3_count": 1160,
+      "n3_mean": 15.675862068965516,
+      "n3_median": 13.0,
+      "n3_p25": 9.0,
+      "n3_p75": 20.0,
+      "p_count": 96,
+      "p_mean": 10.78125,
+      "p_median": 9.0,
+      "p_p25": 7.0,
+      "p_p75": 14.0
+    },
+    {
+      "auc_p_vs_n1": 0.5351581398161587,
+      "auc_p_vs_n1_folds_0_2": 0.5367948857651376,
+      "auc_p_vs_n1_folds_3_4": 0.5510217113665389,
+      "auc_p_vs_n3": 0.4243848778735632,
+      "auc_p_vs_n3_folds_0_2": 0.4135747375579073,
+      "auc_p_vs_n3_folds_3_4": 0.4482023864869053,
+      "direction_folds_0_2": "lower_in_P",
+      "direction_folds_3_4": "lower_in_P",
+      "direction_overall": "lower_in_P",
+      "feature": "library_size",
+      "n1_count": 689,
+      "n1_mean": 22.502177068214802,
+      "n1_median": 16.0,
+      "n1_p25": 10.0,
+      "n1_p75": 27.0,
+      "n3_count": 1160,
+      "n3_mean": 31.05603448275862,
+      "n3_median": 21.0,
+      "n3_p25": 13.0,
+      "n3_p75": 38.0,
+      "p_count": 96,
+      "p_mean": 22.791666666666668,
+      "p_median": 18.0,
+      "p_p25": 12.75,
+      "p_p75": 25.0
+    },
+    {
+      "auc_p_vs_n1": 0.5532701378809869,
+      "auc_p_vs_n1_folds_0_2": 0.5567723656968508,
+      "auc_p_vs_n1_folds_3_4": 0.5444444444444444,
+      "auc_p_vs_n3": 0.8143318965517241,
+      "auc_p_vs_n3_folds_0_2": 0.8157592757873263,
+      "auc_p_vs_n3_folds_3_4": 0.8084611808461181,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "hard_bucket",
+      "n1_count": 689,
+      "n1_mean": 0.7997097242380261,
+      "n1_median": 1.0,
+      "n1_p25": 1.0,
+      "n1_p75": 1.0,
+      "n3_count": 1160,
+      "n3_mean": 0.2775862068965517,
+      "n3_median": 0.0,
+      "n3_p25": 0.0,
+      "n3_p75": 1.0,
+      "p_count": 96,
+      "p_mean": 0.90625,
+      "p_median": 1.0,
+      "p_p25": 1.0,
+      "p_p75": 1.0
+    },
+    {
+      "auc_p_vs_n1": 0.560806724721819,
+      "auc_p_vs_n1_folds_0_2": 0.5448040390832153,
+      "auc_p_vs_n1_folds_3_4": 0.6006385696040868,
+      "auc_p_vs_n3": 0.7510506465517243,
+      "auc_p_vs_n3_folds_0_2": 0.7552382166687917,
+      "auc_p_vs_n3_folds_3_4": 0.7515109251510925,
+      "direction_folds_0_2": "higher_in_P",
+      "direction_folds_3_4": "higher_in_P",
+      "direction_overall": "higher_in_P",
+      "feature": "rescue_evidence_score",
+      "n1_count": 689,
+      "n1_mean": 0.25043381610014104,
+      "n1_median": 0.27386988746335705,
+      "n1_p25": -0.45068625175022287,
+      "n1_p75": 0.865502660518699,
+      "n3_count": 1160,
+      "n3_mean": -0.5778554180690486,
+      "n3_median": -0.9220859639074113,
+      "n3_p25": -1.6328198720412845,
+      "n3_p75": 0.298665245341445,
+      "p_count": 96,
+      "p_mean": 0.4804368390895774,
+      "p_median": 0.4276339744986244,
+      "p_p25": -0.30900577316933564,
+      "p_p75": 1.1584504916592762
+    }
+  ],
+  "feature_inventory": [
+    {
+      "auc_p_vs_n1_folds_0_2": 0.4140423522574552,
+      "auc_p_vs_n1_folds_3_4": 0.43218390804597695,
+      "auc_p_vs_n3_folds_0_2": 0.523141654978962,
+      "auc_p_vs_n3_folds_3_4": 0.5449403378273671,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.41415699080793417,
+      "diagnostic_AUROC_P_vs_N3": 0.5263290229885058,
+      "feature": "s0_top1",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "S0 probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.317206058624823,
+      "auc_p_vs_n1_folds_3_4": 0.38033205619412513,
+      "auc_p_vs_n3_folds_0_2": 0.4131497301202771,
+      "auc_p_vs_n3_folds_3_4": 0.45932124593212453,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.33549528301886794,
+      "diagnostic_AUROC_P_vs_N3": 0.4249910201149426,
+      "feature": "s0_margin",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "S0 probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.49042897097817006,
+      "auc_p_vs_n1_folds_3_4": 0.5085568326947637,
+      "auc_p_vs_n3_folds_0_2": 0.3702877300352756,
+      "auc_p_vs_n3_folds_3_4": 0.37897102123043547,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.5001814223512336,
+      "diagnostic_AUROC_P_vs_N3": 0.37657147988505746,
+      "feature": "s0_entropy",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "S0 probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.31884057971014496,
+      "auc_p_vs_n1_folds_3_4": 0.3237547892720306,
+      "auc_p_vs_n3_folds_0_2": 0.1785243741765481,
+      "auc_p_vs_n3_folds_3_4": 0.1868123353479002,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.3213745766811804,
+      "diagnostic_AUROC_P_vs_N3": 0.18160919540229883,
+      "feature": "lzh_top1",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "LZH Prior-H probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.2981366459627329,
+      "auc_p_vs_n1_folds_3_4": 0.3162196679438059,
+      "auc_p_vs_n3_folds_0_2": 0.18226443962769348,
+      "auc_p_vs_n3_folds_3_4": 0.20478847047884705,
+      "available": true,
+      "classification": "STRONG",
+      "diagnostic_AUROC_P_vs_N1": 0.30220428156748913,
+      "diagnostic_AUROC_P_vs_N3": 0.1909662356321839,
+      "feature": "lzh_margin",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "LZH Prior-H probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.6352838618284844,
+      "auc_p_vs_n1_folds_3_4": 0.6399744572158365,
+      "auc_p_vs_n3_folds_0_2": 0.8343533511836457,
+      "auc_p_vs_n3_folds_3_4": 0.8476677514334418,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.6365354378326076,
+      "diagnostic_AUROC_P_vs_N3": 0.839385775862069,
+      "feature": "lzh_entropy",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "LZH Prior-H probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.3209109730848862,
+      "auc_p_vs_n1_folds_3_4": 0.33065134099616855,
+      "auc_p_vs_n3_folds_0_2": 0.17612308215393768,
+      "auc_p_vs_n3_folds_3_4": 0.1834805516813885,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.3243226898887276,
+      "diagnostic_AUROC_P_vs_N3": 0.1798132183908046,
+      "feature": "wyh_top1",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "WYH MODEL V2 probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.313900693763394,
+      "auc_p_vs_n1_folds_3_4": 0.3266922094508301,
+      "auc_p_vs_n3_folds_0_2": 0.17771686004505077,
+      "auc_p_vs_n3_folds_3_4": 0.18565008523167517,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.31771589259796806,
+      "diagnostic_AUROC_P_vs_N3": 0.18104346264367818,
+      "feature": "wyh_margin",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "WYH MODEL V2 probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.6611456176673568,
+      "auc_p_vs_n1_folds_3_4": 0.6466155810983397,
+      "auc_p_vs_n3_folds_0_2": 0.8313782991202346,
+      "auc_p_vs_n3_folds_3_4": 0.8158995815899581,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.657338534107402,
+      "diagnostic_AUROC_P_vs_N3": 0.8256196120689655,
+      "feature": "wyh_entropy",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "WYH MODEL V2 probability",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.4960771493952272,
+      "auc_p_vs_n1_folds_3_4": 0.4754789272030651,
+      "auc_p_vs_n3_folds_0_2": 0.5164690382081687,
+      "auc_p_vs_n3_folds_3_4": 0.5019758251975824,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.49111786405418484,
+      "diagnostic_AUROC_P_vs_N3": 0.5139727011494253,
+      "feature": "lzh_wyh_agree",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "cross-expert predicted class",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.15538847117794485,
+      "auc_p_vs_n1_folds_3_4": 0.1568965517241379,
+      "auc_p_vs_n3_folds_0_2": 0.4831378299120235,
+      "auc_p_vs_n3_folds_3_4": 0.48326359832635984,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.15602322206095792,
+      "diagnostic_AUROC_P_vs_N3": 0.4831896551724138,
+      "feature": "lzh_s0_agree",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected GROUP P requires S0 to disagree with both currently wrong strong experts; this feature is not an independent reliability cue.",
+      "source": "cross-expert predicted class",
+      "stability": "DEFINITIONALLY_FALSE_ON_P",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.16290726817042606,
+      "auc_p_vs_n1_folds_3_4": 0.16206896551724137,
+      "auc_p_vs_n3_folds_0_2": 0.49193548387096775,
+      "auc_p_vs_n3_folds_3_4": 0.4916317991631799,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.16255442670537013,
+      "diagnostic_AUROC_P_vs_N3": 0.49181034482758623,
+      "feature": "wyh_s0_agree",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected GROUP P requires S0 to disagree with both currently wrong strong experts; this feature is not an independent reliability cue.",
+      "source": "cross-expert predicted class",
+      "stability": "DEFINITIONALLY_FALSE_ON_P",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.16917293233082709,
+      "auc_p_vs_n1_folds_3_4": 0.1706896551724138,
+      "auc_p_vs_n3_folds_0_2": 0.5,
+      "auc_p_vs_n3_folds_3_4": 0.5,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.169811320754717,
+      "diagnostic_AUROC_P_vs_N3": 0.5,
+      "feature": "all_three_agree",
+      "folds_0_2_direction": "tied",
+      "folds_3_4_direction": "tied",
+      "notes": "diagnostic AUROC only; no threshold selected GROUP P requires S0 to disagree with both currently wrong strong experts; this feature is not an independent reliability cue.",
+      "source": "cross-expert predicted class",
+      "stability": "DEFINITIONALLY_FALSE_ON_P",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.523972975918056,
+      "auc_p_vs_n1_folds_3_4": 0.5469348659003832,
+      "auc_p_vs_n3_folds_0_2": 0.5084576480088402,
+      "auc_p_vs_n3_folds_3_4": 0.5231287773128778,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.5299271286889211,
+      "diagnostic_AUROC_P_vs_N3": 0.5110272988505747,
+      "feature": "all_three_different",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "cross-expert predicted class",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.14912280701754388,
+      "auc_p_vs_n1_folds_3_4": 0.14827586206896554,
+      "auc_p_vs_n3_folds_0_2": 0.4750733137829912,
+      "auc_p_vs_n3_folds_3_4": 0.47489539748953974,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.14876632801161105,
+      "diagnostic_AUROC_P_vs_N3": 0.475,
+      "feature": "n_experts_supporting_s0",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected GROUP P requires S0 to disagree with both currently wrong strong experts; this feature is not an independent reliability cue.",
+      "source": "cross-expert predicted class",
+      "stability": "DEFINITIONALLY_FALSE_ON_P",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.14912280701754388,
+      "auc_p_vs_n1_folds_3_4": 0.14827586206896554,
+      "auc_p_vs_n3_folds_0_2": 0.4750733137829912,
+      "auc_p_vs_n3_folds_3_4": 0.47489539748953974,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.14876632801161105,
+      "diagnostic_AUROC_P_vs_N3": 0.475,
+      "feature": "n_strong_supporting_s0",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected GROUP P requires S0 to disagree with both currently wrong strong experts; this feature is not an independent reliability cue.",
+      "source": "cross-expert predicted class",
+      "stability": "DEFINITIONALLY_FALSE_ON_P",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.5154916276197741,
+      "auc_p_vs_n1_folds_3_4": 0.562962962962963,
+      "auc_p_vs_n3_folds_0_2": 0.770517234051596,
+      "auc_p_vs_n3_folds_3_4": 0.7649930264993026,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.526321359458152,
+      "diagnostic_AUROC_P_vs_N3": 0.7626616379310345,
+      "feature": "s0_prob_advantage_lzh",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "cross-expert top1 difference",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.5171261487050961,
+      "auc_p_vs_n1_folds_3_4": 0.5690932311621968,
+      "auc_p_vs_n3_folds_0_2": 0.7177100599260486,
+      "auc_p_vs_n3_folds_3_4": 0.7304354563768789,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.5301161103047896,
+      "diagnostic_AUROC_P_vs_N3": 0.7179777298850575,
+      "feature": "s0_prob_advantage_wyh",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "cross-expert top1 difference",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.549271730049762,
+      "auc_p_vs_n1_folds_3_4": 0.5977011494252873,
+      "auc_p_vs_n3_folds_0_2": 0.12159462790598835,
+      "auc_p_vs_n3_folds_3_4": 0.1356733302339997,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.5659772617319787,
+      "diagnostic_AUROC_P_vs_N3": 0.12607758620689657,
+      "feature": "js_s0_lzh",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "cross-expert JS divergence, base 2",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.552577094911191,
+      "auc_p_vs_n1_folds_3_4": 0.5954022988505747,
+      "auc_p_vs_n3_folds_0_2": 0.12233839092184112,
+      "auc_p_vs_n3_folds_3_4": 0.13885014721834804,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.5650701499758104,
+      "diagnostic_AUROC_P_vs_N3": 0.1285201149425287,
+      "feature": "js_s0_wyh",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "cross-expert JS divergence, base 2",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.5098979332388943,
+      "auc_p_vs_n1_folds_3_4": 0.58058748403576,
+      "auc_p_vs_n3_folds_0_2": 0.7218113816991798,
+      "auc_p_vs_n3_folds_3_4": 0.7694095769409577,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.5255049588776004,
+      "diagnostic_AUROC_P_vs_N3": 0.7329920977011494,
+      "feature": "js_lzh_wyh",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "cross-expert JS divergence, base 2",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.4679997094184737,
+      "auc_p_vs_n1_folds_3_4": 0.45893997445721585,
+      "auc_p_vs_n3_folds_0_2": 0.3347039823196906,
+      "auc_p_vs_n3_folds_3_4": 0.31659693165969316,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.46280085873246257,
+      "diagnostic_AUROC_P_vs_N3": 0.33077406609195403,
+      "feature": "n_detected",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "counts_train nonzero official genes",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.5367948857651376,
+      "auc_p_vs_n1_folds_3_4": 0.5510217113665389,
+      "auc_p_vs_n3_folds_0_2": 0.4135747375579073,
+      "auc_p_vs_n3_folds_3_4": 0.4482023864869053,
+      "available": true,
+      "classification": "WEAK",
+      "diagnostic_AUROC_P_vs_N1": 0.5351581398161587,
+      "diagnostic_AUROC_P_vs_N3": 0.4243848778735632,
+      "feature": "library_size",
+      "folds_0_2_direction": "lower_in_P",
+      "folds_3_4_direction": "lower_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "counts_train library size",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.5567723656968508,
+      "auc_p_vs_n1_folds_3_4": 0.5444444444444444,
+      "auc_p_vs_n3_folds_0_2": 0.8157592757873263,
+      "auc_p_vs_n3_folds_3_4": 0.8084611808461181,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.5532701378809869,
+      "diagnostic_AUROC_P_vs_N3": 0.8143318965517241,
+      "feature": "hard_bucket",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "metadata missingness",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "auc_p_vs_n1_folds_0_2": 0.5448040390832153,
+      "auc_p_vs_n1_folds_3_4": 0.6006385696040868,
+      "auc_p_vs_n3_folds_0_2": 0.7552382166687917,
+      "auc_p_vs_n3_folds_3_4": 0.7515109251510925,
+      "available": true,
+      "classification": "MODERATE",
+      "diagnostic_AUROC_P_vs_N1": 0.560806724721819,
+      "diagnostic_AUROC_P_vs_N3": 0.7510506465517243,
+      "feature": "rescue_evidence_score",
+      "folds_0_2_direction": "higher_in_P",
+      "folds_3_4_direction": "higher_in_P",
+      "notes": "diagnostic AUROC only; no threshold selected",
+      "source": "predeclared composite of z-scored margins",
+      "stability": "STABLE",
+      "test_safe": true
+    },
+    {
+      "available": false,
+      "classification": "UNAVAILABLE",
+      "diagnostic_AUROC_P_vs_N1": null,
+      "diagnostic_AUROC_P_vs_N3": null,
+      "feature": "lzh_prior_h_eligibility",
+      "folds_0_2_direction": null,
+      "folds_3_4_direction": null,
+      "notes": "documented by LZH but no committed cell-level OOF field",
+      "source": "LZH route audit",
+      "stability": "UNAVAILABLE",
+      "test_safe": true
+    },
+    {
+      "available": false,
+      "classification": "UNAVAILABLE",
+      "diagnostic_AUROC_P_vs_N1": null,
+      "diagnostic_AUROC_P_vs_N3": null,
+      "feature": "lzh_graph_degree",
+      "folds_0_2_direction": null,
+      "folds_3_4_direction": null,
+      "notes": "documented by LZH but no committed cell-level OOF field",
+      "source": "LZH graph",
+      "stability": "UNAVAILABLE",
+      "test_safe": true
+    },
+    {
+      "available": false,
+      "classification": "UNAVAILABLE",
+      "diagnostic_AUROC_P_vs_N1": null,
+      "diagnostic_AUROC_P_vs_N3": null,
+      "feature": "lzh_reliable_gene_count",
+      "folds_0_2_direction": null,
+      "folds_3_4_direction": null,
+      "notes": "documented by LZH but no committed cell-level OOF field",
+      "source": "LZH Prior-H",
+      "stability": "UNAVAILABLE",
+      "test_safe": true
+    }
+  ],
+  "final_classification": {
+    "enriched_families": [],
+    "high_precision_regime_predeclared_composite_top_decile": false,
+    "high_precision_stable_folds_3_4": true,
+    "label": "RESCUE SIGNAL WEAK",
+    "n_moderate_features": 13,
+    "n_strong_features": 1,
+    "next_experiment": "Create another independent expert rather than a complex S0 rescue router. Do not start V3-E03B or V3-E03F on the current S0 reliability evidence.",
+    "reason": "S0 adds unique oracle headroom (96 cells; diagnostic three-expert oracle 0.8622), but available test-safe signals do not isolate those rescues from dangerous overrides with fold-stable high precision.",
+    "top_family_folds_0_2": "oligodendrocyte_opc",
+    "top_family_folds_3_4": "oligodendrocyte_opc"
+  },
+  "fold_stability": {
+    "fold_rescue_counts": {
+      "0": 25,
+      "1": 28,
+      "2": 16,
+      "3": 17,
+      "4": 10
+    },
+    "folds_0_2": {
+      "danger_rate_n3": 0.22733333333333333,
+      "lzh_accuracy": 0.8303333333333334,
+      "n": 3000,
+      "n1": 399,
+      "n2": 620,
+      "n3": 682,
+      "positive_rescue_count": 69,
+      "positive_rescue_rate": 0.023,
+      "s0_accuracy": 0.6396666666666667,
+      "three_expert_oracle_accuracy": 0.867,
+      "three_expert_oracle_correct": 2601,
+      "wyh_accuracy": 0.8216666666666667
+    },
+    "folds_3_4": {
+      "danger_rate_n3": 0.239,
+      "lzh_accuracy": 0.821,
+      "n": 2000,
+      "n1": 290,
+      "n2": 423,
+      "n3": 478,
+      "positive_rescue_count": 27,
+      "positive_rescue_rate": 0.0135,
+      "s0_accuracy": 0.616,
+      "three_expert_oracle_accuracy": 0.855,
+      "three_expert_oracle_correct": 1710,
+      "wyh_accuracy": 0.8205
+    }
+  },
+  "hard_bucket": {
+    "False": {
+      "danger_rate_n3": 0.4103819784524976,
+      "lzh_accuracy": 0.9201762977473066,
+      "n": 2042,
+      "n1": 138,
+      "n2": 807,
+      "n3": 838,
+      "positive_rescue_count": 9,
+      "positive_rescue_rate": 0.004407443682664055,
+      "s0_accuracy": 0.5220372184133203,
+      "three_expert_oracle_accuracy": 0.9324191968658179,
+      "three_expert_oracle_correct": 1904,
+      "wyh_accuracy": 0.9142997061704211
+    },
+    "True": {
+      "danger_rate_n3": 0.10885733603786342,
+      "lzh_accuracy": 0.762001352265044,
+      "n": 2958,
+      "n1": 551,
+      "n2": 236,
+      "n3": 322,
+      "positive_rescue_count": 87,
+      "positive_rescue_rate": 0.029411764705882353,
+      "s0_accuracy": 0.704868154158215,
+      "three_expert_oracle_accuracy": 0.8137254901960784,
+      "three_expert_oracle_correct": 2407,
+      "wyh_accuracy": 0.7569303583502367
+    }
+  },
+  "head_note": "HEAD matches frozen E02D checkpoint 718395d",
+  "integrity": {
+    "all_three_wrong": 689,
+    "both_wrong": 785,
+    "fold_rescues": {
+      "0": 25,
+      "1": 28,
+      "2": 16,
+      "3": 17,
+      "4": 10
+    },
+    "lzh_accuracy": 0.8266,
+    "lzh_correct": 4133,
+    "lzh_wyh_oracle": 4215,
+    "lzh_wyh_oracle_accuracy": 0.843,
+    "n_rows": 5000,
+    "positive_rescues": 96,
+    "s0_accuracy": 0.6302,
+    "s0_correct": 3151,
+    "three_expert_oracle": 4311,
+    "three_expert_oracle_accuracy": 0.8622,
+    "unique_cell_id": 5000,
+    "wyh_accuracy": 0.8212,
+    "wyh_correct": 4106
+  },
+  "leakage_audit": {
+    "canonical_folds_3_4_used_for_redesign": false,
+    "cell_id_dtype": "lossless_string",
+    "competition_test_labels_used": false,
+    "leaderboard_feedback_used": false,
+    "learned_gate_trained": false,
+    "model_v1_modified": false,
+    "model_v2_modified": false,
+    "prediction_csv_modified": false,
+    "s0_retrained": false,
+    "submission_generated": false,
+    "threshold_optimized": false,
+    "true_labels_used_only_for_retrospective_diagnostics": true,
+    "v3_e00t_or_e02d_numerical_artifacts_modified": false,
+    "weights_optimized": false
+  },
+  "oracle_is_not_deployable_accuracy": true,
+  "positive_rescues": {
+    "by_section": [
+      {
+        "Section_ID": "0503_M4_C",
+        "n": 7
+      },
+      {
+        "Section_ID": "0610_F5_L",
+        "n": 4
+      },
+      {
+        "Section_ID": "0610_M4_L",
+        "n": 4
+      },
+      {
+        "Section_ID": "0613_M4_L",
+        "n": 4
+      },
+      {
+        "Section_ID": "0328_M2_L",
+        "n": 3
+      },
+      {
+        "Section_ID": "0415_F1_L",
+        "n": 3
+      },
+      {
+        "Section_ID": "0415_M2_L",
+        "n": 3
+      },
+      {
+        "Section_ID": "0610_M5_T",
+        "n": 3
+      },
+      {
+        "Section_ID": "0328_F1_C",
+        "n": 3
+      },
+      {
+        "Section_ID": "0415_M1_L",
+        "n": 3
+      },
+      {
+        "Section_ID": "0610_F4_L",
+        "n": 3
+      },
+      {
+        "Section_ID": "0415_F2_S",
+        "n": 2
+      },
+      {
+        "Section_ID": "0503_M4_L",
+        "n": 2
+      },
+      {
+        "Section_ID": "0415_F2_C",
+        "n": 2
+      },
+      {
+        "Section_ID": "0328_F2_T",
+        "n": 2
+      }
+    ],
+    "by_true_class": [
+      {
+        "n": 31,
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_1"
+      },
+      {
+        "n": 11,
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_progenitor_2"
+      },
+      {
+        "n": 9,
+        "true_family": "astrocyte",
+        "true_label": "astrocyte_1"
+      },
+      {
+        "n": 7,
+        "true_family": "vascular",
+        "true_label": "endothelial"
+      },
+      {
+        "n": 7,
+        "true_family": "microglia",
+        "true_label": "microglia"
+      },
+      {
+        "n": 5,
+        "true_family": "astrocyte",
+        "true_label": "astrocyte_2"
+      },
+      {
+        "n": 4,
+        "true_family": "meningeal",
+        "true_label": "meninges_3"
+      },
+      {
+        "n": 3,
+        "true_family": "vascular",
+        "true_label": "pericyte"
+      },
+      {
+        "n": 3,
+        "true_family": "neuronal_or_other",
+        "true_label": "DH_ex_Prkcg/Nts"
+      },
+      {
+        "n": 3,
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_precursor_cell"
+      },
+      {
+        "n": 2,
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_2"
+      },
+      {
+        "n": 2,
+        "true_family": "neuronal_or_other",
+        "true_label": "alpha_motoneuron"
+      },
+      {
+        "n": 2,
+        "true_family": "oligodendrocyte_opc",
+        "true_label": "oligodendrocyte_progenitor_1"
+      },
+      {
+        "n": 1,
+        "true_family": "neuronal_or_other",
+        "true_label": "DH_ex_Cpne4"
+      },
+      {
+        "n": 1,
+        "true_family": "meningeal",
+        "true_label": "meninges_2"
+      },
+      {
+        "n": 1,
+        "true_family": "neuronal_or_other",
+        "true_label": "DH_ex_Grpr"
+      },
+      {
+        "n": 1,
+        "true_family": "meningeal",
+        "true_label": "meninges_1"
+      },
+      {
+        "n": 1,
+        "true_family": "neuronal_or_other",
+        "true_label": "DH_ex_Tac2"
+      },
+      {
+        "n": 1,
+        "true_family": "neuronal_or_other",
+        "true_label": "DH_ex_Maf/Cpne4"
+      },
+      {
+        "n": 1,
+        "true_family": "remaining_glial_non_neuronal",
+        "true_label": "peripheral_glia"
+      }
+    ],
+    "e02d_family_counts": {
+      "astrocyte": 14,
+      "meningeal": 6,
+      "neuronal_or_other": 9,
+      "oligodendrocyte_opc": 49,
+      "other_glial_non_neuronal": 8,
+      "vascular": 10
+    },
+    "hard_bucket_count": 87,
+    "hard_bucket_fraction": 0.90625,
+    "n": 96,
+    "neuron_or_glial": {
+      "glial_non_neuronal": 89,
+      "neuron": 7
+    }
+  },
+  "quantile_diagnostics": {
+    "lzh_margin": {
+      "deciles": [
+        {
+          "danger_rate_n3": 0.372,
+          "decile": 1,
+          "n": 500,
+          "n3": 186,
+          "positive_rescue_count": 40,
+          "rescue_rate": 0.08
+        },
+        {
+          "danger_rate_n3": 0.224,
+          "decile": 2,
+          "n": 500,
+          "n3": 112,
+          "positive_rescue_count": 30,
+          "rescue_rate": 0.06
+        },
+        {
+          "danger_rate_n3": 0.164,
+          "decile": 3,
+          "n": 500,
+          "n3": 82,
+          "positive_rescue_count": 17,
+          "rescue_rate": 0.034
+        },
+        {
+          "danger_rate_n3": 0.158,
+          "decile": 4,
+          "n": 500,
+          "n3": 79,
+          "positive_rescue_count": 7,
+          "rescue_rate": 0.014
+        },
+        {
+          "danger_rate_n3": 0.132,
+          "decile": 5,
+          "n": 500,
+          "n3": 66,
+          "positive_rescue_count": 2,
+          "rescue_rate": 0.004
+        },
+        {
+          "danger_rate_n3": 0.16,
+          "decile": 6,
+          "n": 500,
+          "n3": 80,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.14,
+          "decile": 7,
+          "n": 500,
+          "n3": 70,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.168,
+          "decile": 8,
+          "n": 500,
+          "n3": 84,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.42283298097251587,
+          "decile": 9,
+          "n": 946,
+          "n3": 400,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.018518518518518517,
+          "decile": 10,
+          "n": 54,
+          "n3": 1,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        }
+      ],
+      "n_bins": 10
+    },
+    "rescue_evidence_score": {
+      "deciles": [
+        {
+          "danger_rate_n3": 0.62,
+          "decile": 1,
+          "n": 500,
+          "n3": 310,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.44,
+          "decile": 2,
+          "n": 500,
+          "n3": 220,
+          "positive_rescue_count": 4,
+          "rescue_rate": 0.008
+        },
+        {
+          "danger_rate_n3": 0.29,
+          "decile": 3,
+          "n": 500,
+          "n3": 145,
+          "positive_rescue_count": 10,
+          "rescue_rate": 0.02
+        },
+        {
+          "danger_rate_n3": 0.196,
+          "decile": 4,
+          "n": 500,
+          "n3": 98,
+          "positive_rescue_count": 14,
+          "rescue_rate": 0.028
+        },
+        {
+          "danger_rate_n3": 0.154,
+          "decile": 5,
+          "n": 500,
+          "n3": 77,
+          "positive_rescue_count": 13,
+          "rescue_rate": 0.026
+        },
+        {
+          "danger_rate_n3": 0.122,
+          "decile": 6,
+          "n": 500,
+          "n3": 61,
+          "positive_rescue_count": 9,
+          "rescue_rate": 0.018
+        },
+        {
+          "danger_rate_n3": 0.054,
+          "decile": 7,
+          "n": 500,
+          "n3": 27,
+          "positive_rescue_count": 7,
+          "rescue_rate": 0.014
+        },
+        {
+          "danger_rate_n3": 0.066,
+          "decile": 8,
+          "n": 500,
+          "n3": 33,
+          "positive_rescue_count": 1,
+          "rescue_rate": 0.002
+        },
+        {
+          "danger_rate_n3": 0.084,
+          "decile": 9,
+          "n": 500,
+          "n3": 42,
+          "positive_rescue_count": 13,
+          "rescue_rate": 0.026
+        },
+        {
+          "danger_rate_n3": 0.294,
+          "decile": 10,
+          "n": 500,
+          "n3": 147,
+          "positive_rescue_count": 25,
+          "rescue_rate": 0.05
+        }
+      ],
+      "n_bins": 10
+    },
+    "s0_entropy": {
+      "deciles": [
+        {
+          "danger_rate_n3": 0.01,
+          "decile": 1,
+          "n": 500,
+          "n3": 5,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.032,
+          "decile": 2,
+          "n": 500,
+          "n3": 16,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.048,
+          "decile": 3,
+          "n": 500,
+          "n3": 24,
+          "positive_rescue_count": 1,
+          "rescue_rate": 0.002
+        },
+        {
+          "danger_rate_n3": 0.146,
+          "decile": 4,
+          "n": 500,
+          "n3": 73,
+          "positive_rescue_count": 11,
+          "rescue_rate": 0.022
+        },
+        {
+          "danger_rate_n3": 0.212,
+          "decile": 5,
+          "n": 500,
+          "n3": 106,
+          "positive_rescue_count": 9,
+          "rescue_rate": 0.018
+        },
+        {
+          "danger_rate_n3": 0.252,
+          "decile": 6,
+          "n": 500,
+          "n3": 126,
+          "positive_rescue_count": 21,
+          "rescue_rate": 0.042
+        },
+        {
+          "danger_rate_n3": 0.306,
+          "decile": 7,
+          "n": 500,
+          "n3": 153,
+          "positive_rescue_count": 16,
+          "rescue_rate": 0.032
+        },
+        {
+          "danger_rate_n3": 0.324,
+          "decile": 8,
+          "n": 500,
+          "n3": 162,
+          "positive_rescue_count": 19,
+          "rescue_rate": 0.038
+        },
+        {
+          "danger_rate_n3": 0.456,
+          "decile": 9,
+          "n": 500,
+          "n3": 228,
+          "positive_rescue_count": 12,
+          "rescue_rate": 0.024
+        },
+        {
+          "danger_rate_n3": 0.534,
+          "decile": 10,
+          "n": 500,
+          "n3": 267,
+          "positive_rescue_count": 7,
+          "rescue_rate": 0.014
+        }
+      ],
+      "n_bins": 10
+    },
+    "s0_margin": {
+      "deciles": [
+        {
+          "danger_rate_n3": 0.508,
+          "decile": 1,
+          "n": 500,
+          "n3": 254,
+          "positive_rescue_count": 23,
+          "rescue_rate": 0.046
+        },
+        {
+          "danger_rate_n3": 0.448,
+          "decile": 2,
+          "n": 500,
+          "n3": 224,
+          "positive_rescue_count": 25,
+          "rescue_rate": 0.05
+        },
+        {
+          "danger_rate_n3": 0.314,
+          "decile": 3,
+          "n": 500,
+          "n3": 157,
+          "positive_rescue_count": 16,
+          "rescue_rate": 0.032
+        },
+        {
+          "danger_rate_n3": 0.28,
+          "decile": 4,
+          "n": 500,
+          "n3": 140,
+          "positive_rescue_count": 15,
+          "rescue_rate": 0.03
+        },
+        {
+          "danger_rate_n3": 0.298,
+          "decile": 5,
+          "n": 500,
+          "n3": 149,
+          "positive_rescue_count": 8,
+          "rescue_rate": 0.016
+        },
+        {
+          "danger_rate_n3": 0.194,
+          "decile": 6,
+          "n": 500,
+          "n3": 97,
+          "positive_rescue_count": 5,
+          "rescue_rate": 0.01
+        },
+        {
+          "danger_rate_n3": 0.166,
+          "decile": 7,
+          "n": 500,
+          "n3": 83,
+          "positive_rescue_count": 3,
+          "rescue_rate": 0.006
+        },
+        {
+          "danger_rate_n3": 0.066,
+          "decile": 8,
+          "n": 500,
+          "n3": 33,
+          "positive_rescue_count": 1,
+          "rescue_rate": 0.002
+        },
+        {
+          "danger_rate_n3": 0.03,
+          "decile": 9,
+          "n": 500,
+          "n3": 15,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.016,
+          "decile": 10,
+          "n": 500,
+          "n3": 8,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        }
+      ],
+      "n_bins": 10
+    },
+    "s0_top1": {
+      "deciles": [
+        {
+          "danger_rate_n3": 0.55,
+          "decile": 1,
+          "n": 500,
+          "n3": 275,
+          "positive_rescue_count": 10,
+          "rescue_rate": 0.02
+        },
+        {
+          "danger_rate_n3": 0.454,
+          "decile": 2,
+          "n": 500,
+          "n3": 227,
+          "positive_rescue_count": 20,
+          "rescue_rate": 0.04
+        },
+        {
+          "danger_rate_n3": 0.326,
+          "decile": 3,
+          "n": 500,
+          "n3": 163,
+          "positive_rescue_count": 30,
+          "rescue_rate": 0.06
+        },
+        {
+          "danger_rate_n3": 0.302,
+          "decile": 4,
+          "n": 500,
+          "n3": 151,
+          "positive_rescue_count": 15,
+          "rescue_rate": 0.03
+        },
+        {
+          "danger_rate_n3": 0.228,
+          "decile": 5,
+          "n": 500,
+          "n3": 114,
+          "positive_rescue_count": 11,
+          "rescue_rate": 0.022
+        },
+        {
+          "danger_rate_n3": 0.222,
+          "decile": 6,
+          "n": 500,
+          "n3": 111,
+          "positive_rescue_count": 6,
+          "rescue_rate": 0.012
+        },
+        {
+          "danger_rate_n3": 0.13,
+          "decile": 7,
+          "n": 500,
+          "n3": 65,
+          "positive_rescue_count": 3,
+          "rescue_rate": 0.006
+        },
+        {
+          "danger_rate_n3": 0.064,
+          "decile": 8,
+          "n": 500,
+          "n3": 32,
+          "positive_rescue_count": 1,
+          "rescue_rate": 0.002
+        },
+        {
+          "danger_rate_n3": 0.03,
+          "decile": 9,
+          "n": 500,
+          "n3": 15,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.014,
+          "decile": 10,
+          "n": 500,
+          "n3": 7,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        }
+      ],
+      "n_bins": 10
+    },
+    "wyh_margin": {
+      "deciles": [
+        {
+          "danger_rate_n3": 0.336,
+          "decile": 1,
+          "n": 500,
+          "n3": 168,
+          "positive_rescue_count": 41,
+          "rescue_rate": 0.082
+        },
+        {
+          "danger_rate_n3": 0.242,
+          "decile": 2,
+          "n": 500,
+          "n3": 121,
+          "positive_rescue_count": 33,
+          "rescue_rate": 0.066
+        },
+        {
+          "danger_rate_n3": 0.194,
+          "decile": 3,
+          "n": 500,
+          "n3": 97,
+          "positive_rescue_count": 12,
+          "rescue_rate": 0.024
+        },
+        {
+          "danger_rate_n3": 0.142,
+          "decile": 4,
+          "n": 500,
+          "n3": 71,
+          "positive_rescue_count": 8,
+          "rescue_rate": 0.016
+        },
+        {
+          "danger_rate_n3": 0.154,
+          "decile": 5,
+          "n": 500,
+          "n3": 77,
+          "positive_rescue_count": 2,
+          "rescue_rate": 0.004
+        },
+        {
+          "danger_rate_n3": 0.148,
+          "decile": 6,
+          "n": 500,
+          "n3": 74,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.132,
+          "decile": 7,
+          "n": 500,
+          "n3": 66,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.182,
+          "decile": 8,
+          "n": 500,
+          "n3": 91,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        },
+        {
+          "danger_rate_n3": 0.395,
+          "decile": 9,
+          "n": 1000,
+          "n3": 395,
+          "positive_rescue_count": 0,
+          "rescue_rate": 0.0
+        }
+      ],
+      "n_bins": 9
+    }
+  },
+  "quantile_stability": {
+    "rescue_evidence_score_top_decile_same_direction": true
+  },
+  "s0_probability": {
+    "available": true,
+    "checkpoint_bytes": 406501,
+    "checkpoint_path": "work/v3_e02d/s0.pt",
+    "checkpoint_sha256": "5451c7a53ff3ca88dd4d83f7cebcc2920d7bd4bbc38073a6326f048f92111fd0",
+    "device": "cpu",
+    "n_label_match": 5000,
+    "reason": "deterministic CPU inference from frozen work/v3_e02d/s0.pt; no retraining",
+    "retrained": false
+  },
+  "separability_summary": {
+    "agreement_interpretation": "Most S0 unique rescues are not concentrated in strong-expert disagreement. Future rescue, if any, must handle rare shared-confidence failures rather than only LZH/WYH disagreement.",
+    "confusion_interpretation": "Most unique S0 rescues occur when LZH and WYH make the same wrong prediction. That favors a global or family-aware rescue of shared-confidence failures over a pure disagreement router.",
+    "fold_stability_text": "Folds 0-2 vs 3-4 keep the unique-rescue identity 69 vs 27 and oligodendrocyte/OPC remains the largest rescue family by count. The oligo/OPC rescue rate among shared errors is not stable (0.176 on folds 0-2 vs 0.069 on folds 3-4). LZH/WYH low-confidence vs N3 keeps the same direction on both splits; S0 high-confidence does not isolate GROUP P on either split.",
+    "future_gate_should_use": "LZH/WYH low confidence and metadata-missingness as negative controls against overriding a currently correct strong expert. Do not use high S0 confidence as a rescue trigger: the 96 unique rescues sit in low-to-mid S0 confidence. Do not treat LZH/WYH disagreement as the primary rescue state: 89 / 96 unique rescues occur when LZH == WYH.",
+    "global_text": "P vs N3 (dangerous override of a currently correct strong expert) is where LZH/WYH low-confidence and hard-bucket missingness show the strongest diagnostic AUROCs. P vs N1 (both strong experts already wrong, S0 also wrong) is the operational bottleneck: S0 top1/margin do not identify the 96 unique rescues among the 785 shared errors, and high S0 confidence deciles contain almost none of the 96 rescues. A cue that finds shared-confidence failures still leaves about a 12% S0 hit rate on those cells, which is unique-oracle headroom rather than a high-precision rescue regime.",
+    "n_moderate_features": 13,
+    "n_strong_features": 1
+  }
+}
