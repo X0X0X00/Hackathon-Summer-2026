@@ -19,6 +19,13 @@ These figures are **WYH local validation results**. MODEL V1 and MODEL V2 were *
 
 A predeclared V2-C blend (C1) reached 82.24% OOF and was rejected: the gain was only +6 net cells, folds 3–4 regressed, and macro-F1 decreased. That result is evidence of conservative model selection / overfitting control; it is not the released MODEL V2 score.
 
+## V3 Research Program
+
+The V3 research program is **completed**. MODEL V3 was **not created**. MODEL V2 remains the frozen personal deployable model.
+
+- Program summary: [`reports/v3/v3_research_program_summary.md`](reports/v3/v3_research_program_summary.md)
+- Contribution record: [`docs/contributions/wyh_v3_contribution.md`](docs/contributions/wyh_v3_contribution.md)
+
 ---
 
 # University of Rochester Biomedical Data Science Hackathon Summer 2026

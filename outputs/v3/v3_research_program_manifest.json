@@ -1,0 +1,87 @@
+{
+  "program_name": "WYH V3 Research Program",
+  "status": "COMPLETED_NO_MODEL_V3_PROMOTION",
+  "current_personal_deployable_model": "MODEL V2",
+  "current_personal_accuracy": 0.8212,
+  "current_personal_correct": 4106,
+  "current_personal_n": 5000,
+  "strongest_auditable_team_standalone": "LZH Prior-H",
+  "strongest_auditable_team_standalone_accuracy": 0.8266,
+  "strongest_auditable_team_standalone_correct": 4133,
+  "strongest_auditable_team_standalone_note": "LZH Prior-H is a frozen team comparator, not a WYH-owned model.",
+  "final_diagnostic_oracle": 0.8786,
+  "oracle_correct": 4393,
+  "oracle_total": 5000,
+  "oracle_is_not_deployable_accuracy": true,
+  "model_v3_created": false,
+  "model_v3_tag_created": false,
+  "model_v3_documentation_created": false,
+  "prediction_csv_modified": false,
+  "closure_commit_expected_head": "e7f94fd",
+  "personal_version_decision": "MODEL V3 PROMOTION NOT JUSTIFIED",
+  "team_standalone_decision": "LZH REMAINS STRONGEST AUDITABLE STANDALONE EXPERT",
+  "central_conclusion": "Information availability was established; safe utilization was unresolved under the tested methods.",
+  "artifacts": {
+    "summary": "reports/v3/v3_research_program_summary.md",
+    "contribution": "docs/contributions/wyh_v3_contribution.md",
+    "metrics_table": "outputs/v3/v3_research_program_metrics.csv"
+  },
+  "experiments": [
+    {
+      "experiment_id": "V3-E00T",
+      "commit": "f117b29",
+      "classification": "ROUTING-ONLY INSUFFICIENT",
+      "primary_metric": "two_expert_diagnostic_oracle",
+      "primary_value": 0.843,
+      "decision": "Search for an independent information source rather than naive blending of LZH Prior-H and WYH MODEL V2."
+    },
+    {
+      "experiment_id": "V3-E02D",
+      "commit": "718395d",
+      "classification": "PROMISING BUT INSUFFICIENT",
+      "primary_metric": "s0_external_validation_accuracy",
+      "primary_value": 0.6302,
+      "decision": "Privileged 500-gene signal is real; tested distillation did not transfer it into a better 200-gene student."
+    },
+    {
+      "experiment_id": "V3-E03A",
+      "commit": "a683a22",
+      "classification": "RESCUE SIGNAL WEAK",
+      "primary_metric": "s0_unique_recoveries",
+      "primary_value": 96,
+      "decision": "Weak-expert diversity exists; confidence-gated utilization was not supported."
+    },
+    {
+      "experiment_id": "V3-E04S",
+      "commit": "61f6194",
+      "classification": "STRONG SOURCE-DIVERSE EXPERT",
+      "primary_metric": "sni_new_unique_recoveries",
+      "primary_value": 53,
+      "decision": "SNI is valuable for complementary information, not standalone accuracy."
+    },
+    {
+      "experiment_id": "V3-E05A",
+      "commit": "4adf802",
+      "classification": "DIRECTIONAL SIGNAL WEAK",
+      "primary_metric": "d3_combined_retrospective_net",
+      "primary_value": -52,
+      "decision": "True-class-conditioned rescue asymmetry does not become a safe inference-time observable rule."
+    },
+    {
+      "experiment_id": "V3-E06M",
+      "commit": "a189841",
+      "classification": "PROMISING SOURCE-BALANCED TRANSFER",
+      "primary_metric": "m2_external_validation_accuracy",
+      "primary_value": 0.8218,
+      "decision": "Explicit source balancing beats naive pooling, but does not produce a stable standalone replacement for MODEL V2."
+    },
+    {
+      "experiment_id": "V3-E07D",
+      "commit": "e7f94fd",
+      "classification": "MODEL V3 PROMOTION NOT JUSTIFIED",
+      "primary_metric": "m2_vs_m0_mcnemar_p",
+      "primary_value": 0.8895,
+      "decision": "M2 failed frozen STRONG criteria; MODEL V2 remains the personal deployable model."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+stage,candidate,metric,value,interpretation,deployable_or_diagnostic,commit,source_artifact
+MODEL-V2,MODEL V2 / V2-B-REFONLY,accuracy,0.8212,Frozen personal deployable model; 4106 / 5000,deployable,2a25ee2,outputs/metrics/model_v2_metrics.json
+MODEL-V2,MODEL V2 / V2-B-REFONLY,correct_cells,4106,Frozen personal deployable correct count,deployable,2a25ee2,outputs/metrics/model_v2_metrics.json
+TEAM-COMPARATOR,LZH Prior-H,accuracy,0.8266,Strongest currently auditable team standalone expert; 4133 / 5000; not WYH-owned,deployable,f117b29,outputs/v3/v3_e00t_metrics.json
+TEAM-COMPARATOR,LZH Prior-H,correct_cells,4133,Reproduced from LZH Prior-H OOF probabilities,deployable,f117b29,outputs/v3/v3_e00t_metrics.json
+V3-E00T,LZH + WYH MODEL V2,two_expert_diagnostic_oracle_accuracy,0.8430,4215 / 5000 coverage ceiling; not deployable OOF,diagnostic,f117b29,outputs/v3/v3_e00t_metrics.json
+V3-E00T,LZH + WYH MODEL V2,two_expert_diagnostic_oracle_correct,4215,At least one of LZH Prior-H or WYH MODEL V2 correct,diagnostic,f117b29,outputs/v3/v3_e00t_metrics.json
+V3-E02D,A200 200-gene reference MLP,reference_domain_accuracy,0.6193,Held-out usable-reference split; not competition OOF,diagnostic,718395d,outputs/v3/v3_e02d_reference_signal_metrics.json
+V3-E02D,A500 500-gene teacher,reference_domain_accuracy,0.8737,Privileged-gene teacher on same reference split; delta +0.2544 vs A200,diagnostic,718395d,outputs/v3/v3_e02d_reference_signal_metrics.json
+V3-E02D,A500 minus A200,accuracy_delta,0.2544,Privileged 500-gene signal supported on the reference domain,diagnostic,718395d,outputs/v3/v3_e02d_reference_signal_metrics.json
+V3-E02D,cross-fitted 500-gene teacher,reference_crossfit_accuracy,0.8713,118998 / 136574 held-out reference cells,diagnostic,718395d,outputs/v3/v3_e02d_teacher_metrics.json
+V3-E02D,S0 hard-label 200-gene student,external_validation_accuracy,0.6302,3151 / 5000; competition labels unused in training,diagnostic,718395d,outputs/v3/v3_e02d_student_comparison.csv
+V3-E02D,S1 logit KD student,external_validation_accuracy,0.6294,3147 / 5000; did not beat S0,diagnostic,718395d,outputs/v3/v3_e02d_student_comparison.csv
+V3-E02D,S2 dual-level student,external_validation_accuracy,0.6292,3146 / 5000; distillation hypothesis unsuccessful,diagnostic,718395d,outputs/v3/v3_e02d_student_comparison.csv
+V3-E03A,S0 unique recoveries,unique_recoveries_beyond_LZH_WYH,96,LZH wrong AND WYH wrong AND S0 correct,diagnostic,a683a22,outputs/v3/v3_e03a_rescue_metrics.json
+V3-E03A,LZH + WYH + S0,three_expert_diagnostic_oracle_accuracy,0.8622,4311 / 5000 coverage ceiling; not deployable OOF,diagnostic,a683a22,outputs/v3/v3_e03a_rescue_metrics.json
+V3-E03A,LZH + WYH + S0,three_expert_diagnostic_oracle_correct,4311,4215 + 96 unique S0 recoveries,diagnostic,a683a22,outputs/v3/v3_e03a_rescue_metrics.json
+V3-E04S,SNI-only LightGBM,external_validation_accuracy,0.5682,2841 / 5000; weak global classifier,diagnostic,61f6194,outputs/v3/v3_e04s_complementarity.json
+V3-E04S,SNI unique recoveries,sni_new_unique_recoveries,53,LZH AND WYH AND S0 wrong AND SNI correct,diagnostic,61f6194,outputs/v3/v3_e04s_complementarity.json
+V3-E04S,LZH + WYH + S0 + SNI,four_expert_diagnostic_oracle_accuracy,0.8728,4364 / 5000 coverage ceiling; not SNI standalone accuracy,diagnostic,61f6194,outputs/v3/v3_e04s_complementarity.json
+V3-E04S,LZH + WYH + S0 + SNI,four_expert_diagnostic_oracle_correct,4364,4311 + 53 SNI unique recoveries,diagnostic,61f6194,outputs/v3/v3_e04s_complementarity.json
+V3-E05A,H1 SNI oligo-1 consensus patch,net_corrections,-30,Precision 0.3125; failed predeclared actionable criteria,diagnostic,4adf802,outputs/v3/v3_e05a_directional_metrics.json
+V3-E05A,H2 S0 progenitor-2 consensus patch,net_corrections,-8,Precision 0.4310; failed predeclared actionable criteria,diagnostic,4adf802,outputs/v3/v3_e05a_directional_metrics.json
+V3-E05A,H3 SNI oligo-2 consensus patch,net_corrections,-14,Precision 0.2812; failed predeclared actionable criteria,diagnostic,4adf802,outputs/v3/v3_e05a_directional_metrics.json
+V3-E05A,D3 combined retrospective patch,net_corrections,-52,4081 / 5000; not an unbiased OOF result and not MODEL V3,diagnostic,4adf802,outputs/v3/v3_e05a_directional_metrics.json
+V3-E06M,M1 naive MERFISH+SNI pool,external_validation_accuracy,0.8172,4086 / 5000; naive pooling regresses vs MODEL V2,diagnostic,a189841,outputs/v3/v3_e06m_metrics.json
+V3-E06M,M2 source-balanced 0.5/0.5,external_validation_accuracy,0.8218,4109 / 5000; experimental candidate not MODEL V3,diagnostic,a189841,outputs/v3/v3_e06m_metrics.json
+V3-E06M,M2 vs M0,wrong_to_correct,105,M2 recovers cells that MODEL V2 missed,diagnostic,a189841,outputs/v3/v3_e06m_complementarity.json
+V3-E06M,M2 vs M0,correct_to_wrong,102,Offsetting errors nearly cancel recoveries,diagnostic,a189841,outputs/v3/v3_e06m_complementarity.json
+V3-E06M,M2 vs M0,net_corrections,3,Overall net +3; folds 0-2 +12; folds 3-4 -9,diagnostic,a189841,outputs/v3/v3_e06m_complementarity.json
+V3-E06M,M2 new unique recoveries,new_unique_beyond_four_expert_pool,29,LZH AND WYH AND S0 AND SNI wrong AND M2 correct,diagnostic,a189841,outputs/v3/v3_e06m_complementarity.json
+V3-E06M,five-expert pool including M2,five_expert_diagnostic_oracle_accuracy,0.8786,4393 / 5000 coverage ceiling; not deployable OOF,diagnostic,a189841,outputs/v3/v3_e06m_complementarity.json
+V3-E06M,five-expert pool including M2,five_expert_diagnostic_oracle_correct,4393,4364 + 29 M2 new unique recoveries,diagnostic,a189841,outputs/v3/v3_e06m_complementarity.json
+V3-E07D,M2 vs M0,mcnemar_exact_p,0.8895,Two-sided exact binomial on 207 discordant cells,diagnostic,e7f94fd,outputs/v3/v3_e07d_decision.json
+V3-E07D,M2 vs M0,cell_bootstrap_mean_delta,0.00061,10000 paired resamples; seed 20260819,diagnostic,e7f94fd,outputs/v3/v3_e07d_bootstrap.json
+V3-E07D,M2 vs M0,cell_bootstrap_p2_5,-0.00500,95% percentile interval lower bound; includes 0,diagnostic,e7f94fd,outputs/v3/v3_e07d_bootstrap.json
+V3-E07D,M2 vs M0,cell_bootstrap_p97_5,0.00620,95% percentile interval upper bound; includes 0,diagnostic,e7f94fd,outputs/v3/v3_e07d_bootstrap.json
+V3-E07D,personal version decision,model_v3_promotion,0,MODEL V3 PROMOTION NOT JUSTIFIED; MODEL V2 retained,deployable,e7f94fd,outputs/v3/v3_e07d_decision.json
