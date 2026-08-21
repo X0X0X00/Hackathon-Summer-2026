@@ -1,0 +1,22 @@
+{
+  "M0": {
+    "test_mean_entropy": 0.20951862082882458,
+    "test_mean_top1": 0.9180757937922154,
+    "val_mean_entropy": 0.20264924738647777,
+    "val_mean_top1": 0.9223629526160046,
+    "val_test_js_divergence": 0.004153291303795926
+  },
+  "M2": {
+    "test_mean_entropy": 0.23302408908623456,
+    "test_mean_top1": 0.9100767614982408,
+    "val_mean_entropy": 0.22844985318577374,
+    "val_mean_top1": 0.9119272207650282,
+    "val_test_js_divergence": 0.003704456994953434
+  },
+  "js_implementation": "scipy.spatial.distance.jensenshannon(base=2) squared to divergence",
+  "m0_m2_test_agree_n": 4735,
+  "m0_m2_test_agreement_rate": 0.947,
+  "m0_m2_test_changed": 265,
+  "note": "NO TEST LABELS WERE USED. Descriptive predicted-class and confidence shift only.",
+  "test_labels_used": false
+}

@@ -1,0 +1,1427 @@
+{
+  "analysis_only": true,
+  "blended_experts": false,
+  "bootstrap": {
+    "cell_level": {
+      "fraction_eq_0": 0.0247,
+      "fraction_gt_0": 0.5717,
+      "fraction_lt_0": 0.4036,
+      "mean_delta": 0.0006108000000000011,
+      "median_delta": 0.0006000000000000449,
+      "n_resamples": 10000,
+      "p2_5": -0.0050000000000000044,
+      "p97_5": 0.006199999999999983
+    },
+    "n_resamples": 10000,
+    "not_used_to_invent_promotion_threshold": true,
+    "section_cluster": {
+      "fraction_eq_0": 0.0253,
+      "fraction_gt_0": 0.5594,
+      "fraction_lt_0": 0.4153,
+      "mean_delta": 0.0006212308001285778,
+      "median_delta": 0.0005724645063995282,
+      "n_resamples": 10000,
+      "p2_5": -0.005370599857312991,
+      "p97_5": 0.006870422508820562
+    },
+    "seed": 20260819
+  },
+  "calibration": {
+    "M0": {
+      "deciles": [
+        {
+          "accuracy": 0.458,
+          "decile": 1,
+          "mean_confidence": 0.5596956120811933,
+          "n": 500
+        },
+        {
+          "accuracy": 0.55,
+          "decile": 2,
+          "mean_confidence": 0.7782671342170424,
+          "n": 500
+        },
+        {
+          "accuracy": 0.668,
+          "decile": 3,
+          "mean_confidence": 0.9178106619093016,
+          "n": 500
+        },
+        {
+          "accuracy": 0.756,
+          "decile": 4,
+          "mean_confidence": 0.9750416819379277,
+          "n": 500
+        },
+        {
+          "accuracy": 0.86,
+          "decile": 5,
+          "mean_confidence": 0.994229849659627,
+          "n": 500
+        },
+        {
+          "accuracy": 0.942,
+          "decile": 6,
+          "mean_confidence": 0.9988381306349292,
+          "n": 500
+        },
+        {
+          "accuracy": 0.978,
+          "decile": 7,
+          "mean_confidence": 0.9997729424572647,
+          "n": 500
+        },
+        {
+          "accuracy": 1.0,
+          "decile": 8,
+          "mean_confidence": 0.9999739400948231,
+          "n": 500
+        },
+        {
+          "accuracy": 1.0,
+          "decile": 9,
+          "mean_confidence": 0.9999995731679355,
+          "n": 500
+        },
+        {
+          "accuracy": 1.0,
+          "decile": 10,
+          "mean_confidence": 1.0,
+          "n": 500
+        }
+      ],
+      "ece": {
+        "bins": [
+          {
+            "abs_gap": null,
+            "accuracy": null,
+            "bin": 0,
+            "left": 0.0,
+            "mean_confidence": null,
+            "n": 0,
+            "right": 0.1
+          },
+          {
+            "abs_gap": null,
+            "accuracy": null,
+            "bin": 1,
+            "left": 0.1,
+            "mean_confidence": null,
+            "n": 0,
+            "right": 0.2
+          },
+          {
+            "abs_gap": 0.39133816062672444,
+            "accuracy": 0.6666666666666666,
+            "bin": 2,
+            "left": 0.2,
+            "mean_confidence": 0.2753285060399422,
+            "n": 3,
+            "right": 0.3
+          },
+          {
+            "abs_gap": 0.034534040611674865,
+            "accuracy": 0.4,
+            "bin": 3,
+            "left": 0.3,
+            "mean_confidence": 0.36546595938832516,
+            "n": 20,
+            "right": 0.4
+          },
+          {
+            "abs_gap": 0.09861457926151362,
+            "accuracy": 0.35802469135802467,
+            "bin": 4,
+            "left": 0.4,
+            "mean_confidence": 0.4566392706195383,
+            "n": 81,
+            "right": 0.5
+          },
+          {
+            "abs_gap": 0.0635577953472638,
+            "accuracy": 0.4880382775119617,
+            "bin": 5,
+            "left": 0.5,
+            "mean_confidence": 0.5515960728592255,
+            "n": 209,
+            "right": 0.6
+          },
+          {
+            "abs_gap": 0.16108823656758864,
+            "accuracy": 0.48672566371681414,
+            "bin": 6,
+            "left": 0.6,
+            "mean_confidence": 0.6478139002844028,
+            "n": 226,
+            "right": 0.7
+          },
+          {
+            "abs_gap": 0.24443153277271223,
+            "accuracy": 0.5057471264367817,
+            "bin": 7,
+            "left": 0.7,
+            "mean_confidence": 0.7501786592094939,
+            "n": 261,
+            "right": 0.8
+          },
+          {
+            "abs_gap": 0.24091217057530778,
+            "accuracy": 0.6115942028985507,
+            "bin": 8,
+            "left": 0.8,
+            "mean_confidence": 0.8525063734738585,
+            "n": 345,
+            "right": 0.9
+          },
+          {
+            "abs_gap": 0.07862278284304569,
+            "accuracy": 0.9110246433203631,
+            "bin": 9,
+            "left": 0.9,
+            "mean_confidence": 0.9896474261634088,
+            "n": 3855,
+            "right": 1.0
+          }
+        ],
+        "ece": 0.10190883073364992,
+        "n_bins": 10
+      }
+    },
+    "M2": {
+      "deciles": [
+        {
+          "accuracy": 0.468,
+          "decile": 1,
+          "mean_confidence": 0.5356693386756433,
+          "n": 500
+        },
+        {
+          "accuracy": 0.552,
+          "decile": 2,
+          "mean_confidence": 0.742231580822685,
+          "n": 500
+        },
+        {
+          "accuracy": 0.674,
+          "decile": 3,
+          "mean_confidence": 0.8903831894156742,
+          "n": 500
+        },
+        {
+          "accuracy": 0.78,
+          "decile": 4,
+          "mean_confidence": 0.963378950315864,
+          "n": 500
+        },
+        {
+          "accuracy": 0.848,
+          "decile": 5,
+          "mean_confidence": 0.990369940144514,
+          "n": 500
+        },
+        {
+          "accuracy": 0.924,
+          "decile": 6,
+          "mean_confidence": 0.9977943628574042,
+          "n": 500
+        },
+        {
+          "accuracy": 0.98,
+          "decile": 7,
+          "mean_confidence": 0.9995068441022362,
+          "n": 500
+        },
+        {
+          "accuracy": 0.992,
+          "decile": 8,
+          "mean_confidence": 0.9999385973454027,
+          "n": 500
+        },
+        {
+          "accuracy": 1.0,
+          "decile": 9,
+          "mean_confidence": 0.9999994039708595,
+          "n": 500
+        },
+        {
+          "accuracy": 1.0,
+          "decile": 10,
+          "mean_confidence": 1.0,
+          "n": 500
+        }
+      ],
+      "ece": {
+        "bins": [
+          {
+            "abs_gap": null,
+            "accuracy": null,
+            "bin": 0,
+            "left": 0.0,
+            "mean_confidence": null,
+            "n": 0,
+            "right": 0.1
+          },
+          {
+            "abs_gap": null,
+            "accuracy": null,
+            "bin": 1,
+            "left": 0.1,
+            "mean_confidence": null,
+            "n": 0,
+            "right": 0.2
+          },
+          {
+            "abs_gap": 0.044327859637607436,
+            "accuracy": 0.3333333333333333,
+            "bin": 2,
+            "left": 0.2,
+            "mean_confidence": 0.2890054736957259,
+            "n": 3,
+            "right": 0.3
+          },
+          {
+            "abs_gap": 0.0798512310290106,
+            "accuracy": 0.2903225806451613,
+            "bin": 3,
+            "left": 0.3,
+            "mean_confidence": 0.3701738116741719,
+            "n": 31,
+            "right": 0.4
+          },
+          {
+            "abs_gap": 0.06576651230637698,
+            "accuracy": 0.39,
+            "bin": 4,
+            "left": 0.4,
+            "mean_confidence": 0.455766512306377,
+            "n": 100,
+            "right": 0.5
+          },
+          {
+            "abs_gap": 0.05133054310368218,
+            "accuracy": 0.4979757085020243,
+            "bin": 5,
+            "left": 0.5,
+            "mean_confidence": 0.5493062516057065,
+            "n": 247,
+            "right": 0.6
+          },
+          {
+            "abs_gap": 0.14456656414121993,
+            "accuracy": 0.5059760956175299,
+            "bin": 6,
+            "left": 0.6,
+            "mean_confidence": 0.6505426597587498,
+            "n": 251,
+            "right": 0.7
+          },
+          {
+            "abs_gap": 0.1836241353931426,
+            "accuracy": 0.568904593639576,
+            "bin": 7,
+            "left": 0.7,
+            "mean_confidence": 0.7525287290327186,
+            "n": 283,
+            "right": 0.8
+          },
+          {
+            "abs_gap": 0.2302257007531181,
+            "accuracy": 0.6239782016348774,
+            "bin": 8,
+            "left": 0.8,
+            "mean_confidence": 0.8542039023879955,
+            "n": 367,
+            "right": 0.9
+          },
+          {
+            "abs_gap": 0.06893322586681228,
+            "accuracy": 0.9198493813878429,
+            "bin": 9,
+            "left": 0.9,
+            "mean_confidence": 0.9887826072546552,
+            "n": 3718,
+            "right": 1.0
+          }
+        ],
+        "ece": 0.09018041419659345,
+        "n_bins": 10
+      }
+    }
+  },
+  "candidates": {
+    "LZH": {
+      "accuracy": 0.8266,
+      "correct": 4133,
+      "fold_accuracy": {
+        "0": 0.828,
+        "1": 0.836,
+        "2": 0.827,
+        "3": 0.824,
+        "4": 0.818
+      },
+      "fold_correct": {
+        "0": 828,
+        "1": 836,
+        "2": 827,
+        "3": 824,
+        "4": 818
+      },
+      "fold_n": {
+        "0": 1000,
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "folds_0_2": 0.8303333333333334,
+      "folds_0_2_correct": 2491,
+      "folds_0_2_n": 3000,
+      "folds_3_4": 0.821,
+      "folds_3_4_correct": 1642,
+      "folds_3_4_n": 2000,
+      "log_loss": 0.5411295941876021,
+      "macro_f1": 0.7977386201523958,
+      "max_fold_accuracy": 0.836,
+      "mean_entropy": 0.4966627653631231,
+      "mean_fold_accuracy": 0.8265999999999998,
+      "mean_margin": 0.7386768942649473,
+      "mean_top1": 0.8402395314786536,
+      "min_fold_accuracy": 0.818,
+      "name": "LZH",
+      "std_fold_accuracy": 0.006542170893518456
+    },
+    "M0": {
+      "accuracy": 0.8212,
+      "correct": 4106,
+      "fold_accuracy": {
+        "0": 0.822,
+        "1": 0.831,
+        "2": 0.812,
+        "3": 0.821,
+        "4": 0.82
+      },
+      "fold_correct": {
+        "0": 822,
+        "1": 831,
+        "2": 812,
+        "3": 821,
+        "4": 820
+      },
+      "fold_n": {
+        "0": 1000,
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "folds_0_2": 0.8216666666666667,
+      "folds_0_2_correct": 2465,
+      "folds_0_2_n": 3000,
+      "folds_3_4": 0.8205,
+      "folds_3_4_correct": 1641,
+      "folds_3_4_n": 2000,
+      "log_loss": 0.6416423806253077,
+      "macro_f1": 0.793613323779027,
+      "max_fold_accuracy": 0.831,
+      "mean_entropy": 0.20264924738647777,
+      "mean_fold_accuracy": 0.8211999999999999,
+      "mean_margin": 0.860305773419165,
+      "mean_top1": 0.9223629526160046,
+      "min_fold_accuracy": 0.812,
+      "name": "M0",
+      "std_fold_accuracy": 0.006760177512462196
+    },
+    "M2": {
+      "accuracy": 0.8218,
+      "correct": 4109,
+      "fold_accuracy": {
+        "0": 0.827,
+        "1": 0.829,
+        "2": 0.821,
+        "3": 0.816,
+        "4": 0.816
+      },
+      "fold_correct": {
+        "0": 827,
+        "1": 829,
+        "2": 821,
+        "3": 816,
+        "4": 816
+      },
+      "fold_n": {
+        "0": 1000,
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "folds_0_2": 0.8256666666666667,
+      "folds_0_2_correct": 2477,
+      "folds_0_2_n": 3000,
+      "folds_3_4": 0.816,
+      "folds_3_4_correct": 1632,
+      "folds_3_4_n": 2000,
+      "log_loss": 0.6221664761889684,
+      "macro_f1": 0.7955218319991503,
+      "max_fold_accuracy": 0.829,
+      "mean_entropy": 0.22844985318577374,
+      "mean_fold_accuracy": 0.8218,
+      "mean_margin": 0.8422720025357384,
+      "mean_top1": 0.9119272207650282,
+      "min_fold_accuracy": 0.816,
+      "name": "M2",
+      "std_fold_accuracy": 0.006058052492344389
+    }
+  },
+  "classwise": {
+    "n_m2_improves": 18,
+    "n_m2_worsens": 14,
+    "n_tied": 28,
+    "top10_m2_gains": [
+      {
+        "class": "meninges_3",
+        "lzh_f1": 0.5263157894736842,
+        "lzh_minus_m0": 0.05263157894736842,
+        "lzh_minus_m2": -0.10526315789473684,
+        "lzh_recall": 0.5263157894736842,
+        "m0_f1": 0.5142857142857142,
+        "m0_recall": 0.47368421052631576,
+        "m2_f1": 0.5714285714285714,
+        "m2_minus_m0": 0.15789473684210525,
+        "m2_recall": 0.631578947368421,
+        "support": 19
+      },
+      {
+        "class": "DH_ex_Rreb1",
+        "lzh_f1": 0.0,
+        "lzh_minus_m0": -0.1111111111111111,
+        "lzh_minus_m2": -0.2222222222222222,
+        "lzh_recall": 0.0,
+        "m0_f1": 0.10526315789473684,
+        "m0_recall": 0.1111111111111111,
+        "m2_f1": 0.2857142857142857,
+        "m2_minus_m0": 0.1111111111111111,
+        "m2_recall": 0.2222222222222222,
+        "support": 9
+      },
+      {
+        "class": "ependymal",
+        "lzh_f1": 0.9523809523809523,
+        "lzh_minus_m0": 0.30000000000000004,
+        "lzh_minus_m2": 0.19999999999999996,
+        "lzh_recall": 1.0,
+        "m0_f1": 0.8235294117647058,
+        "m0_recall": 0.7,
+        "m2_f1": 0.8421052631578947,
+        "m2_minus_m0": 0.10000000000000009,
+        "m2_recall": 0.8,
+        "support": 10
+      },
+      {
+        "class": "DH_ex_Maf/Cck",
+        "lzh_f1": 0.7972972972972973,
+        "lzh_minus_m0": 0.046875,
+        "lzh_minus_m2": -0.03125,
+        "lzh_recall": 0.921875,
+        "m0_f1": 0.7887323943661971,
+        "m0_recall": 0.875,
+        "m2_f1": 0.8079470198675497,
+        "m2_minus_m0": 0.078125,
+        "m2_recall": 0.953125,
+        "support": 64
+      },
+      {
+        "class": "beta_motoneuron",
+        "lzh_f1": 0.6428571428571429,
+        "lzh_minus_m0": 0.07142857142857151,
+        "lzh_minus_m2": 0.0,
+        "lzh_recall": 0.6428571428571429,
+        "m0_f1": 0.5714285714285714,
+        "m0_recall": 0.5714285714285714,
+        "m2_f1": 0.6428571428571429,
+        "m2_minus_m0": 0.07142857142857151,
+        "m2_recall": 0.6428571428571429,
+        "support": 14
+      },
+      {
+        "class": "microglia",
+        "lzh_f1": 0.7666666666666667,
+        "lzh_minus_m0": 0.03125,
+        "lzh_minus_m2": -0.015625,
+        "lzh_recall": 0.71875,
+        "m0_f1": 0.7521367521367521,
+        "m0_recall": 0.6875,
+        "m2_f1": 0.8034188034188035,
+        "m2_minus_m0": 0.046875,
+        "m2_recall": 0.734375,
+        "support": 64
+      },
+      {
+        "class": "DH_ex_Cpne4",
+        "lzh_f1": 0.9019607843137255,
+        "lzh_minus_m0": 0.0,
+        "lzh_minus_m2": -0.03846153846153855,
+        "lzh_recall": 0.8846153846153846,
+        "m0_f1": 0.8846153846153846,
+        "m0_recall": 0.8846153846153846,
+        "m2_f1": 0.9230769230769231,
+        "m2_minus_m0": 0.03846153846153855,
+        "m2_recall": 0.9230769230769231,
+        "support": 26
+      },
+      {
+        "class": "M_ex_Vsx2",
+        "lzh_f1": 0.92,
+        "lzh_minus_m0": 0.0,
+        "lzh_minus_m2": -0.03846153846153855,
+        "lzh_recall": 0.8846153846153846,
+        "m0_f1": 0.92,
+        "m0_recall": 0.8846153846153846,
+        "m2_f1": 0.9411764705882353,
+        "m2_minus_m0": 0.03846153846153855,
+        "m2_recall": 0.9230769230769231,
+        "support": 26
+      },
+      {
+        "class": "DH_ex_Gpr83",
+        "lzh_f1": 0.8656716417910447,
+        "lzh_minus_m0": 0.06060606060606055,
+        "lzh_minus_m2": 0.030303030303030276,
+        "lzh_recall": 0.8787878787878788,
+        "m0_f1": 0.8307692307692308,
+        "m0_recall": 0.8181818181818182,
+        "m2_f1": 0.8235294117647058,
+        "m2_minus_m0": 0.030303030303030276,
+        "m2_recall": 0.8484848484848485,
+        "support": 33
+      },
+      {
+        "class": "DH_in_Npy2r",
+        "lzh_f1": 0.9113924050632911,
+        "lzh_minus_m0": 0.05263157894736836,
+        "lzh_minus_m2": 0.02631578947368418,
+        "lzh_recall": 0.9473684210526315,
+        "m0_f1": 0.8831168831168831,
+        "m0_recall": 0.8947368421052632,
+        "m2_f1": 0.8974358974358975,
+        "m2_minus_m0": 0.02631578947368418,
+        "m2_recall": 0.9210526315789473,
+        "support": 38
+      }
+    ],
+    "top10_m2_losses": [
+      {
+        "class": "pericyte",
+        "lzh_f1": 0.5172413793103449,
+        "lzh_minus_m0": -0.04999999999999999,
+        "lzh_minus_m2": 0.04999999999999999,
+        "lzh_recall": 0.375,
+        "m0_f1": 0.576271186440678,
+        "m0_recall": 0.425,
+        "m2_f1": 0.4642857142857143,
+        "m2_minus_m0": -0.09999999999999998,
+        "m2_recall": 0.325,
+        "support": 40
+      },
+      {
+        "class": "meninges_1",
+        "lzh_f1": 0.7225806451612903,
+        "lzh_minus_m0": -0.059701492537313494,
+        "lzh_minus_m2": 0.02985074626865669,
+        "lzh_recall": 0.835820895522388,
+        "m0_f1": 0.7272727272727273,
+        "m0_recall": 0.8955223880597015,
+        "m2_f1": 0.7012987012987013,
+        "m2_minus_m0": -0.08955223880597019,
+        "m2_recall": 0.8059701492537313,
+        "support": 67
+      },
+      {
+        "class": "DH_ex_Grp",
+        "lzh_f1": 0.6046511627906976,
+        "lzh_minus_m0": -0.11538461538461542,
+        "lzh_minus_m2": -0.038461538461538436,
+        "lzh_recall": 0.5,
+        "m0_f1": 0.6808510638297872,
+        "m0_recall": 0.6153846153846154,
+        "m2_f1": 0.6086956521739131,
+        "m2_minus_m0": -0.07692307692307698,
+        "m2_recall": 0.5384615384615384,
+        "support": 26
+      },
+      {
+        "class": "DH_ex_Grpr",
+        "lzh_f1": 0.8524590163934426,
+        "lzh_minus_m0": 0.0,
+        "lzh_minus_m2": 0.06451612903225812,
+        "lzh_recall": 0.8387096774193549,
+        "m0_f1": 0.8253968253968254,
+        "m0_recall": 0.8387096774193549,
+        "m2_f1": 0.8,
+        "m2_minus_m0": -0.06451612903225812,
+        "m2_recall": 0.7741935483870968,
+        "support": 31
+      },
+      {
+        "class": "oligodendrocyte_progenitor_1",
+        "lzh_f1": 0.5352112676056338,
+        "lzh_minus_m0": -0.040816326530612235,
+        "lzh_minus_m2": 0.02040816326530609,
+        "lzh_recall": 0.3877551020408163,
+        "m0_f1": 0.5753424657534246,
+        "m0_recall": 0.42857142857142855,
+        "m2_f1": 0.5070422535211268,
+        "m2_minus_m0": -0.061224489795918324,
+        "m2_recall": 0.3673469387755102,
+        "support": 49
+      },
+      {
+        "class": "meninges_2",
+        "lzh_f1": 0.5294117647058824,
+        "lzh_minus_m0": 0.047619047619047616,
+        "lzh_minus_m2": 0.09523809523809523,
+        "lzh_recall": 0.42857142857142855,
+        "m0_f1": 0.5245901639344263,
+        "m0_recall": 0.38095238095238093,
+        "m2_f1": 0.4444444444444444,
+        "m2_minus_m0": -0.047619047619047616,
+        "m2_recall": 0.3333333333333333,
+        "support": 42
+      },
+      {
+        "class": "MV_in_Chrna2",
+        "lzh_f1": 0.9333333333333333,
+        "lzh_minus_m0": 0.0,
+        "lzh_minus_m2": 0.045454545454545525,
+        "lzh_recall": 0.9545454545454546,
+        "m0_f1": 0.9333333333333333,
+        "m0_recall": 0.9545454545454546,
+        "m2_f1": 0.8888888888888888,
+        "m2_minus_m0": -0.045454545454545525,
+        "m2_recall": 0.9090909090909091,
+        "support": 22
+      },
+      {
+        "class": "DH_ex_Prkcg/Nts",
+        "lzh_f1": 0.7128712871287128,
+        "lzh_minus_m0": 0.0,
+        "lzh_minus_m2": 0.038461538461538436,
+        "lzh_recall": 0.6923076923076923,
+        "m0_f1": 0.72,
+        "m0_recall": 0.6923076923076923,
+        "m2_f1": 0.6666666666666666,
+        "m2_minus_m0": -0.038461538461538436,
+        "m2_recall": 0.6538461538461539,
+        "support": 52
+      },
+      {
+        "class": "DH_ex_Prkcg/Rxfp1",
+        "lzh_f1": 0.7428571428571429,
+        "lzh_minus_m0": 0.033333333333333326,
+        "lzh_minus_m2": 0.06666666666666665,
+        "lzh_recall": 0.8666666666666667,
+        "m0_f1": 0.746268656716418,
+        "m0_recall": 0.8333333333333334,
+        "m2_f1": 0.7058823529411765,
+        "m2_minus_m0": -0.033333333333333326,
+        "m2_recall": 0.8,
+        "support": 30
+      },
+      {
+        "class": "DH_ex_Tac2",
+        "lzh_f1": 0.7142857142857143,
+        "lzh_minus_m0": 0.0,
+        "lzh_minus_m2": 0.03125,
+        "lzh_recall": 0.78125,
+        "m0_f1": 0.704225352112676,
+        "m0_recall": 0.78125,
+        "m2_f1": 0.7164179104477612,
+        "m2_minus_m0": -0.03125,
+        "m2_recall": 0.75,
+        "support": 32
+      }
+    ]
+  },
+  "created_at_utc": "2026-08-21T13:27:14Z",
+  "created_model_v3": false,
+  "decisions": {
+    "next_action": "Close the personal V3 research program without creating MODEL V3. Keep frozen MODEL V2 as the personal deployable candidate. Treat LZH Prior-H as the strongest currently auditable standalone team expert for any later separately reviewed team-selection discussion. Do not blend M2, train a router, tune source weights, add Spatial-ID, or create a model-v3 tag.",
+    "personal_version": "MODEL V3 PROMOTION NOT JUSTIFIED",
+    "replace_model_v2_with_m2": false,
+    "team_standalone": "LZH REMAINS STRONGEST AUDITABLE STANDALONE EXPERT"
+  },
+  "e06m_strong_audit": {
+    "e06m_module_strong_acc": 0.8262,
+    "e06m_module_strong_net": 25,
+    "failed_strong_checks": [
+      "net_ge_25",
+      "acc_ge_0.8262",
+      "folds_3_4_net_positive",
+      "sni_capture_ge_15"
+    ],
+    "frozen_label": "PROMISING SOURCE-BALANCED TRANSFER",
+    "reproduced_label": "PROMISING SOURCE-BALANCED TRANSFER",
+    "reproduced_reason": "M2 has positive overall net correction, folds 3-4 are not a material regression, and some SNI/new-unique signal transferred, but not all STRONG criteria were met.",
+    "strong_accuracy_min": 0.8262,
+    "strong_criteria_met": false,
+    "strong_net_vs_m0": 25,
+    "thresholds_not_lowered": true
+  },
+  "eligibility": {
+    "excluded": {
+      "S0": {
+        "accuracy": 0.6302,
+        "reason": "diversity / oracle-analysis expert only"
+      },
+      "SNI": {
+        "accuracy": 0.5682,
+        "reason": "diversity / oracle-analysis expert only"
+      },
+      "team_main_v9": {
+        "included": false,
+        "reason": "team main v9 is test/submission-oriented without the same auditable cell-level OOF protocol and is excluded from standalone ranking."
+      }
+    },
+    "standalone_candidates": [
+      "M0",
+      "M2",
+      "LZH"
+    ],
+    "yhh": {
+      "included": false,
+      "reason": "No previously unavailable auditable 5000-cell YHH probability or prediction artifact is present and provenance-verified. YHH is excluded; it is not reconstructed."
+    }
+  },
+  "experiment_id": "V3-E07D",
+  "git": {
+    "branch": "ywan/ml-pipeline",
+    "head": "a1898419404846250ae4650124e26903e91a8aef"
+  },
+  "integrity": {
+    "e06m_five_expert_json": 4393,
+    "e06m_m2_correct_csv": 4109,
+    "e06m_new_unique_file": 29,
+    "five_expert_oracle": 4393,
+    "five_expert_oracle_accuracy": 0.8786,
+    "four_expert_oracle": 4364,
+    "four_expert_oracle_accuracy": 0.8728,
+    "frozen_m0_metrics_correct": 4106,
+    "lzh_correct": 4133,
+    "m0_accuracy": 0.8212,
+    "m0_correct": 4106,
+    "m0_log_loss": 0.6416423806253077,
+    "m0_macro_f1": 0.793613323779027,
+    "m2_accuracy": 0.8218,
+    "m2_changed": 252,
+    "m2_correct": 4109,
+    "m2_correct_to_wrong": 102,
+    "m2_log_loss": 0.6221664761889684,
+    "m2_macro_f1": 0.7955218319991503,
+    "m2_net": 3,
+    "m2_net_02": 12,
+    "m2_net_34": -9,
+    "m2_new_unique": 29,
+    "m2_wrong_to_correct": 105,
+    "oracle_is_not_deployable_accuracy": true,
+    "s0_correct": 3151,
+    "sni_correct": 2841
+  },
+  "leakage_audit": {
+    "added_dataset": false,
+    "blended_experts": false,
+    "competition_test_labels_used": false,
+    "created_m3": false,
+    "created_model_v3": false,
+    "created_model_v3_doc": false,
+    "created_model_v3_tag": false,
+    "diagnostic_correctness_fields_used_as_deployment_features": false,
+    "modified_test_predictions": false,
+    "optimized_ensemble_weights": false,
+    "prediction_csv_modified": false,
+    "searched_thresholds": false,
+    "started_spatial_id": false,
+    "trained_model": false,
+    "trained_router": false,
+    "trained_stacker": false,
+    "tuned_source_weights": false
+  },
+  "lzh_vs_m0": {
+    "folds_0_2": {
+      "a_only_correct": 41,
+      "b_only_correct": 67,
+      "both_correct": 2424,
+      "both_wrong": 468,
+      "discordant": 108,
+      "net_b_minus_a": 26,
+      "pair_oracle_accuracy": 0.844,
+      "pair_oracle_correct": 2532
+    },
+    "folds_3_4": {
+      "a_only_correct": 41,
+      "b_only_correct": 42,
+      "both_correct": 1600,
+      "both_wrong": 317,
+      "discordant": 83,
+      "net_b_minus_a": 1,
+      "pair_oracle_accuracy": 0.8415,
+      "pair_oracle_correct": 1683
+    },
+    "mcnemar": {
+      "correct_to_wrong": 82,
+      "method": "scipy.stats.binomtest two-sided p=0.5",
+      "n_discordant": 191,
+      "net": 27,
+      "note": "A non-significant result does not prove equivalence. It means the observed paired advantage does not provide strong evidence that the first listed model is superior among discordant cells.",
+      "pvalue": 0.05964782114888864,
+      "wrong_to_correct": 109
+    },
+    "overall": {
+      "a_only_correct": 82,
+      "b_only_correct": 109,
+      "both_correct": 4024,
+      "both_wrong": 785,
+      "changed_predictions": 236,
+      "discordant": 191,
+      "net_b_minus_a": 27,
+      "pair_oracle_accuracy": 0.843,
+      "pair_oracle_correct": 4215
+    },
+    "slices": {
+      "astrocyte": {
+        "a_only_correct": 11,
+        "b_only_correct": 14,
+        "both_correct": 630,
+        "both_wrong": 114,
+        "discordant": 25,
+        "net_b_minus_a": 3,
+        "pair_oracle_accuracy": 0.8517555266579974,
+        "pair_oracle_correct": 655,
+        "slice_display": "astrocyte"
+      },
+      "glial": {
+        "a_only_correct": 68,
+        "b_only_correct": 85,
+        "both_correct": 2329,
+        "both_wrong": 660,
+        "discordant": 153,
+        "net_b_minus_a": 17,
+        "pair_oracle_accuracy": 0.7899427116486314,
+        "pair_oracle_correct": 2482,
+        "slice_display": "glial / non-neuronal"
+      },
+      "hard_bucket": {
+        "a_only_correct": 66,
+        "b_only_correct": 81,
+        "both_correct": 2173,
+        "both_wrong": 638,
+        "discordant": 147,
+        "net_b_minus_a": 15,
+        "pair_oracle_accuracy": 0.7843137254901961,
+        "pair_oracle_correct": 2320,
+        "slice_display": "hard bucket"
+      },
+      "meningeal": {
+        "a_only_correct": 8,
+        "b_only_correct": 7,
+        "both_correct": 77,
+        "both_wrong": 36,
+        "discordant": 15,
+        "net_b_minus_a": -1,
+        "pair_oracle_accuracy": 0.71875,
+        "pair_oracle_correct": 92,
+        "slice_display": "meningeal"
+      },
+      "microglia": {
+        "a_only_correct": 0,
+        "b_only_correct": 2,
+        "both_correct": 44,
+        "both_wrong": 18,
+        "discordant": 2,
+        "net_b_minus_a": 2,
+        "pair_oracle_accuracy": 0.71875,
+        "pair_oracle_correct": 46,
+        "slice_display": "microglia"
+      },
+      "neuron": {
+        "a_only_correct": 14,
+        "b_only_correct": 24,
+        "both_correct": 1695,
+        "both_wrong": 125,
+        "discordant": 38,
+        "net_b_minus_a": 10,
+        "pair_oracle_accuracy": 0.9327233584499461,
+        "pair_oracle_correct": 1733,
+        "slice_display": "neuron"
+      },
+      "neuronal_or_other": {
+        "a_only_correct": 16,
+        "b_only_correct": 28,
+        "both_correct": 1851,
+        "both_wrong": 147,
+        "discordant": 44,
+        "net_b_minus_a": 12,
+        "pair_oracle_accuracy": 0.9280117531831538,
+        "pair_oracle_correct": 1895,
+        "slice_display": "neuronal / other"
+      },
+      "non_hard_bucket": {
+        "a_only_correct": 16,
+        "b_only_correct": 28,
+        "both_correct": 1851,
+        "both_wrong": 147,
+        "discordant": 44,
+        "net_b_minus_a": 12,
+        "pair_oracle_accuracy": 0.9280117531831538,
+        "pair_oracle_correct": 1895,
+        "slice_display": "non-hard bucket"
+      },
+      "oligodendrocyte_opc": {
+        "a_only_correct": 42,
+        "b_only_correct": 50,
+        "both_correct": 1095,
+        "both_wrong": 365,
+        "discordant": 92,
+        "net_b_minus_a": 8,
+        "pair_oracle_accuracy": 0.7648195876288659,
+        "pair_oracle_correct": 1187,
+        "slice_display": "oligodendrocyte / OPC"
+      },
+      "remaining_glial_non_neuronal": {
+        "a_only_correct": 1,
+        "b_only_correct": 4,
+        "both_correct": 64,
+        "both_wrong": 13,
+        "discordant": 5,
+        "net_b_minus_a": 3,
+        "pair_oracle_accuracy": 0.8414634146341463,
+        "pair_oracle_correct": 69,
+        "slice_display": "remaining glial"
+      },
+      "vascular": {
+        "a_only_correct": 4,
+        "b_only_correct": 4,
+        "both_correct": 263,
+        "both_wrong": 92,
+        "discordant": 8,
+        "net_b_minus_a": 0,
+        "pair_oracle_accuracy": 0.7465564738292011,
+        "pair_oracle_correct": 271,
+        "slice_display": "vascular / endothelial"
+      }
+    }
+  },
+  "lzh_vs_m2": {
+    "folds_0_2": {
+      "a_only_correct": 59,
+      "b_only_correct": 73,
+      "both_correct": 2418,
+      "both_wrong": 450,
+      "discordant": 132,
+      "net_b_minus_a": 14,
+      "pair_oracle_accuracy": 0.85,
+      "pair_oracle_correct": 2550
+    },
+    "folds_3_4": {
+      "a_only_correct": 42,
+      "b_only_correct": 52,
+      "both_correct": 1590,
+      "both_wrong": 316,
+      "discordant": 94,
+      "net_b_minus_a": 10,
+      "pair_oracle_accuracy": 0.842,
+      "pair_oracle_correct": 1684
+    },
+    "mcnemar": {
+      "correct_to_wrong": 101,
+      "method": "scipy.stats.binomtest two-sided p=0.5",
+      "n_discordant": 226,
+      "net": 24,
+      "note": "A non-significant result does not prove equivalence. It means the observed paired advantage does not provide strong evidence that the first listed model is superior among discordant cells.",
+      "pvalue": 0.12584514876047848,
+      "wrong_to_correct": 125
+    },
+    "overall": {
+      "a_only_correct": 101,
+      "b_only_correct": 125,
+      "both_correct": 4008,
+      "both_wrong": 766,
+      "changed_predictions": 278,
+      "discordant": 226,
+      "net_b_minus_a": 24,
+      "pair_oracle_accuracy": 0.8468,
+      "pair_oracle_correct": 4234
+    },
+    "slices": {
+      "astrocyte": {
+        "a_only_correct": 15,
+        "b_only_correct": 15,
+        "both_correct": 629,
+        "both_wrong": 110,
+        "discordant": 30,
+        "net_b_minus_a": 0,
+        "pair_oracle_accuracy": 0.8569570871261378,
+        "pair_oracle_correct": 659,
+        "slice_display": "astrocyte"
+      },
+      "glial": {
+        "a_only_correct": 82,
+        "b_only_correct": 99,
+        "both_correct": 2315,
+        "both_wrong": 646,
+        "discordant": 181,
+        "net_b_minus_a": 17,
+        "pair_oracle_accuracy": 0.7943984723106302,
+        "pair_oracle_correct": 2496,
+        "slice_display": "glial / non-neuronal"
+      },
+      "hard_bucket": {
+        "a_only_correct": 80,
+        "b_only_correct": 95,
+        "both_correct": 2159,
+        "both_wrong": 624,
+        "discordant": 175,
+        "net_b_minus_a": 15,
+        "pair_oracle_accuracy": 0.7890466531440162,
+        "pair_oracle_correct": 2334,
+        "slice_display": "hard bucket"
+      },
+      "meningeal": {
+        "a_only_correct": 5,
+        "b_only_correct": 9,
+        "both_correct": 75,
+        "both_wrong": 39,
+        "discordant": 14,
+        "net_b_minus_a": 4,
+        "pair_oracle_accuracy": 0.6953125,
+        "pair_oracle_correct": 89,
+        "slice_display": "meningeal"
+      },
+      "microglia": {
+        "a_only_correct": 1,
+        "b_only_correct": 0,
+        "both_correct": 46,
+        "both_wrong": 17,
+        "discordant": 1,
+        "net_b_minus_a": -1,
+        "pair_oracle_accuracy": 0.734375,
+        "pair_oracle_correct": 47,
+        "slice_display": "microglia"
+      },
+      "neuron": {
+        "a_only_correct": 19,
+        "b_only_correct": 26,
+        "both_correct": 1693,
+        "both_wrong": 120,
+        "discordant": 45,
+        "net_b_minus_a": 7,
+        "pair_oracle_accuracy": 0.9354144241119483,
+        "pair_oracle_correct": 1738,
+        "slice_display": "neuron"
+      },
+      "neuronal_or_other": {
+        "a_only_correct": 21,
+        "b_only_correct": 30,
+        "both_correct": 1849,
+        "both_wrong": 142,
+        "discordant": 51,
+        "net_b_minus_a": 9,
+        "pair_oracle_accuracy": 0.930460333006856,
+        "pair_oracle_correct": 1900,
+        "slice_display": "neuronal / other"
+      },
+      "non_hard_bucket": {
+        "a_only_correct": 21,
+        "b_only_correct": 30,
+        "both_correct": 1849,
+        "both_wrong": 142,
+        "discordant": 51,
+        "net_b_minus_a": 9,
+        "pair_oracle_accuracy": 0.930460333006856,
+        "pair_oracle_correct": 1900,
+        "slice_display": "non-hard bucket"
+      },
+      "oligodendrocyte_opc": {
+        "a_only_correct": 53,
+        "b_only_correct": 61,
+        "both_correct": 1084,
+        "both_wrong": 354,
+        "discordant": 114,
+        "net_b_minus_a": 8,
+        "pair_oracle_accuracy": 0.7719072164948454,
+        "pair_oracle_correct": 1198,
+        "slice_display": "oligodendrocyte / OPC"
+      },
+      "remaining_glial_non_neuronal": {
+        "a_only_correct": 1,
+        "b_only_correct": 2,
+        "both_correct": 66,
+        "both_wrong": 13,
+        "discordant": 3,
+        "net_b_minus_a": 1,
+        "pair_oracle_accuracy": 0.8414634146341463,
+        "pair_oracle_correct": 69,
+        "slice_display": "remaining glial"
+      },
+      "vascular": {
+        "a_only_correct": 5,
+        "b_only_correct": 8,
+        "both_correct": 259,
+        "both_wrong": 91,
+        "discordant": 13,
+        "net_b_minus_a": 3,
+        "pair_oracle_accuracy": 0.7493112947658402,
+        "pair_oracle_correct": 272,
+        "slice_display": "vascular / endothelial"
+      }
+    }
+  },
+  "m2_vs_m0": {
+    "folds_0_2": {
+      "both_correct": 2409,
+      "both_wrong": 467,
+      "candidate_only_correct": 68,
+      "changed_predictions": 145,
+      "correct_to_wrong": 56,
+      "m0_only_correct": 56,
+      "n": 3000,
+      "net": 12,
+      "net_correction": 12,
+      "wrong_to_correct": 68
+    },
+    "folds_3_4": {
+      "both_correct": 1595,
+      "both_wrong": 322,
+      "candidate_only_correct": 37,
+      "changed_predictions": 107,
+      "correct_to_wrong": 46,
+      "m0_only_correct": 46,
+      "n": 2000,
+      "net": -9,
+      "net_correction": -9,
+      "wrong_to_correct": 37
+    },
+    "mcnemar": {
+      "correct_to_wrong": 102,
+      "method": "scipy.stats.binomtest two-sided p=0.5",
+      "n_discordant": 207,
+      "net": 3,
+      "note": "A non-significant result does not prove equivalence. It means the observed paired advantage does not provide strong evidence that the first listed model is superior among discordant cells.",
+      "pvalue": 0.889486227787376,
+      "wrong_to_correct": 105
+    },
+    "overall": {
+      "changed_predictions": 252,
+      "correct_to_wrong": 102,
+      "net": 3,
+      "wrong_to_correct": 105
+    }
+  },
+  "optimized_weights": false,
+  "oracle_is_not_deployable_accuracy": true,
+  "oracles": {
+    "five_expert_including_m2": 4393,
+    "four_expert": 4364,
+    "m2_new_unique_recoveries": 29,
+    "not_deployable_accuracy": true
+  },
+  "rare_class": {
+    "buckets": [
+      {
+        "bucket": "<25",
+        "m0_mean_f1": 0.6238290765535347,
+        "m0_mean_recall": 0.5975792807472711,
+        "m2_mean_f1": 0.6528374126806378,
+        "m2_mean_recall": 0.6239112723424205,
+        "n_cells": 201,
+        "n_classes": 15
+      },
+      {
+        "bucket": "25-49",
+        "m0_mean_f1": 0.8301331195791415,
+        "m0_mean_recall": 0.808000923196819,
+        "m2_mean_f1": 0.8135592754837065,
+        "m2_mean_recall": 0.7955763509711744,
+        "n_cells": 751,
+        "n_classes": 21
+      },
+      {
+        "bucket": "50-99",
+        "m0_mean_f1": 0.89891250875384,
+        "m0_mean_recall": 0.9158458146331281,
+        "m2_mean_f1": 0.8994683897184195,
+        "m2_mean_recall": 0.916928686984657,
+        "n_cells": 721,
+        "n_classes": 11
+      },
+      {
+        "bucket": ">=100",
+        "m0_mean_f1": 0.8414253977680298,
+        "m0_mean_recall": 0.8489467530780233,
+        "m2_mean_f1": 0.8430655121291536,
+        "m2_mean_recall": 0.8499381938119982,
+        "n_cells": 3327,
+        "n_classes": 13
+      }
+    ],
+    "macro_f1_delta": 0.0019085082201232284,
+    "macro_f1_m0": 0.793613323779027,
+    "macro_f1_m2": 0.7955218319991503
+  },
+  "research_codename": "FDC-AUDIT",
+  "section_stability": {
+    "iqr_accuracy_delta": 0.02676032367208838,
+    "m2_eq_m0": 45,
+    "m2_gt_m0": 31,
+    "m2_lt_m0": 32,
+    "max_accuracy_delta": 0.14285714285714285,
+    "median_accuracy_delta": 0.0,
+    "min_accuracy_delta": -0.16666666666666666,
+    "n_sections": 108
+  },
+  "slices": {
+    "astrocyte": {
+      "LZH": 0.8374512353706112,
+      "LZH_minus_M0": 0.0039011703511052653,
+      "LZH_minus_M2": 0.0,
+      "M0": 0.8335500650195059,
+      "M2": 0.8374512353706112,
+      "M2_minus_M0": 0.0039011703511052653,
+      "n": 769,
+      "slice": "astrocyte",
+      "slice_display": "astrocyte"
+    },
+    "glial": {
+      "LZH": 0.7683004455760662,
+      "LZH_minus_M0": 0.005410566518141313,
+      "LZH_minus_M2": 0.005410566518141313,
+      "M0": 0.7628898790579249,
+      "M2": 0.7628898790579249,
+      "M2_minus_M0": 0.0,
+      "n": 3142,
+      "slice": "glial",
+      "slice_display": "glial / non-neuronal"
+    },
+    "hard_bucket": {
+      "LZH": 0.762001352265044,
+      "LZH_minus_M0": 0.005070993914807254,
+      "LZH_minus_M2": 0.005070993914807254,
+      "M0": 0.7569303583502367,
+      "M2": 0.7569303583502367,
+      "M2_minus_M0": 0.0,
+      "n": 2958,
+      "slice": "hard_bucket",
+      "slice_display": "hard bucket"
+    },
+    "meningeal": {
+      "LZH": 0.65625,
+      "LZH_minus_M0": -0.0078125,
+      "LZH_minus_M2": 0.03125,
+      "M0": 0.6640625,
+      "M2": 0.625,
+      "M2_minus_M0": -0.0390625,
+      "n": 128,
+      "slice": "meningeal",
+      "slice_display": "meningeal"
+    },
+    "microglia": {
+      "LZH": 0.71875,
+      "LZH_minus_M0": 0.03125,
+      "LZH_minus_M2": -0.015625,
+      "M0": 0.6875,
+      "M2": 0.734375,
+      "M2_minus_M0": 0.046875,
+      "n": 64,
+      "slice": "microglia",
+      "slice_display": "microglia"
+    },
+    "neuron": {
+      "LZH": 0.9251883745963402,
+      "LZH_minus_M0": 0.005382131324004336,
+      "LZH_minus_M2": 0.003767491926803035,
+      "M0": 0.9198062432723358,
+      "M2": 0.9214208826695371,
+      "M2_minus_M0": 0.0016146393972013007,
+      "n": 1858,
+      "slice": "neuron",
+      "slice_display": "neuron"
+    },
+    "neuronal_or_other": {
+      "LZH": 0.9201762977473066,
+      "LZH_minus_M0": 0.00587659157688547,
+      "LZH_minus_M2": 0.004407443682664103,
+      "M0": 0.9142997061704211,
+      "M2": 0.9157688540646425,
+      "M2_minus_M0": 0.0014691478942213676,
+      "n": 2042,
+      "slice": "neuronal_or_other",
+      "slice_display": "neuronal / other"
+    },
+    "non_hard_bucket": {
+      "LZH": 0.9201762977473066,
+      "LZH_minus_M0": 0.00587659157688547,
+      "LZH_minus_M2": 0.004407443682664103,
+      "M0": 0.9142997061704211,
+      "M2": 0.9157688540646425,
+      "M2_minus_M0": 0.0014691478942213676,
+      "n": 2042,
+      "slice": "non_hard_bucket",
+      "slice_display": "non-hard bucket"
+    },
+    "oligodendrocyte_opc": {
+      "LZH": 0.7377577319587629,
+      "LZH_minus_M0": 0.005154639175257825,
+      "LZH_minus_M2": 0.005154639175257825,
+      "M0": 0.7326030927835051,
+      "M2": 0.7326030927835051,
+      "M2_minus_M0": 0.0,
+      "n": 1552,
+      "slice": "oligodendrocyte_opc",
+      "slice_display": "oligodendrocyte / OPC"
+    },
+    "remaining_glial_non_neuronal": {
+      "LZH": 0.8292682926829268,
+      "LZH_minus_M0": 0.03658536585365846,
+      "LZH_minus_M2": 0.012195121951219523,
+      "M0": 0.7926829268292683,
+      "M2": 0.8170731707317073,
+      "M2_minus_M0": 0.024390243902438935,
+      "n": 82,
+      "slice": "remaining_glial_non_neuronal",
+      "slice_display": "remaining glial"
+    },
+    "vascular": {
+      "LZH": 0.7355371900826446,
+      "LZH_minus_M0": 0.0,
+      "LZH_minus_M2": 0.008264462809917328,
+      "M0": 0.7355371900826446,
+      "M2": 0.7272727272727273,
+      "M2_minus_M0": -0.008264462809917328,
+      "n": 363,
+      "slice": "vascular",
+      "slice_display": "vascular / endothelial"
+    }
+  },
+  "test_shift": {
+    "M0": {
+      "test_mean_entropy": 0.20951862082882458,
+      "test_mean_top1": 0.9180757937922154,
+      "val_mean_entropy": 0.20264924738647777,
+      "val_mean_top1": 0.9223629526160046,
+      "val_test_js_divergence": 0.004153291303795926
+    },
+    "M2": {
+      "test_mean_entropy": 0.23302408908623456,
+      "test_mean_top1": 0.9100767614982408,
+      "val_mean_entropy": 0.22844985318577374,
+      "val_mean_top1": 0.9119272207650282,
+      "val_test_js_divergence": 0.003704456994953434
+    },
+    "js_implementation": "scipy.spatial.distance.jensenshannon(base=2) squared to divergence",
+    "m0_m2_test_agree_n": 4735,
+    "m0_m2_test_agreement_rate": 0.947,
+    "m0_m2_test_changed": 265,
+    "note": "NO TEST LABELS WERE USED. Descriptive predicted-class and confidence shift only.",
+    "test_labels_used": false
+  },
+  "trained_model": false
+}

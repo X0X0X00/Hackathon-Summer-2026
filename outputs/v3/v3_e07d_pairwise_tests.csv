@@ -1,0 +1,4 @@
+comparison,wrong_to_correct,correct_to_wrong,net,n_discordant,mcnemar_exact_pvalue,both_correct,both_wrong,pair_oracle_correct,folds_0_2_net,folds_3_4_net
+M2_vs_M0,105,102,3,207,0.889486227787376,4004,789,4211,12,-9
+LZH_vs_M0,109,82,27,191,0.05964782114888864,4024,785,4215,26,1
+LZH_vs_M2,125,101,24,226,0.12584514876047848,4008,766,4234,14,10

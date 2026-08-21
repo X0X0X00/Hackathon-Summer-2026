@@ -1,0 +1,25 @@
+{
+  "cell_level": {
+    "fraction_eq_0": 0.0247,
+    "fraction_gt_0": 0.5717,
+    "fraction_lt_0": 0.4036,
+    "mean_delta": 0.0006108000000000011,
+    "median_delta": 0.0006000000000000449,
+    "n_resamples": 10000,
+    "p2_5": -0.0050000000000000044,
+    "p97_5": 0.006199999999999983
+  },
+  "n_resamples": 10000,
+  "not_used_to_invent_promotion_threshold": true,
+  "section_cluster": {
+    "fraction_eq_0": 0.0253,
+    "fraction_gt_0": 0.5594,
+    "fraction_lt_0": 0.4153,
+    "mean_delta": 0.0006212308001285778,
+    "median_delta": 0.0005724645063995282,
+    "n_resamples": 10000,
+    "p2_5": -0.005370599857312991,
+    "p97_5": 0.006870422508820562
+  },
+  "seed": 20260819
+}
