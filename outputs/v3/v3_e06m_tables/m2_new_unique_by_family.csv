@@ -1,0 +1,8 @@
+family,family_display,n
+oligodendrocyte_opc,oligodendrocyte / OPC,11
+astrocyte,astrocyte,3
+vascular,vascular / endothelial,4
+meningeal,meningeal,0
+microglia,microglia,1
+remaining_glial_non_neuronal,remaining glial/non-neuronal,0
+neuronal_or_other,neuronal / other,10

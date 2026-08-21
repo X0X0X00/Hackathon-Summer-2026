@@ -1,0 +1,8 @@
+family,family_display,n,accuracy
+oligodendrocyte_opc,oligodendrocyte / OPC,1552,0.7326030927835051
+astrocyte,astrocyte,769,0.8374512353706112
+vascular,vascular / endothelial,363,0.7272727272727273
+meningeal,meningeal,128,0.625
+microglia,microglia,64,0.734375
+remaining_glial_non_neuronal,remaining glial/non-neuronal,82,0.8170731707317073
+neuronal_or_other,neuronal / other,2042,0.9157688540646425

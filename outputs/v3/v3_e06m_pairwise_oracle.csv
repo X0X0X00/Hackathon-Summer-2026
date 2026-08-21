@@ -1,0 +1,11 @@
+candidate,existing,both_correct,candidate_only_correct,existing_only_correct,both_wrong,oracle_count,oracle_accuracy,oracle_is_not_deployable_accuracy
+M1,lzh_prior_h,3997,89,136,778,4222,0.8444,True
+M1,wyh_model_v2,4002,84,104,810,4190,0.838,True
+M1,s0,2998,1088,153,761,4239,0.8478,True
+M1,sni,2705,1381,136,778,4222,0.8444,True
+M1,m0,4002,84,104,810,4190,0.838,True
+M2,lzh_prior_h,4008,101,125,766,4234,0.8468,True
+M2,wyh_model_v2,4004,105,102,789,4211,0.8422,True
+M2,s0,3014,1095,137,754,4246,0.8492,True
+M2,sni,2719,1390,122,769,4231,0.8462,True
+M2,m0,4004,105,102,789,4211,0.8422,True

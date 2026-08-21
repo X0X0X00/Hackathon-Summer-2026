@@ -1,0 +1,420 @@
+{
+  "contract_audit": {
+    "lgbm_params": {
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "bagging_seed": 100,
+      "feature_fraction": 0.5,
+      "feature_fraction_seed": 200,
+      "lambda_l2": 1.0,
+      "learning_rate": 0.05,
+      "max_bin": 127,
+      "min_data_in_leaf": 30,
+      "num_class": 60,
+      "num_leaves": 127,
+      "num_threads": 8,
+      "objective": "multiclass",
+      "seed": 0,
+      "verbosity": -1
+    },
+    "n_features": 443,
+    "note": "Frozen V2 feature names, PCA50 reconstruction, LightGBM hyperparameters, 700 rounds, seed 0, E/I+Segment post-processing, and M0 accuracy 0.8212 were reproduced. The only intended differences are the combined reference population and M2 sample weights.",
+    "num_boost_round": 700,
+    "pca_audit": {
+      "atol": 0.0001,
+      "cached_pca_var_explained": 0.31590110063552856,
+      "max_abs_pc_difference": 0.0,
+      "pca_var_explained": 0.31590110063552856,
+      "reproduced": true
+    },
+    "source_used_as_feature": false,
+    "status": "PASS"
+  },
+  "decision": {
+    "criteria_not_changed_after_results": true,
+    "label": "PROMISING SOURCE-BALANCED TRANSFER",
+    "next_action": "Keep M2 as a documented base-model candidate and next compare it against LZH Prior-H and frozen MODEL V2 under the same folds without blending or routing. Do not add another dataset or start Spatial-ID.",
+    "reason": "M2 has positive overall net correction, folds 3-4 are not a material regression, and some SNI/new-unique signal transferred, but not all STRONG criteria were met."
+  },
+  "m0": {
+    "accuracy": 0.8212,
+    "correct": 4106,
+    "families": [
+      {
+        "accuracy": 0.7326030927835051,
+        "family": "oligodendrocyte_opc",
+        "family_display": "oligodendrocyte / OPC",
+        "n": 1552
+      },
+      {
+        "accuracy": 0.8335500650195059,
+        "family": "astrocyte",
+        "family_display": "astrocyte",
+        "n": 769
+      },
+      {
+        "accuracy": 0.7355371900826446,
+        "family": "vascular",
+        "family_display": "vascular / endothelial",
+        "n": 363
+      },
+      {
+        "accuracy": 0.6640625,
+        "family": "meningeal",
+        "family_display": "meningeal",
+        "n": 128
+      },
+      {
+        "accuracy": 0.6875,
+        "family": "microglia",
+        "family_display": "microglia",
+        "n": 64
+      },
+      {
+        "accuracy": 0.7926829268292683,
+        "family": "remaining_glial_non_neuronal",
+        "family_display": "remaining glial/non-neuronal",
+        "n": 82
+      },
+      {
+        "accuracy": 0.9142997061704211,
+        "family": "neuronal_or_other",
+        "family_display": "neuronal / other",
+        "n": 2042
+      }
+    ],
+    "fold_accuracy": {
+      "0": 0.822,
+      "1": 0.831,
+      "2": 0.812,
+      "3": 0.821,
+      "4": 0.82
+    },
+    "folds_0_2": 0.8216666666666667,
+    "folds_0_2_correct": 2465,
+    "folds_0_2_n": 3000,
+    "folds_3_4": 0.8205,
+    "folds_3_4_correct": 1641,
+    "folds_3_4_n": 2000,
+    "log_loss": 0.6416423806253077,
+    "macro_f1": 0.793613323779027,
+    "n": 5000,
+    "slices": {
+      "confusion_pairs_top10": [
+        {
+          "n": 98,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 55,
+          "predicted_label": "oligodendrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 40,
+          "predicted_label": "oligodendrocyte_2",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 36,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_2"
+        },
+        {
+          "n": 31,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "astrocyte_1"
+        },
+        {
+          "n": 30,
+          "predicted_label": "astrocyte_1",
+          "true_label": "endothelial"
+        },
+        {
+          "n": 29,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 26,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 24,
+          "predicted_label": "oligodendrocyte_precursor_cell",
+          "true_label": "oligodendrocyte_progenitor_1"
+        },
+        {
+          "n": 21,
+          "predicted_label": "meninges_1",
+          "true_label": "meninges_2"
+        }
+      ],
+      "glial_accuracy": 0.7628898790579249,
+      "glial_n": 3142,
+      "hard_bucket_accuracy": 0.7569303583502367,
+      "hard_bucket_key": "__MISSING__/__MISSING__/__MISSING__",
+      "hard_bucket_n": 2958,
+      "neuron_accuracy": 0.9198062432723358,
+      "neuron_n": 1858,
+      "non_hard_bucket_accuracy": 0.9142997061704211,
+      "non_hard_bucket_n": 2042
+    }
+  },
+  "m1": {
+    "accuracy": 0.8172,
+    "correct": 4086,
+    "families": [
+      {
+        "accuracy": 0.7216494845360825,
+        "family": "oligodendrocyte_opc",
+        "family_display": "oligodendrocyte / OPC",
+        "n": 1552
+      },
+      {
+        "accuracy": 0.834850455136541,
+        "family": "astrocyte",
+        "family_display": "astrocyte",
+        "n": 769
+      },
+      {
+        "accuracy": 0.7272727272727273,
+        "family": "vascular",
+        "family_display": "vascular / endothelial",
+        "n": 363
+      },
+      {
+        "accuracy": 0.6484375,
+        "family": "meningeal",
+        "family_display": "meningeal",
+        "n": 128
+      },
+      {
+        "accuracy": 0.703125,
+        "family": "microglia",
+        "family_display": "microglia",
+        "n": 64
+      },
+      {
+        "accuracy": 0.7804878048780488,
+        "family": "remaining_glial_non_neuronal",
+        "family_display": "remaining glial/non-neuronal",
+        "n": 82
+      },
+      {
+        "accuracy": 0.9147894221351616,
+        "family": "neuronal_or_other",
+        "family_display": "neuronal / other",
+        "n": 2042
+      }
+    ],
+    "fold_accuracy": {
+      "0": 0.818,
+      "1": 0.823,
+      "2": 0.812,
+      "3": 0.82,
+      "4": 0.813
+    },
+    "folds_0_2": 0.8176666666666667,
+    "folds_0_2_correct": 2453,
+    "folds_0_2_n": 3000,
+    "folds_3_4": 0.8165,
+    "folds_3_4_correct": 1633,
+    "folds_3_4_n": 2000,
+    "log_loss": 0.6312863242875231,
+    "macro_f1": 0.7906259351905699,
+    "n": 5000,
+    "slices": {
+      "confusion_pairs_top10": [
+        {
+          "n": 100,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 63,
+          "predicted_label": "oligodendrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 39,
+          "predicted_label": "oligodendrocyte_2",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 38,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_2"
+        },
+        {
+          "n": 32,
+          "predicted_label": "astrocyte_1",
+          "true_label": "endothelial"
+        },
+        {
+          "n": 31,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 29,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "astrocyte_1"
+        },
+        {
+          "n": 29,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 24,
+          "predicted_label": "oligodendrocyte_precursor_cell",
+          "true_label": "oligodendrocyte_progenitor_1"
+        },
+        {
+          "n": 22,
+          "predicted_label": "endothelial",
+          "true_label": "astrocyte_1"
+        }
+      ],
+      "glial_accuracy": 0.7555697008274984,
+      "glial_n": 3142,
+      "hard_bucket_accuracy": 0.7498309668695065,
+      "hard_bucket_key": "__MISSING__/__MISSING__/__MISSING__",
+      "hard_bucket_n": 2958,
+      "neuron_accuracy": 0.9214208826695371,
+      "neuron_n": 1858,
+      "non_hard_bucket_accuracy": 0.9147894221351616,
+      "non_hard_bucket_n": 2042
+    }
+  },
+  "m2": {
+    "accuracy": 0.8218,
+    "correct": 4109,
+    "families": [
+      {
+        "accuracy": 0.7326030927835051,
+        "family": "oligodendrocyte_opc",
+        "family_display": "oligodendrocyte / OPC",
+        "n": 1552
+      },
+      {
+        "accuracy": 0.8374512353706112,
+        "family": "astrocyte",
+        "family_display": "astrocyte",
+        "n": 769
+      },
+      {
+        "accuracy": 0.7272727272727273,
+        "family": "vascular",
+        "family_display": "vascular / endothelial",
+        "n": 363
+      },
+      {
+        "accuracy": 0.625,
+        "family": "meningeal",
+        "family_display": "meningeal",
+        "n": 128
+      },
+      {
+        "accuracy": 0.734375,
+        "family": "microglia",
+        "family_display": "microglia",
+        "n": 64
+      },
+      {
+        "accuracy": 0.8170731707317073,
+        "family": "remaining_glial_non_neuronal",
+        "family_display": "remaining glial/non-neuronal",
+        "n": 82
+      },
+      {
+        "accuracy": 0.9157688540646425,
+        "family": "neuronal_or_other",
+        "family_display": "neuronal / other",
+        "n": 2042
+      }
+    ],
+    "fold_accuracy": {
+      "0": 0.827,
+      "1": 0.829,
+      "2": 0.821,
+      "3": 0.816,
+      "4": 0.816
+    },
+    "folds_0_2": 0.8256666666666667,
+    "folds_0_2_correct": 2477,
+    "folds_0_2_n": 3000,
+    "folds_3_4": 0.816,
+    "folds_3_4_correct": 1632,
+    "folds_3_4_n": 2000,
+    "log_loss": 0.6221664761889664,
+    "macro_f1": 0.7955218319991503,
+    "n": 5000,
+    "slices": {
+      "confusion_pairs_top10": [
+        {
+          "n": 93,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 51,
+          "predicted_label": "oligodendrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 42,
+          "predicted_label": "oligodendrocyte_2",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 40,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "oligodendrocyte_2"
+        },
+        {
+          "n": 31,
+          "predicted_label": "astrocyte_1",
+          "true_label": "endothelial"
+        },
+        {
+          "n": 28,
+          "predicted_label": "oligodendrocyte_progenitor_2",
+          "true_label": "astrocyte_1"
+        },
+        {
+          "n": 28,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_1"
+        },
+        {
+          "n": 28,
+          "predicted_label": "astrocyte_1",
+          "true_label": "oligodendrocyte_progenitor_2"
+        },
+        {
+          "n": 25,
+          "predicted_label": "oligodendrocyte_precursor_cell",
+          "true_label": "oligodendrocyte_progenitor_1"
+        },
+        {
+          "n": 21,
+          "predicted_label": "DH_in_Cdh3",
+          "true_label": "DH_in_Klhl14"
+        }
+      ],
+      "glial_accuracy": 0.7628898790579249,
+      "glial_n": 3142,
+      "hard_bucket_accuracy": 0.7569303583502367,
+      "hard_bucket_key": "__MISSING__/__MISSING__/__MISSING__",
+      "hard_bucket_n": 2958,
+      "neuron_accuracy": 0.9214208826695371,
+      "neuron_n": 1858,
+      "non_hard_bucket_accuracy": 0.9157688540646425,
+      "non_hard_bucket_n": 2042
+    }
+  }
+}

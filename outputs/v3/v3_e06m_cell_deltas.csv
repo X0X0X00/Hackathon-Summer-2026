@@ -1,0 +1,7 @@
+comparison,split,n,changed_predictions,wrong_to_correct,correct_to_wrong,net_correction,candidate_only_correct,m0_only_correct,both_correct,both_wrong
+M1_vs_M0,overall,5000,234,84,104,-20,84,104,4002,810
+M1_vs_M0,folds_0_2,3000,140,49,61,-12,49,61,2404,486
+M1_vs_M0,folds_3_4,2000,94,35,43,-8,35,43,1598,324
+M2_vs_M0,overall,5000,252,105,102,3,105,102,4004,789
+M2_vs_M0,folds_0_2,3000,145,68,56,12,68,56,2409,467
+M2_vs_M0,folds_3_4,2000,107,37,46,-9,37,46,1595,322

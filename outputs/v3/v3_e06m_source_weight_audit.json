@@ -1,0 +1,59 @@
+{
+  "M1": {
+    "by_source": {
+      "MERFISH": {
+        "count": 136574,
+        "max_weight": 1.0,
+        "mean_weight": 1.0,
+        "median_weight": 1.0,
+        "min_weight": 1.0,
+        "total_base_weight": 136574.0,
+        "total_effective_weight": 136574.0
+      },
+      "SNI": {
+        "count": 55193,
+        "max_weight": 1.0,
+        "mean_weight": 1.0,
+        "median_weight": 1.0,
+        "min_weight": 1.0,
+        "total_base_weight": 55193.0,
+        "total_effective_weight": 55193.0
+      }
+    },
+    "max_weight": 1.0,
+    "mean_weight": 1.0,
+    "median_weight": 1.0,
+    "min_weight": 1.0,
+    "n": 191767,
+    "weight_sum_ratio_merfish_over_sni": 2.474480459478557
+  },
+  "M2": {
+    "balance_ok": true,
+    "by_source": {
+      "MERFISH": {
+        "count": 136574,
+        "max_weight": 0.7020626180678606,
+        "mean_weight": 0.7020626180678603,
+        "median_weight": 0.7020626180678606,
+        "min_weight": 0.7020626180678606,
+        "total_base_weight": 136574.0,
+        "total_effective_weight": 95883.49999999996
+      },
+      "SNI": {
+        "count": 55193,
+        "max_weight": 1.7372402297392786,
+        "mean_weight": 1.7372402297392786,
+        "median_weight": 1.7372402297392786,
+        "min_weight": 1.7372402297392786,
+        "total_base_weight": 55193.0,
+        "total_effective_weight": 95883.5
+      }
+    },
+    "max_weight": 1.7372402297392786,
+    "mean_weight": 0.9999999999999997,
+    "median_weight": 0.7020626180678606,
+    "min_weight": 0.7020626180678606,
+    "n": 191767,
+    "weight_sum_ratio_merfish_over_sni": 0.9999999999999996
+  }
+}

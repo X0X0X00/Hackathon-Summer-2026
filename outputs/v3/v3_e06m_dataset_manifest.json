@@ -1,0 +1,57 @@
+{
+  "additional_sni_cross_source_duplicates_excluded": 0,
+  "branch": "ywan/ml-pipeline",
+  "combined_before_extra": 191767,
+  "combined_row_identity_sha256": "a817c6ea48e9fe327031bfe5dd1cfbd702b6156d23b068b15b7a96916f832c4f",
+  "created_at_utc": "2026-08-21T05:26:49Z",
+  "duplication_check": {
+    "auditable_equivalent_found": false,
+    "claim": "Source-balanced multi-reference training is a new controlled modeling direction within the current auditable project.",
+    "note": "git fetch team --prune succeeded. Inspected team/main, team/yhh, team/lzh, team/wyh, and team/revert-1-lzh. No auditable equivalent of MERFISH + SNI + explicit source-balanced sample weighting + single deployable 200-gene reference model was found. YHH sample_weight is class-balancing / competition-vs-MERFISH mixing. LZH source_weights downweight rare-class MERFISH reference rows in binary glial heads. V3-E04S is SNI-only. This is not a global first-ever novelty claim.",
+    "team_shas": {
+      "team/lzh": "af51ce78846063f2ec9bede33b6b23b7a75d3492",
+      "team/main": "c34feed7a03d1a1421c55a6fe4c40765aeff2b8b",
+      "team/revert-1-lzh": "bf4b34bbb988505341ec2caec237de6a9587207d",
+      "team/wyh": "da127c6ca86693f8bad5941aa26cc24ba129e1af",
+      "team/yhh": "9afc72774e2a6e186a04c2557110992d0befe164"
+    }
+  },
+  "experiment_id": "V3-E06M",
+  "gene_order_matches_v2": true,
+  "gene_order_sha256": "e3301724038990aa2db237026316aaa5fd265a11231c343bea733f8106ab06f5",
+  "merfish": {
+    "md5": "ce06f62c0ec4973581dae17bb76f0cd9",
+    "n_classes": 60,
+    "n_exact_vector_duplicates_removed": 47,
+    "n_test_id_overlaps_removed": 5000,
+    "n_train_id_overlaps_removed": 5000,
+    "n_usable": 136574,
+    "path": "/Users/yyl/Documents/Hackathon-Summer-2026/work/external/MERFISH_spinal_cord_resolved_0718.h5ad",
+    "raw_n_obs": 146621,
+    "raw_n_vars": 500
+  },
+  "n_combined": 191767,
+  "pca_audit": {
+    "atol": 0.0001,
+    "cached_pca_var_explained": 0.31590110063552856,
+    "max_abs_pc_difference": 0.0,
+    "pca_var_explained": 0.31590110063552856,
+    "reproduced": true
+  },
+  "reference_source_used_as_feature": false,
+  "sni": {
+    "competition_test_id_overlap": 0,
+    "competition_train_id_overlap": 0,
+    "dup_merfish": 116,
+    "dup_test": 15,
+    "dup_train": 10,
+    "md5": "7e90a801ee57b8fec06cd03c8630f01b",
+    "n_classes": 60,
+    "n_usable": 55193,
+    "n_usable_e04s": 55193,
+    "path": "/Users/yyl/Documents/Hackathon-Summer-2026/work/external/SNI_merged_0917.h5ad",
+    "raw_n_obs": 55331,
+    "raw_n_vars": 500
+  },
+  "sni_graph_note": "SNI spatial kNN is within SNI Section ID. SNI expression kNN is among SNI cells in the frozen MERFISH-fitted PCA50 space. Neighbor-label histograms use SNI reference labels only. Competition labels do not enter SNI features."
+}

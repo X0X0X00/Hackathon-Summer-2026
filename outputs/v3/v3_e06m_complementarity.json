@@ -1,0 +1,133 @@
+{
+  "all_four_wrong": 636,
+  "anchor_retention": {
+    "m1": {
+      "lost": 104,
+      "net_transfer": -20,
+      "recovered": 84,
+      "retained": 4002,
+      "retention_rate": 0.9746712128592304
+    },
+    "m2": {
+      "lost": 102,
+      "net_transfer": 3,
+      "recovered": 105,
+      "retained": 4004,
+      "retention_rate": 0.9751583049196298
+    }
+  },
+  "decision": {
+    "criteria_not_changed_after_results": true,
+    "label": "PROMISING SOURCE-BALANCED TRANSFER",
+    "next_action": "Keep M2 as a documented base-model candidate and next compare it against LZH Prior-H and frozen MODEL V2 under the same folds without blending or routing. Do not add another dataset or start Spatial-ID.",
+    "reason": "M2 has positive overall net correction, folds 3-4 are not a material regression, and some SNI/new-unique signal transferred, but not all STRONG criteria were met."
+  },
+  "deltas": {
+    "m1_vs_m0": {
+      "folds_0_2": {
+        "both_correct": 2404,
+        "both_wrong": 486,
+        "candidate_only_correct": 49,
+        "changed_predictions": 140,
+        "correct_to_wrong": 61,
+        "m0_only_correct": 61,
+        "n": 3000,
+        "net_correction": -12,
+        "wrong_to_correct": 49
+      },
+      "folds_3_4": {
+        "both_correct": 1598,
+        "both_wrong": 324,
+        "candidate_only_correct": 35,
+        "changed_predictions": 94,
+        "correct_to_wrong": 43,
+        "m0_only_correct": 43,
+        "n": 2000,
+        "net_correction": -8,
+        "wrong_to_correct": 35
+      },
+      "overall": {
+        "both_correct": 4002,
+        "both_wrong": 810,
+        "candidate_only_correct": 84,
+        "changed_predictions": 234,
+        "correct_to_wrong": 104,
+        "m0_only_correct": 104,
+        "n": 5000,
+        "net_correction": -20,
+        "wrong_to_correct": 84
+      }
+    },
+    "m2_vs_m0": {
+      "folds_0_2": {
+        "both_correct": 2409,
+        "both_wrong": 467,
+        "candidate_only_correct": 68,
+        "changed_predictions": 145,
+        "correct_to_wrong": 56,
+        "m0_only_correct": 56,
+        "n": 3000,
+        "net_correction": 12,
+        "wrong_to_correct": 68
+      },
+      "folds_3_4": {
+        "both_correct": 1595,
+        "both_wrong": 322,
+        "candidate_only_correct": 37,
+        "changed_predictions": 107,
+        "correct_to_wrong": 46,
+        "m0_only_correct": 46,
+        "n": 2000,
+        "net_correction": -9,
+        "wrong_to_correct": 37
+      },
+      "overall": {
+        "both_correct": 4004,
+        "both_wrong": 789,
+        "candidate_only_correct": 105,
+        "changed_predictions": 252,
+        "correct_to_wrong": 102,
+        "m0_only_correct": 102,
+        "n": 5000,
+        "net_correction": 3,
+        "wrong_to_correct": 105
+      }
+    }
+  },
+  "experiment_id": "V3-E06M",
+  "four_expert_oracle": 4364,
+  "m1_five_expert_oracle_correct": 4385,
+  "m1_new_unique_recoveries": 21,
+  "m2_all_five_wrong": 607,
+  "m2_five_expert_oracle_correct": 4393,
+  "m2_new_unique_recoveries": 29,
+  "m2_vs_m1": {
+    "balancing_helps": true,
+    "correct_count_delta": 23,
+    "correct_to_wrong": 81,
+    "folds_0_2_delta": 0.008000000000000007,
+    "folds_3_4_delta": -0.000500000000000056,
+    "macro_f1_delta": 0.00489589680858038,
+    "net_correction": 23,
+    "wrong_to_correct": 104
+  },
+  "oracle_is_not_deployable_accuracy": true,
+  "runtime_seconds": 23166.487536041997,
+  "sni_capture": {
+    "m1": {
+      "agrees_with_sni": 5,
+      "capture_fraction": 0.09433962264150944,
+      "captured": 5,
+      "equals_m0": 45,
+      "m0_wrong_to_candidate_correct": 5
+    },
+    "m2": {
+      "agrees_with_sni": 4,
+      "capture_fraction": 0.07547169811320754,
+      "captured": 4,
+      "equals_m0": 47,
+      "m0_wrong_to_candidate_correct": 4
+    }
+  },
+  "sni_unique_recoveries": 53
+}
