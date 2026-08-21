@@ -1,0 +1,8 @@
+family,n_true,strong_consensus_n,strong_consensus_errors,s0_rescues,sni_rescues,either_rescues,both_rescues
+oligodendrocyte_opc,1552,1443,348,45,47,80,12
+astrocyte,769,732,102,13,10,18,5
+vascular,363,349,86,9,4,11,2
+meningeal,128,109,32,6,6,8,4
+microglia,64,60,16,6,4,7,3
+remaining_glial_non_neuronal,82,77,13,1,1,1,1
+neuronal_or_other,2042,1994,143,9,9,15,3

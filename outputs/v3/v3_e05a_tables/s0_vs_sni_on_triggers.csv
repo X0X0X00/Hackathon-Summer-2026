@@ -1,0 +1,4 @@
+hypothesis,support,s0_correct,sni_correct,both_correct,both_wrong,s0_only_correct,sni_only_correct,s0_sni_agree,s0_pred_counts,sni_pred_counts
+H1,88,49,25,5,19,44,20,14,"{'oligodendrocyte_1': 67, 'DH_ex_Sox5': 1, 'oligodendrocyte_progenitor_2': 14, 'meninges_3': 1, 'astrocyte_1': 1, 'MV_in_Sema5b': 1, 'endothelial': 1, 'MV_in_Chrna2': 1, 'DM_ex_Zfhx3': 1}",{'oligodendrocyte_progenitor_2': 88}
+H2,68,25,33,2,12,23,31,4,{'oligodendrocyte_1': 68},"{'oligodendrocyte_progenitor_2': 61, 'oligodendrocyte_1': 4, 'meninges_3': 1, 'oligodendrocyte_2': 1, 'astrocyte_1': 1}"
+H3,35,18,9,1,9,17,8,7,"{'oligodendrocyte_2': 24, 'oligodendrocyte_progenitor_2': 7, 'astrocyte_2': 1, 'oligodendrocyte_1': 3}",{'oligodendrocyte_progenitor_2': 35}

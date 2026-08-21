@@ -1,0 +1,10 @@
+hypothesis,split,trigger_uses_true_label,strong_class,candidate_expert,candidate_class,support,strong_correct,candidate_correct,wrong_to_correct,correct_to_wrong,both_correct,both_wrong,net,patch_precision,candidate_conditional_accuracy,strong_conditional_accuracy,oracle_conditional_accuracy,actionable_overall,sparse_unstable
+H1,overall,False,oligodendrocyte_1,sni,oligodendrocyte_progenitor_2,88,55,25,25,55,0,8,-30,0.3125,0.2840909090909091,0.625,0.9090909090909091,False,False
+H1,folds_0_2,False,oligodendrocyte_1,sni,oligodendrocyte_progenitor_2,50,32,15,15,32,0,3,-17,0.3191489361702128,0.3,0.64,0.94,,
+H1,folds_3_4,False,oligodendrocyte_1,sni,oligodendrocyte_progenitor_2,38,23,10,10,23,0,5,-13,0.30303030303030304,0.2631578947368421,0.6052631578947368,0.868421052631579,,
+H2,overall,False,oligodendrocyte_progenitor_2,s0,oligodendrocyte_1,68,33,25,25,33,0,10,-8,0.43103448275862066,0.36764705882352944,0.4852941176470588,0.8529411764705882,False,False
+H2,folds_0_2,False,oligodendrocyte_progenitor_2,s0,oligodendrocyte_1,47,23,19,19,23,0,5,-4,0.4523809523809524,0.40425531914893614,0.48936170212765956,0.8936170212765957,,
+H2,folds_3_4,False,oligodendrocyte_progenitor_2,s0,oligodendrocyte_1,21,10,6,6,10,0,5,-4,0.375,0.2857142857142857,0.47619047619047616,0.7619047619047619,,
+H3,overall,False,oligodendrocyte_2,sni,oligodendrocyte_progenitor_2,35,23,9,9,23,0,3,-14,0.28125,0.2571428571428571,0.6571428571428571,0.9142857142857143,False,False
+H3,folds_0_2,False,oligodendrocyte_2,sni,oligodendrocyte_progenitor_2,19,11,5,5,11,0,3,-6,0.3125,0.2631578947368421,0.5789473684210527,0.8421052631578947,,
+H3,folds_3_4,False,oligodendrocyte_2,sni,oligodendrocyte_progenitor_2,16,12,4,4,12,0,0,-8,0.25,0.25,0.75,1.0,,

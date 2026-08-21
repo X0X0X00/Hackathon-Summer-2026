@@ -1,0 +1,7 @@
+hypothesis,hard_bucket,support,strong_correct,candidate_correct,wrong_to_correct,correct_to_wrong,both_correct,both_wrong,net,patch_precision,candidate_conditional_accuracy,strong_conditional_accuracy,oracle_conditional_accuracy
+H1,True,88,55,25,25,55,0,8,-30,0.3125,0.2840909090909091,0.625,0.9090909090909091
+H1,False,0,0,0,0,0,0,0,0,,,,
+H2,True,68,33,25,25,33,0,10,-8,0.43103448275862066,0.36764705882352944,0.4852941176470588,0.8529411764705882
+H2,False,0,0,0,0,0,0,0,0,,,,
+H3,True,35,23,9,9,23,0,3,-14,0.28125,0.2571428571428571,0.6571428571428571,0.9142857142857143
+H3,False,0,0,0,0,0,0,0,0,,,,
