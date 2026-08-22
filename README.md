@@ -1,94 +1,99 @@
-# WYH Modeling Track
+# WYH — MERFISH Cell-Type Annotation
 
-## Released models
+A reproducible modeling track for 60-class MERFISH cell-type annotation,
+focused on external-reference transfer, leakage-safe validation, and
+evidence-based model selection.
 
-| Version | Method | Validation | OOF | Official score |
-| --- | --- | --- | ---: | --- |
-| MODEL V1 | Hierarchical Signature Specialists | frozen 3-fold | 75.98% | Not submitted |
-| MODEL V2 | Reference-only LightGBM + approved Zenodo reference | team-compatible 5-fold | 82.12% | Not submitted |
+## Results
 
-## MODEL V2
+| Model | Method | Validation Accuracy | Status |
+| --- | --- | ---: | --- |
+| MODEL V1 | Hierarchical Signature Specialists | 75.98% | Historical baseline |
+| **MODEL V2** | Reference-only LightGBM | **82.12%** | **Selected model** |
+| E06M M2 | Source-balanced multi-reference LightGBM | 82.18% | Experimental; not selected |
 
-MODEL V2 is the current WYH candidate: a reference-only LightGBM trained on **136,574** cleaned cells from the approved Zenodo MERFISH spinal-cord deposit (record 18039571). Local 5-fold OOF accuracy is **82.12%** (4106 / 5000), **+6.14 percentage points** versus MODEL V1.
+## Selected Model — MODEL V2
 
-These figures are **WYH local validation results**. MODEL V1 and MODEL V2 were **not official captain submissions**. No official leaderboard score is claimed.
+MODEL V2 is the selected WYH model. It uses a cleaned external MERFISH
+spinal-cord reference aligned to the official 200-gene panel and a
+LightGBM classifier evaluated under the fixed team-compatible five-fold
+protocol.
 
-- Candidate: [`outputs/submissions/model_v2_candidate.csv`](outputs/submissions/model_v2_candidate.csv)
-- MODEL V2 write-up: [`docs/versions/model_v2.md`](docs/versions/model_v2.md)
-- MODEL V1 write-up: [`docs/versions/model_v1.md`](docs/versions/model_v1.md)
+- Validation accuracy: **82.12%** (4106 / 5000)
+- External reference cells: **136,574**
+- Improvement over MODEL V1: **+6.14 percentage points**
+- Model documentation: [`docs/versions/model_v2.md`](docs/versions/model_v2.md)
+- Candidate predictions: [`outputs/submissions/model_v2_candidate.csv`](outputs/submissions/model_v2_candidate.csv)
 
-A predeclared V2-C blend (C1) reached 82.24% OOF and was rejected: the gain was only +6 net cells, folds 3–4 regressed, and macro-F1 decreased. That result is evidence of conservative model selection / overfitting control; it is not the released MODEL V2 score.
+A predeclared V2-C blend reached 82.24% but was not selected because the gain
+was only six net cells, later folds regressed, and macro-F1 decreased.
 
-## V3 Research Program
+## Post-V2 Research
 
-The V3 research program is **completed without MODEL V3 promotion**.
-MODEL V2 remains the frozen WYH deployable model.
+After MODEL V2, a sequence of controlled experiments tested whether additional
+biological information and complementary experts could produce a stable
+improvement.
 
-| Item | Result | Status |
-| --- | ---: | --- |
-| Frozen MODEL V2 | **82.12%** (4106 / 5000) | Current WYH deployable model |
-| Best V3 experimental candidate — E06M M2 | **82.18%** (4109 / 5000) | Experimental; not promoted |
-| Strongest auditable team standalone comparator — LZH Prior-H | **82.66%** (4133 / 5000) | Teammate model |
-| Five-expert diagnostic oracle | **87.86%** (4393 / 5000) | Diagnostic coverage ceiling only |
+| Direction | Main Finding |
+| --- | --- |
+| Privileged-gene distillation | The 500-gene reference contained substantially more predictive information, but the tested 500→200 distillation methods did not improve the 200-gene student |
+| Weak-expert complementarity | S0 added 96 unique recoveries beyond the two strong experts, but confidence-based rescue was not reliable |
+| SNI source diversity | The independent SNI source added 53 further unique recoveries despite weak standalone accuracy |
+| Source-balanced multi-reference transfer | Explicit source balancing outperformed naive pooling; E06M M2 reached 82.18%, but the gain over MODEL V2 was not stable enough for selection |
+| Final model audit | MODEL V2 was retained after paired, fold, bootstrap, and section-level evaluation |
 
-### Why no MODEL V3?
+### Model Selection Decision
 
-The best V3 experimental candidate improved MODEL V2 by only **3 net cells**
-(105 wrong→correct versus 102 correct→wrong).
+E06M M2 achieved 82.18% (4109 / 5000), only three net correct cells above
+MODEL V2. The gain was not stable across folds, sections, or paired
+statistical evaluation, so MODEL V2 was retained as the selected model.
 
-The improvement was not stable enough for promotion:
+See [`reports/v3/v3_e07d_final_deployable_decision_audit.md`](reports/v3/v3_e07d_final_deployable_decision_audit.md).
 
-- folds 0–2: **+12** net cells
-- folds 3–4: **−9** net cells
-- exact McNemar test: **p = 0.8895**
-- section audit: **31 wins / 45 ties / 32 losses**
+### Main Finding — Coverage vs. Utilization
 
-Therefore the predeclared MODEL V3 promotion criteria were not met.
+The combined expert pool reached an **87.86% retrospective diagnostic oracle**,
+showing that substantial complementary information exists across the evaluated
+experts. However, the tested distillation, confidence-gating, directional
+correction, and source-balanced transfer methods could not convert that
+coverage into a stable standalone improvement without introducing offsetting
+errors.
 
-### Main V3 finding
+> **87.86% is a retrospective diagnostic oracle, not a deployable model
+> accuracy.**
 
-The V3 experiments exposed a **coverage–utilization gap**.
+See [`reports/v3/v3_research_program_summary.md`](reports/v3/v3_research_program_summary.md).
 
-The auditable expert pool contained substantial complementary information,
-but the tested privileged-gene distillation, weak-expert confidence gating,
-directional correction, and source-balanced multi-reference transfer methods
-did not convert that coverage into a stable deployable improvement without
-offsetting errors.
+## Repository Structure
 
-> **87.86% is a diagnostic oracle coverage ceiling — not OOF accuracy,
-> test accuracy, leaderboard accuracy, or a deployable model score.**
+| Path | Purpose |
+| --- | --- |
+| `src/merfish60/` | Reusable modeling, feature, and validation utilities |
+| `scripts/` | Released-model and pipeline entry points |
+| `experiments/` | Controlled modeling and research experiments |
+| `outputs/` | Metrics, validation predictions, probabilities, and selected artifacts |
+| `reports/` | Detailed experiment reports and decision audits |
+| `docs/` | Model documentation and methodology notes |
+| `tests/` | Reproducibility and integrity tests |
+| `data/`, `prediction/` | Challenge data and prediction interfaces |
 
-- Full research summary:
-  [`reports/v3/v3_research_program_summary.md`](reports/v3/v3_research_program_summary.md)
-- WYH contribution record:
-  [`docs/contributions/wyh_v3_contribution.md`](docs/contributions/wyh_v3_contribution.md)
+## Reproducibility
 
----
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python scripts/09_v2b_refonly.py
+.venv/bin/pytest -q tests/
+```
 
-# University of Rochester Biomedical Data Science Hackathon Summer 2026
-Welcome to the landing page for the hackathon. The hackathon will commence 8/18. It will be a prediction challenge. All predictions should be submitted through GitHub using the captain's handle. Scoring will also happen in GitHub. All details regarding the hackathon will be posted here.  
+MODEL V2 reproduction requires the approved external reference described in
+[`docs/versions/model_v2.md`](docs/versions/model_v2.md).
 
- Register for the hackathon [here](https://forms.gle/TEW1BHqezsKgTTKL9). Please make sure each individual competing on your team is fully registered. Each team needs a captain with a github handle. To receive a prize, you must supply your University of Rochester e-mail address. All teams scoring better than random will receive a participation prize. 1st and 2nd place winning teams in each division will get a cash prize (see below).
- **All team members must submit their own registration form to participate.**  
+## Challenge
 
-# Overview
-This is a prediction challenge with spatial transcriptomics data. The objective of the hackathon is to correctly predict cell type labels in MERFISH_cell_type_annotation. Group performance will be measured by the confusion matrix overall accuracy: number of correct predictions / total number of predictions.
+Developed for the University of Rochester Biomedical Data Science Hackathon
+Summer 2026.
 
-# Challenge description
-The challenge is to classify cell types in a mouse neuronal tissue dataset collected using MERFISH, an imaging-based spatial transcriptomics technique that measures gene expression while preserving each cell's exact location in the tissue. The dataset covers ~10,000 cells and 200 genes, with sparse transcript counts paired with spatial coordinates and cell metadata (like cell volume, region, gender, and mouse ID). Participants must predict the cell type label for each cell in the test set. A full description of the challenge and dataset is here: [Data.Description.md](Data.Description.md).
-
-# Logistics
-
-0.   Each team must have a github handle associated with it in order to participate.  Make sure you edit your registration or email the organizers to provide this, if you haven't yet. Your team will not be scored if you do not provide a handle.
-1.   You may add team members up
-to noon EDT on 8/18 by editing your response to the google form or emailing the organizers.
-2.  Teams of entirely undergraduates will be in the undergraduate
-division, else they will be in the open division.
-3. Further instructions for submitting predictions will be posted here as they become available
-4.  Competition runs through 2:59 PM EDT 22-August-2026.  The predictions each team has committed to their repository at that time will be used to determine their final score. Captains must submit their own predictions. Any use of predictions from other teams is disqualifying. Winning teams must submit their code to organizers to claim their prize.
-
-# Prizes
-   
-1.  First place in each division: $300 + $75 x (team size)
-2.  Second place in each division: 0 + $50 x (team size)
-  
+See [`Data.Description.md`](Data.Description.md) for the task/data description
+and the [upstream repository](https://github.com/Rochester-Biomedical-DS/Hackathon-Summer-2026)
+for the original challenge information.
