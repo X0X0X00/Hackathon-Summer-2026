@@ -27,6 +27,7 @@ cand = np.where(U["is_ref"])[0]
 hold = rng.choice(cand, 5000, replace=False)
 U["is_ref"][hold] = False
 json.dump(U["ids"][hold].tolist(), open(ART / "holdout_A_ids.json", "w"))
+json.dump(sorted(set(U["test_uids"].tolist())), open(ART / "trained_with_test_ids.json", "w"))   # test cells (universe ids) unlabelled at train time
 print(f"universe={len(U['ids'])} ref={U['is_ref'].sum()} train={U['is_train'].sum()} test={U['is_test'].sum()} holdoutA=5000  ({time.time()-t0:.0f}s)", flush=True)
 
 prep = fit_prep(U)
@@ -97,7 +98,7 @@ np.savez_compressed(ART / "train_time_test_probs.npz", ids=U["ids"][te], **test_
 # final prediction on the CURRENT test set via the same frozen blend/gating code
 ids_te = U["ids"][te]
 res = blend_predict(test_probs, F, known, te, prep)
-order = pd.Series(np.arange(len(ids_te)), index=ids_te).loc[U["mte"].index.astype(str)].values
+order = pd.Series(np.arange(len(ids_te)), index=ids_te).loc[U["test_uids"]].values
 out = pd.DataFrame({"Cell_ID": U["mte"].index.values, "MERFISH_cell_type_annotation.y": np.array(prep["labels"])[res["pred"][order]]})
 out.to_csv(ART / "prediction_train_time.csv", index=False)
 print("tiers:", {k: int(v) for k, v in zip(*np.unique(res["tier"], return_counts=True))})

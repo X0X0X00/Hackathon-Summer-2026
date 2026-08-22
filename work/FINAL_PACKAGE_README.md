@@ -77,3 +77,22 @@ anndata, pandas, numpy. Import scipy/sklearn before lightgbm in this conda env.
 | C | 5,000 cells from the study's SNI dataset: new mice, new sections, no metadata, labels = `voting` consensus of 5 label-transfer methods | 0.5516 vs `voting`; the five methods agree with each other only 0.26–0.80, and on cells where ≥4 methods agree we score 0.7286 — i.e. near the label-noise ceiling |
 
 Consistency: `predict_final.py` on the original test set reproduces the train-time blend exactly (0 / 5000 differ).
+
+## Validation run (2026-08-22, after the data swap)
+
+Diagnostics printed by `predict_final.py` on the posted validation set: 5,000 cells, 0 new sections,
+metadata present (Segment 40 %, Region/E-I 36 %), **0 ids found in the deposit but 5,000 exact
+matches by 200-gene counts + section + coordinates** — i.e. the validation cells are deposit cells
+under new Cell_IDs. Because those cells were labelled reference rows when the models were trained
+on Saturday, scoring them with the frozen boosters would amount to scoring training cells. Per the
+integrity rule documented above we therefore:
+
+1. added an id-alias step in `final_features.build_universe` (a test cell whose counts, section and
+   coordinates coincide exactly with a deposit cell is treated as that deposit cell — pure data
+   handling, no model change), which makes the integrity guard fire;
+2. re-ran the unchanged `train_final.py` / `train_extra_tier.py` with the validation cells excluded
+   from the reference (exactly what the code does for any competition id) — the Saturday boosters
+   are kept in `final_artifacts_frozen_20260822/` for audit;
+3. scored the validation cells with the retrained models via `predict_final.py` (tier `full`).
+
+Rehearsal A above (0.8212) is precisely this situation and is our expectation for the validation score.

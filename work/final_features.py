@@ -68,16 +68,35 @@ def build_universe(genes, test_meta=None, test_counts=None, exclude_ids=()):
     train_ids = np.array(mtr.index, dtype=str); test_ids = np.array(mte.index, dtype=str)
     assert set(train_ids) <= set(dep_ids), "competition train cells must be deposit cells"
     in_dep = np.isin(test_ids, dep_ids)
-    new_test = test_ids[~in_dep]
+    # Re-identified deposit cells: a test id that is NOT a deposit id but whose 200-gene counts AND
+    # (section, x, y) coincide exactly with one deposit cell is that deposit cell under a new id.
+    # It is aliased to the deposit row (so it is treated exactly like an in-deposit test cell and the
+    # integrity guard can see it); only genuinely new cells are appended.
+    alias = {}
+    if (~in_dep).any():
+        cand = test_ids[~in_dep]
+        h_dep = row_hash(Xd); by_hash = {}
+        for i, h in enumerate(h_dep): by_hash.setdefault(h, []).append(i)
+        h_new = row_hash(cte.loc[cand, genes].values)
+        xy_new = mte.loc[cand, ["center_x", "center_y"]].values.astype(float)
+        sec_new = mte.loc[cand, "Section_ID"].astype(str).values
+        dep_xy = obs[["center_x", "center_y"]].values.astype(float); dep_sec = obs["Section ID"].astype(str).values
+        for k, (cid, h) in enumerate(zip(cand, h_new)):
+            for i in by_hash.get(h, []):
+                if dep_sec[i] == sec_new[k] and np.abs(dep_xy[i] - xy_new[k]).max() < 0.5:
+                    alias[cid] = dep_ids[i]; break
+    uid = lambda t: alias.get(t, t)                      # test id -> universe id
+    new_test = np.array([t for t in test_ids if not (t in alias) and not np.isin(t, dep_ids)], dtype=str)
     n = len(dep_ids) + len(new_test)
     ids = np.concatenate([dep_ids, new_test])
     pos = pd.Series(np.arange(n), index=ids)
+    test_uids = np.array([uid(t) for t in test_ids], dtype=str)
 
     # ---- expression (200 competition genes) ----
     X200 = np.zeros((n, len(genes)), np.float32)
     X200[:len(dep_ids)] = Xd
     X200[pos.loc[train_ids].values] = ctr[genes].values.astype(np.float32)   # identical to deposit (verified)
-    X200[pos.loc[test_ids].values] = cte[genes].values.astype(np.float32)
+    X200[pos.loc[test_uids].values] = cte[genes].values.astype(np.float32)
     # ---- metadata frame (text form) ----
     meta = pd.DataFrame(index=ids)
     meta["Section_ID"] = np.concatenate([obs["Section ID"].astype(str).values, np.array([""] * len(new_test))])
@@ -93,21 +112,21 @@ def build_universe(genes, test_meta=None, test_counts=None, exclude_ids=()):
     meta["Laminae_txt"] = np.concatenate([obs["Laminae"].astype(str).values, np.array(["nan"] * len(new_test))])
     # competition rows: official CSV values win (numeric Region/AP/Segment, text EI)
     comp = pd.concat([mtr, mte])
-    cp = pos.loc[comp.index.astype(str)].values
+    comp_uids = np.concatenate([train_ids, test_uids])
     for col in ["Section_ID", "center_x", "center_y", "volume", "Datasets", "Gender", "Mouse_ID"]:
-        meta.loc[comp.index.astype(str), col] = comp[col].astype(str if col in ("Section_ID", "Datasets", "Gender", "Mouse_ID") else float).values
+        meta.loc[comp_uids, col] = comp[col].astype(str if col in ("Section_ID", "Datasets", "Gender", "Mouse_ID") else float).values
     meta["Region_num"] = np.nan; meta["AP_num"] = np.nan; meta["Segment_num"] = np.nan; meta["EI_num"] = np.nan
-    meta.loc[comp.index.astype(str), "Region_num"] = comp["Region"].values.astype(float)
-    meta.loc[comp.index.astype(str), "AP_num"] = comp["AP_position"].values.astype(float)
-    meta.loc[comp.index.astype(str), "Segment_num"] = comp["Segment"].values.astype(float)
-    meta.loc[comp.index.astype(str), "EI_num"] = comp["Excitatory_vs_Inhibitory"].map({"excitatory": 1.0, "inhibitory": 0.0}).values
+    meta.loc[comp_uids, "Region_num"] = comp["Region"].values.astype(float)
+    meta.loc[comp_uids, "AP_num"] = comp["AP_position"].values.astype(float)
+    meta.loc[comp_uids, "Segment_num"] = comp["Segment"].values.astype(float)
+    meta.loc[comp_uids, "EI_num"] = comp["Excitatory_vs_Inhibitory"].map({"excitatory": 1.0, "inhibitory": 0.0}).values
     # ---- labels & roles ----
     y = np.array([norm_label(l) for l in obs["MERFISH cell type annotation"].astype(str).values] + [""] * len(new_test))
     labels = sorted(mtr.MERFISH_cell_type_annotation.unique())
     lab2code = {l: i for i, l in enumerate(labels)}
     ycode = np.array([lab2code.get(l, -1) for l in y], np.int16)
     is_train = np.zeros(n, bool); is_train[pos.loc[train_ids].values] = True
-    is_test = np.zeros(n, bool); is_test[pos.loc[test_ids].values] = True
+    is_test = np.zeros(n, bool); is_test[pos.loc[test_uids].values] = True
     ycode[is_test] = -1                                           # never use deposit labels of test cells
     ycode[is_train] = mtr.MERFISH_cell_type_annotation.map(lab2code).values
     is_ref = (ycode >= 0) & ~is_train & ~is_test
@@ -118,7 +137,7 @@ def build_universe(genes, test_meta=None, test_counts=None, exclude_ids=()):
     is_ref &= ~dup
     U = dict(ids=ids, X200=X200, meta=meta, y=ycode, labels=np.array(labels), is_train=is_train,
              is_test=is_test, is_ref=is_ref, n_dep=len(dep_ids), test_in_deposit=int(in_dep.sum()),
-             test_new=int((~in_dep).sum()), mtr=mtr, mte=mte)
+             test_new=int(len(new_test)), test_aliased=int(len(alias)), test_uids=test_uids, mtr=mtr, mte=mte)
     return U
 
 

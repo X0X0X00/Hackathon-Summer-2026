@@ -21,7 +21,7 @@ def run_predict(meta_path=None, counts_path=None, out_path=None, verbose=True):
     trained_test = set(json.load(open(ART / "trained_with_test_ids.json")))
     train_ids = set(U["mtr"].index.astype(str)); cur_test = set(U["mte"].index.astype(str))
     dep_ids = set(U["ids"][:U["n_dep"]])
-    overlap = (cur_test & dep_ids) - trained_test - train_ids - set(hold)
+    overlap = (set(U["test_uids"]) & dep_ids) - trained_test - train_ids - set(hold)
     if overlap and "--allow-overlap" not in sys.argv:
         raise SystemExit(f"{len(overlap)} test cells were reference (labelled) rows when the frozen models were trained. "
                          "Re-run `python train_final.py` (it excludes all current competition ids) and predict again.")
@@ -32,7 +32,7 @@ def run_predict(meta_path=None, counts_path=None, out_path=None, verbose=True):
     res = blend_predict(probs, F, known, te, prep)
     ids_te = U["ids"][te]
     mte = U["mte"]
-    order = pd.Series(np.arange(len(ids_te)), index=ids_te).loc[mte.index.astype(str)].values
+    order = pd.Series(np.arange(len(ids_te)), index=ids_te).loc[U["test_uids"]].values
     labels = np.array(prep["labels"])
     out = pd.DataFrame({"Cell_ID": mte.index.values, "MERFISH_cell_type_annotation.y": labels[res["pred"][order]]})
     if out_path:
@@ -40,7 +40,7 @@ def run_predict(meta_path=None, counts_path=None, out_path=None, verbose=True):
     if verbose:
         tiers = {k: int(v) for k, v in zip(*np.unique(res["tier"], return_counts=True))}
         new_secs = len(set(mte.Section_ID.astype(str)) - set(U["mtr"].Section_ID.astype(str)))
-        print(f"test cells={len(te)}  in deposit={U['test_in_deposit']}  new={U['test_new']}  "
+        print(f"test cells={len(te)}  in deposit={U['test_in_deposit']}  re-identified deposit cells={U['test_aliased']}  new={U['test_new']}  "
               f"sections not in train={new_secs}  labelled-spatial-nbr median={np.median(res['n_sp']):.0f}  "
               f"meta_frac={res['meta_frac']:.2f}  tiers={tiers}  ({time.time()-t0:.0f}s)", flush=True)
         if out_path: print("wrote", out_path)

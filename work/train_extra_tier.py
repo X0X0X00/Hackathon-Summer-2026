@@ -8,7 +8,7 @@ from final_blend import mlp_prep_stats, mlp_transform, Net
 threads = int(sys.argv[1]) if len(sys.argv) > 1 else 4
 genes = json.load(open(ART / "genes.json")); prep = json.load(open(ART / "prep.json")); hold = json.load(open(ART / "holdout_A_ids.json"))
 U = build_universe(genes, exclude_ids=hold); U["genes"] = genes
-assert U["is_ref"].sum() == 131574, U["is_ref"].sum()
+print("reference rows:", int(U["is_ref"].sum()), flush=True)
 F = featurize(U, prep)
 known = np.where(U["is_ref"] | U["is_train"], U["y"], -1).astype(np.int64); y = U["y"].astype(np.int64)
 ref = np.where(U["is_ref"])[0]; tr = np.where(U["is_train"])[0]
