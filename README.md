@@ -25,3 +25,16 @@ division, else they will be in the open division.
 1.  First place in each division: $300 + $75 x (team size)
 2.  Second place in each division: 0 + $50 x (team size)
   
+
+---
+
+## Team "codex power" — frozen final model (code freeze 2026-08-22 15:00 EDT)
+
+The frozen pipeline that produced the submitted `prediction/prediction.csv`, and that is re-run
+unchanged on the validation data, lives in **`work/`** — see `work/FINAL_PACKAGE_README.md`
+(method, saved models in `work/final_artifacts/`, MD5 manifest, validation rehearsals, run command).
+Any other model directories in this repository are earlier development snapshots and are not used
+for the submitted or validation predictions.
+
+Validation run: place the new `data/meta_test.csv` + `data/counts_test.csv`, then
+`cd work && python predict_final.py` → `prediction/prediction.csv`.
