@@ -1,7 +1,0 @@
-SCREEN an15     mean=0.7720  f0=0.7620 f1=0.7820  nfeat=505  97s
-SCREEN ab15     mean=0.7770  f0=0.7670 f1=0.7870  nfeat=505  117s
-SCREEN fl15     mean=0.7770  f0=0.7670 f1=0.7870  nfeat=505  115s
-SCREEN mo15     mean=0.7655  f0=0.7550 f1=0.7760  nfeat=505  115s
-SCREEN rg15     mean=0.7735  f0=0.7640 f1=0.7830  nfeat=505  88s
-SCREEN ab8      mean=0.7740  f0=0.7650 f1=0.7830  nfeat=505  86s
-SCREEN ab25     mean=0.7760  f0=0.7660 f1=0.7860  nfeat=505  90s

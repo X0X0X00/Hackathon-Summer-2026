@@ -1,9 +1,40 @@
-# regenerable binaries (see README.md "Reproduce the submission")
-*.npz
+# Local environments and caches
+.venv/
+venv/
 __pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+*.log
+
+# Raw external datasets and derived caches (never commit)
+external/
+*.h5ad
+
+# Regenerable modeling artifacts
+outputs/
+*.npz
+*.npy
+*.pkl
+*.joblib
 cache/
 oof/
-experiments/bag_runs/
-experiments/fold_runs/
-experiments/catxgb_runs/
-experiments/rerank_cache/
+
+# Historical local-pipeline run caches, if recreated
+legacy/cache/
+legacy/oof/
+legacy/experiments/bag_runs/
+legacy/experiments/fold_runs/
+legacy/experiments/catxgb_runs/
+legacy/experiments/rerank_cache/
+
+# Intermediate V3 working directories
+v3_e02d/
+v3_e04s/
+v3_e06m/
