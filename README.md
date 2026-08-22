@@ -5,7 +5,7 @@ Hackathon Summer 2026. WYH contributed a leakage-safe modeling track based on
 external-reference transfer, frozen fold protocols, and evidence-based model
 selection.
 
-## WYH contribution
+## Modeling Summary
 
 The selected WYH research model is **MODEL V2** (V2-B-REFONLY): a reference-only
 LightGBM classifier fit on a cleaned public MERFISH spinal-cord reference and
